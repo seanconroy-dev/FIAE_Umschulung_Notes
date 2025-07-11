@@ -1,0 +1,206 @@
+### 11.07.2025_Programiertechnik/ASS
+
+Projekt: DatentypenUndVariablen
+
+# Kommentare in Java
+
+## Warum sind Kommentare wichtig?
+
+- Kommentare erhöhen die Transparenz im Code – für mich selbst und für alle, die später daran arbeiten
+- Helfen beim Wiedereinstieg nach Pausen oder Projektwechsel
+- Erklären die Logik hinter dem Code
+- Kommentare werden nicht mitkompiliert
+- Ganze Sätze bevorzugt, nicht nur Stichworte
+- In vielen Firmen sind Kommentare Pflicht
+- Kommentare helfen, Zeitverlust zu vermeiden
+- Kommentare sind Teil der Teamkommunikation
+- Kommentare verbessern Codeverständnis bei Code Reviews
+
+## Kommentararten in Java
+
+// Einzeiliger Kommentar
+
+/\*
+
+- Mehrzeiliger Kommentar
+  \*/
+
+/\*\*
+
+- JavaDoc-Kommentar (z. B. für Methoden)
+  \*/
+
+# Daten und Datentypen
+
+- Software verarbeitet Daten
+- Daten können unterschiedlich groß sein → Speicherbedarf beachten
+- Datentypwahl beeinflusst Genauigkeit und Performance
+- Beispiel: Lohnabrechnung – 3000 vs. 2999.99 → Rundungsfehler bei falschem Typ
+
+## Variablen in Java
+
+- Variablen speichern Werte (Container)
+- Immer nur **ein** Wert pro Variable
+- Neuer Wert überschreibt alten
+- Zuweisung: von rechts nach links
+- Deklaration = Variable anlegen
+- Initialisierung = Startwert zuweisen
+- Beides kombinierbar:
+
+```java
+double gehalt = 1000;
+double gehalt1 = 1000, gehalt2 = 1500;
+```
+
+- Semikolon `;` beendet Anweisung
+- CamelCase: z. B. gehaltProMonat
+- Code wird in `main`-Methode geschrieben, eingerahmt in `{}`
+
+## Datentypen in Java
+
+### Gleitkommazahlen
+
+- `double`: Standard für präzise Kommazahlen
+- `float`: kleiner, `f` am Ende z. B. `3.14f`
+
+### Ganze Zahlen
+
+- `int`: Standard für Ganzzahlen
+- `long`: größere Ganzzahlen (`L` am Ende)
+- `short`, `byte`: selten genutzt
+- `int` → kann in `double` oder `float`, aber nicht umgekehrt
+
+### Wahrheitswerte
+
+- `boolean`: true oder false
+- Namenskonvention: `is`, `has`, `can` (z. B. `isLoggedIn`)
+
+### Zeichen
+
+- `char`: genau ein Zeichen, in einfachen Hochkommas: `'a'`, `'%'`
+
+### Zeichenketten
+
+- `String`: mehrere Zeichen in `"`
+- Leerer String erlaubt: `""`
+- Großes `S` → Klasse
+- Verknüpfung: `"Hallo " + name`
+
+```java
+String name = "Max";
+System.out.println("Hallo " + name);
+```
+
+- `.trim()` entfernt Leerzeichen am Rand:
+
+```java
+String eingabe = " Max ";
+System.out.println(eingabe.trim()); // "Max"
+```
+
+## Operatoren in Java
+
+### Arithmetisch
+
+- `+` Addition
+- `-` Subtraktion
+- `*` Multiplikation
+- `/` Division
+- `%` Modulo
+
+### Vergleich
+
+- `==` gleich
+- `!=` ungleich
+- `<` kleiner als
+- `>` größer als
+- `<=` kleiner oder gleich
+- `>=` größer oder gleich
+
+### Logisch
+
+- `&&` UND
+- `||` ODER
+- `!` NICHT
+
+### Beispiel:
+
+```java
+int wert1 = 1;
+int wert2 = 2;
+int erg = wert1 + wert2;
+System.out.println("Ergebnis: " + erg);
+// Ausgabe: Ergebnis: 3
+```
+
+## Fallstricke & Sonderfälle
+
+- Zeichen wie `€`:
+
+```java
+double gehalt = 1234.56;
+char zeichen = '€';
+System.out.println(gehalt + "" + zeichen); // 1234.56€
+```
+
+→ Ohne `""` wird ASCII-Wert von `€` gezeigt
+
+- Division durch 0 erzeugt Laufzeitfehler:
+
+```java
+int a = 10;
+int b = 0;
+int c = a / b; // Fehler
+```
+
+→ Immer vor Division prüfen: `if (b != 0)`
+
+- Gelbe Warnung in IDE = Variable nicht genutzt
+
+## Programmiervorgehensweise
+
+- Neues Projekt anlegen → Rechtsklick → New → Class
+- Haken bei `public static void main` setzen
+- Variablennamen nach Konvention (camelCase)
+- `Ctrl + Leertaste` → Autovervollständigung
+- `Ctrl + Klick` → Springt zur Definition/Doku
+
+## IDE-Struktur (Eclipse, IntelliJ)
+
+```
+Projekt
+└── src
+    └── package
+        └── class
+```
+
+- Jede `.java`-Datei enthält **eine öffentliche Klasse**
+- Einstiegspunkt ist `main`:
+
+```java
+public class Start {
+    public static void main(String[] args) {
+        // Code hier
+    }
+}
+```
+
+## Klausur-Tipps
+
+- Frage: „Deklarieren Sie eine Variable für XY“
+- Lösung: `Datentyp variablenName;`
+- Ggf. Initialisierung direkt dabei
+- Auf Wertebereiche achten
+- Kommentare helfen bei Verständnisschwierigkeiten
+- Methodenköpfe korrekt schreiben
+- Klammern und Struktur prüfen
+
+## Lernhygiene & Selbstorganisation
+
+- Keine Überstunden oder Arbeit nachhause nehmen
+- Bei Frust: Pause, frische Luft, Abstand
+- Hilfe holen ist erlaubt – Dozent, Mitschüler, Dokumentation
+
+---
+
+**Teil der FIAE-Umschulung (2025–2027) am BFW Mühlenbeck. Diese Notizen sind öffentlich dokumentiert zur Wiederholung, Prüfungsvorbereitung und für Dritte zur Orientierung.**
