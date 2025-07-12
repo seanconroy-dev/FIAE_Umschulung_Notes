@@ -102,8 +102,11 @@
   - b_id (Bestellungs-ID)
   - datum
 - Beziehung: Ein Kunde "hat" Bestellungen (1:n Beziehung)
+
   - "1" auf der Kundenseite: Ein Kunde...
   - "n" auf der Bestellungsseite: ...kann mehrere Bestellungen haben
+
+  ![ER-Modell Diagramm](images/erModellDiagramm.png)
 
 ## Zusätzliche Erklärungen
 
