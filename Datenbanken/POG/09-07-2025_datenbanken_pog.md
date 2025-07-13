@@ -135,4 +135,7 @@
 
 ---
 
-_Teil der FIAE-Umschulung (2025–2027) am BFW Mühlenbeck. Diese Notizen sind öffentlich dokumentiert zur Wiederholung, Prüfungsvorbereitung und für Dritte zur Orientierung._
+## _Teil der FIAE-Umschulung (2025–2027) am BFW Mühlenbeck. Diese Notizen sind öffentlich dokumentiert zur Wiederholung, Prüfungsvorbereitung und für Dritte zur Orientierung._
+
+**Unterricht bei:** POG (BFW Mühlenbeck, FIAE Umschulung)  
+**Quelle:** Eigene Mitschrift & Unterrichtsfolien vom 09.07.2025
