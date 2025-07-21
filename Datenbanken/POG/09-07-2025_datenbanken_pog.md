@@ -106,7 +106,7 @@
   - "1" auf der Kundenseite: Ein Kunde...
   - "n" auf der Bestellungsseite: ...kann mehrere Bestellungen haben
 
-
+  ![ER-Modell](./images/erModl.png)
 
 ## Zusätzliche Erklärungen
 
