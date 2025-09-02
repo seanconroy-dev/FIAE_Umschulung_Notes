@@ -20,3 +20,5 @@ desktop.ini
 *.gz
 *.png
 *.jpg
+!WiSo/WIL/bilder/
+!WiSo/WIL/bilder/Produktionsfaktoren.png
