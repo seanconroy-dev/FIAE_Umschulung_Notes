@@ -101,8 +101,7 @@ Kosten = 20.000.000 / (Bandbreite in Mbit/s)
 ### Elektrotechnik-Grundlagen (Wiederholung)
 
 - **Kondensator / Blindwiderstand**  
-  - Formel-Beispiel: `Xc = 1 / (2π f C)`  
-  - (Die Notiz `x²c = 1/z*...f` war fehlerhaft → hier die richtige Formel)  
+  - Formel-Beispiel: `Xc = 1 / (2π f C)`   
 - **Leistung**  
   - `P = U * I`  
   - Leistung = Spannung × Strom  
