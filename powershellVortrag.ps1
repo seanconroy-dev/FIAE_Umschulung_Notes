@@ -1,4 +1,3 @@
-# DROP-IN FIX: keep your *working* script, just replace your Show-Box with this centered version.
 # No cursor moves, no side-effects. Supports optional -ContentWidth and -NoCenter.
 
 function Show-Box {
