@@ -53,8 +53,8 @@
 ```mermaid
 erDiagram
     KUNDE ||--o{ BESTELLUNG
-    BESTELLUNG ||--o{ BESTELLPOSITION  
-    ARTIKEL ||--o{ BESTELLPOSITION 
+    BESTELLUNG ||--o{ BESTELLPOSITION
+    ARTIKEL ||--o{ BESTELLPOSITION
 
     KUNDE {
         int KNr PK
@@ -78,6 +78,7 @@ erDiagram
         int ANr FK
         int Anzahl
     }
+
 ```
 
 ## Boyce-Codd-Normalform (BCNF)
