@@ -52,9 +52,9 @@
 
 ```mermaid
 erDiagram
-    KUNDE ||--o{ BESTELLUNG : gibt auf
-    BESTELLUNG ||--o{ BESTELLPOSITION : enthaelt
-    ARTIKEL ||--o{ BESTELLPOSITION : wird bestellt in
+    KUNDE ||--o{ BESTELLUNG
+    BESTELLUNG ||--o{ BESTELLPOSITION  
+    ARTIKEL ||--o{ BESTELLPOSITION 
 
     KUNDE {
         int KNr PK
