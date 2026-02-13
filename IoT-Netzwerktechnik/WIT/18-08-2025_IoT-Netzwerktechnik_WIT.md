@@ -1,88 +1,173 @@
-﻿## Montag, 18-08-2025_IoT-Netzwerktechnik_WIT
+---
+title: "IoT – MQTT, Mosquitto, Docker & Sensordaten mit ESP32"
+date: 2025-08-18
+weekday: "Montag"
+subject: "IoT & Netzwerktechnik"
+instructor: "WIT"
+program: "FIAE Umschulung 2025-2027"
+module: "IoT-Kommunikation & Datenverarbeitung"
+topic: "MQTT, Mosquitto, Node-RED, Grafana, Docker"
+level: "Grundlagen"
+tags:
+  - MQTT
+  - Mosquitto
+  - ESP32
+  - DHT22
+  - Node-RED
+  - Grafana
+  - Docker
+  - IoT
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
 
-### Was ist Mosquitto?
+# Montag, 2025-08-18_IoT-Netzwerktechnik_WIT
 
-**Eclipse Mosquitto** ist ein leichtgewichtiger MQTT-Broker (Message Queuing Telemetry Transport), der zur Kommunikation zwischen IoT-Geräten verwendet wird.
+## Eclipse Mosquitto
 
-- Protokoll: MQTT (leichtgewichtig, für Netzwerke mit geringer Bandbreite optimiert)
-- Einsatz: z.B. für Sensordatenübertragung zwischen Geräten (Publisher/Subscriber-Prinzip)
-- Open Source und weit verbreitet im IoT-Umfeld
+**Eclipse Mosquitto** ist ein leichtgewichtiger MQTT-Broker (Message Queuing Telemetry Transport).
+
+### Eigenschaften
+- Open Source
+- Sehr ressourcenschonend
+- Optimiert für geringe Bandbreite
+- Ideal für IoT-Umgebungen
+
+### Funktionsprinzip (Publisher/Subscriber)
+- **Publisher** sendet Nachrichten an ein Topic
+- **Broker (Mosquitto)** verteilt Nachrichten
+- **Subscriber** empfängt Nachrichten vom Topic
+
+Beispiel:
+- ESP32 → sendet Temperatur an `SCAG/Temp`
+- Node-RED → abonniert `SCAG/Temp`
+- Grafana → visualisiert gespeicherte Daten
 
 ---
 
-### DHT22 kommt in der Prüfung
+## DHT22 (Prüfungsrelevant)
 
-**DHT22** ist ein digitaler Sensor zur Messung von Temperatur und Luftfeuchtigkeit.
+Digitaler Sensor für:
+- Temperatur
+- Luftfeuchtigkeit
 
-- Genaue Temperatur- und Luftfeuchtigkeitsdaten
-- Typischerweise über GPIO-Pins an Raspberry Pi oder Mikrocontroller angeschlossen
-- In der Abschlussprüfung relevant! (praktische Anwendung + ggf. Auswertung via Node-RED oder Python)
+### Eigenschaften
+- Liefert Float-Werte
+- Anschluss über GPIO
+- Wird oft mit:
+  - Raspberry Pi
+  - ESP32
+  - Arduino
+  - Node-RED
+  - Python
 
----
-
-### IoT und Datenbanken
-
-- IoT-Geräte erzeugen viele **Messwerte (z.B. Sensordaten)**
-- Diese werden meist in einer **Zeitreihendatenbank** gespeichert (z. B. InfluxDB, SQLite)
-- Wichtige Verbindung zu Themen wie:
-  - SQL-Grundlagen
-  - Datenanalyse & Visualisierung
-  - Datenlogging (über Docker, Node-RED, etc.)
-
----
-
-### Grafana
-
-**Grafana** ist ein Tool zur **Visualisierung von Daten**, vor allem Zeitreihendaten.
-
-- Ideal für die Darstellung von Sensordaten aus IoT-Systemen
-- Unterstützt viele Datenquellen (InfluxDB, MySQL, Prometheus etc.)
-- Grafische Dashboards, Alerting-Funktionen
+Typischer Prüfungsbezug:
+- Sensordaten erfassen
+- Weiterverarbeitung über MQTT
+- Speicherung in Datenbank
+- Visualisierung
 
 ---
 
-### Node-RED
+## IoT & Datenbanken
 
-**Node-RED** ist eine Flow-basierte Programmierumgebung für IoT-Projekte.
+IoT-Geräte erzeugen kontinuierlich Messwerte.
 
-- Ermöglicht visuelles Programmieren (Drag & Drop)
-- Integration von MQTT, Datenbanken, HTTP, GPIO etc.
-- Sehr beliebt für schnelle Prototypen und einfache Automatisierung
+Diese werden meist gespeichert in:
+- Zeitreihendatenbanken (z. B. InfluxDB)
+- SQL-Datenbanken (z. B. SQLite, MySQL)
 
----
-
-### Docker
-
-**Docker** ist eine Container-Plattform zur Bereitstellung und Isolierung von Software.
-
-- In IoT-Projekten genutzt für:
-  - Isolierte Umgebung für Broker, Node-RED, Grafana, Datenbank
-  - Reproduzierbare Installationen (z. B. `docker-compose`)
-- Vorteil: Einfaches Setup, portabel, unabhängig vom Host-System
+Relevante Konzepte:
+- Datenlogging
+- Persistenz
+- Zeitstempel
+- Aggregation
+- Visualisierung
 
 ---
 
-### Arduino Code: ESP32 + DHT22 + Ultraschallsensor + MQTT
+## Grafana
 
-#### Was macht der Code?
+Grafana ist ein Visualisierungstool für Zeitreihendaten.
 
-Dieses Arduino-Programm läuft auf einem **ESP32** und erfüllt folgende Aufgaben:
+### Funktionen
+- Dashboard-Erstellung
+- Diagramme
+- Alerting
+- Unterstützung vieler Datenquellen:
+  - InfluxDB
+  - MySQL
+  - Prometheus
+  - PostgreSQL
 
-1. **Verbindet sich mit einem WLAN-Netzwerk**
-2. **Stellt eine Verbindung zu einem lokalen MQTT-Broker (Mosquitto) her**
-3. **Liest Sensordaten** von:
-   - einem **DHT22** (Temperatur & Luftfeuchtigkeit)
-   - einem **Ultraschallsensor** (Abstandsmessung)
-4. **Gibt alle Messdaten** auf der seriellen Konsole aus
-5. **Sendet die Daten** über MQTT an drei Topics:
-   - `SCAG/Temp` → Temperatur
-   - `SCAG/Humi` → Luftfeuchtigkeit
-   - `SCAG/Abstand` → Abstand
-6. Wiederholt den Ablauf alle 3 Sekunden
+Wird häufig kombiniert mit:
+- MQTT
+- Node-RED
+- Docker
+- InfluxDB
 
-#### Ziel:
+---
 
-Die Daten können z. B. in **Node-RED**, **InfluxDB** oder **Grafana** weiterverarbeitet bzw. visualisiert werden.
+## Node-RED
+
+Flow-basierte IoT-Plattform.
+
+### Eigenschaften
+- Visuelle Programmierung (Drag & Drop)
+- MQTT-Integration
+- Datenbank-Anbindung
+- HTTP-Requests
+- GPIO-Steuerung
+
+Ideal für:
+- Prototyping
+- Automatisierung
+- Datenverarbeitung
+
+---
+
+## Docker
+
+Container-Plattform zur Isolation von Anwendungen.
+
+### Vorteil im IoT-Kontext
+- Broker, Node-RED, Grafana getrennt ausführbar
+- Reproduzierbare Setups (docker-compose)
+- Keine Abhängigkeit vom Hostsystem
+- Portabilität
+
+Typische Architektur:
+
+ESP32  
+→ Mosquitto (Docker)  
+→ Node-RED (Docker)  
+→ InfluxDB (Docker)  
+→ Grafana (Docker)
+
+---
+
+# Arduino-Code: ESP32 + DHT22 + Ultraschallsensor + MQTT
+
+## Ziel des Programms
+
+1. WLAN-Verbindung herstellen  
+2. MQTT-Verbindung aufbauen  
+3. Sensordaten lesen  
+4. Daten seriell ausgeben  
+5. Daten an MQTT-Topics senden  
+6. Wiederholung alle 3 Sekunden  
+
+---
+
+## MQTT-Topics
+
+- `SCAG/Temp`
+- `SCAG/Humi`
+- `SCAG/Abstand`
+
+---
+
+## Arduino-Code
 
 ```cpp
 #include "WiFi.h"
@@ -115,25 +200,20 @@ PubSubClient client(espClient);
 void connectToNetwork() {
   Serial.begin(115200);
   WiFi.begin(ssid, password);
+
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.println("Establishing connection to WiFi..");
-    Serial.print("SSID: "); Serial.println(ssid);
-    Serial.print("Paßwort: "); Serial.println(password);
   }
+
   Serial.println("Connected to network");
 }
 
 void mqttconnect() {
   while (!client.connected()) {
-    Serial.print("MQTT connecting ...");
-    String clientId = "SCAG";
-    if (client.connect(clientId.c_str())) {
-      Serial.println("connected");
+    if (client.connect("SCAG")) {
+      Serial.println("MQTT connected");
     } else {
-      Serial.print("failed, status code = ");
-      Serial.print(client.state());
-      Serial.println(" try again in 5 seconds");
       delay(5000);
     }
   }
@@ -142,39 +222,30 @@ void mqttconnect() {
 void setup() {
   connectToNetwork();
   WiFi.setSleep(false);
-  Serial.println(WiFi.localIP());
-  Serial.println(WiFi.macAddress());
 
   client.setServer(mqtt_server, 1883);
+
   dht.begin();
   pinMode(Trigger_AusgangsPin, OUTPUT);
   pinMode(Echo_EingangsPin, INPUT);
 }
 
 void loop() {
-  Serial.begin(115200);
 
   if (WiFi.status() != WL_CONNECTED) {
     connectToNetwork();
   }
+
   if (!client.connected()) {
     mqttconnect();
   }
-
-  Serial.println("---------Temperatur und Luftfeuchtigkeit (DHT22) ----------");
 
   float h = dht.readHumidity();
   float t1 = dht.readTemperature();
 
   if (isnan(h) || isnan(t1)) {
-    Serial.println("Error while reading the sensor");
     return;
   }
-
-  Serial.print("Luftfeuchtigkeit: "); Serial.print(h); Serial.print(" %\t");
-  Serial.print("Temperatur: "); Serial.print(t1); Serial.print(char(186));
-  Serial.println("C ");
-  Serial.println("-----------------------------------------------------------\n");
 
   digitalWrite(Trigger_AusgangsPin, HIGH);
   delayMicroseconds(10);
@@ -182,15 +253,6 @@ void loop() {
 
   Dauer = pulseIn(Echo_EingangsPin, HIGH);
   Abstand = Dauer / 58.2;
-
-  if (Abstand >= maximumRange || Abstand <= minimumRange) {
-    Serial.println("Abstand außerhalb des Messbereichs");
-    Serial.println("-----------------------------------");
-  } else {
-    Serial.print("Der Abstand beträgt: "); Serial.print(Abstand); Serial.println(" cm");
-    Serial.print("Die Dauer beträgt: "); Serial.print(Dauer); Serial.println(" ms");
-    Serial.println("-----------------------------------");
-  }
 
   client.publish(TMP1_TOPIC, String(t1).c_str(), true);
   client.publish(LFK_TOPIC, String(h).c_str(), true);
@@ -202,17 +264,27 @@ void loop() {
 
 ---
 
+## Wichtige technische Hinweise
+
+- WLAN-Passwörter niemals im öffentlichen Repository speichern
+- `Serial.begin()` gehört ausschließlich in `setup()`
+- `pulseIn()` misst Echozeit in Mikrosekunden
+- 58.2 ergibt sich aus Schallgeschwindigkeit in Luft
+- `delay()` blockiert den Controller
+- MQTT Retain-Flag (`true`) speichert letzte Nachricht im Broker
+
+---
+
 <details style="margin-top: 2em;">
 <summary style="font-size: 0.9em; color: #888;">Metadaten anzeigen</summary>
 <p style="font-size: 0.85em; color: grey;">
-Teil der FIAE-Umschulung (2025–2027) am BFW Mühlenbeck.<br>
+Teil der FIAE-Umschulung (2025-2027) am BFW Muehlenbeck.<br>
 Diese Mitschrift entstand im Unterricht am 18.08.2025 mit WIT.<br>
-Sie basiert auf gemeinsam erarbeiteten Inhalten und ergänzenden Übungsbeispielen vom 18.08.2025.<br><br>
-Die Version wurde inhaltlich überarbeitet, strukturell optimiert und technisch ergänzt,<br>
-um Lernerfolg, Prüfungsrelevanz und Nachvollziehbarkeit zu fördern.<br><br>
-Öffentlich dokumentiert zur Wiederholung, Prüfungsvorbereitung und als Orientierungshilfe für Dritte.<br><br>
+Sie basiert auf gemeinsam erarbeiteten Inhalten und ergaenzenden Uebungsbeispielen vom 18.08.2025.<br><br>
+Die Version wurde inhaltlich ueberarbeitet, strukturell optimiert und technisch ergaenzt,<br>
+um Lernerfolg, Pruefungsrelevanz und Nachvollziehbarkeit zu foerdern.<br><br>
 Quelle: Eigene Mitschrift & Unterrichtsinhalte<br>
 Autor: Sean Conroy<br>
-Lizenz: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+Lizenz: CC BY-NC-SA 4.0
 </p>
 </details>
