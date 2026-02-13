@@ -1,4 +1,25 @@
-﻿# Montag, 26-01-2026_Datenbanken_KNO
+---
+title: "Subqueries (Unterabfragen) in SQL"
+date: 2026-01-26
+weekday: "Montag"
+subject: "Datenbanken"
+instructor: "KNO"
+program: "FIAE Umschulung 2025-2027"
+module: "SQL & Abfragen"
+topic: "Subqueries"
+level: "Aufbau"
+tags:
+  - Datenbanken
+  - SQL
+  - DQL
+  - Subqueries
+  - CTE
+  - Performance
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+# Montag, 2026-01-26_Datenbanken_KNO
 
 ## Subqueries (Unterabfragen)
 
@@ -9,7 +30,9 @@
   - **Liste** (eine Spalte mit mehreren Werten)
   - **Tabelle** (mehrere Spalten und Zeilen)
 
-### Verwendung von Subqueries in SQL-Klauseln
+---
+
+## Verwendung von Subqueries in SQL-Klauseln
 
 - `SELECT` erwartet:
   - Skalar (z. B. Aggregat oder Berechnung)
@@ -37,7 +60,10 @@
 - `WITH ... AS (SELECT ...)` (Common Table Expression, CTE) erwartet:
   - Tabelle
 
-Beispiel:
+---
+
+### Beispiel: Common Table Expression (CTE)
+
 ```sql
 WITH dept_count AS (
     SELECT department_id, COUNT(*) AS emp_count
@@ -49,9 +75,12 @@ FROM dept_count
 WHERE emp_count > 10;
 ```
 
-### Beispiele für Subqueries
+---
 
-**Skalare Subquery (Einzelwert):**
+## Beispiele für Subqueries
+
+### Skalare Subquery (Einzelwert)
+
 ```sql
 SELECT name
 FROM employees
@@ -62,7 +91,10 @@ WHERE department_id = (
 );
 ```
 
-**Subquery mit Liste (`IN`):**
+---
+
+### Subquery mit Liste (`IN`)
+
 ```sql
 SELECT name
 FROM employees
@@ -73,7 +105,10 @@ WHERE department_id IN (
 );
 ```
 
-**Subquery mit Aggregatfunktion:**
+---
+
+### Subquery mit Aggregatfunktion
+
 ```sql
 SELECT name, salary
 FROM employees
@@ -83,7 +118,10 @@ WHERE salary > (
 );
 ```
 
-**Korrelierte Subquery (Bezug auf äußere Abfrage):**
+---
+
+### Korrelierte Subquery (Bezug auf äußere Abfrage)
+
 ```sql
 SELECT name,
        (SELECT COUNT(*)
@@ -92,13 +130,17 @@ SELECT name,
 FROM employees;
 ```
 
-### Weitere Eigenschaften von Subqueries
+---
+
+## Weitere Eigenschaften von Subqueries
 
 - Subqueries können selbst weitere Subqueries enthalten (Verschachtelung).
 - Sie können als Ausdruck, Filter oder Datenquelle eingesetzt werden.
 - Korrelierte Subqueries werden für jede Zeile der äußeren Abfrage erneut ausgewertet.
 
-### Performance und Best Practices
+---
+
+## Performance und Best Practices
 
 - Subqueries können die Performance negativ beeinflussen, wenn sie ungünstig eingesetzt werden.
 - Wichtige Optimierungsmaßnahmen:
@@ -120,7 +162,7 @@ Diese Mitschrift entstand im Unterricht am 26.01.2026 mit KNO.<br>
 Sie basiert auf gemeinsam erarbeiteten Inhalten und ergaenzenden Uebungsbeispielen vom 26.01.2026.<br><br>
 Die Version wurde inhaltlich ueberarbeitet, strukturell optimiert und technisch ergaenzt,<br>
 um Lernerfolg, Pruefungsrelevanz und Nachvollziehbarkeit zu foerdern.<br><br>
-Oeffentlich dokumentiert zur Wiederholung, Pruefungsvorbereitung und als Orientierungshilfe fuer Dritte.<br><br>
+Fach: Datenbanken<br>
 Quelle: Eigene Mitschrift & Unterrichtsinhalte<br>
 Autor: Sean Conroy<br>
 Lizenz: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
