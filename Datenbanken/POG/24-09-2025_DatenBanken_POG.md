@@ -1,6 +1,25 @@
+---
+title: "Fremdschlüssel und Beziehungen in relationalen Datenbanken"
+date: 2025-09-24
+weekday: "Mittwoch"
+subject: "Datenbanken"
+instructor: "POG"
+program: "FIAE Umschulung 2025-2027"
+module: "Relationales Datenbankdesign"
+topic: "Fremdschlüssel & Kardinalitäten"
+level: "Grundlagen"
+tags:
+  - Datenbanken
+  - Fremdschlüssel
+  - ER-Modell
+  - Kardinalitäten
+  - Normalisierung
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
 
-## Mittwoch, 24-09-2025_DatenBanken_POG  
-### Fremdschlüssel und Beziehungen in relationalen Datenbanken
+# Mittwoch, 2025-09-24_Datenbanken_POG  
+## Fremdschlüssel und Beziehungen in relationalen Datenbanken
 
 **Thema:** Beziehungen zwischen Tabellen  
 **Kontext:** Relationales Datenbankdesign (Grundlagen)
@@ -54,12 +73,10 @@ Relationale Datenbanken können **N:M-Beziehungen nicht direkt** abbilden.
 - Die Hilfstabelle enthält:
   - den Primärschlüssel der ersten Tabelle als Fremdschlüssel
   - den Primärschlüssel der zweiten Tabelle als Fremdschlüssel
-- Beide Fremdschlüssel bilden oft gemeinsam den Primärschlüssel der Hilfstabelle
-
-> **Die „N-Seite“ kommt immer in die Hilfstabelle.**
+- Beide Fremdschlüssel bilden häufig gemeinsam den Primärschlüssel der Hilfstabelle
 
 ### Beispiel
-- **Schüler (N)** ↔ **Kurs (M)**
+- **Schueler (N)** ↔ **Kurs (M)**
 
 ```
 Schueler
@@ -88,7 +105,7 @@ Schueler_Kurs
 ### Entscheidungskriterium
 Der Fremdschlüssel wird dort gesetzt:
 - wo die Beziehung **optional** ist
-- oder wo sie **logisch besser passt**
+- oder wo sie fachlich sinnvoller angesiedelt ist
 
 ### Beispiel
 - **Person** ↔ **Ausweis**
@@ -135,14 +152,13 @@ Typische Prüfungsfragen:
 
 ---
 
----
 <details style="margin-top: 2em;">
 <summary style="font-size: 0.9em; color: #888;">Metadaten anzeigen</summary>
 <p style="font-size: 0.85em; color: grey;">
 Teil der FIAE-Umschulung (2025-2027) am BFW Muehlenbeck.<br>
 Diese Mitschrift entstand im Unterricht am 24.09.2025 mit POG.<br>
-Sie basiert auf gemeinsam erarbeiteten Inhalten und ergÃ¤nzenden Uebungsbeispielen vom 24.09.2025.<br><br>
-Die Version wurde inhaltlich Ã¼berarbeitet, strukturell optimiert und technisch ergÃ¤nzt,<br>
+Sie basiert auf gemeinsam erarbeiteten Inhalten und ergaenzenden Uebungsbeispielen vom 24.09.2025.<br><br>
+Die Version wurde inhaltlich ueberarbeitet, strukturell optimiert und technisch ergaenzt,<br>
 um Lernerfolg, Pruefungsrelevanz und Nachvollziehbarkeit zu foerdern.<br><br>
 Oeffentlich dokumentiert zur Wiederholung, Pruefungsvorbereitung und als Orientierungshilfe fuer Dritte.<br><br>
 Quelle: Eigene Mitschrift & Unterrichtsinhalte<br>
