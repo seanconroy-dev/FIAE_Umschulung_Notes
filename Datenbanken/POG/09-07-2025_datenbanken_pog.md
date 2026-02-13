@@ -1,141 +1,184 @@
-### 09.07.2025 · Datenbanken · POG
+---
+title: "Datenbanken – Grundlagen, ER-Modell und Normalisierung"
+date: 2025-07-09
+weekday: "Mittwoch"
+subject: "Datenbanken"
+instructor: "POG"
+program: "FIAE Umschulung 2025-2027"
+module: "Relationale Datenbanken"
+topic: "Grundlagen, ER-Modell, Normalisierung"
+level: "Grundlagen"
+tags:
+  - Datenbanken
+  - RDBMS
+  - ER-Modell
+  - Normalisierung
+  - SQL
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
 
-**Thema**: Datenbank-Grundlagen, Relationale Modelle, ER-Modell, Normalisierung  
-**Art**: Unterricht / Mitschrift  
-**Quelle**: Unterricht am BFW Mühlenbeck, Dozent: POG
+# Mittwoch, 2025-07-09_Datenbanken_POG
 
-- [FI-Wiki.de](https://fi-wiki.de/)
+## Datenbanken – Grundlagen
 
-- **_Tests mit stift und papier!_**
+**Thema:** Datenbank-Grundlagen, Relationale Modelle, ER-Modell, Normalisierung  
+**Art:** Unterricht / Mitschrift  
+**Quelle:** Unterricht am BFW Mühlenbeck (POG)  
 
-# Datenbanken Grundlagen
-
-# Definition und Zweck von Datenbanken
-
-- Eine **Datenbank** ist eine Sammlung von Daten, die sich auf ein bestimmtes Thema oder einen bestimmten Zweck beziehen
-- Sie **ermöglicht Zugriff** auf gespeicherte Daten, ohne dass man wissen muss, wie die Daten organisiert sind
-- Sie **gewährleistet Datensicherheit**, sodass nur berechtigte Benutzer Daten manipulieren können
-- **Relationale Datenbanken** verhindern Redundanzen (mehrfaches Speichern gleicher Informationen) und sichern damit die Datenkonsistenz (Eindeutigkeit der Daten)
-
-## Relationale vs. NoSQL-Datenbanken
-
-### Relationale Datenbanken (RDBMS):
-
-- Speichern Daten in **Tabellen mit vordefinierten Strukturen**
-- Beispiele: MySQL, MariaDB, PostgreSQL, Oracle
-- Eignen sich gut für strukturierte Daten mit klaren Beziehungen
-
-### NoSQL-Datenbanken:
-
-- Bieten **flexiblere Modelle** zur Datenspeicherung
-- Verschiedene Typen:
-  - **Dokumentenbasiert**: MongoDB (speichert Daten als JSON-ähnliche Dokumente)
-  - **Schlüssel-Wert-Paare**: Redis (einfache Zuordnung von Werten zu Schlüsseln)
-  - **Graphen**: Neo4j (spezialisiert auf vernetzte Daten)
-- Gut für unstrukturierte Daten, hohe Skalierbarkeit und flexible Schemas
-
-## Wichtige Begriffe in relationalen Datenbanken
-
-- **Entität**: Ein reales Objekt oder Konzept, das in der Datenbank gespeichert wird
-  - _Beispiel_: Kunde, Bestellung, Produkt
-- **Attribut**: Eigenschaften einer Entität
-  - _Beispiel_: Name, E-Mail-Adresse, Geburtsdatum
-- **Relation**: Verbindung zwischen Entitäten, die durch Schlüssel definiert wird
-  - Wird durch Primary Keys und Foreign Keys realisiert
-- **Datensatz (Tupel)**: Eine Zusammenstellung von Daten über ein Objekt
-  - Wird in einer Tabelle als **Zeile** dargestellt
-  - _Beispiel_: Ein bestimmter Kunde mit allen seinen Daten
-
-## Relationales Modell
-
-- Daten werden in **Tabellen** organisiert (Zeilen und Spalten)
-- **Primärschlüssel (Primary Key, PK)**:
-  - Eindeutige Kennung für eine Zeile in einer Tabelle
-  - _Beispiel_: Kundennummer, Personalnummer
-- **Fremdschlüssel (Foreign Key, FK)**:
-  - Verweis auf einen Primärschlüssel einer anderen Tabelle
-  - Ermöglicht die Verknüpfung von Tabellen
-  - _Beispiel_: Eine Bestellung enthält die Kundennummer als Fremdschlüssel
-
-## Kardinalitäten in relationalen Datenbanken
-
-### 1:1 (Eins-zu-Eins)
-
-- Eine Entität ist **genau einer** anderen Entität zugeordnet
-- _Beispiel_: Ein Mitarbeiter hat genau einen Firmen-Laptop
-
-### 1:N (Eins-zu-Viele)
-
-- Eine Entität kann mit **mehreren anderen** Entitäten verknüpft sein
-- _Beispiel_: Ein Kunde kann mehrere Bestellungen haben, aber jede Bestellung gehört nur zu einem Kunden
-
-### N:M (Viele-zu-Viele)
-
-- Eine Entität kann mit **vielen anderen** verknüpft sein, und umgekehrt
-- _Beispiel_: Ein Teilnehmer kann mehrere Kurse belegen, und ein Kurs kann mehrere Teilnehmer haben
-- **Lösung**: Verwendung einer Zwischentabelle (z.B. teilnehmerKurs)
-  - Diese Zwischentabelle enthält typischerweise die Primärschlüssel beider Entitäten als Fremdschlüssel
-
-## ER-Modell (Entity-Relationship-Modell)
-
-- **Grafische Darstellung** von Datenbankstrukturen
-- Besteht aus:
-  - **Entitäten**: Als Rechtecke dargestellt
-  - **Attributen**: Als Ellipsen/Ovale dargestellt
-  - **Beziehungen**: Als Rauten dargestellt
-
-### Elemente im ER-Diagramm
-
-- **Rechtecke**: Repräsentieren Entitäten (z.B. "kunde", "bestellung")
-- **Ovale/Ellipsen**: Repräsentieren Attribute (z.B. "k_id", "nachname", "geb_datum")
-- **Rauten**: Repräsentieren Beziehungen zwischen Entitäten (z.B. "hat")
-- **Linien**: Verbinden Entitäten mit ihren Attributen und mit Beziehungen
-- **Zahlen/Symbole an Linien**: Geben die Kardinalität an (1, n, m)
-
-### Beispiel ER-Diagramm (aus dem Bild)
-
-- Entität "kunde" mit Attributen:
-  - k_id (Kunden-ID)
-  - nachname
-  - geb_datum (Geburtsdatum)
-- Entität "bestellung" mit Attributen:
-  - b_id (Bestellungs-ID)
-  - datum
-- Beziehung: Ein Kunde "hat" Bestellungen (1:n Beziehung)
-
-  - "1" auf der Kundenseite: Ein Kunde...
-  - "n" auf der Bestellungsseite: ...kann mehrere Bestellungen haben
-
-  ![ER-Modell](./images/erModl.png)
-
-## Zusätzliche Erklärungen
-
-### Warum sind Datenbanken wichtig?
-
-- **Strukturierte Datenspeicherung**: Organisieren großer Datenmengen
-- **Datenintegrität**: Verhindern von Dateninkonsistenzen
-- **Effizienter Zugriff**: Schnelles Abrufen und Aktualisieren von Informationen
-- **Datensicherheit**: Kontrolle, wer auf welche Daten zugreifen darf
-
-### Schritte zur Datenbank-Modellierung
-
-1. **Anforderungsanalyse**: Was soll gespeichert werden?
-2. **Konzeptionelle Modellierung**: Erstellen eines ER-Modells
-3. **Logische Modellierung**: Umwandlung in Tabellen
-4. **Physische Modellierung**: Implementierung in einem DBMS (Datenbankmanagementsystem)
-
-### Normalisierung
-
-- Prozess zur Optimierung der Datenbankstruktur
-- Verhindert Anomalien und Redundanzen
-- Wichtige Normalformen:
-  - **1NF**: Atomare Werte (keine Listen in Zellen)
-  - **2NF**: Keine partiellen Abhängigkeiten
-  - **3NF**: Keine transitiven Abhängigkeiten
+- https://fi-wiki.de/  
+- _Tests mit Stift und Papier_
 
 ---
 
-## _Teil der FIAE-Umschulung (2025–2027) am BFW Mühlenbeck. Diese Notizen sind öffentlich dokumentiert zur Wiederholung, Prüfungsvorbereitung und für Dritte zur Orientierung._
+## Definition und Zweck von Datenbanken
 
-**Unterricht bei:** POG (BFW Mühlenbeck, FIAE Umschulung)  
-**Quelle:** Eigene Mitschrift & Unterrichtsfolien vom 09.07.2025
+- Eine **Datenbank** ist eine strukturierte Sammlung von Daten zu einem bestimmten Thema oder Zweck.
+- Sie ermöglicht **zugriffsgesteuerten Zugriff** auf gespeicherte Daten.
+- Sie gewährleistet **Datensicherheit** und kontrollierte Manipulation.
+- Relationale Datenbanken verhindern **Redundanzen** und sichern die **Datenkonsistenz**.
+
+---
+
+## Relationale vs. NoSQL-Datenbanken
+
+### Relationale Datenbanken (RDBMS)
+
+- Speicherung in **Tabellen mit festen Strukturen**
+- Arbeiten mit Primär- und Fremdschlüsseln
+- Geeignet für klar strukturierte Daten mit festen Beziehungen
+- Beispiele:
+  - MySQL
+  - MariaDB
+  - PostgreSQL
+  - Oracle
+
+### NoSQL-Datenbanken
+
+- Flexible, nicht-tabellarische Modelle
+- Geeignet für große, unstrukturierte oder stark skalierende Datenmengen
+
+Typen:
+
+- **Dokumentenbasiert** (z. B. MongoDB)
+- **Key-Value** (z. B. Redis)
+- **Graphdatenbanken** (z. B. Neo4j)
+
+---
+
+## Zentrale Begriffe im relationalen Modell
+
+- **Entität:** Reales Objekt oder Konzept  
+  Beispiel: Kunde, Bestellung, Produkt  
+
+- **Attribut:** Eigenschaft einer Entität  
+  Beispiel: Name, E-Mail, Geburtsdatum  
+
+- **Relation:** Beziehung zwischen Entitäten  
+  Realisiert über Primär- und Fremdschlüssel  
+
+- **Datensatz (Tupel):** Eine Tabellenzeile  
+
+---
+
+## Relationales Modell
+
+- Daten werden in **Tabellen** organisiert
+- **Primärschlüssel (PK):**
+  - Eindeutige Identifikation eines Datensatzes
+- **Fremdschlüssel (FK):**
+  - Verweis auf PK einer anderen Tabelle
+  - Stellt Beziehung zwischen Tabellen her
+
+---
+
+## Kardinalitäten
+
+### 1:1 (Eins-zu-Eins)
+- Eine Entität gehört genau zu einer anderen  
+Beispiel: Mitarbeiter – Firmenlaptop  
+
+### 1:N (Eins-zu-Viele)
+- Eine Entität kann mehrere andere besitzen  
+Beispiel: Kunde – Bestellungen  
+
+### N:M (Viele-zu-Viele)
+- Viele Entitäten stehen zu vielen anderen in Beziehung  
+Beispiel: Teilnehmer – Kurse  
+
+→ Lösung: **Zwischentabelle** mit beiden Fremdschlüsseln  
+
+---
+
+## ER-Modell (Entity-Relationship-Modell)
+
+Grafische Darstellung der Datenstruktur.
+
+Elemente:
+
+- **Rechtecke:** Entitäten  
+- **Ellipsen:** Attribute  
+- **Rauten:** Beziehungen  
+- **Linien:** Verbindungen  
+- **Zahlen:** Kardinalitäten  
+
+### Beispielstruktur
+
+Entität: **kunde**
+- k_id (PK)
+- nachname
+- geb_datum
+
+Entität: **bestellung**
+- b_id (PK)
+- datum
+
+Beziehung:
+Ein Kunde **hat** mehrere Bestellungen (1:n).
+
+![ER-Modell](./images/erModl.png)
+
+---
+
+## Warum Datenbanken wichtig sind
+
+- Strukturierte Speicherung großer Datenmengen
+- Sicherstellung der Datenintegrität
+- Schneller Zugriff auf Informationen
+- Zugriffskontrolle und Rechteverwaltung
+
+---
+
+## Schritte der Datenbank-Modellierung
+
+1. **Anforderungsanalyse**
+2. **Konzeptionelle Modellierung (ER-Modell)**
+3. **Logische Modellierung (Tabellen)**
+4. **Physische Modellierung (DBMS-Implementierung)**
+
+---
+
+## Normalisierung
+
+Optimierung der Tabellenstruktur zur Vermeidung von Redundanzen und Anomalien.
+
+- **1NF:** Nur atomare Werte
+- **2NF:** Keine partiellen Abhängigkeiten
+- **3NF:** Keine transitiven Abhängigkeiten
+
+---
+
+<details style="margin-top: 2em;">
+<summary style="font-size: 0.9em; color: #888;">Metadaten anzeigen</summary>
+<p style="font-size: 0.85em; color: grey;">
+Teil der FIAE-Umschulung (2025-2027) am BFW Muehlenbeck.<br>
+Diese Mitschrift entstand im Unterricht am 09.07.2025 mit POG.<br>
+Sie basiert auf gemeinsam erarbeiteten Inhalten und ergänzenden Übungsbeispielen vom 09.07.2025.<br><br>
+Die Version wurde inhaltlich überarbeitet, strukturell optimiert und technisch ergänzt,<br>
+um Lernerfolg, Prüfungsrelevanz und Nachvollziehbarkeit zu fördern.<br><br>
+Fach: Datenbanken<br>
+Quelle: Eigene Mitschrift & Unterrichtsfolien<br>
+Autor: Sean Conroy<br>
+Lizenz: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+</p>
+</details>
