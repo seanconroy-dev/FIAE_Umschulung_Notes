@@ -1,90 +1,170 @@
-﻿
-## Mittwoch, 08-10-2025_Datenbanken_KNO
+---
+title: "SQL – Grundlagen und Sprachbereiche"
+date: 2025-10-08
+weekday: "Mittwoch"
+subject: "Datenbanken"
+instructor: "KNO"
+program: "FIAE Umschulung 2025-2027"
+module: "SQL"
+topic: "SQL Grundlagen"
+level: "Grundlagen"
+tags:
+  - Datenbanken
+  - SQL
+  - DDL
+  - DML
+  - DQL
+  - Datentypen
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
 
-### Datenbanksprache SQL anwenden
+# Mittwoch, 2025-10-08_Datenbanken_KNO
+
+## Datenbanksprache SQL anwenden
 
 ---
 
-0. **Hintergrundgeschichte**  
-   - Entstehung und Zweck von SQL  
-   - Bedeutung für relationale Datenbanken  
+## 0. Hintergrundgeschichte
 
-   **SQL** = *Structured Query Language*  
-   → Weitverbreitete Sprache zur Arbeit mit **relationalen Datenbanken**.  
-   Entwickelt Anfang der **1970er Jahre** auf Basis des relationalen Modells von Edgar F. Codd.  
-   SQL ist eine **Standardsprache (ANSI / ISO)** für alle relationalen Datenbanksysteme.  
-   Es existieren jedoch **verschiedene Dialekte**, z. B. MySQL, PostgreSQL, Oracle SQL, SQL Server.
+- Entstehung und Zweck von SQL  
+- Bedeutung für relationale Datenbanken  
 
-   **SQL besteht aus mehreren Sprachbereichen:**
-   - **DDL (Data Definition Language):** Definition von Strukturen → z. B. `CREATE`, `ALTER`, `DROP`
-   - **DML (Data Manipulation Language):** Manipulation von Daten → z. B. `INSERT`, `UPDATE`, `DELETE`
-   - **DQL (Data Query Language):** Abfrage von Daten → z. B. `SELECT`
-   - **DCL (Data Control Language):** Zugriffsrechte → z. B. `GRANT`, `REVOKE`
-   - **TCL (Transaction Control Language):** Steuerung von Transaktionen → z. B. `COMMIT`, `ROLLBACK`
+**SQL** = *Structured Query Language*  
+→ Weitverbreitete Sprache zur Arbeit mit relationalen Datenbanken.  
 
----
+Entwickelt Anfang der **1970er Jahre** auf Basis des relationalen Modells von Edgar F. Codd.  
+SQL ist eine **Standardsprache (ANSI / ISO)** für relationale Datenbanksysteme.  
 
-1. **Syntaktische Grundlagen und Operatoren**  
-   - Grundstruktur von SQL-Befehlen:  
-     `SELECT Spalten FROM Tabelle WHERE Bedingung;`  
-   - Vergleichsoperatoren: `=`, `<>`, `<`, `>`, `<=`, `>=`  
-   - Logische Operatoren: `AND`, `OR`, `NOT`  
-   - Arithmetische Operatoren: `+`, `-`, `*`, `/`  
-
-   **Datentypen in SQL (Übersicht):**
-
-   **Numerische Datentypen:**
-   - `INT` / `INTEGER` – Ganze Zahl (Standardbereich bis ca. ±2 Milliarden)  
-   - `SMALLINT` – Kleinere ganze Zahl (−32.768 bis 32.767)  
-   - `BIGINT` – Sehr große ganze Zahl (bis ca. ±9 Quintillionen)  
-   - `DECIMAL(p,s)` / `NUMERIC(p,s)` – Feste Anzahl an Stellen mit Nachkommastellen (z. B. Geldwerte)  
-   - `FLOAT` / `REAL` / `DOUBLE PRECISION` – Gleitkommazahlen  
-
-   **Zeichenketten (Strings):**
-   - `CHAR(n)` – Feste Länge (z. B. `CHAR(5)` = immer 5 Zeichen)  
-   - `VARCHAR(n)` – Variable Länge bis `n` Zeichen  
-   - `TEXT` – Sehr lange Texte (Länge systemabhängig)  
-
-   **Datums- und Zeittypen:**
-   - `DATE` – Datum (Format: YYYY-MM-DD)  
-   - `TIME` – Uhrzeit (Format: HH:MM:SS)  
-   - `DATETIME` – Kombination aus Datum und Zeit  
-   - `TIMESTAMP` – Zeitstempel, oft automatisch gesetzt  
-   - `YEAR` – Jahresangabe (z. B. 2025)
-
-   **Logische Datentypen:**
-   - `BOOLEAN` / `BOOL` – Wahrheitswert (`TRUE` oder `FALSE`)  
-   - Manche Systeme speichern dies intern als `TINYINT(1)` (z. B. MySQL)
-
-   **Binäre Datentypen (für Dateien, Bilder, etc.):**
-   - `BINARY(n)` – Feste Länge binärer Daten  
-   - `VARBINARY(n)` – Variable Länge binärer Daten  
-   - `BLOB` (*Binary Large Object*) – Große binäre Objekte  
-
-   **Weitere spezielle Typen (je nach System):**
-   - `ENUM('Wert1','Wert2',...)` – Fester Wertebereich  
-   - `SET('Wert1','Wert2',...)` – Kombination mehrerer Werte aus festem Satz  
-   - `JSON` – Strukturierte Datenspeicherung (MySQL, PostgreSQL)  
-   - `UUID` – Universally Unique Identifier (z. B. für Primärschlüssel)
+Es existieren jedoch verschiedene Dialekte, z. B.:
+- MySQL
+- PostgreSQL
+- Oracle SQL
+- Microsoft SQL Server
 
 ---
 
-2. **Anlegen, Ändern und Löschen von Tabellen**  
-   - Tabellenstruktur definieren oder anpassen:
-     - `CREATE TABLE`  
-     - `ALTER TABLE`  
-     - `DROP TABLE`
+## Sprachbereiche von SQL
+
+- **DDL (Data Definition Language)**  
+  → Definition von Strukturen  
+  → `CREATE`, `ALTER`, `DROP`
+
+- **DML (Data Manipulation Language)**  
+  → Manipulation von Daten  
+  → `INSERT`, `UPDATE`, `DELETE`
+
+- **DQL (Data Query Language)**  
+  → Abfrage von Daten  
+  → `SELECT`
+
+- **DCL (Data Control Language)**  
+  → Zugriffsrechte  
+  → `GRANT`, `REVOKE`
+
+- **TCL (Transaction Control Language)**  
+  → Steuerung von Transaktionen  
+  → `COMMIT`, `ROLLBACK`
 
 ---
 
-3. **Einfügen, Ändern und Löschen von Datensätzen**  
-   - Datensätze verwalten:
-     - `INSERT INTO` – neue Daten hinzufügen  
-     - `UPDATE` – vorhandene Daten ändern  
-     - `DELETE FROM` – Daten löschen
+## 1. Syntaktische Grundlagen und Operatoren
+
+Grundstruktur einer Abfrage:
+
+```sql
+SELECT Spalten
+FROM Tabelle
+WHERE Bedingung;
+```
+
+### Vergleichsoperatoren
+`=`, `<>`, `<`, `>`, `<=`, `>=`
+
+### Logische Operatoren
+`AND`, `OR`, `NOT`
+
+### Arithmetische Operatoren
+`+`, `-`, `*`, `/`
 
 ---
 
-4. **Abfrage von Daten**  
-   - Abfragen mit `SELECT`:  
-     `SELECT * FROM kunden;` → alle Spalten  
+## Datentypen in SQL (Übersicht)
+
+### Numerische Datentypen
+- `INT` / `INTEGER` – Ganze Zahl  
+- `SMALLINT` – Kleinere ganze Zahl  
+- `BIGINT` – Sehr große ganze Zahl  
+- `DECIMAL(p,s)` / `NUMERIC(p,s)` – Feste Genauigkeit (z. B. Geldwerte)  
+- `FLOAT`, `REAL`, `DOUBLE PRECISION` – Gleitkommazahlen  
+
+### Zeichenketten
+- `CHAR(n)` – Feste Länge  
+- `VARCHAR(n)` – Variable Länge  
+- `TEXT` – Lange Texte  
+
+### Datums- und Zeittypen
+- `DATE` – Datum (YYYY-MM-DD)  
+- `TIME` – Uhrzeit (HH:MM:SS)  
+- `DATETIME` – Datum + Zeit  
+- `TIMESTAMP` – Zeitstempel  
+- `YEAR` – Jahresangabe  
+
+### Logische Datentypen
+- `BOOLEAN` / `BOOL` – TRUE oder FALSE  
+  - In manchen Systemen intern als `TINYINT(1)` gespeichert  
+
+### Binäre Datentypen
+- `BINARY(n)` – Feste Länge  
+- `VARBINARY(n)` – Variable Länge  
+- `BLOB` – Große binäre Objekte  
+
+### Weitere systemabhängige Typen
+- `ENUM(...)`
+- `SET(...)`
+- `JSON`
+- `UUID`
+
+---
+
+## 2. Tabellen anlegen, ändern und löschen
+
+- `CREATE TABLE`
+- `ALTER TABLE`
+- `DROP TABLE`
+
+---
+
+## 3. Datensätze verwalten
+
+- `INSERT INTO` – neue Daten hinzufügen  
+- `UPDATE` – vorhandene Daten ändern  
+- `DELETE FROM` – Daten löschen  
+
+---
+
+## 4. Daten abfragen
+
+```sql
+SELECT *
+FROM kunden;
+```
+
+→ Gibt alle Spalten der Tabelle `kunden` zurück.
+
+---
+
+<details style="margin-top: 2em;">
+<summary style="font-size: 0.9em; color: #888;">Metadaten anzeigen</summary>
+<p style="font-size: 0.85em; color: grey;">
+Teil der FIAE-Umschulung (2025-2027) am BFW Muehlenbeck.<br>
+Diese Mitschrift entstand im Unterricht am 08.10.2025 mit KNO.<br>
+Sie basiert auf gemeinsam erarbeiteten Inhalten und ergänzenden Übungsbeispielen vom 08.10.2025.<br><br>
+Die Version wurde inhaltlich überarbeitet, strukturell optimiert und technisch ergänzt,<br>
+um Lernerfolg, Prüfungsrelevanz und Nachvollziehbarkeit zu fördern.<br><br>
+Fach: Datenbanken<br>
+Quelle: Eigene Mitschrift & Unterrichtsinhalte<br>
+Autor: Sean Conroy<br>
+Lizenz: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+</p>
+</details>
