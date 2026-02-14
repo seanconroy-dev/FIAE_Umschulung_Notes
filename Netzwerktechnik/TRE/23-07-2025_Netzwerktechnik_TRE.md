@@ -1,50 +1,139 @@
-```markdown
-## Mittwoch, 23-07-2025_Netzwerktechnik_TRE
+---
+title: "Sniffer, CSMA/CD und Bus-Topologie – Grundlagen"
+date: 2025-07-23
+weekday: "Mittwoch"
+subject: "Netzwerktechnik"
+instructor: "TRE"
+program: "FIAE Umschulung 2025-2027"
+module: "Netzwerkgrundlagen"
+topic: "Sniffer, CSMA/CD, Kollisionsverfahren, Topologien"
+level: "Grundlagen"
+tags:
+  - Sniffer
+  - CSMA/CD
+  - CSMA/CA
+  - Kollisionen
+  - Bus-Topologie
+  - OSI-Modell
+  - Netzwerktechnik
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
 
-### Sniffer installieren
-- Cmdlet in PowerShell, um die **reale IP-Adresse** abzufragen:  
+# Sniffer & Zugriffsverfahren – 2025-07-23 (NT, TRE)
+
+---
+
+## Sniffer – Installation & IP-Abfrage
+
+Externe IP-Adresse per PowerShell abrufen:
+
 ```pwsh
 Invoke-RestMethod -Uri 'https://api.ipify.org?format=json'
 ```
 
----
-
-### OSI-Modell – Review
-- **Schicht 0**: Übertragungsmedien (Kabel, LWL, WLAN)  
+Hinweis:
+Dies liefert die oeffentliche IP-Adresse (NAT-Ausgang), nicht die lokale private IP.
 
 ---
 
-### Zugriffsverfahren & Kollisionen
-- **Collision Detection (CD)** → Erkennung von Kollisionen im Netzwerk  
-- **Jam Signal** → Meldung einer erkannten Kollision an alle Teilnehmer  
-- **Backoff-Strategie** → z. B. 1 von 2 Runden Wartezeit, bevor erneut gesendet wird  
-- **CSMA (Carrier Sense Multiple Access)**  
-  - **CSMA/CD** → Collision Detection  
-  - **CSMA/CA** → Collision Avoidance (Kollisionsvermeidung)  
+## OSI-Modell – Review
 
-Quelle: [Wikipedia – CSMA/CD](https://de.wikipedia.org/wiki/Carrier_Sense_Multiple_Access/Collision_Detection)
+Schicht 0 (inoffiziell):
+- Uebertragungsmedien
+- Kupferkabel
+- LWL (Glasfaser)
+- WLAN
+
+Nicht offizieller Bestandteil des OSI-Modells, aber physikalische Grundlage.
 
 ---
 
-### Topologien & Komponenten
-- **Bus-Topologie**  
-  - Historisch verbreitet, heute kaum noch genutzt  
-  - Benötigt **Terminatoren** an den Enden des Busses, um Signalreflexionen zu verhindern  
+## Zugriffsverfahren & Kollisionen
+
+### CSMA – Carrier Sense Multiple Access
+
+Prinzip:
+Ein Geraet prueft, ob das Medium frei ist, bevor es sendet.
+
+---
+
+### CSMA/CD – Collision Detection
+
+Verwendet bei:
+Klassischem Ethernet mit Halbduplex (z. B. Hubs).
+
+Ablauf:
+1. Medium pruefen
+2. Senden
+3. Bei Kollision → Jam Signal
+4. Backoff-Zeit berechnen
+5. Erneuter Sendeversuch
+
+Backoff:
+Binärer exponentieller Backoff-Algorithmus.
+Wartezeit wird zufaellig innerhalb wachsender Zeitfenster gewaehlt.
+
+Hinweis:
+In modernen, vollduplex-basierten Switch-Netzen tritt CSMA/CD praktisch nicht mehr auf.
+
+---
+
+### CSMA/CA – Collision Avoidance
+
+Verwendet bei:
+WLAN (IEEE 802.11).
+
+Prinzip:
+Kollisionen werden moeglichst vermieden, da eine gleichzeitige Sende- und Empfangserkennung nicht moeglich ist.
+
+---
+
+## Jam Signal
+
+- Wird bei erkannter Kollision gesendet.
+- Informiert alle Teilnehmer ueber die Stoerung.
+- Fuehrt zum Abbruch des aktuellen Sendevorgangs.
+
+---
+
+## Bus-Topologie
+
+Historische Netzstruktur:
+- Alle Teilnehmer teilen sich ein gemeinsames Medium.
+- Beispiel: Koaxialkabel-Ethernet (10Base2, 10Base5).
+
+Wichtig:
+- Terminatoren an beiden Enden erforderlich.
+- Verhindern Signalreflexionen.
+- Ohne Terminierung kommt es zu Stoerungen.
+
+Heute:
+Weitgehend durch Stern-Topologien mit Switches ersetzt.
+
+---
+
+## Kernaussagen
+
+- CSMA/CD ist historisch relevant, aber in modernen Switch-Netzen praktisch obsolet.
+- WLAN nutzt CSMA/CA.
+- Bus-Topologien benoetigen Terminatoren.
+- Sniffer helfen bei der Analyse von Netzwerkverkehr.
+- Oeffentliche IP ist nicht gleich lokale IP.
 
 ---
 
 <details style="margin-top: 2em;">
 <summary style="font-size: 0.9em; color: #888;">Metadaten anzeigen</summary>
 <p style="font-size: 0.85em; color: grey;">
-Teil der FIAE-Umschulung (2025–2027) am BFW Mühlenbeck.<br>
+Teil der FIAE-Umschulung (2025-2027) am BFW Muehlenbeck.<br>
 Diese Mitschrift entstand im Unterricht am 23.07.2025 mit TRE.<br>
-Sie basiert auf gemeinsam erarbeiteten Inhalten und ergänzenden Übungsbeispielen vom 23.07.2025.<br><br>
-Die Version wurde inhaltlich überarbeitet, strukturell optimiert und technisch ergänzt,<br>
-um Lernerfolg, Prüfungsrelevanz und Nachvollziehbarkeit zu fördern.<br><br>
-Öffentlich dokumentiert zur Wiederholung, Prüfungsvorbereitung und als Orientierungshilfe für Dritte.<br><br>
+Sie basiert auf gemeinsam erarbeiteten Inhalten und ergaenzenden Uebungsbeispielen vom 23.07.2025.<br><br>
+Die Version wurde inhaltlich ueberarbeitet, strukturell optimiert und technisch ergaenzt,<br>
+um Lernerfolg, Pruefungsrelevanz und Nachvollziehbarkeit zu foerdern.<br><br>
+Oeffentlich dokumentiert zur Wiederholung, Pruefungsvorbereitung und als Orientierungshilfe fuer Dritte.<br><br>
 Quelle: Eigene Mitschrift & Unterrichtsinhalte<br>
 Autor: Sean Conroy<br>
-Lizenz: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+Lizenz: CC BY-NC-SA 4.0
 </p>
 </details>
-```
