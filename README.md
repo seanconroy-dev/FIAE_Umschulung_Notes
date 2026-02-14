@@ -1,24 +1,49 @@
 # FIAE Umschulung Notes (2025–2027)
 
-Markdown-basierte Mitschriften während meiner Umschulung zum  
+Markdown-basierte, strukturierte Mitschriften während meiner Umschulung zum  
 **Fachinformatiker für Anwendungsentwicklung (FIAE)**  
 BFW Mühlenbeck · Zeitraum: **Juni 2025 – Juni 2027**
 
-Dieses Repository dient als zentrale Dokumentation meines Lernfortschritts  
-und enthält tägliche Mitschriften aus allen relevanten Unterrichtseinheiten.
+Dieses Repository dokumentiert systematisch meinen Lernfortschritt  
+und dient als strukturierte Wissensbasis zur Vorbereitung auf **AP1 und AP2 (IHK)**.
+
+---
+
+## Konzept & Standardisierung
+
+Alle Notizen:
+
+- enthalten ein einheitliches **Frontmatter** (Metadaten: Fach, Modul, Dozent, Thema, Level, Tags)
+- folgen einer festen **Footer-Struktur**
+- sind prüfungsorientiert aufbereitet (AP1/AP2-Fokus)
+- werden fachlich überarbeitet und strukturell optimiert
+
+Ziel ist nicht nur Mitschrift, sondern **lernoptimierte Dokumentation**.
 
 ---
 
 ## Struktur
 
-Die Notizen sind gegliedert nach:
+Die Inhalte sind gegliedert nach:
 
-- **Fach** (z. B. Datentechnik, WISO, Programmieren)
-- **Dozent** innerhalb jedes Fachbereichs
-- **Dateinamen** folgen dem Format: `DD.MM.YYYY_thema.md`  
-  (z. B. `10.07.2025-zahlensysteme.md`)
+- **Fachbereich**
+- **Dozent**
+- **Modul / Thema**
 
-### Beispielhafte Ordnerstruktur
+Dateinamen folgen dem Format:
+
+```
+DD.MM.YYYY-thema.md
+```
+
+Beispiel:
+```
+10.07.2025-zahlensysteme.md
+```
+
+---
+
+## Beispielhafte Ordnerstruktur
 
 ```
 FIAE_Umschulung_Notes/
@@ -49,28 +74,36 @@ FIAE_Umschulung_Notes/
 
 ---
 
-## Zweck dieses Repos
+## Zweck dieses Repositories
 
-- Strukturierte Mitschriften zur Wiederholung & Vertiefung  
-- Vorbereitung auf AP1 / AP2 (IHK)  
-- Versionskontrolle & Fortschrittsdokumentation  
+- Wiederholung & langfristige Wissenssicherung  
+- Systematische Prüfungsvorbereitung (AP1/AP2)  
+- Nachvollziehbare Versionshistorie  
 - Öffentliches Lernportfolio  
 
-> Hinweis: Diese Notizen spiegeln meinen persönlichen Lernweg wider  
-> und erheben keinen Anspruch auf Vollständigkeit oder offizielle Korrektheit.
+---
+
+## Qualitätshinweis
+
+Diese Notizen basieren auf Unterrichtsinhalten und eigener Nachbearbeitung.  
+Sie stellen **keine offizielle Lehrunterlage** dar und ersetzen kein Fachbuch.
 
 ---
 
 ## Lizenz
 
-© 2025–2027 Sean Conroy. Persönliche Lernunterlagen.  
-Keine Garantie auf Vollständigkeit oder Korrektheit.  
-Verwendung zu Lernzwecken erlaubt, kommerzielle Nutzung nicht gestattet.
+© 2025–2027 Sean Conroy  
+Lizenz: **CC BY-NC-SA 4.0**
+
+- Nutzung zu Lernzwecken erlaubt  
+- Namensnennung erforderlich  
+- Keine kommerzielle Nutzung  
+- Weitergabe nur unter gleichen Bedingungen  
 
 ---
 
 ## Autor
 
 **Sean Conroy**  
-BFW Mühlenbeck – FIAE Umschulung 2025–2027  
-[https://github.com/seanconroy-dev](https://github.com/seanconroy-dev)
+FIAE Umschulung · BFW Mühlenbeck  
+GitHub: https://github.com/seanconroy-dev
