@@ -1,334 +1,342 @@
-﻿## Montag, 15-09-2025_ProgrammierTechnik_WED
+---
+title: "Switch-Case und For-Schleife in Java"
+date: 2025-09-15
+weekday: "Montag"
+subject: "Programmiertechnik"
+instructor: "WED"
+program: "FIAE Umschulung 2025-2027"
+module: "Kontrollstrukturen"
+topic: "switch, for-Schleife, Schleifenübungen"
+level: "Grundlagen"
+tags:
+  - switch
+  - switch-expression
+  - for-loop
+  - Schleifen
+  - Kontrollstrukturen
+  - FizzBuzz
+  - SumUp
+  - EvenOdd
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
 
-### Switch-Case in Java
-
-#### Grundidee
-- Kontrollstruktur zum Abprüfen **fester Werte** einer Variablen.  
-- Ersetzt oft lange **if-else-if-Ketten**.  
-- Bietet **mehr Übersichtlichkeit und Lesbarkeit**, wenn mehrere Ausgänge möglich sind.  
-- Besonders nützlich für **Menüführung, Zustandsabfragen oder Mapping von Werten**.  
-- Seit Java 12/14 → **neue Switch-Expressions** mit vereinfachter Syntax und direkter Rückgabe von Werten.  
+# Switch-Case & For-Schleife (2025-09-15 · WED)
 
 ---
 
-#### Klassische Syntax (ältere Form)
+# FOR LOOP (for-Schleife)
+
+## Was ist eine for-Schleife?
+
+Eine **for-Schleife** ist eine kopfgesteuerte Schleife.
+
+Sie wird verwendet, wenn:
+- die Anzahl der Wiederholungen bekannt ist
+- ein Zähler benötigt wird
+- eine Sequenz von Zahlen durchlaufen werden soll
+
+---
+
+## Syntax
+
 ```java
-switch (variable) {
-    case Wert1:
-        // Anweisungen
-        break;
-    case Wert2:
-        // Anweisungen
-        break;
-    default:
-        // Anweisungen falls kein Wert zutrifft
+for (Initialisierung; Bedingung; Veränderung) {
+    // Anweisungen
 }
 ```
-
----
-
-#### Einfaches Beispiel
-```java
-int tag = 2;
-
-switch (tag) {
-    case 1:
-        System.out.println("Sonntag");
-        break;
-    case 2:
-        System.out.println("Montag");
-        break;
-    case 3:
-        System.out.println("Dienstag");
-        break;
-    default:
-        System.out.println("Unbekannter Tag");
-}
-```
-
-**Ablauf im Beispiel:**
-- `tag == 2` → führt aus: `System.out.println("Montag");`
-- `break;` → verhindert, dass weitere cases ebenfalls ausgeführt werden (Fall-Through).
-- `default:` → wird ausgeführt, wenn kein case passt (ähnlich wie else).
-
----
-
-#### Fall-Through Problem (ohne `break`)
-```java
-int tag = 2;
-
-switch (tag) {
-    case 1:
-        System.out.println("Sonntag");
-    case 2:
-        System.out.println("Montag");
-    case 3:
-        System.out.println("Dienstag");
-}
-```
-**Ausgabe:**
-```
-Montag
-Dienstag
-```
-- Erklärung: Ohne `break;` springt das Programm nach einem Treffer in die nächsten Fälle hinein.  
-- Deshalb ist `break;` **fast immer notwendig**, außer wenn Fall-Through gewollt ist.  
-
----
-
-#### Switch mit Strings
-Seit Java 7 möglich:
-```java
-String farbe = "rot";
-
-switch (farbe) {
-    case "rot":
-        System.out.println("Stop!");
-        break;
-    case "grün":
-        System.out.println("Go!");
-        break;
-    default:
-        System.out.println("Unbekannte Farbe");
-}
-```
-
----
-
-#### Switch mit Enums
-Enums sind oft eleganter als Zahlen oder Strings:
-```java
-enum Wochentag { MONTAG, DIENSTAG, MITTWOCH }
-
-Wochentag heute = Wochentag.MONTAG;
-
-switch (heute) {
-    case MONTAG:
-        System.out.println("Wochenstart");
-        break;
-    case DIENSTAG:
-        System.out.println("Noch weit bis zum Wochenende");
-        break;
-    default:
-        System.out.println("Anderer Tag");
-}
-```
-
----
-
-### Neue Switch-Expression (seit Java 12/14)
-
-#### Grundidee
-- Erweitert den klassischen `switch`.  
-- Kann jetzt **einen Wert zurückgeben**.  
-- Nutzt **Arrow-Syntax (`->`)**, kein `break;` mehr nötig.  
-- Mehrere `case`-Labels können kombiniert werden.  
-
----
-
-#### Beispiel: Rückgabe eines Wertes
-```java
-int tag = 2;
-
-String wochentag = switch (tag) {
-    case 1 -> "Sonntag";
-    case 2 -> "Montag";
-    case 3 -> "Dienstag";
-    default -> "Unbekannt";
-};
-
-System.out.println(wochentag);
-```
-👉 Hier liefert `switch` direkt einen String zurück.  
-
----
-
-#### Beispiel: Block mit `yield`
-Wenn mehrere Anweisungen gebraucht werden:
-```java
-int tag = 2;
-
-String info = switch (tag) {
-    case 1, 7 -> "Wochenende";
-    case 2, 3, 4, 5, 6 -> {
-        System.out.println("Arbeitstag erkannt");
-        yield "Woche";
-    }
-    default -> "Unbekannt";
-};
-
-System.out.println(info);
-```
-
----
-
-### Vergleich Klassisch vs. Neu
-
-| Klassischer Switch | Neue Switch-Expression |
-|--------------------|-------------------------|
-| Benötigt `break;` nach jedem case | Kein `break;` nötig |
-| Nur Kontrollfluss, keine direkte Rückgabe | Kann Werte zurückgeben |
-| Lesbarer als lange if-else-Ketten | Noch kompakter, keine Fehler durch fehlendes break |
-| Unterstützt primitive Typen, Strings, Enums | Gleiche Typen + modernere Syntax |
-| Fall-Through möglich (Fehlerquelle) | Kein Fall-Through |
-
----
-
-#### Typische Einsatzgebiete
-- Menüführung in Konsolenprogrammen (z. B. „1 = Addieren, 2 = Subtrahieren“).  
-- Übersetzung von Zahlen in Texte (z. B. Wochentage, Monate).  
-- Zustandsmaschinen (z. B. Ampel mit Rot, Gelb, Grün).  
-- Neue Syntax: Besonders geeignet, wenn ein **Wert zurückgegeben** werden soll.  
-
----
-
-#### Einschränkungen
-- Funktioniert nur mit:
-  - `byte`, `short`, `int`
-  - `char`
-  - `String`
-  - `enum`
-- Keine Bereichsvergleiche (`<`, `>`, `<=`, `>=`). Dafür bleibt `if-else` nötig.  
-
----
-
-#### Typische Prüfungsfrage
-- „Wann sollte man switch verwenden und wann if-else?“  
-  - **switch (klassisch oder neu)**: Wenn eine Variable mit **festen, diskreten Werten** verglichen wird.  
-  - **if-else**: Wenn **Bereichsprüfungen** oder **komplexe Bedingungen** benötigt werden.  
-- „Was ist der Unterschied zwischen klassischem switch und neuer Switch-Expression?“  
-  - Klassisch → benötigt `break;`, keine Rückgabe möglich.  
-  - Neu → kompakter, kein `break;`, Werte können direkt zurückgegeben werden.  
-
----
-### For Loop
-what is it?
-what is the syntax
-what is it used for?
-why is it better or worse..
-examples backwards and forwards
-skipping number ( i -2)....
-
-dauerschleifen.....
-uebung ( sum up )
-SumUp
-
-Filename: SumUp.java
-
-Schreiben Sie ein Java-Programm, das die Summe aller Zahlen von 1 bis 100 berechnet und anschließend 
-das Ergebnis auf der Konsole ausgibt.
-
-Anforderungen:
-- Verwenden Sie eine Schleife (for).
-- Nutzen Sie eine Variable, um die Zwischensumme zu speichern und schrittweise zu erhöhen.
-- Geben Sie das Ergebnis mit dem Wort „Summe“ aus, z. B.:
-
->> java .\SumUp.java
-Summe: 5050
-
-Erweiterung: Zwischenergebnisse
-- Geben Sie an:
-  o Die bisherige Summe
-  o Die zu addierende Zahl
-  o Die neue Summe
-
->> java .\SumUp.java
-0 + 1 = 1
-1 + 2 = 3
-3 + 3 = 6
-6 + 4 = 10
-10 + 5 = 15
-15 + 6 = 21
-21 + 7 = 28
-
----
-Even-odd
-
-Filename: EvenOdd.java
-
-Schreiben Sie ein Java-Programm, das die Zahlen von 1 bis 20 durchläuft und bei jeder Zahl prüft, 
-ob sie gerade oder ungerade ist.
-
-Anforderungen:
-- Verwenden Sie eine Schleife (for).
-- Ermitteln Sie mit Hilfe des Modulo-Operators (%), ob eine Zahl gerade ist (i % 2 == 0).
-- Geben Sie für jede Zahl eine Zeile im Format aus:
-
->> java .\EvenOdd.java
-1 ist ungerade
-2 ist gerade
-3 ist ungerade
-4 ist gerade
-5 ist ungerade
-6 ist gerade
-7 ist ungerade
-8 ist gerade
-9 ist ungerade
-10 ist gerade
-11 ist ungerade
-12 ist gerade
-...
-
----
-FizzBuzz
-
-Filename: FizzBuzz.java
-
-Schreiben Sie ein Java-Programm, das die Zahlen von 1 bis 30 ausgibt. Dabei gelten folgende Regeln:
-
-- Für Zahlen, die durch 3 teilbar sind, geben Sie „Fizz“ statt der Zahl aus.
-- Für Zahlen, die durch 5 teilbar sind, geben Sie „Buzz“ statt der Zahl aus.
-- Für Zahlen, die sowohl durch 3 als auch durch 5 teilbar sind, geben Sie „FizzBuzz“ aus.
-- Alle anderen Zahlen sollen ganz normal ausgegeben werden.
-
-Hinweis: Verwenden Sie eine Schleife und eine geeignete Verzweigungsstruktur, um die Bedingungen umzusetzen.
 
 Beispiel:
 
->> java .\FizzBuzz.java
-1
-2
-Fizz
-4
-Buzz
-Fizz
-7
-8
-Fizz
-Buzz
-11
-Fizz
-13
-14
-FizzBuzz
-...
+```java
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+```
 
-Erweiterung 1: Benutzerdefinierte Obergrenze
+Bedeutung:
+- `int i = 0` → Startwert
+- `i < 5` → Abbruchbedingung
+- `i++` → Schrittweite (i = i + 1)
 
-Passen Sie Ihr bestehendes FizzBuzz-Programm so an, dass die Obergrenze nicht mehr fest auf 30 gesetzt ist.
-Stattdessen soll der Benutzer beim Start des Programms eine Zahl eingeben, bis zu der das Programm laufen soll.
+---
 
-Anforderungen:
-- Fordern Sie den Benutzer per Input auf, eine Ganzzahl einzugeben.
-- Geben Sie die Zahlen von 1 bis zur eingegebenen Zahl nach den bekannten FizzBuzz-Regeln aus.
+## Wofür wird sie genutzt?
 
-Hinweis: Verwenden Sie z. B. Scanner, um die Benutzereingabe einzulesen.
+- Zählerschleifen
+- Durchlaufen von Arrays oder Listen
+- Wiederholte Berechnungen
+- Tabellen, Matrizen
+- Algorithmische Muster
 
-Erweiterung 2: Benutzerdefinierte Teilbarkeitsregeln
+---
 
-Erweitern Sie Ihr FizzBuzz-Programm so, dass die Teilbarkeitsregeln individuell festgelegt werden können.
+## Vorwärts zählen
 
-Anforderungen:
-- Lassen Sie den Benutzer zwei ganze Zahlen eingeben:
-  o Eine Zahl für die Ausgabe „Fizz“ (z. B. 2).
-  o Eine Zahl für die Ausgabe „Buzz“ (z. B. 7).
-- Geben Sie anschließend alle Zahlen von 1 bis zu einer ebenfalls eingegebenen Obergrenze nach den neuen Regeln aus:
-  o Wenn eine Zahl durch die „Fizz“-Zahl teilbar ist: geben Sie „Fizz“ aus.
-  o Wenn eine Zahl durch die „Buzz“-Zahl teilbar ist: geben Sie „Buzz“ aus.
-  o Wenn eine Zahl durch beide Zahlen teilbar ist: geben Sie „FizzBuzz“ aus.
-  o Andernfalls geben Sie die Zahl selbst aus.
+```java
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+```
 
-Hinweis: Achten Sie darauf, die Benutzereingaben auf sinnvolle Werte zu überprüfen (z. B. keine Teilung durch 0).
+---
+
+## Rückwärts zählen
+
+```java
+for (int i = 5; i >= 1; i--) {
+    System.out.println(i);
+}
+```
+
+---
+
+## Schritte überspringen (Schrittweite verändern)
+
+### In Zweierschritten
+
+```java
+for (int i = 0; i <= 10; i += 2) {
+    System.out.println(i);
+}
+```
+
+### Rückwärts in Zweierschritten
+
+```java
+for (int i = 10; i >= 0; i -= 2) {
+    System.out.println(i);
+}
+```
+
+---
+
+## Dauerschleife (Endlosschleife)
+
+```java
+for (;;) {
+    System.out.println("Läuft endlos");
+}
+```
+
+Oder:
+
+```java
+for (int i = 0; true; i++) {
+    System.out.println(i);
+}
+```
+
+⚠ Nur mit Abbruchbedingung sinnvoll (z. B. `break`).
+
+---
+
+## Vorteile der for-Schleife
+
+- Kompakt
+- Lesbar
+- Zähler klar definiert
+- Weniger Fehleranfällig als while bei Zählerschleifen
+
+---
+
+## Nachteile
+
+- Weniger flexibel bei komplexen Abbruchbedingungen
+- Für unbekannte Wiederholungen oft ungeeignet
+
+---
+
+# ÜBUNG 1 – SumUp
+
+## Aufgabe
+
+Berechne die Summe von 1 bis 100.
+
+---
+
+## Lösung
+
+```java
+public class SumUp {
+    public static void main(String[] args) {
+
+        int summe = 0;
+
+        for (int i = 1; i <= 100; i++) {
+            summe += i;
+        }
+
+        System.out.println("Summe: " + summe);
+    }
+}
+```
+
+Ergebnis:
+```
+Summe: 5050
+```
+
+---
+
+## Erweiterung – Zwischenergebnisse
+
+```java
+public class SumUp {
+    public static void main(String[] args) {
+
+        int summe = 0;
+
+        for (int i = 1; i <= 100; i++) {
+            int alt = summe;
+            summe += i;
+            System.out.println(alt + " + " + i + " = " + summe);
+        }
+
+        System.out.println("Summe: " + summe);
+    }
+}
+```
+
+---
+
+# ÜBUNG 2 – EvenOdd
+
+```java
+public class EvenOdd {
+    public static void main(String[] args) {
+
+        for (int i = 1; i <= 20; i++) {
+
+            if (i % 2 == 0) {
+                System.out.println(i + " ist gerade");
+            } else {
+                System.out.println(i + " ist ungerade");
+            }
+        }
+    }
+}
+```
+
+Kernlogik:
+- `i % 2 == 0` → gerade
+- sonst → ungerade
+
+---
+
+# ÜBUNG 3 – FizzBuzz
+
+```java
+public class FizzBuzz {
+    public static void main(String[] args) {
+
+        for (int i = 1; i <= 30; i++) {
+
+            if (i % 15 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(i);
+            }
+        }
+    }
+}
+```
+
+Wichtig:
+- Erst `% 15` prüfen!
+- Sonst würden 15, 30 nur als Fizz erkannt.
+
+---
+
+# FizzBuzz – Erweiterung 1 (Benutzereingabe)
+
+```java
+import java.util.Scanner;
+
+public class FizzBuzz {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Obergrenze eingeben: ");
+        int max = sc.nextInt();
+
+        for (int i = 1; i <= max; i++) {
+
+            if (i % 15 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(i);
+            }
+        }
+
+        sc.close();
+    }
+}
+```
+
+---
+
+# FizzBuzz – Erweiterung 2 (Benutzerdefinierte Regeln)
+
+```java
+import java.util.Scanner;
+
+public class FizzBuzz {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Fizz-Zahl: ");
+        int fizz = sc.nextInt();
+
+        System.out.print("Buzz-Zahl: ");
+        int buzz = sc.nextInt();
+
+        if (fizz == 0 || buzz == 0) {
+            System.out.println("Keine Teilung durch 0 erlaubt!");
+            return;
+        }
+
+        System.out.print("Obergrenze: ");
+        int max = sc.nextInt();
+
+        for (int i = 1; i <= max; i++) {
+
+            if (i % fizz == 0 && i % buzz == 0) {
+                System.out.println("FizzBuzz");
+            } else if (i % fizz == 0) {
+                System.out.println("Fizz");
+            } else if (i % buzz == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(i);
+            }
+        }
+
+        sc.close();
+    }
+}
+```
+
+---
+
+# Kernaussagen
+
+- for = kopfgesteuerte Schleife
+- Ideal bei bekannter Wiederholungsanzahl
+- Schrittweite frei definierbar
+- Endlosschleifen möglich
+- `%` (Modulo) ist zentral für Teilbarkeitslogik
+- Reihenfolge der Bedingungen ist entscheidend
 
 ---
 
@@ -336,16 +344,9 @@ Hinweis: Achten Sie darauf, die Benutzereingaben auf sinnvolle Werte zu überpr�
 <summary style="font-size: 0.9em; color: #888;">Metadaten anzeigen</summary>
 <p style="font-size: 0.85em; color: grey;">
 Teil der FIAE-Umschulung (2025-2027) am BFW Muehlenbeck.<br>
-Diese Mitschrift entstand im Unterricht am 15.09.2025 mit WED.<br>
-Sie basiert auf gemeinsam erarbeiteten Inhalten und ergänzenden Übungsbeispielen vom 15.09.2025.<br><br>
-Die Version wurde inhaltlich erweitert (klassischer Switch + neue Switch-Expressions), strukturell optimiert und technisch ergänzt,<br>
-um Lernerfolg, Prüfungsrelevanz und Nachvollziehbarkeit zu fördern.<br><br>
-Öffentlich dokumentiert zur Wiederholung, Prüfungsvorbereitung und als Orientierungshilfe für Dritte.<br><br>
-Quelle: Eigene Mitschrift & Unterrichtsinhalte<br>
+Unterricht am 15.09.2025 mit WED.<br>
+Quelle: Eigene Mitschrift & Unterrichtsinhalte.<br>
 Autor: Sean Conroy<br>
-Lizenz: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+Lizenz: CC BY-NC-SA 4.0
 </p>
 </details>
-
-
-
