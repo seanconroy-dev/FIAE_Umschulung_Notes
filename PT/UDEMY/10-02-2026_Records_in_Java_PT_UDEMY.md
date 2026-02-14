@@ -1,100 +1,178 @@
-﻿## Dienstag, 10-02-2026_Records_in_Java_PT_UDEMY
+---
+title: "Records in Java – Grundlagen und Vergleich zu POJOs"
+date: 2026-02-10
+weekday: "Dienstag"
+subject: "Programmierung"
+instructor: "UDEMY"
+program: "FIAE Umschulung 2025-2027"
+module: "Java Grundlagen"
+topic: "Records, Immutable Klassen, Vergleich zu POJO"
+level: "Grundlagen"
+tags:
+  - Java
+  - Records
+  - Immutable
+  - POJO
+  - DTO
+  - OOP
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
 
-# Records in Java
- 
+# Records in Java – 2026-02-10 (UDEMY)
+
 ## Definition und Einführung
-**Records** sind eine spezielle Art von Klasse in Java, die ab **Java 14** als Preview-Feature eingeführt und in **Java 16** als Standardfeature übernommen wurden. Sie sind speziell für die **Speicherung von Daten** konzipiert und bieten eine **kompakte Syntax**, um Klassen zu definieren, die hauptsächlich aus Feldern bestehen.
- 
-Records sind **unveränderlich (immutable)** und generieren automatisch wichtige Methoden wie `equals()`, `hashCode()`, `toString()` sowie einen **Konstruktor** und **Accessor-Methoden** für alle deklarierten Felder.
- 
+
+Records sind eine spezielle Klassenart in Java.
+
+- Eingeführt in **Java 14** (Preview)
+- Seit **Java 16** offiziell Bestandteil der Sprache
+- Konzipiert für **reine Datenklassen**
+
+Records sind standardmäßig:
+
+- **immutable**
+- kompakt in der Syntax
+- stark reduziert im Boilerplate-Code
+
+Der Compiler generiert automatisch:
+
+- Konstruktor
+- `equals()`
+- `hashCode()`
+- `toString()`
+- Accessor-Methoden
+
 ---
- 
-## Syntax und Beispiel
-### Grundlegende Syntax
+
+# Grundsyntax
+
 ```java
-public record RecordName(Typ1 feld1, Typ2 feld2, ...) {}
+public record RecordName(Typ1 feld1, Typ2 feld2) {}
 ```
- 
-### Beispiel: `Person`-Record
-```java
-public record Person(String name, int age) {}
-```
-- Der Compiler generiert automatisch:
-  - Einen **Konstruktor** mit den Parametern `name` und `age`
-  - **Accessor-Methoden** (`name()` und `age()` – **keine Getter-Setters!**)
-  - Die Methoden `equals()`, `hashCode()` und `toString()`
- 
----
- 
-## Vorteile von Records
-| Vorteil                     | Beschreibung                                                                                     |
-|-----------------------------|-------------------------------------------------------------------------------------------------|
-| **Weniger Boilerplate-Code** | Records reduzieren den Codeaufwand für einfache Datenklassen deutlich.                        |
-| **Unveränderlichkeit**      | Records sind standardmäßig **immutable**, was die Sicherheit und Vorhersagbarkeit erhöht.     |
-| **Automatische Methoden**    | Der Compiler generiert `equals()`, `hashCode()`, `toString()` und Accessor-Methoden automatisch. |
-| **Kompakte Syntax**         | Die Definition ist kurz und prägnant.                                                          |
- 
----
- 
-## Einschränkungen von Records
-| Einschränkung                     | Beschreibung                                                                                     |
-|-----------------------------------|-------------------------------------------------------------------------------------------------|
-| **Keine Vererbung**               | Records können nicht von anderen Klassen erben, aber Schnittstellen implementieren.             |
-| **Keine zusätzlichen Felder**     | Alle Felder müssen im Record-Header deklariert werden.                                         |
-| **Keine Modifizierer**            | Felder sind implizit `private` und `final`.                                                     |
-| **Keine Setter-Methoden**         | Records sind unveränderlich; es gibt keine Setter-Methoden.                                    |
- 
----
- 
-## Records vs. POJOs
- 
-| Merkmal               | Record                                  | POJO (Plain Old Java Object)                     |
-|-----------------------|-----------------------------------------|-------------------------------------------------|
-| **Zweck**             | Speicherung von Daten                   | Flexibel: Daten, Logik, Vererbung, etc.         |
-| **Unveränderlichkeit** | Immer immutable                         | Kann mutable oder immutable sein                |
-| **Boilerplate-Code**  | Minimal (automatische Methoden)        | Mehr Code (manuelle Getter/Setter/Methoden)     |
-| **Vererbung**         | Nicht möglich                          | Möglich                                        |
-| **Flexibilität**      | Eingeschränkt (nur Daten)              | Hoch (beliebige Logik und Struktur)             |
- 
----
- 
-## Accessor-Methoden in Records
-Records verwenden **keine klassischen Getter-Methoden**, sondern **automatisch generierte Accessor-Methoden**, die den Feldnamen tragen:
+
+## Beispiel
+
 ```java
 public record Person(String name, int age) {}
-// Accessor-Methoden:
-String name = person.name();  // Nicht: person.getName()
-int age = person.age();        // Nicht: person.getAge()
 ```
- 
+
+Automatisch generiert:
+
+- Konstruktor `Person(String name, int age)`
+- Accessor-Methoden:
+  - `name()`
+  - `age()`
+- `equals()`
+- `hashCode()`
+- `toString()`
+
+Wichtig:  
+Keine klassischen Getter (`getName()`), sondern:
+
+```java
+person.name();
+person.age();
+```
+
 ---
- 
-## Wann sollte man Records verwenden?
-- **Datenklassen:** Wenn die Klasse hauptsächlich aus Feldern besteht und unveränderlich sein soll.
-- **DTOs (Data Transfer Objects):** Ideal für die Übertragung von Daten zwischen Schichten.
-- **Wertobjekte:** Wenn Objekte durch ihre Werte definiert sind (z. B. `Point`, `Range`).
- 
-## Wann sollte man POJOs verwenden?
-- **Komplexe Logik:** Wenn die Klasse Methoden mit komplexer Logik enthält.
-- **Vererbung:** Wenn die Klasse von einer anderen Klasse erben soll.
-- **Mutable Objekte:** Wenn die Objekte nach der Erstellung verändert werden müssen.
- 
+
+# Vorteile von Records
+
+| Vorteil | Erklärung |
+|----------|-----------|
+| Weniger Boilerplate | Keine manuelle Implementierung von Getter, equals, etc. |
+| Immutable | Felder sind implizit `private final` |
+| Automatische Methoden | equals, hashCode, toString werden generiert |
+| Kompakte Syntax | Sehr kurze Klassendefinition |
+
 ---
- 
-**Hinweis:**
-Die `@Override`-Annotation wird verwendet, um anzuzeigen, dass eine Methode eine Methode der Superklasse überschreibt. Dies hilft, Fehler zur Compile-Zeit zu erkennen, falls die Methode nicht tatsächlich eine Methode der Superklasse überschreibt.
+
+# Einschränkungen von Records
+
+| Einschränkung | Erklärung |
+|---------------|-----------|
+| Keine Klassenvererbung | Records können keine andere Klasse erweitern |
+| Keine zusätzlichen Instanzfelder | Nur Felder aus dem Header |
+| Keine Setter | Immutable |
+| Eingeschränkte Flexibilität | Fokus auf Datenhaltung |
+
+Records können jedoch:
+
+- Interfaces implementieren
+- Zusätzliche Methoden enthalten
+- Validierung im Konstruktor durchführen
+
 ---
+
+# Records vs. POJOs
+
+| Merkmal | Record | POJO |
+|----------|--------|------|
+| Zweck | Datenhaltung | Allgemeine Klassen |
+| Immutable | Immer | Optional |
+| Boilerplate | Minimal | Hoch |
+| Vererbung | Nicht möglich | Möglich |
+| Flexibilität | Eingeschränkt | Hoch |
+
+---
+
+# Accessor-Methoden
+
+Records generieren automatisch Accessor-Methoden mit dem Feldnamen:
+
+```java
+String name = person.name();
+int age = person.age();
+```
+
+Nicht:
+
+```java
+person.getName();
+```
+
+---
+
+# Wann Records verwenden?
+
+- DTOs (Data Transfer Objects)
+- Wertobjekte (z. B. Point, Range)
+- Datenmodelle ohne komplexe Logik
+- Immutable Objekte
+
+---
+
+# Wann POJOs verwenden?
+
+- Wenn Vererbung benötigt wird
+- Bei komplexer Geschäftslogik
+- Wenn Objekte veränderbar sein sollen
+- Wenn zusätzliche Felder außerhalb des Headers nötig sind
+
+---
+
+# Prüfungsrelevante Kernaussagen
+
+- Records sind seit Java 16 Standard
+- Immer immutable
+- Automatische Generierung wichtiger Methoden
+- Keine Setter
+- Keine Klassenvererbung möglich
+- Ideal für reine Datenstrukturen
+
+---
+
 <details style="margin-top: 2em;">
 <summary style="font-size: 0.9em; color: #888;">Metadaten anzeigen</summary>
 <p style="font-size: 0.85em; color: grey;">
 Teil der FIAE-Umschulung (2025-2027) am BFW Muehlenbeck.<br>
-Diese Mitschrift entstand im Unterricht am 10.02.2026 mit UDEMY.<br>
-Sie basiert auf gemeinsam erarbeiteten Inhalten und ergaenzenden Uebungsbeispielen vom 10.02.2026.<br><br>
-Die Version wurde inhaltlich ueberarbeitet, strukturell optimiert und technisch ergaenzt,<br>
-um Lernerfolg, Pruefungsrelevanz und Nachvollziehbarkeit zu foerdern.<br><br>
-Oeffentlich dokumentiert zur Wiederholung, Pruefungsvorbereitung und als Orientierungshilfe fuer Dritte.<br><br>
-Quelle: Eigene Mitschrift & Unterrichtsinhalte<br>
+Diese Mitschrift entstand am 10.02.2026 im Rahmen eines Udemy-Kurses.<br>
+Die Version wurde inhaltlich ueberarbeitet und strukturell optimiert,<br>
+um Lernerfolg und Nachvollziehbarkeit zu foerdern.<br><br>
+Quelle: Eigene Mitschrift (Udemy)<br>
 Autor: Sean Conroy<br>
-Lizenz: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+Lizenz: CC BY-NC-SA 4.0
 </p>
 </details>
+```
