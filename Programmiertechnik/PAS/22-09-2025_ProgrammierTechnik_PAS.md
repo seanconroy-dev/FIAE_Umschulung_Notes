@@ -1,48 +1,59 @@
+---
+title: "Kopf- und Fußgesteuerte Schleifen in Java"
+date: 2025-09-22
+weekday: "Montag"
+subject: "Programmiertechnik"
+instructor: "PAS"
+program: "FIAE Umschulung 2025-2027"
+module: "Java Grundlagen"
+topic: "Schleifen und Kontrollstrukturen"
+level: "Grundlagen"
+tags:
+  - Java
+  - Schleifen
+  - while
+  - for
+  - do-while
+  - Kontrollstrukturen
+  - Programmierlogik
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
 
-## Montag, 22-09-2025_ProgrammierTechnik_PAS  
-### Kopfgesteuerte und fußgesteuerte Schleifen – Grundlagen und Beispiele
+# Kopf- und Fußgesteuerte Schleifen – 2025-09-22 (PAS)
 
-**Thema:** Schleifen (Loops)  
-**Kontext:** Programmierlogik, Kontrollstrukturen, Java-nahe Grundlagen
+## Thema
+Schleifen (Loops) in Java – Grundlagen der Kontrollstrukturen
 
 ---
 
 ## 1. Was sind Schleifen?
 
-**Schleifen** sind Kontrollstrukturen, mit denen ein Programm  
-einen Anweisungsblock **mehrfach wiederholt** ausführt.
+Schleifen sind Kontrollstrukturen, mit denen ein Anweisungsblock mehrfach ausgeführt wird.
 
-Zweck von Schleifen:
-- Wiederholungen vermeiden
+Zweck:
+- Wiederholungen automatisieren
 - Code verkürzen
-- Logik klar ausdrücken
-- Verarbeitung von Datenmengen
+- Datenmengen verarbeiten
+- Logik klar strukturieren
 
 ---
 
 ## 2. Kopfgesteuerte Schleifen
 
 ### Definition
-Bei einer **kopfgesteuerten Schleife** wird die Bedingung **vor** dem Schleifenrumpf geprüft.
+Die Bedingung wird **vor** dem Schleifenrumpf geprüft.
 
-➡️ Wenn die Bedingung **falsch** ist, wird die Schleife **kein einziges Mal** ausgeführt.
+Ist sie von Anfang an falsch, wird der Codeblock **kein einziges Mal** ausgeführt.
 
-Typische Vertreter:
+Vertreter:
 - `while`
 - `for`
 
 ---
 
-### 2.1 while-Schleife (kopfgesteuert)
+### 2.1 while-Schleife
 
-**Prinzip**
-```
-while (Bedingung) {
-    Anweisungen
-}
-```
-
-**Beispiel**
 ```java
 int i = 0;
 
@@ -52,30 +63,23 @@ while (i < 5) {
 }
 ```
 
-**Eigenschaften**
-- Anzahl der Durchläufe oft nicht im Voraus bekannt
-- Bedingung wird **vor jedem Durchlauf** geprüft
+Eigenschaften:
+- Bedingung wird vor jedem Durchlauf geprüft
+- Häufig bei unbekannter Anzahl an Wiederholungen
 
 ---
 
-### 2.2 for-Schleife (kopfgesteuert)
+### 2.2 for-Schleife
 
-**Prinzip**
-```
-for (Start; Bedingung; Änderung) {
-    Anweisungen
-}
-```
-
-**Beispiel**
 ```java
 for (int i = 0; i < 5; i++) {
     System.out.println(i);
 }
 ```
 
-**Typischer Einsatz**
-- Wenn die Anzahl der Wiederholungen bekannt ist
+Eigenschaften:
+- Startwert, Bedingung und Änderung in einer Zeile
+- Ideal bei bekannter Wiederholungsanzahl
 - Zählergesteuerte Abläufe
 
 ---
@@ -83,25 +87,17 @@ for (int i = 0; i < 5; i++) {
 ## 3. Fußgesteuerte Schleifen
 
 ### Definition
-Bei einer **fußgesteuerten Schleife** wird die Bedingung **nach** dem Schleifenrumpf geprüft.
+Die Bedingung wird **nach** dem Schleifenrumpf geprüft.
 
-➡️ Die Schleife wird **mindestens einmal** ausgeführt, egal ob die Bedingung erfüllt ist oder nicht.
+Die Schleife wird **mindestens einmal** ausgeführt.
 
-Typischer Vertreter:
+Vertreter:
 - `do-while`
 
 ---
 
-### 3.1 do-while-Schleife (fußgesteuert)
+### 3.1 do-while-Schleife
 
-**Prinzip**
-```
-do {
-    Anweisungen
-} while (Bedingung);
-```
-
-**Beispiel**
 ```java
 int i = 0;
 
@@ -111,48 +107,31 @@ do {
 } while (i < 5);
 ```
 
-**Eigenschaften**
-- Mindestens ein Durchlauf garantiert
-- Bedingung wird **am Ende** geprüft
+Eigenschaften:
+- Mindestens ein Durchlauf
+- Typisch bei Menü- oder Eingabeabfragen
 
 ---
 
-## 4. Vergleich: Kopf- vs. fußgesteuert
+## 4. Vergleich
 
 | Merkmal | Kopfgesteuert | Fußgesteuert |
-|-------|---------------|--------------|
+|----------|---------------|--------------|
 | Bedingung geprüft | vor dem Durchlauf | nach dem Durchlauf |
 | Mindestdurchläufe | 0 | 1 |
-| Typische Schleifen | while, for | do-while |
-| Einsatz | unbekannte oder bekannte Wiederholungen | Menüabfragen, Eingaben |
+| Typische Formen | while, for | do-while |
+| Einsatz | bekannte oder unbekannte Wiederholungen | Eingaben, Menüsysteme |
 
 ---
 
-## 5. Typische Anwendungsfälle
-
-### Kopfgesteuert
-- Verarbeitung von Listen
-- Zählerschleifen
-- Abbruch bei Nichterfüllung einer Bedingung
-
-### Fußgesteuert
-- Benutzereingaben
-- Menüsysteme
-- Wiederholen bis gültige Eingabe erfolgt
-
----
-
-## 6. Verschachtelte Schleifen (Nested Loops)
+## 5. Verschachtelte Schleifen
 
 ### Definition
-Eine **verschachtelte Schleife** ist eine Schleife **innerhalb einer anderen Schleife**.
+Eine Schleife innerhalb einer anderen Schleife.
 
-Die innere Schleife wird:
-- bei **jedem Durchlauf** der äußeren Schleife vollständig ausgeführt
+Die innere Schleife läuft bei jedem Durchlauf der äußeren Schleife vollständig durch.
 
----
-
-### Beispiel: Verschachtelte for-Schleifen
+### Beispiel
 
 ```java
 for (int i = 1; i <= 3; i++) {
@@ -162,38 +141,38 @@ for (int i = 1; i <= 3; i++) {
 }
 ```
 
-**Ablauf**
+Ablauf:
 - äußere Schleife: 3 Durchläufe
-- innere Schleife: 3 Durchläufe pro äußerem Durchlauf
+- innere Schleife: 3 Durchläufe je äußerem Durchlauf
 - Gesamt: 9 Ausgaben
 
 ---
 
-## 7. Typische Einsatzfälle für verschachtelte Schleifen
+## 6. Typische Einsatzbereiche
 
-- Tabellen (Zeilen / Spalten)
+- Tabellen (Zeilen/Spalten)
 - Matrizen
 - Koordinatensysteme
 - Mehrdimensionale Datenstrukturen
 
 ---
 
-## 8. Typische Fehler
+## 7. Typische Fehlerquellen
 
 - Endlosschleifen (Bedingung wird nie falsch)
 - Zählvariable wird nicht verändert
-- Zu tiefe Verschachtelung (unübersichtlich)
-- Falsche Bedingung bei do-while (unerwartete Durchläufe)
+- Falsche Bedingung bei do-while
+- Zu tiefe Verschachtelung → schlechter lesbarer Code
 
 ---
 
 ## Kernaussagen
 
-- Kopfgesteuerte Schleifen prüfen **vorher**
-- Fußgesteuerte Schleifen laufen **mindestens einmal**
-- `for` eignet sich für bekannte Wiederholungen
-- `while` für unbekannte
-- Verschachtelte Schleifen multiplizieren die Durchläufe
+- Kopfgesteuerte Schleifen prüfen zuerst.
+- Fußgesteuerte laufen mindestens einmal.
+- `for` → bekannte Anzahl.
+- `while` → unbekannte Anzahl.
+- Verschachtelung multipliziert Durchläufe.
 
 ---
 
@@ -201,13 +180,9 @@ for (int i = 1; i <= 3; i++) {
 <summary style="font-size: 0.9em; color: #888;">Metadaten anzeigen</summary>
 <p style="font-size: 0.85em; color: grey;">
 Teil der FIAE-Umschulung (2025-2027) am BFW Muehlenbeck.<br>
-Diese Mitschrift entstand im Unterricht am 22.09.2025 mit PAS.<br>
-Sie basiert auf gemeinsam erarbeiteten Inhalten und ergÃ¤nzenden Uebungsbeispielen vom 22.09.2025.<br><br>
-Die Version wurde inhaltlich Ã¼berarbeitet, strukturell optimiert und technisch ergÃ¤nzt,<br>
-um Lernerfolg, Pruefungsrelevanz und Nachvollziehbarkeit zu foerdern.<br><br>
-Oeffentlich dokumentiert zur Wiederholung, Pruefungsvorbereitung und als Orientierungshilfe fuer Dritte.<br><br>
-Quelle: Eigene Mitschrift & Unterrichtsinhalte<br>
+Unterricht am 22.09.2025 mit PAS.<br>
+Quelle: Eigene Mitschrift & Unterrichtsinhalte.<br>
 Autor: Sean Conroy<br>
-Lizenz: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+Lizenz: CC BY-NC-SA 4.0
 </p>
 </details>
