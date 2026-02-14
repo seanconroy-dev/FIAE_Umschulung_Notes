@@ -1,126 +1,194 @@
-﻿## Dienstag, 09-09-2025_Programiertechnik_WED
+---
+title: "Altersabfrage mit if-else"
+date: 2025-09-09
+weekday: "Dienstag"
+subject: "Programmiertechnik"
+instructor: "WED"
+program: "FIAE Umschulung 2025-2027"
+module: "Kontrollstrukturen"
+topic: "if-else, Bereichsprüfung, Validierung"
+level: "Grundlagen"
+tags:
+  - if-else
+  - Kontrollstrukturen
+  - Bereichsprüfung
+  - Eingabevalidierung
+  - Entscheidungslogik
+  - Pseudocode
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
 
-THEMA: Altersabfrage mit if-else
+# Altersabfrage mit if-else (2025-09-09 · WED)
 
-ZIEL
-- Ein Programm ordnet eine Person anhand ihres Alters einer Kategorie zu:
-  - Kind: bis 14 Jahre
-  - Teen: ab 14 bis 18 Jahre
-  - Erwachsener: ab 18 Jahre
-  - Rentner: ab 66 Jahre
-- Ausgabe als Klartext, z. B. "Du bist Teenager."
+## Ziel
 
-REGELN UND GRENZEN
-- Kind: alter <= 14
-- Teen: 14 < alter < 18   (laut Aufgabenformulierung: ab 14 bis 18, in der Praxis muss 14 exakt entschieden werden)
-- Erwachsener: alter >= 18 und alter < 66
-- Rentner: alter >= 66
-- Wichtig: Entscheide inklusiv oder exklusiv pro Grenze und bleib konsistent. Für die gegebene Aufgabe gilt:
-  - 14 gehört zu Teen oder Kind, je nach Auslegung. Ein sauberer, eindeutiger Ansatz ist:
-    - Kind: alter <= 13
-    - Teen: 14 <= alter <= 17
-    - Erwachsener: 18 <= alter <= 65
-    - Rentner: alter >= 66
-  - Diese Variante beseitigt Überschneidungen und Kantenkonflikte.
+Ein Programm ordnet eine Person anhand ihres Alters einer Kategorie zu:
 
-ENTSCHEIDUNGSLOGIK IN WORTEN
-- Prüfe von klein nach groß, damit früh enge Bereiche greifen:
-  - Wenn alter <= 13 dann Kind
-  - Sonst wenn alter <= 17 dann Teen
-  - Sonst wenn alter <= 65 dann Erwachsener
-  - Sonst Rentner
+- Kind
+- Teen
+- Erwachsener
+- Rentner
 
-WARUM if-else STATT MEHRERER if
-- if-else-Ketten stoppen nach dem ersten Treffer. Das verhindert doppelte Ausgaben.
-- Mehrere unabhängige ifs prüfen jede Bedingung. Das kann zu mehreren Treffern führen. Beispiel: alter = 70 erfüllt ">= 18" und ">= 66".
-- Wenn sich Bereiche ausschließen sollen, nutze eine Kette.
-
-EINGABEVALIDIERUNG
-- Negative Werte oder unrealistische Eingaben abfangen.
-- Beispiel in Worten:
-  - Wenn alter < 0 oder alter > 130 dann "Ungültige Eingabe".
-- Optional: Eingabewiederholung bis gültig.
-
-PSEUDOCODE (TEXTBESCHREIBUNG)
-- Lese eine Ganzzahl alter ein.
-- Wenn alter < 0 oder alter > 130 dann gib Fehlermeldung aus und beende.
-- Wenn alter <= 13 dann "Kind" ausgeben.
-- Sonst wenn alter <= 17 dann "Teen" ausgeben.
-- Sonst wenn alter <= 65 dann "Erwachsener" ausgeben.
-- Sonst "Rentner" ausgeben.
-
-TESTMATRIX
-- 0  -> Kind
-- 10 -> Kind
-- 13 -> Kind
-- 14 -> Teen
-- 17 -> Teen
-- 18 -> Erwachsener
-- 30 -> Erwachsener
-- 65 -> Erwachsener
-- 66 -> Rentner
-- 99 -> Rentner
-- -1 -> Ungültig
-- 131 -> Ungültig
-
-TYPISCHE FEHLER
-- Überlappende Bedingungen, z. B. "alter >= 18" vor "alter >= 66" ohne else-if, führt zu doppelten Treffern.
-- Unklare Grenzwerte, z. B. nicht festgelegt, ob 14 Kind oder Teen ist.
-- Falsche Reihenfolge der Prüfungen. Immer vom engsten zum weitesten Bereich.
-- Keine Validierung der Eingabe, führt zu Unsinnswerten.
-- Strings statt Zahlen einlesen oder Dezimalwerte ohne Bedürfnis. Für dieses Problem reicht int.
-
-FACHBEGRIFFE
-- Kontrollstruktur: steuert den Ablauf, z. B. if-else, switch.
-- Bedingung: Ausdruck, der wahr oder falsch ist.
-- Bereichsprüfung: teste, ob eine Zahl in einem Intervall liegt, z. B. 14 bis 17.
-- Exklusiv vs. Inklusiv: "<" schließt die Grenze aus, "<=" schließt sie ein.
-
-ENTSCHEIDUNGSBAUM ALS ASCII
-- Start
-  - alter < 0 oder alter > 130 -> Ungültig
-  - sonst alter <= 13 -> Kind
-  - sonst alter <= 17 -> Teen
-  - sonst alter <= 65 -> Erwachsener
-  - sonst -> Rentner
-
-ÜBUNGSVARIANTEN ZUR VERTIEFUNG
-- Variante 1 Eingabevalidierung: Solange eingeben lassen, bis ein gültiges Alter kommt.
-- Variante 2 Auslagerung in Methode: Schreibe eine Methode, die die Kategorie als Text zurückgibt. Vorteil: testbar, wiederverwendbar.
-- Variante 3 Internationalisierung: Kategorienamen als Parameter oder in einer Map halten, später für Deutsch und Englisch.
-- Variante 4 Grenzwerte konfigurierbar: Grenzen als Konstanten definieren und zentral ändern.
-- Variante 5 Vergleich mit mehreren if: Bewusst mehrere ifs verwenden und die doppelte Ausgabe beobachten, um den Unterschied zu fühlen.
-- Variante 6 Erweiterung: Füge Zwischenkategorien hinzu, z. B. Vorschulkind, Senior 80 plus. Achte auf lückenlose und überschneidungsfreie Bereiche.
-
-DENKREGELN FÜR BEREICHE
-- Schreibe Intervalle lückenlos und ohne Überlappung.
-- Bestimme erst Grenzen, dann entscheide pro Grenze ob inklusiv oder exklusiv.
-- Ordne die Prüfungen so, dass enge Bereiche zuerst kommen und breite Bereiche später, oder nutze klare Obergrenzenkaskaden wie oben.
-
-KURZE CHECKLISTE FÜR SPÄTER
-- Grenzen sauber festgelegt
-- Reihenfolge eng zu breit
-- if-else statt mehrere if
-- Eingabe validieren
-- Testmatrix mit Kantenwerten ausführen
-- Optional: Logik in Methode auslagern
-
-BEISPIELAUSGABE IN WORTEN
-- Eingabe: 17
-- Ausgabe: Du bist Teenager.
+Beispielausgabe:  
+`Du bist Teenager.`
 
 ---
+
+## Saubere, eindeutige Grenzdefinition
+
+Um Überschneidungen zu vermeiden:
+
+- Kind: `alter <= 13`
+- Teen: `14 <= alter <= 17`
+- Erwachsener: `18 <= alter <= 65`
+- Rentner: `alter >= 66`
+
+Diese Variante ist:
+- lückenlos
+- überschneidungsfrei
+- logisch konsistent
+
+---
+
+## Entscheidungslogik
+
+Reihenfolge von klein nach groß:
+
+1. Wenn `alter < 0` oder `alter > 130` → Ungültig
+2. Wenn `alter <= 13` → Kind
+3. Sonst wenn `alter <= 17` → Teen
+4. Sonst wenn `alter <= 65` → Erwachsener
+5. Sonst → Rentner
+
+---
+
+## Warum if-else statt mehrere if?
+
+Eine `if-else-if`-Kette:
+- stoppt nach dem ersten Treffer
+- verhindert doppelte Ausgaben
+
+Mehrere einzelne `if`:
+- prüfen alle Bedingungen
+- können mehrere Kategorien gleichzeitig ausgeben
+
+Beispielproblem:
+```
+if (alter >= 18)
+if (alter >= 66)
+```
+Alter 70 erfüllt beide Bedingungen.
+
+---
+
+## Eingabevalidierung
+
+Empfohlen:
+
+- `alter < 0` → ungültig
+- `alter > 130` → ungültig
+
+Optional:
+- Eingabe wiederholen, bis gültiger Wert vorliegt.
+
+---
+
+## Pseudocode
+
+```
+Lese alter
+
+wenn alter < 0 oder alter > 130
+    Ausgabe "Ungültige Eingabe"
+sonst wenn alter <= 13
+    Ausgabe "Kind"
+sonst wenn alter <= 17
+    Ausgabe "Teen"
+sonst wenn alter <= 65
+    Ausgabe "Erwachsener"
+sonst
+    Ausgabe "Rentner"
+```
+
+---
+
+## Testmatrix (Grenzwerte prüfen!)
+
+| Alter | Erwartetes Ergebnis |
+|-------|--------------------|
+| 0     | Kind               |
+| 13    | Kind               |
+| 14    | Teen               |
+| 17    | Teen               |
+| 18    | Erwachsener        |
+| 65    | Erwachsener        |
+| 66    | Rentner            |
+| -1    | Ungültig           |
+| 131   | Ungültig           |
+
+---
+
+## Typische Fehler
+
+- Überlappende Bedingungen
+- Falsche Reihenfolge der Prüfungen
+- Keine Validierung
+- Mehrere `if` statt `if-else`
+- Unklare Inklusiv-/Exklusiv-Grenzen
+
+---
+
+## Fachbegriffe
+
+- **Kontrollstruktur** → steuert Programmablauf
+- **Bedingung** → wahr/falsch-Ausdruck
+- **Bereichsprüfung** → Zahl liegt im Intervall
+- **Inklusiv** → Grenze eingeschlossen (`<=`)
+- **Exklusiv** → Grenze ausgeschlossen (`<`)
+
+---
+
+## Entscheidungsbaum (ASCII)
+
+```
+Start
+ ├─ alter < 0 oder > 130 → Ungültig
+ ├─ alter <= 13          → Kind
+ ├─ alter <= 17          → Teen
+ ├─ alter <= 65          → Erwachsener
+ └─ sonst                → Rentner
+```
+
+---
+
+## Denkregeln für Bereiche
+
+- Keine Lücken
+- Keine Überlappungen
+- Grenzen bewusst definieren
+- Reihenfolge korrekt wählen
+- Teste Kantenwerte (Grenzfälle)
+
+---
+
+## Checkliste
+
+- Grenzen eindeutig definiert
+- if-else-Kette korrekt
+- Validierung vorhanden
+- Testmatrix geprüft
+- Optional: Logik in Methode ausgelagert
+
+---
+
 <details style="margin-top: 2em;">
 <summary style="font-size: 0.9em; color: #888;">Metadaten anzeigen</summary>
 <p style="font-size: 0.85em; color: grey;">
-Teil der FIAE-Umschulung (2025â€“2027) am BFW Muehlenbeck.<br>
-Diese Mitschrift entstand im Unterricht am 09.09.2025 mit WED.<br>
-Sie basiert auf gemeinsam erarbeiteten Inhalten und ergÃ¤nzenden Uebungsbeispielen vom 09.09.2025.<br><br>
-Die Version wurde inhaltlich Ã¼berarbeitet, strukturell optimiert und technisch ergÃ¤nzt,<br>
-um Lernerfolg, Pruefungsrelevanz und Nachvollziehbarkeit zu foerdern.<br><br>
-Oeffentlich dokumentiert zur Wiederholung, Pruefungsvorbereitung und als Orientierungshilfe fuer Dritte.<br><br>
-Quelle: Eigene Mitschrift & Unterrichtsinhalte<br>
+Teil der FIAE-Umschulung (2025-2027) am BFW Muehlenbeck.<br>
+Unterricht am 09.09.2025 mit WED.<br>
+Quelle: Eigene Mitschrift & Unterrichtsinhalte.<br>
 Autor: Sean Conroy<br>
-Lizenz: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+Lizenz: CC BY-NC-SA 4.0
 </p>
 </details>
