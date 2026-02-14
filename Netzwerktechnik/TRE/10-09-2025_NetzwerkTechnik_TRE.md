@@ -1,126 +1,190 @@
-﻿
-## Mittwoch, 10-09-2025_NetzwerkTechnik_TRE
+---
+title: "Spanning Tree Protocol (STP/RSTP) & PoE – Grundlagen und Berechnung"
+date: 2025-09-10
+weekday: "Mittwoch"
+subject: "Netzwerktechnik"
+instructor: "TRE"
+program: "FIAE Umschulung 2025-2027"
+module: "Switching & Redundanz"
+topic: "STP, RSTP, Bridge-ID, Path-Cost, Redundanz, PoE"
+level: "Grundlagen"
+tags:
+  - STP
+  - RSTP
+  - Bridge-ID
+  - Root-Bridge
+  - Path-Cost
+  - Redundanz
+  - PoE
+  - Netzwerktechnik
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
 
-### Spanning Tree Protocol (STP / RSTP)
+# STP / RSTP – 2025-09-10 (NT, TRE)
 
-- **MAC-Adresse**
-  - Beispiel: `11-11-11-11-11-11`  
-  - Aufbau: **Herstellerkennung | Gerätenummer**  
-  - Kurzform: manchmal nur ein Teil zur Darstellung, z. B. `11-11`
-
-- **Root-Bridge**
-  - Der Switch mit der **kleinsten Bridge-ID** wird Root-Bridge.  
-  - Bridge-ID = Priorität + MAC-Adresse  
-  - Wenn alle Prioritäten gleich sind → entscheidet die **kleinste MAC-Adresse**.  
-  - Achtung: Die Aussage „je niedriger die MAC-Adresse, desto älter“ ist **nicht korrekt**.  
-    - Niedrige MAC = kein Alter, sondern zufällige Hersteller-Zuteilung.  
-    - Wichtig für STP: nur zum Bestimmen der Root-Bridge.
-
-- **Automatismus**
-  - STP deaktiviert automatisch bestimmte Ports, um **Schleifen (Loops)** zu verhindern.  
-  - Dadurch wird aus einem Ring eine **logische Baumstruktur**.  
-
-#### Beispiel Ring → Baum
-
-```
-Vorher (Loop):                  Nachher (STP deaktiviert eine Verbindung):
-
-   [S1]──[S2]──[S3]                 [S1]──[S2]──[S3]
-     │           |       →             │
-    [S4]---------|                    [S4]
-```
-
-- STP macht aus dem Ring eine Kette (Baum).
-- Der „ausgeschaltete“ Port bleibt als Backup für Redundanz bestehen.
+## Spanning Tree Protocol (STP / RSTP)
 
 ---
 
-### Kostenberechnung (Path Cost)
+## MAC-Adresse
 
-- Die **Kosten** bestimmen, welcher Pfad bevorzugt wird.  
-- Faustformel (STP-Standard):
+- 48 Bit (6 Byte)
+- Aufbau: OUI (Herstellerkennung, 24 Bit) + geraetespezifischer Anteil (24 Bit)
+- Beispiel: 11-11-11-11-11-11
+
+Hinweis:
+Eine kleinere MAC-Adresse bedeutet nicht „aelter“, sondern nur eine niedrigere numerische Kennung.
+
+---
+
+## Root-Bridge
+
+Die Root-Bridge ist der Switch mit der kleinsten Bridge-ID.
+
+Bridge-ID besteht aus:
+- Prioritaet (Standard: 32768)
+- MAC-Adresse
+
+Regel:
+1. Niedrigste Prioritaet gewinnt.
+2. Bei gleicher Prioritaet entscheidet die kleinste MAC-Adresse.
+
+Die Root-Bridge ist Referenzpunkt fuer alle Pfadberechnungen.
+
+---
+
+## Funktionsprinzip von STP
+
+Problem:
+Redundante Verbindungen erzeugen Layer-2-Loops → Broadcast-Sturm.
+
+Loesung:
+STP deaktiviert automatisch bestimmte Ports, um eine logische Baumstruktur zu erzeugen.
+
+Ring → Baum:
 
 ```
-Kosten = 20.000.000 / (Bandbreite in Mbit/s)
+Vorher (Loop):                 Nachher (Baumstruktur):
+
+   [S1]──[S2]──[S3]                [S1]──[S2]──[S3]
+     │           |        →           │
+    [S4]---------|                   [S4]
 ```
 
-- **Beispiele (Standardwerte)**:  
-  - 10 Mbit/s → 2.000.000  
-  - 100 Mbit/s → 200.000  
-  - 1 Gbit/s → 20.000  
-  - 10 Gbit/s → 2.000  
-  - 100 Gbit/s → 200  
-  - 1 Tbit/s → 20  
+Blockierte Ports bleiben als Backup erhalten.
 
-- **Hinweis:** Deine Notizen mit „100 STP, 19 STP …“ waren nicht ganz korrekt.  
-  → Ich habe sie mit den offiziellen IEEE-Standardwerten ersetzt.  
+RSTP (Rapid STP):
+Schnellere Konvergenz im Vergleich zu klassischem STP.
 
 ---
 
-### Beispielrechnung
+## Path Cost (Kostenberechnung)
 
-- 4 Switches mit Verbindungen:  
-  - 3 × 1 Gbit/s  
-  - 1 × 100 Mbit/s  
-- Es entsteht ein Loop.  
-- **Gesamtkosten** (vereinfacht): 260.000  
-- Lösung: STP blockiert den 100-Mbit/s-Link.  
-- Ergebnis: Aus dem Ring wird eine Kette (Bus) → keine Schleife mehr.
+Pfadkosten bestimmen den bevorzugten Weg zur Root-Bridge.
+
+Moderne IEEE-Standardwerte (Kurzwerte):
+
+- 10 Mbit/s → 100
+- 100 Mbit/s → 19
+- 1 Gbit/s → 4
+- 10 Gbit/s → 2
+- 100 Gbit/s → 1
+
+Hinweis:
+Fruehere Berechnungen mit 20.000.000/Bandbreite waren alte Referenzwerte.
+Heute werden standardisierte Cost-Werte verwendet.
+
+Regel:
+Der Pfad mit den niedrigsten Gesamtkosten gewinnt.
 
 ---
 
-### Redundanz
+## Beispiel
 
-- Netzwerke brauchen **Redundanz**, um bei Ausfall einer Verbindung Alternativpfade zu haben.  
-- STP hält blockierte Ports in Reserve:  
-  - Fällt ein aktiver Pfad aus → aktiviert STP den blockierten Port.  
-- Beispiel: Cloud-Umgebungen benötigen hohe Redundanz für Ausfallsicherheit.
+Gegeben:
+- 3 Verbindungen mit 1 Gbit/s (Cost 4)
+- 1 Verbindung mit 100 Mbit/s (Cost 19)
+
+Ergebnis:
+Der 100-Mbit/s-Link wird blockiert, da er hoehere Kosten verursacht.
+
+STP erzeugt eine schleifenfreie Topologie.
 
 ---
 
-### Power over Ethernet (PoE)
+## Redundanz
 
-- **Definition**: Daten + Strom laufen über dasselbe Ethernet-Kabel.  
-- **Einsatzgebiete**: IP-Kameras, Access Points, IP-Telefone.  
-- **Beispiel**:  
-  - Webcam → Switch (PoE-Switch liefert gleichzeitig Stromversorgung).  
-- Vorteil: kein separates Netzteil notwendig.
+Ziel:
+Ausfallsicherheit durch alternative Pfade.
 
-#### PoE-Skizze
+Ablauf:
+- Ein Link faellt aus.
+- STP aktiviert zuvor blockierten Port.
+- Neue Baumstruktur wird berechnet.
+
+Einsatz:
+Unternehmensnetze, Rechenzentren, Cloud-Umgebungen.
+
+---
+
+## Power over Ethernet (PoE)
+
+Definition:
+Uebertragung von Daten und Strom ueber dasselbe Ethernet-Kabel.
+
+Einsatz:
+- IP-Kameras
+- Access Points
+- VoIP-Telefone
+
+Vorteil:
+Kein separates Netzteil erforderlich.
+
+Skizze:
 
 ```
- [Switch mit PoE]───(Daten + Strom über LAN-Kabel)───[IP-Kamera]
-       │
-       │ 230 V Netzstrom (Einspeisung für Switch)
-       │
-   [Stromnetz]
+ [PoE-Switch]───(Daten + Strom)───[IP-Kamera]
+        │
+        └── 230 V Netzversorgung
 ```
 
 ---
 
-### Elektrotechnik-Grundlagen (Wiederholung)
+## Elektrotechnik – Wiederholung
 
-- **Kondensator / Blindwiderstand**  
-  - Formel-Beispiel: `Xc = 1 / (2π f C)`   
-- **Leistung**  
-  - `P = U * I`  
-  - Leistung = Spannung × Strom  
-- **Wechselspannung**  
-  - Relevanz bei Stromversorgung, Netztechnik, PoE.
+Blindwiderstand eines Kondensators:
+Xc = 1 / (2 * pi * f * C)
+
+Leistung:
+P = U * I
+
+Wechselspannung:
+Relevanz bei Netzteilen und PoE-Versorgung.
 
 ---
+
+## Kernaussagen
+
+- STP verhindert Layer-2-Schleifen.
+- Root-Bridge = kleinste Bridge-ID.
+- Niedrigste Path-Cost bestimmt den aktiven Pfad.
+- RSTP konvergiert schneller als klassisches STP.
+- PoE kombiniert Daten und Strom ueber Ethernet.
+
+---
+
 <details style="margin-top: 2em;">
 <summary style="font-size: 0.9em; color: #888;">Metadaten anzeigen</summary>
 <p style="font-size: 0.85em; color: grey;">
-Teil der FIAE-Umschulung (2025–2027) am BFW Muehlenbeck.<br>
+Teil der FIAE-Umschulung (2025-2027) am BFW Muehlenbeck.<br>
 Diese Mitschrift entstand im Unterricht am 10.09.2025 mit TRE.<br>
-Sie basiert auf gemeinsam erarbeiteten Inhalten und ergänzenden Übungsbeispielen vom 10.09.2025.<br><br>
-Die Version wurde inhaltlich überarbeitet, strukturell optimiert und technisch ergänzt,<br>
-um Lernerfolg, Prüfungsrelevanz und Nachvollziehbarkeit zu fördern.<br><br>
-Öffentlich dokumentiert zur Wiederholung, Prüfungsvorbereitung und als Orientierungshilfe für Dritte.<br><br>
+Sie basiert auf gemeinsam erarbeiteten Inhalten und ergaenzenden Uebungsbeispielen vom 10.09.2025.<br><br>
+Die Version wurde inhaltlich ueberarbeitet, strukturell optimiert und technisch ergaenzt,<br>
+um Lernerfolg, Pruefungsrelevanz und Nachvollziehbarkeit zu foerdern.<br><br>
+Oeffentlich dokumentiert zur Wiederholung, Pruefungsvorbereitung und als Orientierungshilfe fuer Dritte.<br><br>
 Quelle: Eigene Mitschrift & Unterrichtsinhalte<br>
 Autor: Sean Conroy<br>
 Lizenz: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
 </p>
 </details>
-
