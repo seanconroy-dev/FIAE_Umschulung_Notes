@@ -1,115 +1,144 @@
-﻿
-## Freitag, 25-07-2025_Programmiertechnik_ASS
+---
+title: "Datentypen, Scanner und Entwicklungsgrundlagen in Java"
+date: 2025-07-25
+weekday: "Freitag"
+subject: "Programmiertechnik"
+instructor: "ASS"
+program: "FIAE Umschulung 2025-2027"
+module: "Java Grundlagen"
+topic: "Scanner, Datentypen, IDE, Rechenoperationen"
+level: "Grundlagen"
+tags:
+  - Java
+  - Scanner
+  - Datentypen
+  - Variablen
+  - IDE
+  - Eclipse
+  - IntelliJ
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
 
-### Allgemeine Hinweise
-- **Event** – ein Ereignis in Programmiersprachen, z. B. Eingabe oder Mausklick.  
-- **`.close()`** – Befehl, um Ressourcen (z. B. Scanner, Streams) zu schließen.  
-- **Strg + Shift + 7** – Blockkommentare in IntelliJ/Eclipse.  
-- **Escape-Sequenzen in Java:**  
-  - `\t` = Tabulator (Einrückung)  
-  - `\n` = Zeilenumbruch  
+# Datentypen, Scanner und Entwicklungsgrundlagen – 2025-07-25 (ASS)
 
 ---
 
-### Entwicklungsumgebung & Grundlagen
-- **Scanner rot markiert?** → `import java.util.Scanner;` fehlt.  
-- **RM → show in → System Explorer** – Dateien im Explorer anzeigen.  
-- **JDK installiert?** → Danach IDE installieren.  
-- **JRE System Library → java.util** → von hier werden Klassen wie Scanner importiert.  
-- **JDK & LTS:**  
-  - LTS-Versionen (Long Term Support) kostenpflichtig bei kommerzieller Nutzung.  
-  - Setzen System-Umgebungsvariablen automatisch.  
-  - Bei neuer Java-Version → alte Installation deinstallieren.  
-- **Grundregel für jede Programmiersprache:**  
-  1. SDK (Software Development Kit) installieren.  
-  2. IDE einrichten.  
-- **String-Block:** `""" ... """` (Textblock seit Java 15).  
-- **Telefonnummern und Postleitzahlen niemals als `int` speichern**, sonst führende Nullen gehen verloren → lieber `String`.
+## Allgemeine Hinweise
+
+- **Event**: Ereignis im Programm (z. B. Tastatureingabe, Mausklick).
+- **`.close()`**: Schließt Ressourcen wie `Scanner` oder Streams.
+- **Strg + Shift + 7**: Blockkommentar in IntelliJ/Eclipse.
+- **Escape-Sequenzen in Java**
+  - `\t` → Tabulator
+  - `\n` → Zeilenumbruch
 
 ---
 
-### Scanner-Beispiel – Aufgabe 4
+## Entwicklungsumgebung & Grundlagen
+
+- Scanner rot markiert → `import java.util.Scanner;` fehlt.
+- RM → *Show in → System Explorer* → Datei im Explorer öffnen.
+- Reihenfolge:
+  1. JDK (SDK) installieren
+  2. IDE installieren
+- `java.util` enthält u. a. `Scanner`.
+- **Textblock (seit Java 15)**:
+  ```java
+  String text = """
+  Mehrzeiliger
+  Text
+  """;
+  ```
+- Telefonnummern & Postleitzahlen → **als String speichern**, da führende Nullen sonst verloren gehen.
+
+### Hinweis zu LTS
+LTS-Versionen (Long Term Support) sind bei kommerzieller Nutzung bestimmter Distributionen kostenpflichtig (z. B. Oracle JDK). OpenJDK-Distributionen können kostenfrei sein.  
+Neue Java-Version → alte Version ggf. sauber deinstallieren.
+
+---
+
+## Scanner-Beispiel – Aufgabe 4
+
 ```java
 Scanner sc = new Scanner(System.in);
 
 System.out.println("Vorname eingeben: ");
-String Vorname = sc.next();
+String vorname = sc.next();
 
 System.out.println("Nachname eingeben: ");
-String Nachname = sc.next();
+String nachname = sc.next();
 
 System.out.println("Wohnort eingeben: ");
-String Wohnort = sc.next();
+String wohnort = sc.next();
 
 System.out.println("Alter eingeben: ");
-int Alter = sc.nextInt();
+int alter = sc.nextInt();
 
 System.out.println("Kontostand eingeben: ");
-double Kontostand = sc.nextDouble();
+double kontostand = sc.nextDouble();
 
 System.out.println("Geburtsdatum eingeben: ");
-String Geburtsdatum = sc.next();
+String geburtsdatum = sc.next();
 
 System.out.println("Aufgabe 4:");
-System.out.println("Vorname:\t" + Vorname);
-System.out.println("Nachname:\t" + Nachname);
-System.out.println("Wohnort:\t" + Wohnort);
-System.out.println("Alter:\t\t" + Alter);
-System.out.println("Kontostand:\t" + Kontostand);
-System.out.println("Geburtsdatum:\t" + Geburtsdatum);
+System.out.println("Vorname:\t" + vorname);
+System.out.println("Nachname:\t" + nachname);
+System.out.println("Wohnort:\t" + wohnort);
+System.out.println("Alter:\t\t" + alter);
+System.out.println("Kontostand:\t" + kontostand);
+System.out.println("Geburtsdatum:\t" + geburtsdatum);
 ```
 
 ---
 
-### Komplette Beispielklasse – Datentypen & Variablen
+## Komplette Beispielklasse – Datentypen & Variablen
+
 ```java
 import java.util.Scanner;
 
 public class AufgDatentypenVariablen {
     public static void main(String[] args) {
 
-        // Aufgabe 1 – Deklaration & Initialisierung
-        // Deklaration: Variable mit Datentyp anlegen
-        // Initialisierung: Wert zuweisen
+        // Deklaration
         int a;
         float b;
         char c;
 
-        // Aufgabe 2 – Werte zuweisen
+        // Initialisierung
         a = 15;
         b = 3.3f;
         c = '&';
 
-        // Aufgabe 3 & 4 – Eingabe von Daten
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Vorname eingeben: ");
-        String Vorname = sc.next();
+        String vorname = sc.next();
 
         System.out.println("Nachname eingeben: ");
-        String Nachname = sc.next();
+        String nachname = sc.next();
 
         System.out.println("Wohnort eingeben: ");
-        String Wohnort = sc.next();
+        String wohnort = sc.next();
 
         System.out.println("Alter eingeben: ");
-        int Alter = sc.nextInt();
+        int alter = sc.nextInt();
 
         System.out.println("Kontostand eingeben: ");
-        double Kontostand = sc.nextDouble();
+        double kontostand = sc.nextDouble();
 
         System.out.println("Geburtsdatum eingeben: ");
-        String Geburtsdatum = sc.next();
+        String geburtsdatum = sc.next();
 
         System.out.println("Aufgabe 4:");
-        System.out.println("Vorname:\t" + Vorname);
-        System.out.println("Nachname:\t" + Nachname);
-        System.out.println("Wohnort:\t" + Wohnort);
-        System.out.println("Alter:\t\t" + Alter);
-        System.out.println("Kontostand:\t" + Kontostand);
-        System.out.println("Geburtsdatum:\t" + Geburtsdatum);
+        System.out.println("Vorname:\t" + vorname);
+        System.out.println("Nachname:\t" + nachname);
+        System.out.println("Wohnort:\t" + wohnort);
+        System.out.println("Alter:\t\t" + alter);
+        System.out.println("Kontostand:\t" + kontostand);
+        System.out.println("Geburtsdatum:\t" + geburtsdatum);
 
-        // Aufgabe 5 – Rechenoperationen
+        // Rechenoperationen
         System.out.println("Erste Zahl eingeben: ");
         int x = sc.nextInt();
         System.out.println("Zweite Zahl eingeben: ");
@@ -117,9 +146,8 @@ public class AufgDatentypenVariablen {
         System.out.println("Dritte Zahl eingeben: ");
         int z = sc.nextInt();
 
-        int ergminus = x - y - z;
-        System.out.println("Aufgabe 5:");
-        System.out.println(x + "-" + y + "-" + z + " = " + ergminus);
+        int ergMinus = x - y - z;
+        System.out.println(x + "-" + y + "-" + z + " = " + ergMinus);
 
         System.out.println("Erste Kommazahl eingeben: ");
         double h = sc.nextDouble();
@@ -128,18 +156,21 @@ public class AufgDatentypenVariablen {
         System.out.println("Dritte Kommazahl eingeben: ");
         double p = sc.nextDouble();
 
-        double ergkomma = h - u - p;
-        System.out.println(h + "-" + u + "-" + p + " = " + ergkomma);
+        double ergKomma = h - u - p;
+        System.out.println(h + "-" + u + "-" + p + " = " + ergKomma);
 
-        // Aufgabe 6 – Geschwindigkeit berechnen
-        System.out.println("Strecke eingeben in Meter: ");
+        // Geschwindigkeit
+        System.out.println("Strecke in Meter eingeben: ");
         double s = sc.nextDouble();
-        System.out.println("Zeit eingeben in Sekunden: ");
+        System.out.println("Zeit in Sekunden eingeben: ");
         double t = sc.nextDouble();
 
-        double v = s / t;
-        System.out.println("Aufgabe 6:");
-        System.out.println("Formel: s / t = v => " + s + "m / " + t + "s = " + v + "m/s");
+        if (t != 0) {
+            double v = s / t;
+            System.out.println("Formel: s / t = v => " + s + "m / " + t + "s = " + v + "m/s");
+        } else {
+            System.out.println("Zeit darf nicht 0 sein.");
+        }
 
         sc.close();
     }
@@ -148,61 +179,34 @@ public class AufgDatentypenVariablen {
 
 ---
 
-### Beispielausgabe
-```
-Vorname eingeben: 
-jan
-Nachname eingeben: 
-musterman
-Wohnort eingeben: 
-berlin
-Alter eingeben: 
-35
-Kontostand eingeben: 
-22
-Geburtsdatum eingeben: 
-11.11.1888
+## Wichtige Korrekturen & Hinweise
 
-Aufgabe 4:
-Vorname:	jan
-Nachname:	musterman
-Wohnort:	berlin
-Alter:		35
-Kontostand:	22.0
-Geburtsdatum:	11.11.1888
-
-Aufgabe 5:
-1-2-3 = -4
-2.5-2.0-2.0 = -1.5
-
-Aufgabe 6:
-Formel: s / t = v => 2.0m / 2.0s = 1.0m/s
-```
+- Variablennamen beginnen konventionsgemäß **klein** (camelCase).
+- Division durch 0 vermeiden → vorher prüfen.
+- `next()` liest nur ein Wort.  
+  Für ganze Zeilen besser `nextLine()` verwenden.
+- Ressourcen immer mit `.close()` schließen.
 
 ---
 
-### Kerngedanken
-- Scanner **immer importieren**: `import java.util.Scanner;`  
-- Variablen sauber **deklarieren und initialisieren**.  
-- **Escape-Sequenzen** (`\t`, `\n`) für bessere Ausgabe nutzen.  
-- **Strings** statt `int` bei Telefonnummern, Postleitzahlen.  
-- IDE-Hotkeys (Strg + Shift + 7) nutzen, um schneller Kommentare zu setzen.  
-- JDK & LTS beachten: kommerziell → kostenpflichtig.  
+## Kerngedanken
+
+- Scanner korrekt importieren.
+- Deklaration ≠ Initialisierung.
+- Escape-Sequenzen verbessern Formatierung.
+- Strings für Werte mit führenden Nullen verwenden.
+- SDK vor IDE installieren.
+- Sichtbarkeit, Struktur und saubere Benennung sind Teil professioneller Praxis.
 
 ---
 
 <details style="margin-top: 2em;">
 <summary style="font-size: 0.9em; color: #888;">Metadaten anzeigen</summary>
 <p style="font-size: 0.85em; color: grey;">
-Teil der FIAE-Umschulung (2025–2027) am BFW Mühlenbeck.<br>
-Diese Mitschrift entstand im Unterricht am 25.07.2025 mit ASS.<br>
-Sie basiert auf gemeinsam erarbeiteten Inhalten und ergänzenden Übungsbeispielen vom 25.07.2025.<br><br>
-Die Version wurde inhaltlich überarbeitet, strukturell optimiert und technisch ergänzt,<br>
-um Lernerfolg, Prüfungsrelevanz und Nachvollziehbarkeit zu fördern.<br><br>
-Öffentlich dokumentiert zur Wiederholung, Prüfungsvorbereitung und als Orientierungshilfe für Dritte.<br><br>
-Quelle: Eigene Mitschrift & Unterrichtsinhalte<br>
+Teil der FIAE-Umschulung (2025-2027) am BFW Muehlenbeck.<br>
+Unterricht am 25.07.2025 mit ASS.<br>
+Quelle: Eigene Mitschrift & Unterrichtsinhalte.<br>
 Autor: Sean Conroy<br>
-Lizenz: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+Lizenz: CC BY-NC-SA 4.0
 </p>
 </details>
-
