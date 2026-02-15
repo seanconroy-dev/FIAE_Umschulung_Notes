@@ -1,4 +1,4 @@
-﻿---
+---
 title: "IoT – MQTT, Mosquitto, Docker & Sensordaten mit ESP32"
 date: 2025-08-18
 weekday: "Montag"
@@ -272,3 +272,4 @@ void loop() {
 - 58.2 ergibt sich aus Schallgeschwindigkeit in Luft
 - `delay()` blockiert den Controller
 - MQTT Retain-Flag (`true`) speichert letzte Nachricht im Broker
+
