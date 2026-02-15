@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Schalenmodell & Kernelarchitekturen"
 date: 2025-09-18
 weekday: "Donnerstag"
@@ -183,3 +183,4 @@ Ein Hybridkernel kombiniert Elemente von monolithischem Kernel und Microkernel.
 ### Beispiel
 
 - Windows NT (3.1 – Windows 11)
+
