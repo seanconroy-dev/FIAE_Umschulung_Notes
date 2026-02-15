@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Linux – SSH, IP-Bridges und Paketverwaltung"
 date: 2025-10-29
 weekday: "Mittwoch"
@@ -129,3 +129,4 @@ sudo apt show <paket>        # Paketdetails anzeigen
 - Repositories sind in Bereiche nach Lizenz- und Supportstatus unterteilt.  
 - Korrekte Zeitsynchronisation ist Voraussetzung für sichere Paketvalidierung.  
 - Kenntnisse zu SSH und APT sind prüfungsrelevant (AP1/AP2) und Grundlage für spätere Themen wie Serveradministration und Netzwerkautomatisierung.
+
