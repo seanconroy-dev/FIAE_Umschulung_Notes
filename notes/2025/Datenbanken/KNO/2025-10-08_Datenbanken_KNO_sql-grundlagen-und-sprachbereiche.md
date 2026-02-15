@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SQL – Grundlagen und Sprachbereiche"
 date: 2025-10-08
 weekday: "Mittwoch"
@@ -151,3 +151,4 @@ FROM kunden;
 ```
 
 → Gibt alle Spalten der Tabelle `kunden` zurück.
+
