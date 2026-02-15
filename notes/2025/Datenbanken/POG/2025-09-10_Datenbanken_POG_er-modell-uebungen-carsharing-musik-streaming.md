@@ -1,4 +1,4 @@
-﻿---
+---
 title: "ER-Modell Übungen – Carsharing & Musik-Streaming"
 date: 2025-09-10
 weekday: "Mittwoch"
@@ -147,3 +147,4 @@ Erstellen Sie auf Grundlage dieser Beschreibung ein vollständiges Entity-Relati
   (Jedes Lied stammt von genau einem Künstler, ein Künstler veröffentlicht viele Lieder.)
 - Lied — (m:n) — Playlist  
   (Ein Lied kann in mehreren Playlists vorkommen, eine Playlist enthält viele Lieder.)
+
