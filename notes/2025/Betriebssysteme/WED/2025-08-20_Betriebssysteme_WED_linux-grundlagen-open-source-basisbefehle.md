@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Linux Grundlagen – Open Source & Basisbefehle"
 date: 2025-08-20
 weekday: "Mittwoch"
@@ -183,3 +183,4 @@ Diese Basisbefehle sind grundlegend für:
 - DevOps-Workflows (Docker, Git, Deployment)
 
 Frühe Sicherheit im Umgang mit der Shell erleichtert das Verständnis komplexerer Werkzeuge erheblich.
+
