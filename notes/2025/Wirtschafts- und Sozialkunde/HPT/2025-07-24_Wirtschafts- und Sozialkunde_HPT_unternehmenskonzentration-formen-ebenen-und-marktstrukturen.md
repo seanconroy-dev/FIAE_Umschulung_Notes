@@ -1,0 +1,198 @@
+﻿---
+title: "Unternehmenskonzentration – Formen, Ebenen und Marktstrukturen"
+date: 2025-07-24
+weekday: "Donnerstag"
+subject: "Wirtschafts- und Sozialkunde"
+instructor: "HPT"
+program: "FIAE Umschulung 2025-2027"
+module: "Markt & Wettbewerb"
+topic: "Unternehmenskonzentration, Kartell, Fusion, Oligopol"
+level: "Grundlagen"
+tags:
+  - Unternehmenskonzentration
+  - Skaleneffekte
+  - Horizontal
+  - Vertikal
+  - Diagonal
+  - Kartell
+  - Fusion
+  - ARGE
+  - Konsortium
+  - Oligopol
+  - GWB
+  - AP1
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+## Donnerstag, 24-07-2025 · WiSo · HPT
+
+# Grundlagen der Wirtschaft – Unternehmenskonzentration
+
+Unternehmenskonzentration beschreibt den Zusammenschluss oder die enge Zusammenarbeit mehrerer Unternehmen.
+
+Ziel ist meist:
+
+- Kosten senken
+- Marktmacht erhöhen
+- Risiken verteilen
+- Wettbewerb beeinflussen
+
+---
+
+# Skaleneffekte & Vorteile
+
+## Skaleneffekte
+
+Kostenersparnisse durch steigende Produktionsmenge.
+
+Beispiel:
+
+- Fixkosten verteilen sich auf mehr Stücke.
+- Einkauf größerer Mengen senkt Stückkosten.
+
+---
+
+## Weitere Vorteile
+
+- Kostenvorteile durch Massenproduktion
+- Gemeinsamer Kundenstamm
+- Risiko-Streuung durch Diversifikation
+- Bessere Finanzierungsmöglichkeiten
+- Größere Verhandlungsmacht gegenüber Lieferanten
+
+---
+
+# Ebenen der Konzentration
+
+## Horizontal
+
+Zusammenschluss auf derselben Produktions- oder Handelsstufe.
+
+Beispiel:
+
+- Zwei Automobilhersteller fusionieren.
+
+Ziel:
+
+- Marktanteil erhöhen
+- Konkurrenz reduzieren
+
+---
+
+## Vertikal
+
+Zusammenschluss auf aufeinanderfolgenden Produktionsstufen.
+
+Beispiel:
+
+- Hersteller übernimmt Zulieferer.
+
+Ziel:
+
+- Kontrolle über Lieferkette
+- Kostensenkung
+- Versorgungssicherheit
+
+---
+
+## Diagonal (auch konglomerat)
+
+Zusammenschluss branchenfremder Unternehmen.
+
+Beispiel:
+
+- Hotelunternehmen + Versicherungskonzern
+
+Ziel:
+
+- Risikostreuung
+- Erweiterung des Geschäftsfeldes
+
+---
+
+# Formen der Zusammenarbeit
+
+## ARGE (Arbeitsgemeinschaft)
+
+- Vertraglicher Zusammenschluss
+- Zeitlich begrenzt
+- Typisch im Bauwesen
+- Unternehmen bleiben rechtlich selbstständig
+
+---
+
+## Konsortium
+
+- Zeitlich befristeter Zusammenschluss
+- Häufig bei Banken
+- Finanzierung großer Projekte
+
+Beispiel:
+
+- Großkredit für Infrastrukturprojekt
+
+---
+
+## Kartell
+
+Zusammenschluss von Unternehmen derselben Branche.
+
+Ziel:
+
+- Einfluss auf Preise
+- Einfluss auf Produktionsmengen
+- Aufteilung von Absatzgebieten
+
+Formen:
+
+- Preiskartell
+- Mengenkartell
+- Gebietskartell
+
+Rechtslage:
+
+- In Deutschland geregelt durch das **GWB (Gesetz gegen Wettbewerbsbeschränkungen)**.
+- Kartelle sind grundsätzlich verboten, Ausnahmen unter strengen Bedingungen möglich.
+
+Gefahr:
+
+- Wettbewerbsverzerrung
+- Benachteiligung der Verbraucher
+
+---
+
+## Fusion
+
+- Dauerhafter Zusammenschluss
+- Unternehmen verlieren ihre rechtliche Selbstständigkeit
+- Es entsteht eine neue wirtschaftliche Einheit
+
+---
+
+# Marktstrukturen
+
+## Oligopol
+
+- Wenige große Anbieter dominieren den Markt.
+- Hohe gegenseitige Abhängigkeit.
+- Erhöhte Wahrscheinlichkeit für Kartellbildung.
+
+Beispielbereiche:
+
+- Energie
+- Telekommunikation
+- Automobilindustrie
+
+---
+
+# Prüfungsfokus (AP1)
+
+- Unterschied horizontal / vertikal / diagonal erklären
+- ARGE, Konsortium und Kartell unterscheiden
+- Fusion definieren
+- Oligopol einordnen
+- GWB als Wettbewerbsrecht kennen
+- Vorteile und Risiken von Konzentration bewerten
+
+Unternehmenskonzentration ist ein zentrales Thema im Spannungsfeld zwischen Wettbewerb, Marktmacht und Regulierung.

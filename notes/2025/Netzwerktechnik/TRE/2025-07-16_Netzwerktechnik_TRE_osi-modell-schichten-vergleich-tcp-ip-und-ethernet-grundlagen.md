@@ -1,0 +1,162 @@
+﻿---
+title: "OSI-Modell – Schichten, Vergleich TCP/IP und Ethernet-Grundlagen"
+date: 2025-07-16
+weekday: "Mittwoch"
+subject: "Netzwerktechnik"
+instructor: "TRE"
+program: "FIAE Umschulung 2025-2027"
+module: "Netzwerkgrundlagen"
+topic: "OSI-Modell, TCP/IP-Vergleich, Ethernet-Frame, TCP"
+level: "Grundlagen"
+tags:
+  - OSI-Modell
+  - TCP/IP
+  - Ethernet
+  - MAC-Adresse
+  - TCP
+  - UDP
+  - Wireshark
+  - Netzwerktechnik
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+# OSI-Modell – 2025-07-16 (NT, TRE)
+
+## OSI – Open Systems Interconnection
+
+Referenzmodell der ISO zur Beschreibung von Netzwerkkommunikation.  
+Besteht aus 7 klar definierten Schichten.
+
+---
+
+## Warum ein Schichtenmodell?
+
+- Klare Verantwortlichkeiten
+- Austauschbare Protokolle (Modularitaet)
+- Herstellerunabhaengigkeit
+- Vereinfachtes Debugging durch Schichtentrennung
+
+---
+
+## Die 7 Schichten des OSI-Modells
+
+| Nr. | Schicht               | Hauptfunktion |
+|-----|------------------------|--------------|
+| 7   | Anwendungsschicht      | Schnittstelle zu Programmen (HTTP, FTP, SMTP) |
+| 6   | Darstellungsschicht    | Verschluesselung, Formatierung, Codierung |
+| 5   | Sitzungsschicht        | Sitzungssteuerung |
+| 4   | Transportschicht       | TCP/UDP, Flusskontrolle, Zuverlaessigkeit |
+| 3   | Vermittlungsschicht    | Routing, IP-Adressen |
+| 2   | Sicherungsschicht      | Frames, MAC-Adressen, CRC |
+| 1   | Bituebertragungsschicht| Elektrische/optische Signaluebertragung |
+
+---
+
+## Vergleich: OSI vs. TCP/IP
+
+| OSI-Schicht(en) | TCP/IP-Schicht |
+|-----------------|----------------|
+| 7–5             | Anwendung      |
+| 4               | Transport      |
+| 3               | Internet       |
+| 2–1             | Netzzugang     |
+
+Hinweis:
+TCP/IP ist das praktisch eingesetzte Modell im Internet.
+
+---
+
+## Merksatz (oben nach unten)
+
+Alle Dummen Schueler Tragen Viele Schwere Buecher  
+= Anwendung – Darstellung – Sitzung – Transport – Vermittlung – Sicherung – Bit
+
+---
+
+## Schicht 0 (inoffiziell)
+
+Nicht Bestandteil des OSI-Modells, aber Grundlage:
+- Kupfer
+- Glasfaser
+- Funk
+- Steckverbindungen
+- EMV-Einfluesse
+
+---
+
+## Praeambel & Start of Frame (Ethernet)
+
+- Praeambel: 7 Byte 10101010 (Taktsynchronisation)
+- Start Frame Delimiter: 10101011
+- Interframe Gap: 96 Bit Pause zwischen Frames
+
+Hinweis:
+Jumbo-Frames beeinflussen nicht die Taktsynchronisation; diese erfolgt physikalisch auf Layer 1.
+
+---
+
+## Ethernet-Frame – Grundstruktur
+
+Bestandteile:
+- Destination MAC (6 Byte)
+- Source MAC (6 Byte)
+- EtherType (2 Byte)
+- Payload (46–1500 Byte)
+- FCS (4 Byte)
+
+Gesamtgroesse:
+64–1518 Byte (ohne Praeambel und SFD)
+
+---
+
+## MAC vs. IP-Adresse
+
+MAC-Adresse:
+- 48 Bit
+- Lokal im LAN relevant
+- Hardwaregebunden
+
+IP-Adresse:
+- Logische Adresse
+- Netzuebergreifend routingfaehig
+
+---
+
+## Terminal-Kommandos
+
+- ipconfig /all → zeigt IP- und MAC-Adressen
+- arp -a → zeigt ARP-Tabelle (IP ↔ MAC)
+
+---
+
+## TCP – Transmission Control Protocol
+
+- OSI-Schicht 4
+- Verbindungsorientiert
+- Sequenznummern und Bestaetigungen
+- Fehlerkontrolle und Flusssteuerung
+
+UDP:
+- Verbindungslos
+- Geringer Overhead
+- Keine Garantie fuer Zustellung
+
+---
+
+## Sniffer & Datenschutz
+
+Wireshark analysiert Netzwerkverkehr.
+
+Wichtig:
+- Einsatz nur mit Genehmigung
+- Datenschutz beachten
+- Schriftliche Freigabe empfohlen
+
+---
+
+## Zusatzinformationen
+
+- Klassenraum-IP: 192.168.33.1
+- OSI-Schichten 5–7 werden im TCP/IP-Modell zur Anwendungsschicht zusammengefasst.
+- Netzwerk-Analyse ist ein zentrales Ausbildungsthema.

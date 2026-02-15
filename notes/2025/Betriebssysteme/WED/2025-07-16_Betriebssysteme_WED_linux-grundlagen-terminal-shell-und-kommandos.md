@@ -1,0 +1,100 @@
+﻿---
+title: "Linux Grundlagen – Terminal, Shell und Kommandos"
+date: 2025-07-16
+weekday: "Mittwoch"
+subject: "BS"
+instructor: "WED"
+program: "FIAE Umschulung 2025-2027"
+module: "Linux Grundlagen"
+topic: "Terminal & Shell"
+level: "Grundlagen"
+tags:
+  - Linux
+  - Terminal
+  - Shell
+  - CLI
+  - Grundbefehle
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+# Mittwoch, 2025-07-16_BS_WED
+
+## Linux Grundlagen – Terminal, Shell und Kommandos
+
+> In einem Terminal (auch „Konsole“ genannt) läuft eine Shell, die eine Eingabeaufforderung zeigt. Dort kann man über die Linux-Befehlszeile Kommandos eingeben.
+
+---
+
+## Grundbegriffe
+
+- **Konsole**: Ursprünglich die physische Hardware zur Bedienung eines Rechners (z. B. Tastatur und Bildschirm).
+- **Terminal**: Programm, das ein Fenster zur Eingabe von Befehlen bereitstellt.
+- **Shell**: Programm, das Eingaben interpretiert und ausführt (z. B. `bash`, `zsh`, `fish`). Die Shell läuft im Terminal.
+- **Befehlszeile**: Textzeile zur Eingabe von Befehlen; Bestandteil der Shell.
+- **Eingabeaufforderung (Prompt)**: Zeigt an, dass Eingaben möglich sind. Enthält meist Benutzername, Rechnername und aktuelles Verzeichnis.
+
+Beispiel:
+
+```bash
+user@rechner:~$ ls -l
+admini@bfw-pc01:~/Doku$
+```
+
+---
+
+## Struktur eines Befehls
+
+```bash
+befehl [optionen] [parameter]
+```
+
+- **Befehl**: Name des auszuführenden Programms (z. B. `ls`)
+- **Optionen**: Beginnen mit `-` (z. B. `-l`), verändern das Verhalten
+- **Parameter**: Ziel oder Pfadangabe (z. B. `/home`)
+
+Beispiel:
+
+```bash
+ls -l /home
+```
+
+- `ls` → Befehl  
+- `-l` → Option  
+- `/home` → Parameter  
+
+Hinweis: Linux ist **case-sensitive** – `PWD` ≠ `pwd`.
+
+---
+
+## Wichtige Befehle und Tastenkombinationen
+
+| Befehl / Tastenkombi        | Bedeutung                                                      |
+|----------------------------|----------------------------------------------------------------|
+| `whoami`                   | Aktueller Benutzer                                              |
+| `ip a`                     | IP-Adresse und Netzwerkinformationen                           |
+| `pwd`                      | Aktuelles Verzeichnis anzeigen                                 |
+| `hostname`                 | Rechnername anzeigen                                           |
+| `env`                      | Umgebungsvariablen anzeigen                                    |
+| `env \| grep -i "path"`    | Filtert PATH (i = case-insensitiv)                             |
+| `grep`                     | Sucht nach Mustern in Text                                     |
+| `man ls`                   | Handbuchseite zu `ls` (mit `q` beenden)                        |
+| `ls -lisa`                 | Detaillierte Anzeige inkl. versteckter Dateien                 |
+| `Strg + C`                 | Bricht laufenden Befehl ab                                     |
+| `Strg + L`                 | Terminal leeren                                                |
+| Pfeiltasten ↑/↓           | Letzte Befehle wiederholen                                     |
+| `Tab`                      | Autovervollständigung                                          |
+
+---
+
+## Beispielhafte Befehlsnutzung
+
+```bash
+ls -lisa Schreibtisch/
+
+ls -l
+
+ls Schreibtisch/
+```
+
+Optionen wie `-lisa` können in beliebiger Reihenfolge stehen (`-isal` = `-lisa`).

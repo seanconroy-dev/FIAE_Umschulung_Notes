@@ -1,0 +1,144 @@
+﻿---
+title: "Marktformen, Marktzugang und Wettbewerbsarten"
+date: 2025-09-24
+weekday: "Mittwoch"
+subject: "Wirtschafts- und Sozialkunde"
+instructor: "WIL"
+program: "FIAE Umschulung 2025-2027"
+module: "Markt und Preis"
+topic: "Marktformen, Marktzugang, Wettbewerbsarten"
+level: "Grundlagen"
+tags:
+  - Marktformen
+  - Polypol
+  - Oligopol
+  - Monopol
+  - Marktzugang
+  - Wettbewerb
+  - Qualitätswettbewerb
+  - Werbewettbewerb
+  - AP1
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+## Mittwoch, 24-09-2025_WiSo_WIL
+
+# Marktformen
+
+Marktformen unterscheiden sich nach der Anzahl der Anbieter und Nachfrager auf einem Markt.
+
+---
+
+## Polypol
+- Viele Anbieter
+- Viele Nachfrager  
+→ Starker Wettbewerb  
+→ Kein einzelner Marktteilnehmer kann den Preis wesentlich beeinflussen  
+
+**Beispiele:**  
+Lebensmittelmarkt, Börsenhandel mit standardisierten Aktien  
+
+**Prüfungsfokus:** „viele + viele“ = klassische Wettbewerbsform
+
+---
+
+## Oligopol
+- Wenige Anbieter
+- Viele Nachfrager  
+→ Anbieter beobachten sich stark gegenseitig  
+→ Preisabsprachen sind gesetzlich verboten (Kartellrecht)
+
+**Beispiele:**  
+Mobilfunkmarkt, Fluggesellschaften, Mineralölkonzerne  
+
+**Prüfungsfokus:** Wenige Anbieter haben hohen Markteinfluss
+
+---
+
+## Monopol
+- Ein Anbieter
+- Viele Nachfrager  
+→ Anbieter ist Preisführer  
+→ Gefahr von Machtmissbrauch  
+→ Staatliche Regulierung häufig notwendig
+
+**Beispiele:**  
+Regionale Stromnetzbetreiber, bestimmte Infrastrukturmärkte  
+(Hinweis: Auch staatliche Monopole oder natürliche Monopole möglich)
+
+**Prüfungsfokus:** „Einer gegen alle“
+
+---
+
+# Marktzugang
+
+## Freier Marktzugang
+- Jeder kann Anbieter oder Nachfrager werden  
+- Geringe Eintrittsbarrieren  
+
+Beispiel: Viele Dienstleistungsbereiche
+
+---
+
+## Beschränkter Marktzugang
+- Zugang durch Gesetze, Lizenzen oder hohe Investitionskosten begrenzt  
+- Hohe Markteintrittsbarrieren  
+
+Beispiele:  
+Medikamentenherstellung (Zulassungspflicht)  
+Energieversorgung  
+Bankwesen  
+
+**Prüfungsfokus:** Markteintrittsbarrieren erkennen
+
+---
+
+# Verhaltensweisen der Marktteilnehmer
+
+## Anbieter
+- Ziel: Gewinnmaximierung  
+- Reagieren auf Preis- und Mengenänderungen  
+- Beobachten Konkurrenz  
+
+## Nachfrager
+- Ziel: Nutzenmaximierung  
+- Achten auf Preis-Leistungs-Verhältnis  
+- Reagieren auf Preisänderungen (Substitution möglich)
+
+**Merksatz:**  
+Anbieter → Gewinn  
+Nachfrager → Nutzen
+
+---
+
+# Wettbewerbsarten
+
+## Preiswettbewerb
+- Konkurrenz über Preisnachlässe  
+- Häufig im Polypol
+
+---
+
+## Qualitätswettbewerb
+- Wettbewerb über Qualität, Service, Innovation  
+- Differenzierung vom Konkurrenten  
+- Beispiel: Premium-Markenstrategie
+
+---
+
+## Werbewettbewerb
+- Wettbewerb über Marketing und Image  
+- Markenbildung und Wiedererkennung  
+
+---
+
+# Prüfungsrelevante Zusammenhänge (AP1)
+
+- Marktform anhand von Anbieter-/Nachfrageranzahl bestimmen  
+- Unterschied Polypol, Oligopol, Monopol sicher erklären  
+- Marktzugang (frei vs. beschränkt) erkennen  
+- Marktteilnehmer-Ziele unterscheiden  
+- Wettbewerbsarten vergleichen (Preis vs. Qualität vs. Werbung)
+
+Diese Grundlagen sind zentral für das Verständnis von Preisbildung, Marktmechanismen und staatlicher Regulierung in der sozialen Marktwirtschaft.

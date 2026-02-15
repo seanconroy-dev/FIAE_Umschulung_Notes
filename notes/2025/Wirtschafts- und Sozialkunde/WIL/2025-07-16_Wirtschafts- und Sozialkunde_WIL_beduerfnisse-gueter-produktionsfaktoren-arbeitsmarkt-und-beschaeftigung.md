@@ -1,0 +1,237 @@
+﻿---
+title: "Bedürfnisse, Güter & Produktionsfaktoren – Arbeitsmarkt und Beschäftigung"
+date: 2025-07-16
+weekday: "Mittwoch"
+subject: "Wirtschafts- und Sozialkunde"
+instructor: "WIL"
+program: "FIAE Umschulung 2025-2027"
+module: "Volkswirtschaftliche Grundlagen"
+topic: "Bedürfnisse, knappe Güter, Produktionsfaktoren, Arbeitsmarkt, Unterbeschäftigung"
+level: "Grundlagen"
+tags:
+  - Bedürfnisse
+  - freie Güter
+  - knappe Güter
+  - Produktionsfaktoren
+  - Arbeit
+  - Boden
+  - Kapital
+  - Humankapital
+  - Arbeitslosigkeit
+  - Unterbeschäftigung
+  - Lohn-Preis-Spirale
+  - AP1
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+## Mittwoch, 16.07.2025 · WiSo · WIL
+
+# Bedürfnisse und Güter
+
+Die Bedürfnisse der Menschen sind grundsätzlich **unbegrenzt**.  
+Die zur Befriedigung notwendigen Güter sind jedoch **begrenzt**.
+
+→ Knappheit zwingt zum wirtschaftlichen Handeln.
+
+---
+
+## Freie Güter
+
+- Im Überfluss vorhanden
+- Keine Knappheit
+- Kein wirtschaftlicher Aufwand notwendig
+
+Beispiele:
+
+- Luft
+- Sonnenlicht
+- Regenwasser
+
+Wichtig:  
+Freie Güter können regional oder zeitlich knapp werden (z. B. Trinkwasser).
+
+---
+
+## Knappe Güter
+
+- Begrenzte Verfügbarkeit
+- Müssen produziert oder bereitgestellt werden
+- Verursachen Kosten
+
+Beispiele:
+
+- Lebensmittel
+- Energie
+- Maschinen
+- Softwarelizenzen
+- Datenzugänge
+
+In der IT zählen digitale Produkte, Software, Rechte und Daten zu immateriellen knappen Gütern.
+
+---
+
+# Produktionsfaktoren
+
+Zur Herstellung knapper Güter werden Produktionsfaktoren benötigt.
+
+## Klassische Produktionsfaktoren
+
+1. Arbeit  
+2. Boden  
+3. Kapital  
+
+Ergänzend: Humankapital (Wissen, Qualifikation)
+
+---
+
+## 1. Arbeit
+
+Menschliche Tätigkeit im Produktionsprozess.
+
+### Gliederung:
+
+- schöpferisch
+- leitend
+- ausführend
+
+### Ausbildungsstand:
+
+- ungelernt
+- angelernt
+- gelernt
+
+### Beschäftigungslage:
+
+- Vollbeschäftigung: Arbeitslosenquote 1–3 %
+- Unterbeschäftigung: >3 %
+- Überbeschäftigung: <1 %
+
+---
+
+## 2. Boden
+
+Natürliche Ressourcen.
+
+Eigenschaften:
+
+- Unvermehrbar
+- Standortgebunden
+- Übertragbar (Eigentum)
+
+Nutzung:
+
+- Landwirtschaft
+- Rohstoffgewinnung
+- Standortfaktor
+
+---
+
+## 3. Kapital
+
+### Geldkapital
+Finanzielle Mittel.
+
+### Sachkapital
+Maschinen, Gebäude, Anlagen.
+
+### Investition
+Erhöhung des Sachkapitals.
+
+---
+
+## Humankapital
+
+- Wissen
+- Qualifikation
+- Erfahrung
+
+Wird zunehmend als vierter Produktionsfaktor betrachtet.
+
+---
+
+# Beschäftigungs- und Arbeitsmarktpolitik
+
+Haushalte stellen ihre Arbeitskraft bereit.  
+Unternehmen zahlen Löhne (Faktorlohnkosten).
+
+---
+
+## Kaufkrafttheorie (vereinfacht)
+
+Steigende Löhne → höhere Kaufkraft → höhere Nachfrage → mehr Produktion → mehr Beschäftigung
+
+Aber:
+
+Wenn Lohnerhöhungen die Produktionskosten stark erhöhen, können Preise steigen.
+
+---
+
+## Lohn-Preis-Spirale
+
+Ablauf:
+
+1. Löhne steigen
+2. Nachfrage steigt
+3. Preise steigen
+4. Neue Lohnforderungen
+
+Risiko:
+
+- Inflation
+- Rückgang der Wettbewerbsfähigkeit
+- Rezession
+
+---
+
+# Unterbeschäftigung
+
+Unterbeschäftigung liegt vor, wenn Produktionsfaktoren nicht voll ausgelastet sind.
+
+Beispiel:
+
+10.000 Arbeitskräfte verfügbar  
+9.000 beschäftigt  
+→ 10 % unausgelastet
+
+---
+
+## Vollbeschäftigung
+
+Arbeitslosenquote zwischen 1 % und 3 %.
+
+---
+
+## Arbeitslosigkeit
+
+Definition:
+
+Arbeitsfähig und arbeitswillig, aber ohne Beschäftigung.
+
+Nicht vollständig erfasst:
+
+- Stille Reserve (z. B. entmutigte Arbeitssuchende)
+
+---
+
+# Arten der Arbeitslosigkeit
+
+| Art | Ursache | Bekämpfung |
+|------|----------|------------|
+| Friktionell | Übergangsphasen | Vermittlung verbessern |
+| Saisonal | Jahreszeitliche Schwankungen | Strukturprogramme |
+| Konjunkturell | Wirtschaftliche Abschwächung | Konjunkturpolitik |
+| Strukturell | Technologischer Wandel | Umschulung, Weiterbildung |
+
+---
+
+# Prüfungsfokus (AP1)
+
+- Unterschied freie und knappe Güter erklären
+- Produktionsfaktoren nennen und erläutern
+- Humankapital einordnen
+- Unterbeschäftigung definieren
+- Arbeitslosenarten unterscheiden
+- Lohn-Preis-Spirale erklären
+
+Diese Grundlagen bilden das Fundament für volkswirtschaftliches Verständnis und Arbeitsmarktanalyse.

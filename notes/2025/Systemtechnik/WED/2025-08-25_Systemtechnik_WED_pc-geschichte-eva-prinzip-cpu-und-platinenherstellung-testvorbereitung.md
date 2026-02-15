@@ -1,0 +1,211 @@
+﻿---
+title: "PC-Geschichte, EVA-Prinzip, CPU und Platinenherstellung (Testvorbereitung)"
+date: 2025-08-25
+weekday: "Montag"
+subject: "Systemtechnik"
+instructor: "WED"
+program: "FIAE Umschulung 2025-2027"
+module: "Rechnerarchitektur & Hardwaregrundlagen"
+topic: "PC-Geschichte, EVA, CPU-Aufbau, Moore’s Gesetz, PCB"
+level: "Grundlagen"
+tags:
+  - PC-Geschichte
+  - Von-Neumann-Architektur
+  - EVA
+  - CPU
+  - ALU
+  - Register
+  - Cache
+  - Moore
+  - PCB
+  - Leiterplatte
+  - FR4
+  - AP1
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+## Montag, 25-08-2025_ST_WED
+
+**Test nächste Woche – Themen:**
+- PC-Geschichte  
+- EVA-Prinzip  
+- Zentraleinheit (CPU)  
+
+---
+
+# PC-Geschichte – Überblick
+
+- **1940er–1950er**: Von-Neumann-Architektur (gemeinsamer Speicher für Daten und Programme). Übergang von Elektronenröhren zu Transistoren.  
+- **1958**: Integrierte Schaltung (IC) – mehrere Transistoren auf einem Chip.  
+- **1971**: Intel 4004 – erster kommerzieller Mikroprozessor (CPU auf einem Chip).  
+- **1981**: IBM PC – Standardisierung und PC-Kompatibilität.  
+- **1984–1995**: GUI-Systeme (Macintosh, Windows) verbreiten sich stark.  
+- **2000er–heute**: Multi-Core-CPUs, Virtualisierung, Cloud, GPUs als Beschleuniger, Fokus auf Parallelität statt reine Takterhöhung.
+
+Wichtig:  
+Die Von-Neumann-Architektur ist prüfungsrelevant (Speicherprinzip, sequentielle Abarbeitung).
+
+---
+
+# EVA-Prinzip (Eingabe – Verarbeitung – Ausgabe)
+
+Grundmodell jedes Informationssystems:
+
+- **Eingabe**: Tastatur, Maus, Sensoren, Netzwerkdaten  
+- **Verarbeitung**: CPU führt Befehle aus  
+- **Ausgabe**: Monitor, Drucker, Datei, Netzwerkantwort  
+
+Speicher wirkt als Querschnittsfunktion:
+
+- Register  
+- Cache  
+- RAM  
+- Massenspeicher  
+
+Erweiterung:  
+Oft wird von **EVAS** gesprochen (Speicherung als vierte Komponente).
+
+---
+
+# Zentraleinheit (CPU)
+
+## Aufgabe
+
+- Befehle holen (Fetch)
+- Dekodieren (Decode)
+- Ausführen (Execute)
+- Ergebnisse zurückschreiben (Write Back)
+
+Das nennt man **Fetch-Decode-Execute-Zyklus**.
+
+---
+
+## Aufbau
+
+### ALU (Arithmetic Logic Unit)
+- Addieren
+- Subtrahieren
+- Vergleiche
+- Bit-Operationen
+
+### Steuerwerk
+- Dekodiert Befehle
+- Steuert Datenflüsse
+- Koordiniert Komponenten
+
+### Register
+- Schnellster Speicher im System
+- Speichern Operanden und Adressen
+
+### Cache (L1, L2, L3)
+- Puffer zwischen CPU und RAM
+- Reduziert Zugriffszeiten
+- L1 am schnellsten, aber klein
+
+### Takt
+- Gibt Geschwindigkeit vor (Hz)
+- Moderne CPUs arbeiten mit:
+  - Pipelines
+  - Out-of-Order-Execution
+  - Mehreren Kernen
+
+---
+
+## ISA – Instruction Set Architecture
+
+Beispiel:
+
+- x86-64
+- ARM
+
+Unterschiede:
+
+- RISC (Reduced Instruction Set Computer)
+- CISC (Complex Instruction Set Computer)
+
+---
+
+# Moore’s Gesetz
+
+Beobachtung:
+
+Transistoranzahl pro Chip verdoppelt sich etwa alle 18–24 Monate.
+
+Folgen:
+
+- Jahrzehntelang exponentielle Leistungssteigerung
+- Heute: physikalische Grenzen
+- Fokus auf:
+  - Energieeffizienz
+  - Parallelisierung
+  - Spezialbeschleuniger (GPU, NPU)
+
+Wichtig:  
+Moore’s Gesetz ist eine Beobachtung, kein Naturgesetz.
+
+---
+
+# Platine (PCB – Printed Circuit Board)
+
+## Aufgabe
+
+- Mechanische Trägerstruktur
+- Elektrische Verbindung durch Leiterbahnen
+- Wärmeabfuhr
+- EMV-gerechtes Layout
+
+---
+
+## Aufbau (typisch FR-4)
+
+- FR-4-Kern (Glasfaser + Epoxidharz)
+- Kupferschicht (häufig 35 µm)
+- Leiterbahnen
+- Lötpads
+- Durchkontaktierungen (Vias)
+- Lötstoppmaske (meist grün)
+- Bestückungsdruck
+- Oberflächenfinish (z. B. ENIG)
+
+---
+
+# Platinenherstellung – Übersicht
+
+1. Kupferkaschiertes FR-4 vorbereiten  
+2. Reinigung  
+3. Fotolack (Resist) aufbringen  
+4. Belichtung mit Layout-Maske  
+5. Entwicklung (nicht gehärteten Resist entfernen)  
+6. Ätzen (freies Kupfer entfernen)  
+7. Resist entfernen  
+8. Bohren  
+9. Durchkontaktieren  
+10. Lötstoppmaske auftragen  
+11. Bestückungsdruck  
+12. Oberflächenfinish (z. B. ENIG)  
+13. Elektrische Prüfung  
+14. Vereinzelung und Endkontrolle  
+
+---
+
+# Wichtige Begriffe
+
+- Resist = lichtempfindlicher Fotolack  
+- Ätzen = chemisches Entfernen von Kupfer  
+- Via = metallisierte Bohrung  
+- ENIG = Nickel-Gold-Oberfläche  
+- FR-4 = Standard-Leiterplattenmaterial  
+
+---
+
+# Zusammenfassung (Testfokus)
+
+- Von-Neumann-Architektur erklären können  
+- EVA-Prinzip sicher darstellen  
+- CPU-Aufbau benennen (ALU, Steuerwerk, Register, Cache)  
+- Fetch-Decode-Execute-Zyklus kennen  
+- Moore’s Gesetz einordnen  
+- PCB-Aufbau und Herstellungsprozess grob beschreiben  
+
+Diese Themen bilden die Grundlage für Systemtechnik in AP1.
