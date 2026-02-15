@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Datenbanken – Grundlagen, ER-Modell und Normalisierung"
 date: 2025-07-09
 weekday: "Mittwoch"
@@ -165,3 +165,4 @@ Optimierung der Tabellenstruktur zur Vermeidung von Redundanzen und Anomalien.
 - **1NF:** Nur atomare Werte
 - **2NF:** Keine partiellen Abhängigkeiten
 - **3NF:** Keine transitiven Abhängigkeiten
+
