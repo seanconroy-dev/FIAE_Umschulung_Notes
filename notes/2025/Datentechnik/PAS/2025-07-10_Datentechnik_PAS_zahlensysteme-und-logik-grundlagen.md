@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Zahlensysteme und Logik – Grundlagen"
 date: 2025-07-10
 weekday: "Donnerstag"
@@ -147,3 +147,4 @@ System.out.println((true || false) && false); // false
 - Das Binärsystem ist die Grundlage aller digitalen Systeme.
 - Hexadezimal dient der kompakten technischen Darstellung (z. B. 0xFF = 255).
 - Logikgatter sind die elementaren Bausteine moderner Rechnerarchitekturen.
+
