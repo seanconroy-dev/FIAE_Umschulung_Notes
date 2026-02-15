@@ -9,77 +9,53 @@ und dient als strukturierte Wissensbasis zur Vorbereitung auf **AP1 und AP2 (IHK
 
 ---
 
-## Konzept & Standardisierung
+## Struktur (Standardisiert)
 
-Alle Notizen:
+Alle Notizen liegen unter:
 
-- enthalten ein einheitliches **Frontmatter** (Metadaten: Fach, Modul, Dozent, Thema, Level, Tags)
-- folgen einer festen **Footer-Struktur**
-- sind prüfungsorientiert aufbereitet (AP1/AP2-Fokus)
-- werden fachlich überarbeitet und strukturell optimiert
+notes/<Jahr>/<Fach>/<Dozent>/
 
-Ziel ist nicht nur Mitschrift, sondern **lernoptimierte Dokumentation**.
+Beispiel:
+
+notes/2026/Programmiertechnik/ASS/
 
 ---
 
-## Struktur
-
-Die Inhalte sind gegliedert nach:
-
-- **Fachbereich**
-- **Dozent**
-- **Modul / Thema**
+## Dateiformat
 
 Dateinamen folgen dem Format:
 
-```
-DD.MM.YYYY-thema.md
-```
+YYYY-MM-DD_Fach_Dozenkürzel_slug.md
 
 Beispiel:
-```
-10.07.2025-zahlensysteme.md
-```
+
+2026-01-26_Programmiertechnik_ASS_objektorientierung.md
 
 ---
 
-## Beispielhafte Ordnerstruktur
+## Standardisierung
 
-```
-FIAE_Umschulung_Notes/
-├── Datenbanken/
-│   ├── SCH/
-│   └── POG/
-├── Digitaltechnik/
-│   └── PAS/
-├── Betriebssysteme/
-│   ├── SLE/
-│   └── WED/
-├── IoT-Netzwerktechnik/
-│   └── WIT/
-├── Netzwerktechnik/
-│   ├── KLA/
-│   └── TRE/
-├── Programmiertechnik/
-│   ├── ASS/
-│   └── SCH/
-├── TK/
-│   └── KLA/
-├── WiSo/
-│   ├── HPT/
-│   └── WIL/
-├── Web/
-│   └── KLK/
-```
+Jede Notiz enthält:
+
+- YAML-Frontmatter (Metadaten: Fach, Modul, Dozent, Thema, Level, Tags)
+- einheitliche Struktur
+- prüfungsorientierte Aufbereitung (AP1/AP2-Fokus)
+- konsistente Benennung und Kategorisierung
+
+Die Struktur ist bewusst systematisch aufgebaut, um langfristige Wissensarchivierung zu ermöglichen.
 
 ---
 
-## Zweck dieses Repositories
+## Ziel des Systems
 
-- Wiederholung & langfristige Wissenssicherung  
-- Systematische Prüfungsvorbereitung (AP1/AP2)  
-- Nachvollziehbare Versionshistorie  
-- Öffentliches Lernportfolio  
+Dieses Repository ist kein reines Mitschriftenarchiv.
+
+Es dient als:
+
+- strukturierte Wissensdatenbank  
+- langfristiges Lernsystem  
+- versionierte Dokumentation  
+- öffentliches Lernportfolio  
 
 ---
 
@@ -104,6 +80,6 @@ Lizenz: **CC BY-NC-SA 4.0**
 
 ## Autor
 
-**Sean Conroy**  
+Sean Conroy  
 FIAE Umschulung · BFW Mühlenbeck  
 GitHub: https://github.com/seanconroy-dev
