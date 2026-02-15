@@ -1,4 +1,4 @@
-﻿---
+---
 title: "ERM-Regeln und Klausurhinweise"
 date: 2025-07-24
 weekday: "Donnerstag"
@@ -72,3 +72,4 @@ license: "CC BY-NC-SA 4.0"
   - Kardinalitäten  
 - Bezeichnungen exakt aus der Aufgabenstellung übernehmen  
 - Primärschlüssel klar kennzeichnen
+
