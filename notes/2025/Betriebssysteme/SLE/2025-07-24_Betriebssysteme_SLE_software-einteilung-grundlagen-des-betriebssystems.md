@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Software-Einteilung & Grundlagen des Betriebssystems"
 date: 2025-07-24
 weekday: "Donnerstag"
@@ -105,3 +105,4 @@ Programmiersprachen bilden die Grundlage für beide Seiten (System- und Anwendun
 
 - Zuweisung und Steuerung von Ein- und Ausgabegeräten
 - Verwaltung des Dateisystems
+
