@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SSH – Kryptographie und schlüsselbasierte Authentifizierung"
 date: 2025-12-17
 weekday: "Mittwoch"
@@ -253,3 +253,4 @@ aber das kryptographische Prinzip bleibt identisch:
 
 Der Server prüft den Besitz des Private Keys –  
 ohne dass dieser jemals übertragen wird.
+
