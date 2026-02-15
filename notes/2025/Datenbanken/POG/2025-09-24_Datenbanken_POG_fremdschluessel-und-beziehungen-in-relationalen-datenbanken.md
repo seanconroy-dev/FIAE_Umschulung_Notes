@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Fremdschlüssel und Beziehungen in relationalen Datenbanken"
 date: 2025-09-24
 weekday: "Mittwoch"
@@ -149,3 +149,4 @@ Typische Prüfungsfragen:
 - „Wie wird eine N:M-Beziehung aufgelöst?“
 - „Wo liegt der Fremdschlüssel bei 1:N?“
 - „Warum setzt man bei 1:1 nicht zwei Fremdschlüssel?“
+
