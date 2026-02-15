@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Data Manipulation mit SQL (praxisnah mit QueryBrowser)"
 date: 2025-09-04
 weekday: "Donnerstag"
@@ -251,3 +251,4 @@ license: "CC BY-NC-SA 4.0"
 - PRIMARY KEY → eindeutig, oft AUTO_INCREMENT  
 - FOREIGN KEY → referenzielle Integrität  
 - Normalisierung → Redundanz vermeiden, Entitäten trennen
+
