@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Linux – Dateirechte"
 date: 2025-09-24
 weekday: "Mittwoch"
@@ -109,3 +109,4 @@ Beispiele:
 ```bash
 sudo chown user:group datei
 ```
+
