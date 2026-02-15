@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Linux/Unix – Befehle & Navigation"
 date: 2025-07-23
 weekday: "Mittwoch"
@@ -67,3 +67,4 @@ Schwerpunkte im Unterricht:
   - Mit `cd` und `..` navigieren
   - Strukturen mit `ls` und `tree` anzeigen
   - Verzeichnisse mit `rm -r` entfernen
+
