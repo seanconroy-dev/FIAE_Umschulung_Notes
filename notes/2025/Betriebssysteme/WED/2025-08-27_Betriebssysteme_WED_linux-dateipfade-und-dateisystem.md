@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Linux – Dateipfade und Dateisystem"
 date: 2025-08-27
 weekday: "Mittwoch"
@@ -138,3 +138,4 @@ license: "CC BY-NC-SA 4.0"
     ```bash
     rm -r projekt/bilder
     ```
+
