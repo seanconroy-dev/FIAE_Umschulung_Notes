@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Netzwerktechnik – Grundlagen, OSI-Modell und Netzwerkbasiswissen"
 date: 2025-07-09
 weekday: "Mittwoch"
@@ -210,3 +210,4 @@ Regel:
 
 - WuT: Switched Ethernet Grundlagen (PDF)
 - WuT: Was ist Ethernet? (PDF)
+
