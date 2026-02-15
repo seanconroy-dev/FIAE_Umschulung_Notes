@@ -1,4 +1,4 @@
-﻿---
+---
 title: "OSI-Modell – Schichten, Vergleich TCP/IP und Ethernet-Grundlagen"
 date: 2025-07-16
 weekday: "Mittwoch"
@@ -160,3 +160,4 @@ Wichtig:
 - Klassenraum-IP: 192.168.33.1
 - OSI-Schichten 5–7 werden im TCP/IP-Modell zur Anwendungsschicht zusammengefasst.
 - Netzwerk-Analyse ist ein zentrales Ausbildungsthema.
+
