@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Linux – Benutzer- und Gruppenmanagement"
 date: 2025-09-10
 weekday: "Mittwoch"
@@ -192,3 +192,4 @@ id alice
 - Root-Rechte sparsam einsetzen – Admin-Aufgaben über `sudo`  
 - Gruppen vereinfachen die Rechteverwaltung  
 - Änderungen stets mit `groups` oder `id` überprüfen
+
