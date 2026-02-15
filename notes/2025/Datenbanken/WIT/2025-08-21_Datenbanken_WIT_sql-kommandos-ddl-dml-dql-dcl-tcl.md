@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SQL-Kommandos – DDL, DML, DQL, DCL, TCL"
 date: 2025-08-21
 weekday: "Donnerstag"
@@ -202,3 +202,4 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 | DQL | Daten abfragen | SELECT | SELECT * FROM schueler; |
 | DCL | Rechte verwalten | GRANT, REVOKE | GRANT SELECT ON schule.* TO user; |
 | TCL | Transaktionen steuern | COMMIT, ROLLBACK | START TRANSACTION; ... COMMIT; |
+
