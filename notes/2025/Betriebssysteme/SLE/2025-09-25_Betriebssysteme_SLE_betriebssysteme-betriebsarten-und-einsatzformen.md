@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Betriebssysteme – Betriebsarten und Einsatzformen"
 date: 2025-09-25
 weekday: "Donnerstag"
@@ -198,3 +198,4 @@ Typische Prüfungsfragen:
 - Unterschiede zwischen Dialog- und Batchbetrieb  
 - Abgrenzung Echtzeit- vs. universelles Betriebssystem  
 - Geeignete Einsatzszenarien für verschiedene Betriebsarten
+
