@@ -121,3 +121,4 @@ Weitgehend durch Stern-Topologien mit Switches ersetzt.
 - Sniffer helfen bei der Analyse von Netzwerkverkehr.
 - Oeffentliche IP ist nicht gleich lokale IP.
 
+
