@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Windows – Bootprozess, BIOS/UEFI und MBR/GPT"
 date: 2025-10-08
 weekday: "Mittwoch"
@@ -194,3 +194,4 @@ Die EFI-Systempartition (formatiert mit FAT32)
 **Unterschiede im Bootprozess:**  
 - GPT: besitzt eine dedizierte EFI-Systempartition mit Bootdateien  
 - MBR: Bootcode liegt direkt im ersten Sektor und arbeitet hardware-nah
+
