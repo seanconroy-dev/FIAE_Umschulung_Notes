@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Linux – Absolute und relative Pfade"
 date: 2025-09-03
 weekday: "Mittwoch"
@@ -126,3 +126,4 @@ license: "CC BY-NC-SA 4.0"
 - Absolute Pfade sind eindeutig  
 - Relative Pfade sind flexibel  
 - `~` steht für das Home-Verzeichnis
+
