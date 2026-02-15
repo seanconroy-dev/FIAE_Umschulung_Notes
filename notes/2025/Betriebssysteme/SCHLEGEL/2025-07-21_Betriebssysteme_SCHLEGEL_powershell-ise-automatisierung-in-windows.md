@@ -1,4 +1,4 @@
-﻿---
+---
 title: "PowerShell ISE & Automatisierung in Windows"
 date: 2025-07-21
 weekday: "Montag"
@@ -156,10 +156,4 @@ $eingabe = Read-Host "Geben Sie Ihren Namen ein:"
 
 - **F5** → Skript ausführen  
 
----
 
-Teil der FIAE-Umschulung (2025–2027) am BFW Mühlenbeck.  
-Diese Notizen sind öffentlich dokumentiert zur Wiederholung, Prüfungsvorbereitung und zur Orientierung.
-
-**Unterricht bei:** Schlegel (BFW Mühlenbeck, FIAE Umschulung)  
-**Quelle:** Eigene Mitschrift vom 21.07.2025  
