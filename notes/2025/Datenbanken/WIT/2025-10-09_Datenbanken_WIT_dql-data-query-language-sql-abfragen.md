@@ -1,4 +1,4 @@
-﻿---
+---
 title: "DQL – Data Query Language (SQL-Abfragen)"
 date: 2025-10-09
 weekday: "Donnerstag"
@@ -232,3 +232,4 @@ Ohne DQL:
 - keine Datenanzeige  
 - keine Suche  
 - keine Auswertung
+
