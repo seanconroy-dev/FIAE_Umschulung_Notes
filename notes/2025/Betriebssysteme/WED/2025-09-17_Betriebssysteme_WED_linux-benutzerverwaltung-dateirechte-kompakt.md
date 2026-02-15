@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Linux – Benutzerverwaltung & Dateirechte (kompakt)"
 date: 2025-09-17
 weekday: "Mittwoch"
@@ -288,3 +288,4 @@ visudo
 - Benutzer & Gruppen korrekt verwalten
 - SGID & Sticky erklären
 - ACLs sinnvoll einsetzen
+
