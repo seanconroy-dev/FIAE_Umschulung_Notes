@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Sniffer, CSMA/CD und Bus-Topologie – Grundlagen"
 date: 2025-07-23
 weekday: "Mittwoch"
@@ -120,3 +120,4 @@ Weitgehend durch Stern-Topologien mit Switches ersetzt.
 - Bus-Topologien benoetigen Terminatoren.
 - Sniffer helfen bei der Analyse von Netzwerkverkehr.
 - Oeffentliche IP ist nicht gleich lokale IP.
+
