@@ -1,4 +1,4 @@
-﻿---
+---
 title: "RECAP & Geschichte der Betriebssysteme ab 2000 – UNIX"
 date: 2025-08-21
 weekday: "Donnerstag"
@@ -95,3 +95,4 @@ license: "CC BY-NC-SA 4.0"
 - Nahezu alle Top-500-Supercomputer nutzen Linux.
 - iOS und Android basieren auf UNIX-Prinzipien.
 - macOS ist offiziell UNIX-zertifiziert.
+
