@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Zahlensysteme – Umrechnungen (Dezimal, Dual, Hex)"
 date: 2025-09-11
 weekday: "Donnerstag"
@@ -206,3 +206,4 @@ Hinweise:
 - Fehlende Nibble-Gruppierung bei Hex-Zahlen.
 - Führende Nullen trotz Byte-Vorgabe vergessen.
 - Falsche Zuordnung der Potenzen (Index zählt von rechts ab 0).
+
