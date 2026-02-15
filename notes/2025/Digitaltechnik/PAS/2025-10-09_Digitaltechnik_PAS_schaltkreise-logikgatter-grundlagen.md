@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Schaltkreise & Logikgatter – Grundlagen"
 date: 2025-10-09
 weekday: "Donnerstag"
@@ -168,3 +168,4 @@ Ohne Logikgatter:
 - kein Prozessor  
 - kein RAM  
 - kein Programmfluss
+
