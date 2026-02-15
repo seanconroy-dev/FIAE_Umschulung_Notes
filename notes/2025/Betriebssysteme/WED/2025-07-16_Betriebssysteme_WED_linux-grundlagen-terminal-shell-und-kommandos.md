@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Linux Grundlagen – Terminal, Shell und Kommandos"
 date: 2025-07-16
 weekday: "Mittwoch"
@@ -98,3 +98,4 @@ ls Schreibtisch/
 ```
 
 Optionen wie `-lisa` können in beliebiger Reihenfolge stehen (`-isal` = `-lisa`).
+
