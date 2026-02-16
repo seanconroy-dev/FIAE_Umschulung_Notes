@@ -1,4 +1,4 @@
-﻿---
+---
 title: "PC-Geschichte, EVA-Prinzip, CPU und Platinenherstellung (Testvorbereitung)"
 date: 2025-08-25
 weekday: "Montag"
@@ -209,3 +209,4 @@ Moore’s Gesetz ist eine Beobachtung, kein Naturgesetz.
 - PCB-Aufbau und Herstellungsprozess grob beschreiben  
 
 Diese Themen bilden die Grundlage für Systemtechnik in AP1.
+
