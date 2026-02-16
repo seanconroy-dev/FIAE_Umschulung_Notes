@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Paket-Analyzer, DNS4EU, MAC-Adresse & Netzwerkgrundlagen"
 date: 2025-08-20
 weekday: "Mittwoch"
@@ -139,3 +139,4 @@ Zeigt:
 - Hubs senden an alle, Switches leiten gezielt weiter.
 - MAC-Adressen sind lokal eindeutig.
 - Broadcast endet an der Router-Grenze.
+
