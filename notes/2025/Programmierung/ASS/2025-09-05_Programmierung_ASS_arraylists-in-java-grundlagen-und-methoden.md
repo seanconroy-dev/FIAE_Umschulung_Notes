@@ -1,4 +1,4 @@
-﻿---
+---
 title: "ArrayLists in Java – Grundlagen und Methoden"
 date: 2025-09-05
 weekday: "Freitag"
@@ -148,3 +148,4 @@ System.out.println(numbers);
   - LinkedList
 - `Collections.sort()` für Sortierung verwenden
 - LinkedList bietet zusätzliche Methoden wie `addFirst()` und `addLast()`
+
