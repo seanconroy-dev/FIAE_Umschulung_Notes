@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Spanning Tree Protocol (STP/RSTP) & PoE – Grundlagen und Berechnung"
 date: 2025-09-10
 weekday: "Mittwoch"
@@ -171,3 +171,4 @@ Relevanz bei Netzteilen und PoE-Versorgung.
 - Niedrigste Path-Cost bestimmt den aktiven Pfad.
 - RSTP konvergiert schneller als klassisches STP.
 - PoE kombiniert Daten und Strom ueber Ethernet.
+
