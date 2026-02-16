@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Arbeitsplatz-Umgebungen – On-Premises, Cloud und Virtuelle Desktops (AP1)"
 date: 2025-09-22
 weekday: "Montag"
@@ -193,3 +193,4 @@ Diese Grundlagen sind relevant für:
 - Wirtschaftlichkeitsbetrachtung
 - IT-Sicherheit
 - Systemkonzepte
+
