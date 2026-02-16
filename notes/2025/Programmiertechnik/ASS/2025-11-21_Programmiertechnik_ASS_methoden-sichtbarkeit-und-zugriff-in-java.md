@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Methoden, Sichtbarkeit und Zugriff in Java"
 date: 2025-11-21
 weekday: "Freitag"
@@ -200,3 +200,4 @@ Typische Fragestellungen:
 - Sichtbarkeit wird durch Modifizierer geregelt  
 - Packages definieren Zugriffsbereiche  
 - Für Zugriff über Package-Grenzen ist `public` erforderlich
+
