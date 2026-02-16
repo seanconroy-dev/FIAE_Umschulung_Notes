@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Switch-Case und For-Schleife in Java"
 date: 2025-09-15
 weekday: "Montag"
@@ -337,3 +337,4 @@ public class FizzBuzz {
 - Endlosschleifen möglich
 - `%` (Modulo) ist zentral für Teilbarkeitslogik
 - Reihenfolge der Bedingungen ist entscheidend
+
