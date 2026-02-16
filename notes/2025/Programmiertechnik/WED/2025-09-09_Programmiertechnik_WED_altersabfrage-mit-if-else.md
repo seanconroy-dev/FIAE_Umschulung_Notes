@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Altersabfrage mit if-else"
 date: 2025-09-09
 weekday: "Dienstag"
@@ -179,3 +179,4 @@ Start
 - Validierung vorhanden
 - Testmatrix geprüft
 - Optional: Logik in Methode ausgelagert
+
