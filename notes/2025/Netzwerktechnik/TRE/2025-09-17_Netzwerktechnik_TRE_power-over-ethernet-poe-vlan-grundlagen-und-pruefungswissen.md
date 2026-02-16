@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Power over Ethernet (PoE) & VLAN – Grundlagen und Pruefungswissen"
 date: 2025-09-17
 weekday: "Mittwoch"
@@ -155,7 +155,8 @@ Geraete in unterschiedlichen VLANs koennen ohne Routing nicht direkt kommunizier
 - LLDP deaktivieren  
 - MTU-Groesse bei Zwischenkomponenten ignorieren  
 
----
+
 
 ## Pruefungsstichworte
 PSE, PD, Endspan, Midspan, 802.3af/at/bt, Klassen 0–8, Alternative A/B, 4-Pair, Phantom-Speisung, LLDP-MED, MPS, 100-m-Regel, Budget, 802.1Q, VLAN-ID, Access, Trunk, Native VLAN, LACP.
+
