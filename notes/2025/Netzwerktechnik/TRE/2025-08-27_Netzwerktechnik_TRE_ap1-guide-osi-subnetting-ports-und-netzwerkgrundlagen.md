@@ -1,4 +1,4 @@
-﻿---
+---
 title: "AP1-Guide – OSI, Subnetting, Ports und Netzwerkgrundlagen"
 date: 2025-08-27
 weekday: "Mittwoch"
@@ -200,3 +200,4 @@ Subnetze beginnen bei:
 - Standardports kennen.
 - Router, Switch, Hub unterscheiden koennen.
 - NAT, VLAN, VPN grundlegend erklaeren koennen.
+
