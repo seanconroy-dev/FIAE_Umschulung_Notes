@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Kommentare, Datentypen und Variablen in Java"
 date: 2025-07-11
 weekday: "Freitag"
@@ -227,3 +227,4 @@ public class Start {
 - Methodenkopf korrekt schreiben
 - Struktur und Klammern prüfen
 - Kommentare können beim Verständnis helfen
+
