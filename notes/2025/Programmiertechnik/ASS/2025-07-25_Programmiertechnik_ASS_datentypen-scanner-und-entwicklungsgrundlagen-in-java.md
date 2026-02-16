@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Datentypen, Scanner und Entwicklungsgrundlagen in Java"
 date: 2025-07-25
 weekday: "Freitag"
@@ -197,3 +197,4 @@ public class AufgDatentypenVariablen {
 - Strings für Werte mit führenden Nullen verwenden.
 - SDK vor IDE installieren.
 - Sichtbarkeit, Struktur und saubere Benennung sind Teil professioneller Praxis.
+
