@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Datentypen, Variablen, Scanner und Debugging in Java"
 date: 2025-07-18
 weekday: "Freitag"
@@ -228,3 +228,4 @@ public class Obst {
 - Warum ist Pufferbereinigung nach `nextInt()` nötig?
 - Was passiert bei falschem Datentyp?
 - Wann verwendet man `double` statt `int`?
+
