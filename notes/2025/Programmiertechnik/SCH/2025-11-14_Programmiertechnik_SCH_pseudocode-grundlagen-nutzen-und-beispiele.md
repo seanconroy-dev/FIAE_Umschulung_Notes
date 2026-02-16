@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Pseudocode – Grundlagen, Nutzen und Beispiele"
 date: 2025-11-14
 weekday: "Freitag"
@@ -201,3 +201,4 @@ Logik:
 - Er ist ein Denk- und Planungswerkzeug
 - Gute Struktur im Pseudocode führt zu sauberem Code
 - Besonders wichtig für Anfänger und Prüfungen
+
