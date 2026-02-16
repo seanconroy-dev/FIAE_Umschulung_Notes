@@ -1,4 +1,4 @@
-﻿---
+---
 title: "IPv4 – Grundlagen, Klassen & Subnetting"
 date: 2025-10-08
 weekday: "Mittwoch"
@@ -216,3 +216,4 @@ Differenz: 26 − 8 = 18
 - Subnetze = 2^(Subnetbits)
 - Longest Prefix Match entscheidet Routing
 - Klassenmodell ist historisch, CIDR ist Standard
+
