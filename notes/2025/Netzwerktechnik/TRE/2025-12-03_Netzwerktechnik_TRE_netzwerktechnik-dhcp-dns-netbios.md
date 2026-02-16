@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Netzwerktechnik – DHCP, DNS & NetBIOS"
 date: 2025-12-03
 weekday: "Mittwoch"
@@ -168,3 +168,4 @@ flowchart TD
 - Broadcast funktioniert nicht über Router hinweg
 - Lease-Time bestimmt Gültigkeit einer IP
 - ARP prüft IP-Konflikte
+
