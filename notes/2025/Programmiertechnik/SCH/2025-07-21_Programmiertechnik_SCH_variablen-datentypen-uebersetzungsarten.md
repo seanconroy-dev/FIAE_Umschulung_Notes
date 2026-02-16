@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Variablen, Datentypen & Übersetzungsarten"
 date: 2025-07-21
 weekday: "Montag"
@@ -141,3 +141,4 @@ public static void main(String[] args)
 - Java wird kompiliert und anschließend von der JVM ausgeführt.
 - Bytecode macht Java plattformunabhängig.
 - Der Scope bestimmt die Lebensdauer einer Variable.
+
