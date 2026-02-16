@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Menüprogramme mit switch-case und geometrische Berechnungen in Java"
 date: 2025-09-12
 weekday: "Freitag"
@@ -224,3 +224,4 @@ public class AufgabeGeometrie {
 - Scanner korrekt verwenden und Puffer beachten
 - Mathematische Funktionen mit `Math.PI` und `Math.sqrt`
 - Mit `printf` saubere und formatierte Ausgaben erzeugen
+
