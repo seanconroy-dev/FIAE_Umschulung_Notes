@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Pseudocode – Grundlagen, Struktur und logisches Denken"
 date: 2025-11-14
 weekday: "Freitag"
@@ -183,3 +183,4 @@ von
 - Implementierung (Wie genau schreibt man es in Java?)
 
 Wer Pseudocode sauber beherrscht, reduziert später Syntaxfehler und programmiert strukturierter.
+
