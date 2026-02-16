@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Switches & Link Aggregation – Grundlagen und Praxis"
 date: 2025-09-03
 weekday: "Mittwoch"
@@ -166,3 +166,4 @@ Der logische Kanal verteilt Last, addiert aber nicht die Bandbreite eines einzel
 - Link Aggregation erhoeht Durchsatz und Redundanz.
 - LACP ist der Standardmechanismus (802.1AX).
 - Einzelne Verbindungen skalieren nicht linear mit der Anzahl der Links.
+
