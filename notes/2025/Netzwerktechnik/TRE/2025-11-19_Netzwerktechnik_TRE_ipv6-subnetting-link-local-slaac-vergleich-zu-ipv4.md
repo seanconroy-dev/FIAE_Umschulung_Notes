@@ -1,4 +1,4 @@
-﻿---
+---
 title: "IPv6 – Subnetting, Link-Local, SLAAC & Vergleich zu IPv4"
 date: 2025-11-19
 weekday: "Mittwoch"
@@ -187,3 +187,4 @@ DHCPv6
 - Link-Local ist verpflichtend und zentral fuer IPv6.
 - SLAAC ist Standardmechanismus.
 - IPv4-Klassen sind historisch, aber pruefungsrelevant.
+
