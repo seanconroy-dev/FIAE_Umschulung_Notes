@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Geräteklassen in der IT – Einordnung und Merkmale (AP1)"
 date: 2025-09-29
 weekday: "Montag"
@@ -154,3 +154,4 @@ Diese ergänzen klassische CPUs.
 - Typische Einsatzszenarien nennen
 
 Geräteklassen helfen dabei, IT-Systeme strukturiert zu analysieren und wirtschaftlich passend auszuwählen.
+
