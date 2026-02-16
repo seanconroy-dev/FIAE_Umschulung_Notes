@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Kopf- und Fußgesteuerte Schleifen in Java"
 date: 2025-09-22
 weekday: "Montag"
@@ -173,3 +173,4 @@ Ablauf:
 - `for` → bekannte Anzahl.
 - `while` → unbekannte Anzahl.
 - Verschachtelung multipliziert Durchläufe.
+
