@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Datentypen und Arrays in Java – Grundlagen & AP1-Relevanz"
 date: 2025-08-18
 weekday: "Montag"
@@ -189,3 +189,4 @@ Diese Themen sind Kernbestandteil der AP1 und bilden die Basis für spätere Inh
 - Klassen
 - Objektorientierung
 - Collections
+
