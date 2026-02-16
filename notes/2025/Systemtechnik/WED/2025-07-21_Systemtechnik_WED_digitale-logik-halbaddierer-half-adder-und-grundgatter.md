@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Digitale Logik – Halbaddierer (Half Adder) und Grundgatter"
 date: 2025-07-21
 weekday: "Montag"
@@ -161,3 +161,4 @@ Ziel war das Verständnis:
 - Gatter logisch erklären können
 
 Digitale Logik bildet die Grundlage für Prozessoren, ALUs und damit für jede moderne Rechnerarchitektur.
+
