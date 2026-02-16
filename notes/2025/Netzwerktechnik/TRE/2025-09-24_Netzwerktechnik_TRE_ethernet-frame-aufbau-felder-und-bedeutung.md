@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Ethernet Frame – Aufbau, Felder und Bedeutung"
 date: 2025-09-24
 weekday: "Mittwoch"
@@ -168,3 +168,4 @@ Typische Fragen:
 - Mindestframegröße: 64 Byte.
 - Standard-MTU: 1500 Byte.
 - Fehler werden erkannt, aber nicht korrigiert.
+
