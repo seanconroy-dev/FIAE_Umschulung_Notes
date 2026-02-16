@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Maßeinheiten von Daten & Bussystem – Speicherberechnung und Rechnerarchitektur"
 date: 2025-12-01
 weekday: "Montag"
@@ -217,3 +217,4 @@ Bidirektional.
 - Adressbusbreite bestimmt maximal adressierbaren Speicher  
 
 Diese Inhalte gehören zum Kernwissen für AP1 im Bereich Systemtechnik.
+
