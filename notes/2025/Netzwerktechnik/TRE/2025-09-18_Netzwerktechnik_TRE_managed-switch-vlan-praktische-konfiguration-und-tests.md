@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Managed Switch & VLAN – Praktische Konfiguration und Tests"
 date: 2025-09-18
 weekday: "Donnerstag"
@@ -157,3 +157,4 @@ Legende:
 - Fa0/1–Fa0/2 → Access, VLAN 10
 - Fa0/3–Fa0/4 → Access, VLAN 20
 - Fa0/24 → Trunk, VLAN 10 & 20 (802.1Q tagged)
+
