@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Encapsulation & UML – OOP Grundlagen"
 date: 2026-02-11
 weekday: "Mittwoch"
@@ -199,3 +199,4 @@ Merksatz:
 - Aktivitätsdiagramm = Ablauf  
 - Zustandsdiagramm = Lebenszyklus  
 - Sequenzdiagramm = Kommunikation
+
