@@ -1,4 +1,4 @@
-﻿---
+---
 title: "HTML-Grundlagen & CSS Grid – Layout, Selektoren und Emmet (Projekt)"
 date: 2025-07-11
 weekday: "Freitag"
@@ -172,3 +172,4 @@ Diese Grundlagen sind essenziell für:
 - Frontend-Entwicklung
 - Projektarbeiten
 - Praktische Prüfungsanteile
+
