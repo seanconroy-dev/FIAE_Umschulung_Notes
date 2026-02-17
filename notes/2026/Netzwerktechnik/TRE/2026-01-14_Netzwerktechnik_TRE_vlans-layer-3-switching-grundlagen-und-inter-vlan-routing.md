@@ -1,4 +1,4 @@
-﻿---
+---
 title: "VLANs & Layer-3-Switching – Grundlagen und Inter-VLAN-Routing"
 date: 2026-01-14
 weekday: "Mittwoch"
@@ -183,3 +183,4 @@ Wichtig: Das IP-Paket bleibt erhalten, nur der Ethernet-Frame (inkl. VLAN-Tag) w
 ## Prüfungsmerksatz
 
 Ein Layer-3-Switch trennt VLANs auf Layer 2 und verbindet sie gezielt über Routing auf Layer 3.
+
