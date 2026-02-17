@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Einstieg in die objektorientierte Programmierung (OOP)"
 date: 2026-01-28
 weekday: "Mittwoch"
@@ -135,3 +135,4 @@ Eine Klasse besteht typischerweise aus:
 - Konkrete Instanzen einer Klasse
 - Repräsentieren reale oder abstrakte Dinge
 - Besitzen individuelle Attributwerte
+
