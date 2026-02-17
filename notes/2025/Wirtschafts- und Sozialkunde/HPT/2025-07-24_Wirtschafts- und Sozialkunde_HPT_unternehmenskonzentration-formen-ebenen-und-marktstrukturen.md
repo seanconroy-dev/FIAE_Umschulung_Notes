@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Unternehmenskonzentration – Formen, Ebenen und Marktstrukturen"
 date: 2025-07-24
 weekday: "Donnerstag"
@@ -196,3 +196,4 @@ Beispielbereiche:
 - Vorteile und Risiken von Konzentration bewerten
 
 Unternehmenskonzentration ist ein zentrales Thema im Spannungsfeld zwischen Wettbewerb, Marktmacht und Regulierung.
+
