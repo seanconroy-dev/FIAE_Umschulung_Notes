@@ -1,4 +1,4 @@
-﻿---
+---
 title: "CSS Grid & Emmet – Strukturaufbau und Layout-Grundlagen"
 date: 2025-07-18
 weekday: "Freitag"
@@ -176,3 +176,4 @@ grid-column: span 2;
 - Kommentar-Syntax kennen
 
 CSS Grid ist ein zentrales Werkzeug moderner Weblayouts und Grundlage für saubere, responsive Seitenstrukturen.
+
