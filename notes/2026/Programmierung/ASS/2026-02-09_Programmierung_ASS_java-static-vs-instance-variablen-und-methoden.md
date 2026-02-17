@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Java – Static vs. Instance Variablen und Methoden"
 date: 2026-02-09
 weekday: "Montag"
@@ -176,3 +176,4 @@ public class MyClass {
     }
 }
 ~~~
+
