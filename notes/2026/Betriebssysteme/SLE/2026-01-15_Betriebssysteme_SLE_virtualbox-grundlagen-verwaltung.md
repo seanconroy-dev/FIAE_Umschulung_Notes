@@ -1,4 +1,4 @@
-﻿---
+---
 title: "VirtualBox – Grundlagen & Verwaltung"
 date: 2026-01-15
 weekday: "Donnerstag"
@@ -129,3 +129,4 @@ sudo mount -t vboxsf <ordnername> <mountpunkt>
 - Extension Pack: PUEL (Personal Use and Evaluation License)
 - Guest Additions (Linux-Komponenten): GNU General Public License v2.0
 - Copyleft-Prinzip bei GPL
+
