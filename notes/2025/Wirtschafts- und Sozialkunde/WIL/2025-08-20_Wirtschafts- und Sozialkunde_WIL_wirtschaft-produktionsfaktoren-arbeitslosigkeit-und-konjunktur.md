@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Wirtschaft – Produktionsfaktoren, Arbeitslosigkeit und Konjunktur"
 date: 2025-08-20
 weekday: "Mittwoch"
@@ -162,3 +162,4 @@ In Krisen werden Investitionen oft verschoben.
 - Rolle des Staates in Krisenphasen kennen
 
 Diese Grundlagen sind zentral für das Verständnis wirtschaftlicher Zusammenhänge in der sozialen Marktwirtschaft.
+
