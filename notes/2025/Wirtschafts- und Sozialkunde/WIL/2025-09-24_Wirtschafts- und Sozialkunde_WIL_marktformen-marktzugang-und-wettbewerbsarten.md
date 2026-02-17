@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Marktformen, Marktzugang und Wettbewerbsarten"
 date: 2025-09-24
 weekday: "Mittwoch"
@@ -142,3 +142,4 @@ Nachfrager → Nutzen
 - Wettbewerbsarten vergleichen (Preis vs. Qualität vs. Werbung)
 
 Diese Grundlagen sind zentral für das Verständnis von Preisbildung, Marktmechanismen und staatlicher Regulierung in der sozialen Marktwirtschaft.
+
