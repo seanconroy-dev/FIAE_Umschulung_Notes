@@ -1,4 +1,4 @@
-﻿---
+---
 title: "OSI-Schicht 4 – Transport & Ports"
 date: 2026-02-04
 weekday: "Mittwoch"
@@ -144,3 +144,4 @@ UDP ist wie eine Postkarte. Schnell – aber ohne Garantie.
 - Well-known Ports < 1024
 - Client nutzt meist dynamische Ports
 - Server lauschen auf festen Ports
+
