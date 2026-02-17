@@ -1,0 +1,147 @@
+---
+title: "OSI-Schicht 4 – Transport & Ports"
+date: 2026-02-04
+weekday: "Mittwoch"
+subject: "Netzwerktechnik"
+instructor: "TRE"
+program: "FIAE Umschulung 2025-2027"
+module: "OSI-Modell"
+topic: "Transport Layer, TCP, UDP, Ports"
+level: "Grundlagen"
+tags:
+  - OSI
+  - Transport
+  - TCP
+  - UDP
+  - Ports
+  - Netzwerktechnik
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+# Mittwoch, 2026-02-04_NT_TRE
+
+---
+
+# Schicht 4: Transport (OSI-Modell)
+
+## OSI-Schicht 4 – Transport
+
+**Aufgabe:**  
+Verantwortlich für die **Ende-zu-Ende-Kommunikation** zwischen zwei Hosts.
+
+**Kernfunktionen:**
+- Segmentierung von Daten
+- Wiederzusammensetzen am Ziel
+- Zuverlässigkeit (bei TCP)
+- Flusskontrolle
+- Staukontrolle
+- Fehlererkennung
+
+Merksatz:  
+Schicht 4 interessiert sich nicht mehr für Kabel oder IP-Routing – sondern für **Prozess-zu-Prozess-Kommunikation**.
+
+---
+
+# Ports
+
+## Definition
+
+Ports sind **logische Endpunkte** der Transportschicht.  
+Sie identifizieren, **welcher Dienst oder welches Programm** Daten empfangen soll.
+
+IP-Adresse = *Welcher Computer?*  
+Port = *Welches Programm auf diesem Computer?*
+
+Ports stehen im **TCP- oder UDP-Header**.
+
+---
+
+## Port-Bereiche
+
+| Kategorie | Bereich | Bedeutung |
+|------------|------------|------------|
+| Well-known Ports | 0–1023 | Standardisierte Dienste |
+| Registered Ports | 1024–49151 | Registrierte Anwendungen |
+| Dynamic / Private Ports | 49152–65535 | Temporäre Client-Ports |
+
+---
+
+## Wichtige Standard-Ports
+
+| Dienst | Port |
+|---------|------|
+| FTP | 20 (Daten), 21 (Steuerung) |
+| SSH | 22 |
+| Telnet | 23 |
+| SMTP | 25 |
+| DNS | 53 |
+| DHCP | 67 (Server), 68 (Client) |
+| HTTP | 80 |
+| POP3 | 110 |
+| IMAP | 143 |
+| HTTPS | 443 |
+| RDP | 3389 |
+| MySQL | 3306 |
+| PostgreSQL | 5432 |
+| MongoDB | 27017 |
+| Redis | 6379 |
+| Memcached | 11211 |
+| RabbitMQ | 5672 |
+| NTP | 123 |
+| Netzwerkdrucker | 9100 (TCP) |
+
+---
+
+# TCP – Transmission Control Protocol
+
+## Eigenschaften
+
+- Verbindungsorientiert (3-Way-Handshake)
+- Zuverlässig
+- Reihenfolge garantiert
+- Fehlererkennung durch Sequenznummern & ACK
+- Flusskontrolle (Windowing)
+- Staukontrolle (Congestion Control)
+
+Typische Anwendungen:
+- HTTP / HTTPS
+- FTP
+- SMTP
+- SSH
+
+TCP ist wie ein Einschreiben mit Rückschein.
+
+---
+
+# UDP – User Datagram Protocol
+
+## Eigenschaften
+
+- Verbindungslos
+- Keine Garantie für Zustellung
+- Keine Reihenfolgegarantie
+- Kein Verbindungsaufbau
+- Geringer Overhead
+- Schnell
+
+Typische Anwendungen:
+- DNS
+- DHCP
+- VoIP
+- Video-Streaming
+- Online-Gaming
+
+UDP ist wie eine Postkarte. Schnell – aber ohne Garantie.
+
+---
+
+## Prüfungsrelevante Kernaussagen
+
+- Ports gehören zur Schicht 4
+- IP + Port = Socket
+- TCP ist zuverlässig, UDP ist schnell
+- Well-known Ports < 1024
+- Client nutzt meist dynamische Ports
+- Server lauschen auf festen Ports
+

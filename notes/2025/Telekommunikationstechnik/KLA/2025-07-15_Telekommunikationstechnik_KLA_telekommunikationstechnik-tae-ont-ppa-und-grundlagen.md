@@ -1,0 +1,157 @@
+---
+title: "Telekommunikationstechnik – TAE, ONT, PPA und Grundlagen"
+date: 2025-07-15
+weekday: "Dienstag"
+subject: "Telekommunikationstechnik"
+instructor: "KLA"
+program: "FIAE Umschulung 2025-2027"
+module: "Netzabschlusstechnik & Infrastruktur"
+topic: "TAE, ONT, Splitter, PPA, Daempfung"
+level: "Grundlagen"
+tags:
+  - TAE
+  - PPA
+  - ONT
+  - Splitter
+  - Keystone
+  - Patchfeld
+  - Daempfung
+  - Telekommunikationstechnik
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+# Telekommunikationstechnik – 2025-07-15 (TK, KLA)
+
+## TAE (Telekommunikations-Anschluss-Einheit)
+
+Umgangssprachlich „Telefondose“.  
+Die TAE-Dose ist der Netzabschluss zwischen oeffentlichem Telefonnetz und Kundengeraet (Telefon, Fax, Modem).
+
+Wichtig:
+Die erste installierte Dose (1. TAE) ist der offizielle Netzabschlusspunkt des Anbieters.
+
+---
+
+## Keystone
+
+Keystone-Module sind modulare Steckverbinder (z. B. RJ45), die in genormte Halterungen passen.
+
+Einsatzbereiche:
+- Wanddosen
+- Patchfelder
+- Netzwerkschränke
+- Labore / Werkstaetten
+
+Vorteil:
+Modular austauschbar und flexibel kombinierbar.
+
+---
+
+## Patchfeld
+
+Ein Patchfeld (Patch Panel) verbindet:
+
+- Feste Gebaeudeverkabelung (Verlegekabel)
+- Flexible Patchkabel zu Switch, Router oder Endgeraet
+
+Typischer Ort:
+Netzwerkschrank (19-Zoll-Rack)
+
+Zweck:
+Strukturierte Verkabelung und einfache Umkonfiguration.
+
+---
+
+## ONT – Optical Network Termination
+
+Der ONT ist der optische Netzabschluss bei FTTH (Fiber to the Home).
+
+Funktion:
+- Wandelt optische Signale (Licht) in elektrische Signale
+- Uebergabepunkt zwischen Glasfaser und Router
+
+Wird in der Regel vom Netzbetreiber installiert.
+
+---
+
+## Splitter (DSL)
+
+Ein DSL-Splitter trennt:
+
+- Niederfrequente Telefonie
+- Hochfrequentes DSL-Signal
+
+Heute:
+Oft nicht mehr notwendig, da moderne Router ein integriertes Modem besitzen.
+
+Hinweis:
+Das Entfernen oder Manipulieren eines Splitters ist unzulaessig und kann zu Stoerungen oder Vertragsverletzungen fuehren.
+
+---
+
+## PPA – Passiver Pruefabschluss
+
+Der PPA befindet sich in der 1. TAE-Dose.
+
+Technischer Aufbau:
+- Diode
+- 470 kOhm Widerstand (±1 %)
+
+Zweck:
+Fernmessung der Teilnehmerleitung durch den Netzbetreiber.
+
+Moegliche Messungen:
+- Leitungsunterbrechung
+- Kurzschluss
+- Isolationswiderstand
+- Fremdspannung
+
+Durch Umpolung der Speisespannung kann die Leitung geprueft werden (SEPT-Verfahren).
+
+---
+
+## Diode
+
+Eine Diode laesst Strom nur in eine Richtung durch.
+
+Anwendung:
+- Schutzschaltungen
+- Gleichrichtung
+- Bestandteil des PPA
+
+Oft wird ein Vorwiderstand zur Strombegrenzung eingesetzt.
+
+---
+
+## Daempfung (Attenuation)
+
+Daempfung bezeichnet den Signalverlust auf einer Leitung.  
+Einheit: Dezibel (dB)
+
+Ursachen:
+- Leitungslänge
+- Material und Querschnitt
+- Steckverbindungen
+- Uebergangswiderstaende
+
+Typischer Richtwert:
+Singlemode-Glasfaser ≈ 0,2 dB/km (nicht pro Meter)
+
+Hohe Daempfung verschlechtert Signalqualitaet und Reichweite.
+
+---
+
+## Merktabelle
+
+| Begriff   | Funktion / Bedeutung                         | Anwendung / Ort              |
+|------------|---------------------------------------------|------------------------------|
+| TAE        | Netzabschluss Telefonleitung                | Wanddose (1. TAE)           |
+| PPA        | Pruefelement (470 kOhm + Diode)             | In der 1. TAE               |
+| ONT        | Optisch → elektrisch                        | Glasfaseranschluss          |
+| Splitter   | Trennt DSL- und Telefonsignal               | Vor Router (DSL)            |
+| Keystone   | Modulares Stecksystem                       | Wanddose / Patchfeld        |
+| Patchfeld  | Verbindet feste + flexible Verkabelung      | Netzwerkschrank             |
+| Diode      | Strom nur in eine Richtung                  | Schutz / Elektronik         |
+| Daempfung  | Signalverlust ueber Entfernung              | Kupfer / Glasfaser          |
+

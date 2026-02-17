@@ -1,0 +1,198 @@
+---
+title: "Marktformen & Präferenzen – Vollkommener und unvollkommener Markt"
+date: 2025-09-17
+weekday: "Mittwoch"
+subject: "Wirtschafts- und Sozialkunde"
+instructor: "WIL"
+program: "FIAE Umschulung 2025-2027"
+module: "Marktwirtschaft & Preisbildung"
+topic: "Marktarten, Präferenzen, Markttransparenz, vollkommener Markt"
+level: "Grundlagen"
+tags:
+  - Markt
+  - Angebot
+  - Nachfrage
+  - Marktformen
+  - vollkommener Markt
+  - unvollkommener Markt
+  - Präferenzen
+  - Markttransparenz
+  - Punktmarkt
+  - Gebietsmarkt
+  - AP1
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+## Mittwoch, 17-09-2025_WiSo_WIL
+
+# Markt – einfach erklärt
+
+## 1) Grundideen
+
+- **Angebot** = Verkaufswünsche der Anbieter  
+- **Nachfrage** = Kaufwünsche der Nachfrager  
+- **Markt** = Zusammentreffen von Angebot und Nachfrage  
+- **Preis** = Ergebnis dieses Zusammenspiels  
+
+Merksatz:
+
+Mehr Nachfrage → Preis steigt  
+Mehr Angebot → Preis sinkt  
+Schnittpunkt = **Gleichgewichtspreis**
+
+---
+
+# 2) Marktarten und Begriffe
+
+## Nach Raum und Zeit
+
+### Punktmarkt
+- Fester Ort
+- Fester Zeitpunkt  
+Beispiel: Börsenhandel zu einem bestimmten Zeitpunkt.
+
+### Gebietsmarkt
+- Über ein Gebiet verteilt  
+Beispiel: Fernsehermarkt in Bayern.
+
+---
+
+## Nach staatlichem Einfluss
+
+### Freier Markt
+- Kaum staatliche Eingriffe
+
+### Regulierter Markt
+- Staat setzt Regeln oder greift ein  
+Beispiel: Agrarmarkt mit Mindestpreisen
+
+---
+
+## Nach Zugang
+
+### Offener Markt
+- Jeder kann teilnehmen  
+Beispiel: Supermarkt
+
+### Geschlossener Markt
+- Teilnahme beschränkt  
+Beispiel: Kommunale Versorgungsmonopole
+
+---
+
+## Nach Art der Güter
+
+### Homogener Markt
+- Güter gleichartig
+- Keine Qualitätsunterschiede erkennbar  
+Beispiel: Standardisierte Aktien
+
+### Heterogener Markt
+- Güter verschiedenartig  
+Beispiel: Automarkt (Marke, Ausstattung)
+
+---
+
+## Teilmarkt vs. Gesamtmarkt
+
+- **Teilmarkt**: Ausschnitt eines größeren Marktes  
+- **Gesamtmarkt**: Gesamtheit aller Teilmärkte
+
+---
+
+# 3) Faktormärkte
+
+## Arbeitsmarkt
+- Angebot: Arbeitskraft
+- Nachfrage: Unternehmen
+- Besonderheit: Tarifverträge beeinflussen Lohnbildung
+
+## Bodenmarkt
+- Grundstücke
+- Pachtflächen
+
+## Kapitalmarkt
+- Langfristige Finanzierung  
+Beispiel: Anleihen, Pfandbriefe
+
+## Geldmarkt
+- Kurzfristige Finanzmittel zwischen Banken
+
+---
+
+# 4) Vollkommener vs. unvollkommener Markt
+
+## Vollkommener Markt (Modellannahme)
+
+Voraussetzungen:
+
+1. Homogene Güter  
+2. Keine Präferenzen:
+   - persönlich
+   - räumlich
+   - zeitlich
+3. Vollständige Markttransparenz  
+
+Folge:
+
+- Einheitlicher Preis
+- Anbieter und Nachfrager sind Preisnehmer
+
+---
+
+## Unvollkommener Markt
+
+Sobald eine Bedingung fehlt:
+
+- Präferenzen vorhanden
+- Informationsmangel
+- Unterschiedliche Güter
+
+In der Realität sind fast alle Märkte unvollkommen.
+
+---
+
+# 5) Präferenzen erkennen
+
+## Persönliche Präferenz
+- Marke
+- Service
+- Beziehung
+
+## Räumliche Präferenz
+- Nähe
+- Standortvorteil
+
+## Zeitliche Präferenz
+- Öffnungszeiten
+- Saison
+- Dringlichkeit
+
+## Markttransparenz
+- Vollständige Information über Preise und Bedingungen
+
+---
+
+# Mini-Checkliste für Prüfungsaufgaben
+
+1. Ist das Gut standardisiert? → homogen  
+2. Gibt es Ortsvorteile? → räumlich  
+3. Spielt der Zeitpunkt eine Rolle? → zeitlich  
+4. Beeinflussen Marke/Beziehung? → persönlich  
+5. Haben alle vollständige Informationen? → Transparenz  
+6. Greift der Staat ein? → regulierter Markt  
+
+---
+
+# Prüfungsfokus (AP1)
+
+- Markt definieren
+- Marktarten unterscheiden
+- Vollkommenen Markt erklären
+- Präferenzen sicher zuordnen
+- Homogen vs. heterogen abgrenzen
+- Punktmarkt vs. Gebietsmarkt unterscheiden
+
+Der Markt ist das zentrale Koordinationsinstrument der sozialen Marktwirtschaft.
+

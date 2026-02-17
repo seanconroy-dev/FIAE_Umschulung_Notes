@@ -1,0 +1,186 @@
+---
+title: "Linux Grundlagen – Open Source & Basisbefehle"
+date: 2025-08-20
+weekday: "Mittwoch"
+subject: "BS"
+instructor: "WED"
+program: "FIAE Umschulung 2025-2027"
+module: "Linux Grundlagen"
+topic: "Open Source & Grundbefehle"
+level: "Grundlagen"
+tags:
+  - Linux
+  - Open Source
+  - GPL
+  - Shell
+  - CLI
+  - Grundbefehle
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+# Mittwoch, 2025-08-20_BS_WED
+
+# Betriebssysteme – Linux Grundlagen
+
+---
+
+## Open Source und Lizenzen
+
+- **Linux ist Open Source**  
+  - Der Quellcode ist öffentlich einsehbar.  
+  - Jeder darf den Code analysieren, verändern und weitergeben.
+
+- **„Frei“ bedeutet nicht automatisch „kostenlos“**  
+  - Kommerzielle Nutzung ist erlaubt (z. B. Support, Services, Enterprise-Distributionen).
+  - Änderungen am Code müssen unter derselben Lizenz weitergegeben werden (z. B. GPL – Copyleft-Prinzip).
+
+**Merksatz:**  
+Open Source bedeutet Transparenz und Nutzungsfreiheit – nicht zwingend Kostenfreiheit.
+
+---
+
+## Nützliche Ressourcen
+
+- Cheatsheet (auf USB bereitgestellt) – Übersicht wichtiger Linux-Befehle  
+- Wiki Wendler: http://wiki.wendler.io  
+
+---
+
+## Arbeiten mit Dateien und Ordnern
+
+### Ordner erstellen
+
+```bash
+mkdir mein_ordner
+```
+
+---
+
+### Dateien erstellen
+
+```bash
+touch datei.txt
+```
+
+---
+
+### Umbenennen
+
+```bash
+mv alte_datei.txt neue_datei.txt
+```
+
+---
+
+### Kopieren
+
+```bash
+cp quelle.txt ziel.txt
+cp -r ordner1 ordner2
+```
+
+---
+
+### Verschieben
+
+```bash
+mv datei.txt /ziel/ordner/
+```
+
+---
+
+### Ordnerstruktur anzeigen
+
+```bash
+ls -R
+tree
+```
+
+---
+
+## Linux Befehle – Cheatsheet
+
+### Navigation
+
+```bash
+pwd
+ls
+ls -la
+cd /pfad
+cd ..
+```
+
+---
+
+### Dateien & Ordner
+
+```bash
+mkdir test
+touch datei.txt
+cp quelle ziel
+mv quelle ziel
+rm datei.txt
+rm -r ordner
+```
+
+---
+
+### Dateien anzeigen & bearbeiten
+
+```bash
+cat datei.txt
+less datei.txt
+head -n 10 datei.txt
+tail -n 10 datei.txt
+nano datei.txt
+```
+
+---
+
+### Benutzer & Rechte
+
+```bash
+whoami
+id
+chmod 755 datei.sh
+chown user:group f.txt
+sudo <befehl>
+```
+
+---
+
+### Prozesse & System
+
+```bash
+ps aux
+top
+kill <pid>
+df -h
+free -h
+uptime
+```
+
+---
+
+### Netzwerk
+
+```bash
+ping google.com
+ip a
+curl http://seite.de
+```
+
+---
+
+## Verbindung zur Praxis
+
+Diese Basisbefehle sind grundlegend für:
+
+- tägliche Arbeit in der Shell  
+- Skripting und Automatisierung  
+- Serveradministration  
+- DevOps-Workflows (Docker, Git, Deployment)
+
+Frühe Sicherheit im Umgang mit der Shell erleichtert das Verständnis komplexerer Werkzeuge erheblich.
+

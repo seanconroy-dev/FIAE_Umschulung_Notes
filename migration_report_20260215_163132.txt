@@ -1,0 +1,152 @@
+=== Migration started: 02/15/2026 16:31:32 ===
+Base: /home/sean/umschulung-work/FIAE_Umschulung_Notes
+NotesRoot: /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes
+ArchiveInvalid: True
+StripFooter: True
+Apply: True
+Files found: 104
+
+INVALID no frontmatter: /home/sean/umschulung-work/FIAE_Umschulung_Notes/README.md
+OK   ARCHIVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/README.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/archive/invalid/no-frontmatter/README.md
+WARN unknown subject 'Programmierung' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/PT/POG/11-02-2026_PT_POG.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Programmierung/POG/2026-02-11_Programmierung_POG_encapsulation-uml-oop-grundlagen.md
+WARN unknown subject 'Programmierung' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/PT/POG/28-01-2026_PT_POG.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Programmierung/POG/2026-01-28_Programmierung_POG_einstieg-in-die-objektorientierte-programmierung-oop.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/PT/SCH/14-11-2025_PT_SCH.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Programmiertechnik/SCH/2025-11-14_Programmiertechnik_SCH_pseudocode-grundlagen-struktur-und-logisches-denken.md
+INVALID no frontmatter: /home/sean/umschulung-work/FIAE_Umschulung_Notes/PT/SCH/23-01-2026_PT_SCH.md
+OK   ARCHIVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/PT/SCH/23-01-2026_PT_SCH.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/archive/invalid/no-frontmatter/23-01-2026_PT_SCH.md
+WARN unknown subject 'Programmierung' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/PT/ASS/02-02-2026_PT_ASS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Programmierung/ASS/2026-02-02_Programmierung_ASS_java-getter-setter-und-konstruktoren.md
+WARN unknown subject 'Programmierung' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/PT/ASS/09-02-2026_PT_ASS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Programmierung/ASS/2026-02-09_Programmierung_ASS_java-oop-getter-setter-konstruktoren-referenzen.md
+WARN unknown subject 'Programmierung' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/PT/ASS/26-01-2026_PT_ASS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Programmierung/ASS/2026-01-26_Programmierung_ASS_objektorientierte-programmierung-hibernate-semester-2.md
+WARN unknown subject 'Programmierung' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/PT/ASS/30-01-2026_PT_ASS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Programmierung/ASS/2026-01-30_Programmierung_ASS_einfuehrung-in-android-studio.md
+WARN unknown subject 'Programmierung' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/PT/ASS/09-02-2026_PT_ASS/Udemy_StaticVsIntance.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Programmierung/ASS/2026-02-09_Programmierung_ASS_java-static-vs-instance-variablen-und-methoden.md
+WARN unknown subject 'Programmierung' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/PT/UDEMY/10-02-2026_POJO_und_JavaBean_PT_UDEMY.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Programmierung/UDEMY/2026-02-10_Programmierung_UDEMY_pojo-javabean-annotationen-in-java.md
+WARN unknown subject 'Programmierung' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/PT/UDEMY/10-02-2026_Records_in_Java_PT_UDEMY.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Programmierung/UDEMY/2026-02-10_Programmierung_UDEMY_records-in-java-grundlagen-und-vergleich-zu-pojos.md
+WARN unknown subject 'Netzwerktechnik / Embedded' (kept as-is)
+ERR  MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/IoT-Netzwerktechnik/WIT/14-07-2025_WIT_IoT.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik / Embedded/WIT/2025-07-14_Netzwerktechnik / Embedded_WIT_sensoren-mikrocontroller-sr04-dht22-esp32.md :: Exception calling "WriteAllText" with "3" argument(s): "Could not find a part of the path '/home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik / Embedded/WIT/2025-07-14_Netzwerktechnik / Embedded_WIT_sensoren-mikrocontroller-sr04-dht22-esp32.md'."
+WARN unknown subject 'IoT & Netzwerktechnik' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/IoT-Netzwerktechnik/WIT/18-08-2025_IoT-Netzwerktechnik_WIT.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/IoT & Netzwerktechnik/WIT/2025-08-18_IoT & Netzwerktechnik_WIT_iot-mqtt-mosquitto-docker-sensordaten-mit-esp32.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/TK/KLA/15.07.2025-TK.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Telekommunikation/KLA/2025-07-15_Telekommunikation_KLA_tae-ppa-und-diode-grundlagen-telekommunikation-ap1.md
+WARN unknown subject 'Datentechnik' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Digitaltechnik/PAS/10-07-2025_DT_PAS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Datentechnik/PAS/2025-07-10_Datentechnik_PAS_zahlensysteme-und-logik-grundlagen.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/ST/WED/01-12-2025_ST_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Systemtechnik/WED/2025-12-01_Systemtechnik_WED_masseinheiten-von-daten-bussystem-speicherberechnung-und-rechnerarchitektur.md
+INVALID no frontmatter: /home/sean/umschulung-work/FIAE_Umschulung_Notes/ST/WED/03-11-2025_ST_WED.md
+OK   ARCHIVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/ST/WED/03-11-2025_ST_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/archive/invalid/no-frontmatter/03-11-2025_ST_WED.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/ST/WED/12-01-2026_ST_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Systemtechnik/WED/2026-01-12_Systemtechnik_WED_pcie-architektur-lanes-versionen-und-praxisbezug-ap1.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/ST/WED/18-08-2025_ST_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Systemtechnik/WED/2025-08-18_Systemtechnik_WED_einfuehrung-in-die-it-am-arbeitsplatz-eva-prinzip-und-systemgrundlagen-ap1.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/ST/WED/21-07-2025_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Systemtechnik/WED/2025-07-21_Systemtechnik_WED_digitale-logik-halbaddierer-half-adder-und-grundgatter.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/ST/WED/22-09-2025_ST_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Systemtechnik/WED/2025-09-22_Systemtechnik_WED_arbeitsplatz-umgebungen-on-premises-cloud-und-virtuelle-desktops-ap1.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/ST/WED/25-08-2025_ST_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Systemtechnik/WED/2025-08-25_Systemtechnik_WED_pc-geschichte-eva-prinzip-cpu-und-platinenherstellung-testvorbereitung.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/ST/WED/29-09-2025_ST_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Systemtechnik/WED/2025-09-29_Systemtechnik_WED_geraeteklassen-in-der-it-einordnung-und-merkmale-ap1.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Web/KLK/11-07-2025_WEB_KLK.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Webentwicklung/KLU/2025-07-11_Webentwicklung_KLU_html-grundlagen-css-grid-layout-selektoren-und-emmet-projekt.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Web/KLK/12-09-2025_WEB_KLU.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Webentwicklung/KLU/2025-09-12_Webentwicklung_KLU_css-grid-grundlagen-platzierung-und-responsive-layout.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Web/KLK/16-07-2025_KLU_WEB.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Webentwicklung/KLK/2025-07-18_Webentwicklung_KLK_css-grid-emmet-strukturaufbau-und-layout-grundlagen.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/DT/PAS/09-10-2025_DT_PAS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Digitaltechnik/PAS/2025-10-09_Digitaltechnik_PAS_schaltkreise-logikgatter-grundlagen.md
+INVALID no frontmatter: /home/sean/umschulung-work/FIAE_Umschulung_Notes/DT/PAS/25-09-2025_DT_PAS.md
+OK   ARCHIVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/DT/PAS/25-09-2025_DT_PAS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/archive/invalid/no-frontmatter/25-09-2025_DT_PAS.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/DT/KRU/11-09-2025_DT_KRU.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Digitaltechnik/KRU/2025-09-11_Digitaltechnik_KRU_zahlensysteme-umrechnungen-dezimal-dual-hex.md
+INVALID no frontmatter: /home/sean/umschulung-work/FIAE_Umschulung_Notes/DT/KRU/20-11-2025_DT_KRU.md
+OK   ARCHIVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/DT/KRU/20-11-2025_DT_KRU.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/archive/invalid/no-frontmatter/20-11-2025_DT_KRU.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/DB/WIT/09-10-2025_DB_WIT.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Datenbanken/WIT/2025-10-09_Datenbanken_WIT_dql-data-query-language-sql-abfragen.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/NT/TRE/03-12-2025_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik/TRE/2025-12-03_Netzwerktechnik_TRE_netzwerktechnik-dhcp-dns-netbios.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/NT/TRE/04-02-2026_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Netzwerktechnik/TRE/2026-02-04_Netzwerktechnik_TRE_osi-schicht-4-transport-ports.md
+INVALID no frontmatter: /home/sean/umschulung-work/FIAE_Umschulung_Notes/NT/TRE/05-11-2025_NT_TRE.md
+OK   ARCHIVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/NT/TRE/05-11-2025_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/archive/invalid/no-frontmatter/05-11-2025_NT_TRE.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/NT/TRE/07-01-2026_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Netzwerktechnik/TRE/2026-01-07_Netzwerktechnik_TRE_routing-dynamisch-vs-statisch-rip-ospf-bgp.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/NT/TRE/08-10-2025_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik/TRE/2025-10-08_Netzwerktechnik_TRE_ipv4-grundlagen-klassen-subnetting.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/NT/TRE/14-01-2026_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Netzwerktechnik/TRE/2026-01-14_Netzwerktechnik_TRE_vlans-layer-3-switching-grundlagen-und-inter-vlan-routing.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/NT/TRE/17-09-2025_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik/TRE/2025-09-17_Netzwerktechnik_TRE_power-over-ethernet-poe-vlan-grundlagen-und-pruefungswissen.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/NT/TRE/18-09-2025_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik/TRE/2025-09-18_Netzwerktechnik_TRE_managed-switch-vlan-praktische-konfiguration-und-tests.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/NT/TRE/19-11-2025_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik/TRE/2025-11-19_Netzwerktechnik_TRE_ipv6-subnetting-link-local-slaac-vergleich-zu-ipv4.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/NT/TRE/24-09-2025_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik/TRE/2025-09-24_Netzwerktechnik_TRE_ethernet-frame-aufbau-felder-und-bedeutung.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/NT/TRE/28-01-2026_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Netzwerktechnik/TRE/2026-01-28_Netzwerktechnik_TRE_klausurvorbereitung-ipv4-ipv6-dhcp-dns-und-routing.md
+INVALID no frontmatter: /home/sean/umschulung-work/FIAE_Umschulung_Notes/NT/TRE/29-10-2025_NT_TRE.md
+OK   ARCHIVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/NT/TRE/29-10-2025_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/archive/invalid/no-frontmatter/29-10-2025_NT_TRE.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Programmiertechnik/SCH/14-11-2025_PT_SCH.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Programmiertechnik/SCH/2025-11-14_Programmiertechnik_SCH_pseudocode-grundlagen-nutzen-und-beispiele.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Programmiertechnik/SCH/21-07-2025_SCH_PT.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Programmiertechnik/SCH/2025-07-21_Programmiertechnik_SCH_variablen-datentypen-uebersetzungsarten.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Programmiertechnik/PAS/22-09-2025_ProgrammierTechnik_PAS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Programmiertechnik/PAS/2025-09-22_Programmiertechnik_PAS_kopf-und-fussgesteuerte-schleifen-in-java.md
+WARN unknown subject 'Programmierung' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Programmiertechnik/ASS/05-09-2025_PT_ASS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Programmierung/ASS/2025-09-05_Programmierung_ASS_arraylists-in-java-grundlagen-und-methoden.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Programmiertechnik/ASS/11-07-2025_PT_ASS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Programmiertechnik/ASS/2025-07-11_Programmiertechnik_ASS_kommentare-datentypen-und-variablen-in-java.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Programmiertechnik/ASS/12-09-2025_Programiertechnik_ASS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Programmiertechnik/ASS/2025-09-12_Programmiertechnik_ASS_menueprogramme-mit-switch-case-und-geometrische-berechnungen-in-java.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Programmiertechnik/ASS/18-07-2025_PT_ASS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Programmiertechnik/ASS/2025-07-18_Programmiertechnik_ASS_datentypen-variablen-scanner-und-debugging-in-java.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Programmiertechnik/ASS/21-11-2025_PT_ASS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Programmiertechnik/ASS/2025-11-21_Programmiertechnik_ASS_methoden-sichtbarkeit-und-zugriff-in-java.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Programmiertechnik/ASS/25-07-2025_Programiertechnik_ASS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Programmiertechnik/ASS/2025-07-25_Programmiertechnik_ASS_datentypen-scanner-und-entwicklungsgrundlagen-in-java.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Programmiertechnik/WED/09-09-2025_Programiertechnik_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Programmiertechnik/WED/2025-09-09_Programmiertechnik_WED_altersabfrage-mit-if-else.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Programmiertechnik/WED/15-09-2025_ProgrammierTechnik_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Programmiertechnik/WED/2025-09-15_Programmiertechnik_WED_switch-case-und-for-schleife-in-java.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Programmiertechnik/WED/18-08-2025_PT_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Programmiertechnik/WED/2025-08-18_Programmiertechnik_WED_datentypen-und-arrays-in-java-grundlagen-ap1-relevanz.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Datenbanken/POG/08-10-2025_Datenbanken_POG.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Datenbanken/KNO/2025-10-08_Datenbanken_KNO_sql-grundlagen-und-sprachbereiche.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Datenbanken/POG/09-07-2025_datenbanken_pog.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Datenbanken/POG/2025-07-09_Datenbanken_POG_datenbanken-grundlagen-er-modell-und-normalisierung.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Datenbanken/POG/10-09-2025_Datenbanken_POG.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Datenbanken/POG/2025-09-10_Datenbanken_POG_er-modell-uebungen-carsharing-musik-streaming.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Datenbanken/POG/24-09-2025_DatenBanken_POG.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Datenbanken/POG/2025-09-24_Datenbanken_POG_fremdschluessel-und-beziehungen-in-relationalen-datenbanken.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Datenbanken/SCH/24-07-2025_Datenbanken_SCH.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Datenbanken/SCH/2025-07-24_Datenbanken_SCH_erm-regeln-und-klausurhinweise.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Datenbanken/WIT/04-09-2025_datenbanken_WIT.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Datenbanken/WIT/2025-09-04_Datenbanken_WIT_data-manipulation-mit-sql-praxisnah-mit-querybrowser.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Datenbanken/WIT/21-08-2025_Datenbanken_WIT.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Datenbanken/WIT/2025-08-21_Datenbanken_WIT_sql-kommandos-ddl-dml-dql-dcl-tcl.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Datenbanken/KNO/02-02-2026_Datenbanken_KNO.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Datenbanken/KNO/2026-02-02_Datenbanken_KNO_normalisierung-normalformen-in-relationalen-datenbanken.md
+INVALID no frontmatter: /home/sean/umschulung-work/FIAE_Umschulung_Notes/Datenbanken/KNO/12-01-2026_Datenbanken_KNO.md
+OK   ARCHIVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Datenbanken/KNO/12-01-2026_Datenbanken_KNO.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/archive/invalid/no-frontmatter/12-01-2026_Datenbanken_KNO.md
+INVALID no frontmatter: /home/sean/umschulung-work/FIAE_Umschulung_Notes/Datenbanken/KNO/15-01-2026_Datenbanken_KNO.md
+OK   ARCHIVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Datenbanken/KNO/15-01-2026_Datenbanken_KNO.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/archive/invalid/no-frontmatter/15-01-2026_Datenbanken_KNO.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Datenbanken/KNO/26-01-2026_Datenbanken_KNO.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Datenbanken/KNO/2026-01-26_Datenbanken_KNO_subqueries-unterabfragen-in-sql.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/SLE/08-10-2025_BS_SLE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/SLE/2025-10-08_Betriebssysteme_SLE_windows-bootprozess-bios-uefi-und-mbr-gpt.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/SLE/15-01-2026_BS_SLE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Betriebssysteme/SLE/2026-01-15_Betriebssysteme_SLE_virtualbox-grundlagen-verwaltung.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/SLE/18-09-2025_BS_SLE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/SLE/2025-09-18_Betriebssysteme_SLE_schalenmodell-kernelarchitekturen.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/SLE/21-07-2025_BS_SLE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/SCHLEGEL/2025-07-21_Betriebssysteme_SCHLEGEL_powershell-ise-automatisierung-in-windows.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/SLE/21-08-2025_BS_SLE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/SLE/2025-08-21_Betriebssysteme_SLE_recap-geschichte-der-betriebssysteme-ab-2000-unix.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/SLE/24-07-2025_BS_SLE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/SLE/2025-07-24_Betriebssysteme_SLE_software-einteilung-grundlagen-des-betriebssystems.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/SLE/25-09-2025_BS_SLE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/SLE/2025-09-25_Betriebssysteme_SLE_betriebssysteme-betriebsarten-und-einsatzformen.md
+INVALID no frontmatter: /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/SLE/30-10-2025_BS_SLE.md
+OK   ARCHIVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/SLE/30-10-2025_BS_SLE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/archive/invalid/no-frontmatter/30-10-2025_BS_SLE.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/WED/03-09-2025_BS_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/WED/2025-09-03_Betriebssysteme_WED_linux-absolute-und-relative-pfade.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/WED/10-09-2025_BS_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/WED/2025-09-10_Betriebssysteme_WED_linux-benutzer-und-gruppenmanagement.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/WED/14-01-2026_BS_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2026/Betriebssysteme/WED/2026-01-14_Betriebssysteme_WED_linux-private-public-key-authentifizierung-ssh.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/WED/16-07_2025_WED_BS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/WED/2025-07-16_Betriebssysteme_WED_linux-grundlagen-terminal-shell-und-kommandos.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/WED/17-09-2025_WED_BS.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/WED/2025-09-17_Betriebssysteme_WED_linux-benutzerverwaltung-dateirechte-kompakt.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/WED/17-12-2025_BS_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/WED/2025-12-17_Betriebssysteme_WED_ssh-kryptographie-und-schluesselbasierte-authentifizierung.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/WED/20-08-2025_BS_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/WED/2025-08-20_Betriebssysteme_WED_linux-grundlagen-open-source-basisbefehle.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/WED/23-07-2025_BS_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/WED/2025-07-23_Betriebssysteme_WED_linux-unix-befehle-navigation.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/WED/24-09-2025_BS_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/WED/2025-09-24_Betriebssysteme_WED_linux-dateirechte.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/WED/27-08-2025_BS_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/WED/2025-08-27_Betriebssysteme_WED_linux-dateipfade-und-dateisystem.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/BS/WED/29-10-2025_BS_WED.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Betriebssysteme/WED/2025-10-29_Betriebssysteme_WED_linux-ssh-ip-bridges-und-paketverwaltung.md
+WARN unknown subject 'Wirtschafts- und Sozialkunde' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/WiSo/WIL/02-12-2025_WiSo_WIL.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Wirtschafts- und Sozialkunde/WIL/2025-12-02_Wirtschafts- und Sozialkunde_WIL_geschaeftsfaehigkeit-altersstufen-rechtsfolgen-und-abgrenzungen-104-113-bgb.md
+WARN unknown subject 'Wirtschafts- und Sozialkunde' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/WiSo/WIL/03-09-2025_WiSo_WIL.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Wirtschafts- und Sozialkunde/WIL/2025-09-03_Wirtschafts- und Sozialkunde_WIL_erweiterter-wirtschaftskreislauf-akteure-geld-und-gueterstroeme.md
+WARN unknown subject 'Wirtschafts- und Sozialkunde' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/WiSo/WIL/10-09-2025_WiSo_WIL.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Wirtschafts- und Sozialkunde/WIL/2025-09-10_Wirtschafts- und Sozialkunde_WIL_markt-und-preis-grundbegriffe-marktarten-und-regulierung.md
+WARN unknown subject 'Wirtschafts- und Sozialkunde' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/WiSo/WIL/16-12-2025_WiSo_WIL.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Wirtschafts- und Sozialkunde/WIL/2025-12-16_Wirtschafts- und Sozialkunde_WIL_testvorbereitung-wiso-marktformen-gleichgewichtspreis-und-wirtschaftskreislauf.md
+WARN unknown subject 'Wirtschafts- und Sozialkunde' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/WiSo/WIL/16.07.2025-WiSo.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Wirtschafts- und Sozialkunde/WIL/2025-07-16_Wirtschafts- und Sozialkunde_WIL_beduerfnisse-gueter-produktionsfaktoren-arbeitsmarkt-und-beschaeftigung.md
+WARN unknown subject 'Wirtschafts- und Sozialkunde' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/WiSo/WIL/17-09-2025_WiSo_WIL.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Wirtschafts- und Sozialkunde/WIL/2025-09-17_Wirtschafts- und Sozialkunde_WIL_marktformen-praeferenzen-vollkommener-und-unvollkommener-markt.md
+WARN unknown subject 'Wirtschafts- und Sozialkunde' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/WiSo/WIL/20-08-2025_WiSo_WIL.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Wirtschafts- und Sozialkunde/WIL/2025-08-20_Wirtschafts- und Sozialkunde_WIL_wirtschaft-produktionsfaktoren-arbeitslosigkeit-und-konjunktur.md
+WARN unknown subject 'Wirtschafts- und Sozialkunde' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/WiSo/WIL/24-09-2025_WiSo_WIL.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Wirtschafts- und Sozialkunde/WIL/2025-09-24_Wirtschafts- und Sozialkunde_WIL_marktformen-marktzugang-und-wettbewerbsarten.md
+WARN unknown subject 'Wirtschafts- und Sozialkunde' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/WiSo/WIL/27-08-2025_WiSo_WIL.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Wirtschafts- und Sozialkunde/WIL/2025-08-27_Wirtschafts- und Sozialkunde_WIL_wirtschaftskreislaeufe-und-geld-grundlagen-fuer-ap1-ap2.md
+WARN unknown subject 'Wirtschafts- und Sozialkunde' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/WiSo/HPT/24-07-2025_WiSo_HPT.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Wirtschafts- und Sozialkunde/HPT/2025-07-24_Wirtschafts- und Sozialkunde_HPT_unternehmenskonzentration-formen-ebenen-und-marktstrukturen.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Netzwerktechnik/TRE/03-09-2025_Netzwerktechnik_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik/TRE/2025-09-03_Netzwerktechnik_TRE_switches-link-aggregation-grundlagen-und-praxis.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Netzwerktechnik/TRE/09-07-2025_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik/TRE/2025-07-09_Netzwerktechnik_TRE_netzwerktechnik-grundlagen-osi-modell-und-netzwerkbasiswissen.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Netzwerktechnik/TRE/10-09-2025_NetzwerkTechnik_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik/TRE/2025-09-10_Netzwerktechnik_TRE_spanning-tree-protocol-stp-rstp-poe-grundlagen-und-berechnung.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Netzwerktechnik/TRE/16-07-2025_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik/TRE/2025-07-16_Netzwerktechnik_TRE_osi-modell-schichten-vergleich-tcp-ip-und-ethernet-grundlagen.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Netzwerktechnik/TRE/20-08-2025_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik/TRE/2025-08-20_Netzwerktechnik_TRE_paket-analyzer-dns4eu-mac-adresse-netzwerkgrundlagen.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Netzwerktechnik/TRE/23-07-2025_Netzwerktechnik_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik/TRE/2025-07-23_Netzwerktechnik_TRE_sniffer-csma-cd-und-bus-topologie-grundlagen.md
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Netzwerktechnik/TRE/27-08-2025_NT_TRE.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Netzwerktechnik/TRE/2025-08-27_Netzwerktechnik_TRE_ap1-guide-osi-subnetting-ports-und-netzwerkgrundlagen.md
+WARN unknown subject 'Telekommunikationstechnik' (kept as-is)
+OK   MOVE  /home/sean/umschulung-work/FIAE_Umschulung_Notes/Netzwerktechnik/KLA/15-07-2025_KLA_TK.md  ->  /home/sean/umschulung-work/FIAE_Umschulung_Notes/notes/2025/Telekommunikationstechnik/KLA/2025-07-15_Telekommunikationstechnik_KLA_telekommunikationstechnik-tae-ont-ppa-und-grundlagen.md
+
+=== Migration finished: 02/15/2026 16:31:33 ===
+Changed: 93
+Archived: 10
+Skipped (errors): 1
+Report: /home/sean/umschulung-work/FIAE_Umschulung_Notes/migration_report_20260215_163132.txt

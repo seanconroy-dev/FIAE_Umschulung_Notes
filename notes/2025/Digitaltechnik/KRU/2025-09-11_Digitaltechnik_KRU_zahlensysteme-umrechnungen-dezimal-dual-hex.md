@@ -1,0 +1,209 @@
+---
+title: "Zahlensysteme – Umrechnungen (Dezimal, Dual, Hex)"
+date: 2025-09-11
+weekday: "Donnerstag"
+subject: "DT"
+instructor: "KRU"
+program: "FIAE Umschulung 2025-2027"
+module: "Grundlagen Informatik"
+topic: "Zahlensysteme & Umrechnungen"
+level: "Grundlagen"
+tags:
+  - Zahlensysteme
+  - Binär
+  - Hexadezimal
+  - Dezimal
+  - Umrechnung
+  - Bits
+  - Bytes
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+# Donnerstag, 2025-09-11_DT_KRU
+
+## Zahlensysteme – Umrechnungen (Dezimal, Dual, Hex)
+
+**Thema:** Methoden zum Umrechnen und Darstellung in ganzen Bytes  
+
+---
+
+## ZIEL
+
+- Dezimalzahlen sicher in Dualzahlen umrechnen und zurück (mit mehreren Verfahren).
+- Dualzahlen korrekt in Hexadezimalzahlen umwandeln und umgekehrt.
+- Rechenwege strukturiert und nachvollziehbar dokumentieren.
+- Zahlen korrekt in **ganzen Bytes** darstellen.
+
+---
+
+## BEGRIFFE
+
+- **Dezimal (Basis 10):** Ziffern 0–9  
+- **Dual / Binär (Basis 2):** Ziffern 0–1  
+- **Hexadezimal (Basis 16):** Ziffern 0–9, A–F  
+- **Bit:** kleinste Informationseinheit (0 oder 1)  
+- **Byte:** 8 Bit  
+- **Nibble:** 4 Bit (Grundlage der Hex-Darstellung)
+
+---
+
+## ORIENTIERUNG – Wann nutze ich welche Methode?
+
+### Dezimal → Dual
+- **Divisionsmethode:** Standardverfahren für ganze Zahlen.
+- **Subtraktionsmethode:** geeignet, wenn 2er-Potenzen schnell erkannt werden.
+
+### Dual → Dezimal
+- **Additionsmethode (Positionswerte):** klassische Methode.
+- **Multiplikationsmethode (Horner-Verfahren):** effizient bei längeren Bitfolgen.
+
+### Dual ↔ Hex
+- Umrechnung über **4-Bit-Gruppen (Nibble)**.
+
+---
+
+## KLEINES CHEATSHEET
+
+### 2er-Potenzen
+
+1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, …
+
+### Hex-Nibble
+
+```
+0000 = 0   0001 = 1   0010 = 2   0011 = 3
+0100 = 4   0101 = 5   0110 = 6   0111 = 7
+1000 = 8   1001 = 9   1010 = A   1011 = B
+1100 = C   1101 = D   1110 = E   1111 = F
+```
+
+---
+
+## METHODEN MIT VORLAGEN
+
+### Divisionsmethode (Dezimal → Dual)
+
+```
+Dezimalzahl n = ________
+
+n ÷ 2 = ________  Rest __
+n ÷ 2 = ________  Rest __
+n ÷ 2 = ________  Rest __
+…
+Dualzahl = __________________₂
+```
+
+---
+
+### Additionsmethode (Dual → Dezimal)
+
+```
+Dualzahl b = __________________
+
+Position (von rechts):  … 7 6 5 4 3 2 1 0
+Werte:                 …128 64 32 16 8 4 2 1
+Gesetzte Bits:         __________________
+
+Summe der Potenzen = __________________
+Ergebnis (dezimal) = __________________
+```
+
+---
+
+### Subtraktionsmethode (Dezimal → Dual)
+
+```
+Dezimalzahl n = ________
+
+2^__ = ______ ≤ n   → Bit = 1, Rest = ______
+2^__ = ______ ≤ Rest → Bit = 1, Rest = ______
+…
+Dualzahl = __________________₂
+```
+
+---
+
+### Multiplikationsmethode / Horner (Dual → Dezimal)
+
+```
+Dualzahl b = __________________
+
+v = 0
+v = v*2 + _ = __
+v = v*2 + _ = __
+v = v*2 + _ = __
+…
+Ergebnis (dezimal) = ________
+```
+
+---
+
+## DUAL ↔ HEX ÜBER NIBBLES
+
+```
+Dual: ____ ____ ____ ____
+Hex:   __   __   __   __
+```
+
+---
+
+## AUFGABEN
+
+### Aufgabe 4 – Methoden anwenden
+
+**1) Divisionsmethode**  
+Dezimalzahl: 171₁₀
+
+```
+171 ÷ 2 = _____ Rest __
+_____ ÷ 2 = _____ Rest __
+…
+Ergebnis: __________₂
+```
+
+**2) Additionsmethode**  
+Dualzahl: 10001011₂
+
+```
+Gesetzte Bits / Potenzen: __________________
+Summe = __________ → Ergebnis: ______₁₀
+```
+
+---
+
+### Aufgabe 5 – Darstellung in unterschiedlichen Zahlensystemen
+
+Hinweise:
+- Dualzahlen auf **8 / 16 / 24 / 32 Bit** auffüllen.
+- Hexadezimalzahlen immer in **4er-Gruppen** schreiben.
+
+| Nr. | Dezimalzahl | Dualzahl (ganze Bytes) | Hexadezimalzahl |
+|----:|-------------|------------------------|-----------------|
+| Beispiel | 25 | 0001 1001 | 19 |
+| 1 | 2000 | | |
+| 2 | | 0000 0110 | A3 |
+| 3 | 9103 | | |
+| 4 | | 0100 0111 1111 0010 | |
+| 5 | 430 | | F2, 1C / F2 BC |
+| 6 | | | |
+| 7 | | | |
+
+---
+
+## SELBSTKONTROLLE
+
+- Stimmen bei Dual → Dezimal die verwendeten 2er-Potenzen?
+- Wurden Divisionsreste korrekt von **unten nach oben** gelesen?
+- Sind Hex-Zahlen korrekt in 4-Bit-Nibbles gruppiert?
+- Wurden führende Nullen ergänzt, wenn ganze Bytes gefordert sind?
+
+---
+
+## TYPISCHE FEHLER
+
+- Falsche Leserichtung bei der Divisionsmethode.
+- Fehlende Nibble-Gruppierung bei Hex-Zahlen.
+- Führende Nullen trotz Byte-Vorgabe vergessen.
+- Falsche Zuordnung der Potenzen (Index zählt von rechts ab 0).
+

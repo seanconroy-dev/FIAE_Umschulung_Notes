@@ -1,0 +1,230 @@
+---
+title: "Kommentare, Datentypen und Variablen in Java"
+date: 2025-07-11
+weekday: "Freitag"
+subject: "Programmiertechnik"
+instructor: "ASS"
+program: "FIAE Umschulung 2025-2027"
+module: "Java Grundlagen"
+topic: "Kommentare, Datentypen, Variablen, Operatoren"
+level: "Grundlagen"
+tags:
+  - Java
+  - Datentypen
+  - Variablen
+  - Operatoren
+  - Kommentare
+  - Programmiertechnik
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+# Kommentare, Datentypen und Variablen in Java – 2025-07-11 (ASS)
+
+Projekt: DatentypenUndVariablen
+
+---
+
+## Kommentare in Java
+
+### Warum sind Kommentare wichtig?
+
+- Erhöhen Transparenz im Code
+- Erleichtern Wiedereinstieg nach Pausen
+- Dokumentieren Logik und Entscheidungen
+- Werden nicht mitkompiliert
+- Unterstützen Teamkommunikation
+- Wichtig für Code Reviews
+- In vielen Unternehmen verpflichtend
+
+---
+
+### Kommentararten
+
+```java
+// Einzeiliger Kommentar
+
+/*
+ Mehrzeiliger Kommentar
+*/
+
+/**
+ * JavaDoc-Kommentar (z.B. für Methoden oder Klassen)
+ */
+```
+
+---
+
+# Daten und Datentypen
+
+- Software verarbeitet Daten
+- Datentyp beeinflusst Speicherbedarf, Genauigkeit und Performance
+- Falsche Typwahl kann zu Rundungsfehlern führen (z.B. bei Geldbeträgen)
+
+---
+
+## Variablen in Java
+
+- Speichern genau einen Wert
+- Neuer Wert überschreibt alten
+- Zuweisung erfolgt von rechts nach links
+- Deklaration = Variable anlegen
+- Initialisierung = Startwert setzen
+
+```java
+double gehalt = 1000;
+double gehalt1 = 1000, gehalt2 = 1500;
+```
+
+- Jede Anweisung endet mit `;`
+- Namenskonvention: camelCase (z.B. gehaltProMonat)
+- Code steht innerhalb der `main`-Methode
+
+---
+
+## Datentypen in Java
+
+### Gleitkommazahlen
+
+- `double` → Standard für Dezimalzahlen
+- `float` → kleiner, Suffix `f` erforderlich (`3.14f`)
+
+### Ganze Zahlen
+
+- `int` → Standardtyp
+- `long` → größere Werte, Suffix `L`
+- `short`, `byte` → selten genutzt
+- Implizite Typumwandlung: `int` → `double` erlaubt, umgekehrt nicht ohne Cast
+
+### Wahrheitswerte
+
+- `boolean` → `true` oder `false`
+- Namenskonvention: `is`, `has`, `can`
+
+### Zeichen
+
+- `char` → genau ein Zeichen
+- Beispiel: `'a'`, `'%'`, `'€'`
+
+### Zeichenketten
+
+- `String` → mehrere Zeichen
+- In doppelten Anführungszeichen `" "`
+- Leerer String: `""`
+- `String` ist eine Klasse (großes S)
+
+```java
+String name = "Max";
+System.out.println("Hallo " + name);
+```
+
+Leerzeichen entfernen:
+
+```java
+String eingabe = " Max ";
+System.out.println(eingabe.trim());
+```
+
+---
+
+## Operatoren in Java
+
+### Arithmetische Operatoren
+
+- `+` Addition
+- `-` Subtraktion
+- `*` Multiplikation
+- `/` Division
+- `%` Modulo
+
+### Vergleichsoperatoren
+
+- `==` gleich
+- `!=` ungleich
+- `<` kleiner
+- `>` größer
+- `<=` kleiner oder gleich
+- `>=` größer oder gleich
+
+### Logische Operatoren
+
+- `&&` UND
+- `||` ODER
+- `!` NICHT
+
+---
+
+## Beispiel
+
+```java
+int wert1 = 1;
+int wert2 = 2;
+int erg = wert1 + wert2;
+System.out.println("Ergebnis: " + erg);
+```
+
+---
+
+## Fallstricke
+
+### Zeichen + Zahl
+
+```java
+double gehalt = 1234.56;
+char zeichen = '€';
+System.out.println(gehalt + "" + zeichen);
+```
+
+Hinweis:
+Ohne `""` würde eine numerische Addition stattfinden (Unicode-Wert des Zeichens).
+
+---
+
+### Division durch 0
+
+```java
+int a = 10;
+int b = 0;
+int c = a / b; // ArithmeticException
+```
+
+Vorher prüfen:
+
+```java
+if (b != 0) {
+    int c = a / b;
+}
+```
+
+---
+
+## IDE-Grundstruktur
+
+```
+Projekt
+└── src
+    └── package
+        └── class
+```
+
+- Eine öffentliche Klasse pro `.java`-Datei
+- Einstiegspunkt:
+
+```java
+public class Start {
+    public static void main(String[] args) {
+        // Code hier
+    }
+}
+```
+
+---
+
+## Klausurhinweise
+
+- Variable korrekt deklarieren: `Datentyp name;`
+- Wertebereiche beachten
+- Methodenkopf korrekt schreiben
+- Struktur und Klammern prüfen
+- Kommentare können beim Verständnis helfen
+

@@ -1,0 +1,132 @@
+---
+title: "Objektorientierte Programmierung & Hibernate – Semester 2"
+date: 2026-01-26
+weekday: "Montag"
+subject: "Programmierung"
+instructor: "ASS"
+program: "FIAE Umschulung 2025-2027"
+module: "OOP Grundlagen"
+topic: "Objekte, Klassen, Hibernate"
+level: "Grundlagen"
+tags:
+  - Java
+  - OOP
+  - Klasse
+  - Objekt
+  - Attribut
+  - Hibernate
+  - ORM
+  - Semester2
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+# Objektorientierte Programmierung (OOP) – 2026-01-26 (ASS)
+
+## Semester 2 – Einstieg
+
+---
+
+## Grundidee der OOP
+
+- Objektorientierte Programmierung ist ein Programmierparadigma.
+- Programme bestehen aus Objekten, die miteinander interagieren.
+- Fokus liegt auf Daten (Zustand) und Verhalten (Methoden).
+
+---
+
+## Objekte
+
+- Ein Objekt repraesentiert etwas aus der realen oder abstrakten Welt.
+- Ein Objekt besitzt:
+  - Zustand (Attribute)
+  - Verhalten (Methoden)
+- Ein Objekt benoetigt immer eine Klasse als Bauplan.
+- Objekte werden in Java typischerweise mit `new` erzeugt.
+
+Beispiel:
+~~~java
+Person p = new Person();
+~~~
+
+---
+
+## Klassen
+
+- Eine Klasse ist der Bauplan fuer Objekte.
+- Sie definiert:
+  - Attribute (Eigenschaften)
+  - Datentypen der Attribute
+  - Methoden (Verhalten)
+- Jede Klasse stellt einen eigenen Datentyp dar.
+
+Beispiel:
+~~~java
+public class Person {
+    private String name;
+    private int age;
+}
+~~~
+
+---
+
+## Attribute
+
+- Attribute sind Variablen innerhalb einer Klasse.
+- Sie beschreiben Eigenschaften eines Objekts.
+- Es gibt:
+  - Primitive Datentypen (int, double, boolean, char)
+  - Referenztypen (String, Arrays, andere Klassen)
+
+Beispiel:
+~~~java
+private int age;
+private String name;
+private Address address; // eigener Datentyp
+~~~
+
+---
+
+## Typen von Klassen
+
+### Entity-Klassen
+- Repräsentieren Datenobjekte.
+- Oft direkte Abbildung einer Datenbanktabelle.
+- Enthalten meist Attribute + Getter/Setter.
+
+### Model-Klassen
+- Dienen der fachlichen Modellierung.
+- Enthalten zusaetzlich Logik oder Berechnungen.
+- Nicht zwingend 1:1 Datenbankabbildung.
+
+---
+
+# Hibernate (ORM – Object Relational Mapping)
+
+## Zweck
+
+- Hibernate ist ein ORM-Framework.
+- Es verbindet objektorientierte Klassen mit relationalen Datenbanken.
+- Erlaubt Datenbankzugriff ohne direktes Schreiben von SQL fuer Standardoperationen.
+
+---
+
+## Zentrale Konzepte
+
+### Mapping
+- Zuordnung einer Java-Klasse zu einer Datenbanktabelle.
+- Attribute werden auf Spalten abgebildet.
+
+### Mapping-Dateien
+- Beschreiben die Beziehung zwischen Klasse und Tabelle.
+- Historisch XML-basiert, heute haeufig Annotationen in der Klasse.
+
+### XML-Konfiguration
+- `hibernate.cfg.xml`
+- Zentrale Konfigurationsdatei.
+- Enthält:
+  - Datenbankverbindung
+  - Dialekt
+  - Benutzername / Passwort
+  - Mapping-Definitionen
+

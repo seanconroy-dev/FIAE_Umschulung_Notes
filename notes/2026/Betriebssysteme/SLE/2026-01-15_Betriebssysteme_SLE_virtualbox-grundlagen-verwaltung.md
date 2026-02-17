@@ -1,0 +1,132 @@
+---
+title: "VirtualBox – Grundlagen & Verwaltung"
+date: 2026-01-15
+weekday: "Donnerstag"
+subject: "BS"
+instructor: "SLE"
+program: "FIAE Umschulung 2025-2027"
+module: "Virtualisierung"
+topic: "VirtualBox"
+level: "Grundlagen"
+tags:
+  - VirtualBox
+  - Virtualisierung
+  - Snapshots
+  - Guest Additions
+  - Netzwerke
+  - Shared Folders
+author: "Sean Conroy"
+license: "CC BY-NC-SA 4.0"
+---
+
+# Donnerstag, 2026-01-15_BS_SLE
+
+## VirtualBox – Grundlagen & Verwaltung
+
+### 1. VirtualBox Guest Additions (Windows-Gast)
+
+**Installation:**
+- In der laufenden VM: **Geräte → Gasterweiterungen einlegen**
+- CD-Laufwerk im Gastbetriebssystem öffnen
+- Setup ausführen und Installation abschließen
+- VM neu starten
+
+**Hinweise:**
+- ISO-Datei wird von VirtualBox bereitgestellt
+- Vorteile:
+  - Optimierte Bildschirmauflösung
+  - Bessere Grafikleistung
+  - Maus-Integration
+  - Unterstützung für Shared Folders
+
+---
+
+### 2. Anzeige & Erweiterungen
+
+- Display-Optimierung über installierte Guest Additions
+- ISO-Dateien über das virtuelle CD-Laufwerk mounten
+- Extension Pack erforderlich für:
+  - USB 2.0 / 3.0
+  - RDP
+  - PXE-Boot
+
+**Extension Pack installieren:**
+- **VirtualBox → Datei → Einstellungen → Erweiterungen**
+- Neues Paket hinzufügen
+- Passendes Extension Pack auswählen
+- Installation bestätigen
+
+---
+
+### 3. Snapshots (Sicherungspunkte)
+
+**Snapshot erstellen:**
+- VM auswählen → **Snapshots → Snapshot erstellen**
+
+**Snapshot wiederherstellen:**
+- VM auswählen → **Snapshots → Wiederherstellen**
+
+**Unterschied: Backup vs. Snapshot**
+- **Full Backup:**
+  - Komplette virtuelle Maschine wird gesichert
+- **Snapshot:**
+  - Speichert den Zustand der VM zu einem bestimmten Zeitpunkt
+  - Änderungen werden in separaten Differenzdateien gespeichert
+
+**Vor- und Nachteile von Snapshots:**
+
+- Vorteile:
+  - Sehr schnell
+  - Platzsparend (nur Änderungen werden gespeichert)
+
+- Nachteile:
+  - Abhängigkeit von der Basis-VDI
+  - Beschädigung der Basisdatei macht abhängige Snapshots unbrauchbar
+  - Viele Snapshots können Performance beeinträchtigen
+
+---
+
+### 4. Gemeinsame Ordner (Shared Folders)
+
+**Einrichten in VirtualBox:**
+- **Maschine → Einstellungen → Gemeinsame Ordner**
+- Ordner hinzufügen
+- Ordnerpfad und Namen festlegen
+- „Automatisch einbinden“ aktivieren
+- „Schreibgeschützt“ optional
+
+**Mounten im Linux-Gast:**
+
+```bash
+sudo mount -t vboxsf <ordnername> <mountpunkt>
+```
+
+---
+
+### 5. Klonen von virtuellen Maschinen
+
+- VM auswählen → Rechtsklick → **Klonen**
+- Klontyp:
+  - Vollständiger Klon
+  - Verknüpfter Klon (abhängig von der Original-VM)
+- MAC-Adressen neu generieren (empfohlen)
+
+---
+
+### 6. Netzwerk & Sonstiges
+
+- Netzwerkanpassungen je nach Szenario:
+  - NAT
+  - Bridged Adapter
+  - Host-only
+- Shared Folder für Datenaustausch Host ↔ Gast
+
+---
+
+### 7. Lizenz & Rechtliches
+
+- VirtualBox Basisversion: Open Source (GPL v2)
+- Extension Pack: PUEL (Personal Use and Evaluation License)
+- Guest Additions (Linux-Komponenten): GNU General Public License v2.0
+- Copyleft-Prinzip bei GPL
+
