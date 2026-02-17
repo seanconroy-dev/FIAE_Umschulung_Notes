@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Telekommunikationstechnik – TAE, ONT, PPA und Grundlagen"
 date: 2025-07-15
 weekday: "Dienstag"
@@ -154,3 +154,4 @@ Hohe Daempfung verschlechtert Signalqualitaet und Reichweite.
 | Patchfeld  | Verbindet feste + flexible Verkabelung      | Netzwerkschrank             |
 | Diode      | Strom nur in eine Richtung                  | Schutz / Elektronik         |
 | Daempfung  | Signalverlust ueber Entfernung              | Kupfer / Glasfaser          |
+
