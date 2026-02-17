@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Klausurvorbereitung – IPv4, IPv6, DHCP, DNS und Routing"
 date: 2026-01-28
 weekday: "Mittwoch"
@@ -200,3 +200,4 @@ Router tauschen Routen automatisch aus.
 - DNS uebersetzt Namen in IP-Adressen.
 - Routing verbindet Netze.
 - Dynamische Protokolle skalieren besser als statische Routen.
+
