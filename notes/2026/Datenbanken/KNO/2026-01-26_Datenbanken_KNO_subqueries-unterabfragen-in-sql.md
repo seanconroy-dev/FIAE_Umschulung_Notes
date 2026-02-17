@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Subqueries (Unterabfragen) in SQL"
 date: 2026-01-26
 weekday: "Montag"
@@ -151,3 +151,4 @@ FROM employees;
   - Analyse der Ausführungspläne (Query Execution Plans)
   - Vergleich von Abfragen mit und ohne Subqueries
   - Gezielter Einsatz von `EXISTS` oder `IN`, abhängig vom Anwendungsfall
+
