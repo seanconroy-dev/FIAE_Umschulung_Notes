@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Geschäftsfähigkeit – Altersstufen, Rechtsfolgen und Abgrenzungen (§§ 104–113 BGB)"
 date: 2025-12-02
 weekday: "Dienstag"
@@ -134,3 +134,4 @@ Rechtssubjekte handeln mit Rechtsobjekten.
 - „Lediglich rechtlich vorteilhaft“ definieren können
 
 Geschäftsfähigkeit ist ein zentrales Thema im Wirtschaftsrecht und regelmäßig Bestandteil von Prüfungsaufgaben.
+
