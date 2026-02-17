@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Einführung in Android Studio"
 date: 2026-01-30
 weekday: "Freitag"
@@ -140,3 +140,4 @@ app/
 - Farben immer als Resource speichern
 - `@string/...` für Texte
 - `@color/...` für Farben
+
