@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Testvorbereitung WiSo – Marktformen, Gleichgewichtspreis und Wirtschaftskreislauf"
 date: 2025-12-16
 weekday: "Dienstag"
@@ -218,3 +218,4 @@ Unterscheidung:
 - Soziale Marktwirtschaft einordnen
 
 Diese Themen bilden die Grundlage für das Verständnis von Preisbildung und Marktmechanismen.
+
