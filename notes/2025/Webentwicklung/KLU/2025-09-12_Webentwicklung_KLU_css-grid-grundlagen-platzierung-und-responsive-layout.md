@@ -1,4 +1,4 @@
-﻿---
+---
 title: "CSS Grid – Grundlagen, Platzierung und Responsive Layout"
 date: 2025-09-12
 weekday: "Freitag"
@@ -213,3 +213,4 @@ Wichtig zu verstehen:
 - Struktur zuerst (HTML), Design danach (CSS)
 
 CSS Grid ist heute Standard für moderne Weblayouts.
+
