@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Wirtschaftskreisläufe und Geld – Grundlagen für AP1/AP2"
 date: 2025-08-27
 weekday: "Mittwoch"
@@ -173,3 +173,4 @@ Wertschöpfung entsteht durch Kombination der Produktionsfaktoren.
 - Wertschöpfung ist Grundlage wirtschaftlichen Wachstums  
 
 Diese Inhalte bilden das Fundament für Markt, Preisbildung, Finanzierung und Wirtschaftspolitik.
+
