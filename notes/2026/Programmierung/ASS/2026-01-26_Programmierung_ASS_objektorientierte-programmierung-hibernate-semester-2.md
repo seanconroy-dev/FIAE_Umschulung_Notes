@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Objektorientierte Programmierung & Hibernate – Semester 2"
 date: 2026-01-26
 weekday: "Montag"
@@ -129,3 +129,4 @@ private Address address; // eigener Datentyp
   - Dialekt
   - Benutzername / Passwort
   - Mapping-Definitionen
+
