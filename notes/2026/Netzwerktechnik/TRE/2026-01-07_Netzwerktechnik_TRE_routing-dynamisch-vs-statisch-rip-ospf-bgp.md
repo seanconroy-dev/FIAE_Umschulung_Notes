@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Routing – Dynamisch vs. Statisch (RIP, OSPF, BGP)"
 date: 2026-01-07
 weekday: "Mittwoch"
@@ -200,3 +200,4 @@ RIP wählt:
 - Hostrouten gewinnen durch Longest Prefix Match
 - Statische Routen reagieren nicht auf Ausfälle
 - Dynamische Protokolle konvergieren nach Änderungen
+
