@@ -264,9 +264,10 @@ $content = $frontmatter + "`n" + $header + $mainContent
 # ----------------------------
 # 5) Write (UTF-8 BOM) & open
 # ----------------------------
-$utf8WithBOM = New-Object System.Text.UTF8Encoding $true
+$utf8WithBOM = New-Object System.Text.UTF8Encoding $false
 [System.IO.File]::WriteAllText($filePath, $content, $utf8WithBOM)
 
 Write-Host "✅ Note erstellt: $filePathResolved"
 code $filePathResolved
+
 
