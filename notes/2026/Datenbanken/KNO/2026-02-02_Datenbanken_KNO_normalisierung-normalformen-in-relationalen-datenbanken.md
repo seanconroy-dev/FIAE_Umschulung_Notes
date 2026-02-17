@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Normalisierung – Normalformen in relationalen Datenbanken"
 date: 2026-02-02
 weekday: "Montag"
@@ -160,3 +160,4 @@ Loesung:
   in mehrere Tabellen zerlegt werden
 - Kommt in der Praxis selten vor
 - Relevant vor allem in sehr komplexen Datenmodellen
+
