@@ -1,4 +1,4 @@
-﻿---
+---
 title: "POJO, JavaBean & Annotationen in Java"
 date: 2026-02-10
 weekday: "Dienstag"
@@ -185,3 +185,4 @@ Die Annotation `@Override` hilft dem Compiler, Fehler frühzeitig zu erkennen.
 - Annotationen liefern Metadaten
 - Overriding erfordert identische Signatur
 - `@Override` erhöht Typsicherheit
+
