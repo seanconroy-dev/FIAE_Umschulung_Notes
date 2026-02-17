@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Bedürfnisse, Güter & Produktionsfaktoren – Arbeitsmarkt und Beschäftigung"
 date: 2025-07-16
 weekday: "Mittwoch"
@@ -235,3 +235,4 @@ Nicht vollständig erfasst:
 - Lohn-Preis-Spirale erklären
 
 Diese Grundlagen bilden das Fundament für volkswirtschaftliches Verständnis und Arbeitsmarktanalyse.
+
