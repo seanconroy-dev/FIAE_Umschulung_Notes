@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Markt und Preis – Grundbegriffe, Marktarten und Regulierung"
 date: 2025-09-10
 weekday: "Mittwoch"
@@ -210,3 +210,4 @@ Finanzprodukte, deren Wert von einem Basiswert abhängt.
 - Finanzmarktprodukte benennen
 
 Markt und Preis sind zentrale Grundlagen der sozialen Marktwirtschaft.
+
