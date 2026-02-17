@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Erweiterter Wirtschaftskreislauf – Akteure, Geld- und Güterströme"
 date: 2025-09-03
 weekday: "Mittwoch"
@@ -178,3 +178,4 @@ Alle Akteure sind über Geld- und Güterströme verbunden.
 - Bedeutung von Export und Import erläutern
 
 Der erweiterte Wirtschaftskreislauf ist ein zentrales Modell zum Verständnis volkswirtschaftlicher Zusammenhänge.
+
