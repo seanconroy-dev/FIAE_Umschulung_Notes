@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Records in Java – Grundlagen und Vergleich zu POJOs"
 date: 2026-02-10
 weekday: "Dienstag"
@@ -176,3 +176,4 @@ Lizenz: CC BY-NC-SA 4.0
 </p>
 </details>
 ```
+
