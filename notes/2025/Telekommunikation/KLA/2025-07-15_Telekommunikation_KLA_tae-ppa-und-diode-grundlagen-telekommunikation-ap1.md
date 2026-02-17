@@ -1,4 +1,4 @@
-﻿---
+---
 title: "TAE, PPA und Diode – Grundlagen Telekommunikation (AP1)"
 date: 2025-07-15
 weekday: "Dienstag"
@@ -120,3 +120,4 @@ Grundlage:
 - Unterschied Durchlass- und Sperrrichtung kennen
 
 Diese Inhalte verbinden Telekommunikation, Recht und elektronische Grundlagen.
+
