@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Java OOP – Getter, Setter, Konstruktoren & Referenzen"
 date: 2026-02-09
 weekday: "Montag"
@@ -122,3 +122,4 @@ public class Person {
 - Eine Referenz kann `null` sein.
 - Mehrere Referenzen koennen auf dasselbe Objekt zeigen.
 - Das Objekt existiert im Heap; die Referenz speichert nur die Adresse.
+
