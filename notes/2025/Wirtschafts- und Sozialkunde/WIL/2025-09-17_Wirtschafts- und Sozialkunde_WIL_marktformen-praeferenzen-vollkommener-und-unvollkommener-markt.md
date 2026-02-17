@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Marktformen & Präferenzen – Vollkommener und unvollkommener Markt"
 date: 2025-09-17
 weekday: "Mittwoch"
@@ -195,3 +195,4 @@ In der Realität sind fast alle Märkte unvollkommen.
 - Punktmarkt vs. Gebietsmarkt unterscheiden
 
 Der Markt ist das zentrale Koordinationsinstrument der sozialen Marktwirtschaft.
+
