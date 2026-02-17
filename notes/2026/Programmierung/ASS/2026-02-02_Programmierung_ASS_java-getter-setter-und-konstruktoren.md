@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Java – Getter, Setter und Konstruktoren"
 date: 2026-02-02
 weekday: "Montag"
@@ -146,3 +146,4 @@ public class Person {
 - Zugriff ueber Getter
 - Setter nur, wenn Aenderbarkeit gewollt ist
 - Immutable-Ansatz bei sensiblen Daten (kein Setter)
+
