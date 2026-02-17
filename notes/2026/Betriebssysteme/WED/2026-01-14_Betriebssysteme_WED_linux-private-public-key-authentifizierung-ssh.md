@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Linux – Private-/Public-Key-Authentifizierung (SSH)"
 date: 2026-01-14
 weekday: "Mittwoch"
@@ -274,3 +274,4 @@ Schlüsselbasierte SSH-Authentifizierung:
 - resistent gegen Brute-Force-Angriffe  
 - Standard in moderner Systemadministration  
 - skalierbar für mehrere Server
+
