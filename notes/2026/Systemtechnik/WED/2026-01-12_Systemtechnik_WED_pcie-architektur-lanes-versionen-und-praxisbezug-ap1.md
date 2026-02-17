@@ -1,4 +1,4 @@
-﻿---
+---
 title: "PCIe – Architektur, Lanes, Versionen und Praxisbezug (AP1)"
 date: 2026-01-12
 weekday: "Montag"
@@ -229,3 +229,4 @@ graph TD
 - Rolle des Adress- und Datenpfads im Gesamtsystem
 
 PCIe ist heute das zentrale Hochgeschwindigkeits-Backbone moderner PCs.
+
