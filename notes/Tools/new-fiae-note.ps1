@@ -34,6 +34,7 @@ $CanonSubjects = @(
     "Telekommunikation",
     "Webentwicklung",
     "WiSo"
+    "Git"
 )
 
 # ============================================================
@@ -118,6 +119,9 @@ Add-SubjectAlias "nt/tre"            "Netzwerktechnik"
 Add-SubjectAlias "tk"                "Telekommunikation"
 Add-SubjectAlias "web"               "Webentwicklung"
 Add-SubjectAlias "wiso"              "WiSo"
+
+Add-SubjectAlias "git"                "Git"
+
 
 # --- FIXED: Single entry point used by the rest of the script ---
 function Normalize-Subject {
