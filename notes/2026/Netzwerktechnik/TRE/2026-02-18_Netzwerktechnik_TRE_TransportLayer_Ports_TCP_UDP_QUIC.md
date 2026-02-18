@@ -16,6 +16,7 @@ tags:
   - QUIC
   - OSI
   - DDoS
+  - Sliding Window
 author: "Sean Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
@@ -50,18 +51,10 @@ Beispiel:
 192.168.2.1:80 (TCP)
 ```
 
-Das beschreibt einen Webserver auf Port 80 über TCP.
-
 Eine Verbindung besteht aus zwei Endpunkten (Sockets):
 
 ```
 Client-IP:Client-Port  →  Server-IP:Server-Port
-```
-
-Beispiel:
-
-```
-192.168.21.42:51257  →  192.168.2.1:80
 ```
 
 Der Client nutzt meist einen **dynamischen (Ephemeral) Port**.  
@@ -71,7 +64,8 @@ Der Server nutzt einen **fest definierten Dienst-Port**.
 
 ## 3) Portbereiche
 
-Ports sind 16-Bit-Zahlen.  
+Ports sind 16-Bit-Zahlen.
+
 Berechnung:
 
 ```
@@ -114,9 +108,9 @@ Beide Protokolle arbeiten auf **Layer 4 (Transportschicht)** des OSI-Modells.
 Eigenschaften:
 
 - verbindungsorientiert (3-Way-Handshake)
-- zuverlässig (Bestätigungen/Acknowledgements)
+- zuverlässig (ACK-Bestätigungen)
 - garantiert Reihenfolge
-- Wiederholung verlorener Pakete
+- Wiederholung verlorener Segmente
 - Flusskontrolle (Flow Control)
 - Staukontrolle (Congestion Control)
 - ausschließlich 1:1-Verbindung (Unicast)
@@ -128,8 +122,18 @@ Typische Nutzung:
 - SSH
 - Dateiübertragung
 
-Eselsbrücke:  
-**Einschreiben mit Rückschein**
+#### Sliding Window (Schiebefenster)
+
+TCP verwendet einen **Schiebefenster-Mechanismus** zur Flusskontrolle.
+
+Der Empfänger teilt dem Sender die aktuelle **Fenstergröße (Window Size)** mit.  
+Diese gibt an, wie viele Bytes ohne weitere Bestätigung gesendet werden dürfen.
+
+Vorteile:
+
+- Empfänger wird nicht überlastet  
+- Leitung wird effizient genutzt  
+- Mehrere Segmente können parallel übertragen werden  
 
 ---
 
@@ -141,7 +145,6 @@ Eigenschaften:
 - keine Garantie auf Reihenfolge
 - keine automatische Fehlerkorrektur
 - geringer Overhead
-- schneller bei geringer Latenz
 - unterstützt Unicast, Broadcast und Multicast
 
 Typische Nutzung:
@@ -150,9 +153,6 @@ Typische Nutzung:
 - Online-Games
 - Streaming
 - VoIP
-
-Eselsbrücke:  
-**Postkarte**
 
 ---
 
@@ -163,8 +163,8 @@ Eselsbrücke:
 | Verbindung         | Ja (Handshake)                    | Nein                         |
 | Zuverlässigkeit    | Hoch                              | Keine Garantie               |
 | Reihenfolge        | Garantiert                        | Nicht garantiert             |
-| Geschwindigkeit    | Höherer Overhead, oft langsamer   | Geringer Overhead, schneller |
 | Staukontrolle      | Ja                                | Nein                         |
+| Overhead           | Höher                             | Gering                       |
 | Typische Nutzung   | Web, Mail, SSH                    | DNS, Streaming, Games        |
 
 ---
@@ -172,7 +172,7 @@ Eselsbrücke:
 ## 6) QUIC – Ersatz für TCP?
 
 QUIC wurde ursprünglich von Google entwickelt.  
-Es ist heute die Grundlage von **HTTP/3**.
+Es ist die Transportbasis von **HTTP/3**.
 
 Wichtige Eigenschaften:
 
@@ -180,10 +180,11 @@ Wichtige Eigenschaften:
 - integriert TLS 1.3-Verschlüsselung
 - 0-RTT bzw. 1-RTT Verbindungsaufbau
 - Multiplexing ohne Head-of-Line-Blocking
-- bessere Performance bei Paketverlust
+- eigene Staukontrolle
 
-QUIC ersetzt TCP nicht vollständig.  
-Es wird primär für moderne Webkommunikation eingesetzt.
+QUIC ersetzt nicht TCP allgemein,  
+sondern kombiniert Funktionen von **TCP + TLS + HTTP/2** in einem Protokoll  
+für moderne Webkommunikation.
 
 ---
 
@@ -191,11 +192,11 @@ Es wird primär für moderne Webkommunikation eingesetzt.
 
 Ablauf bei einem Webzugriff:
 
-1. Browser öffnet zufälligen Client-Port (z. B. 51257)
-2. Verbindung zur Server-IP auf Port 80 oder 443
-3. TCP-Handshake (bei TCP/HTTPS)
-4. Datenübertragung
-5. Verbindung wird geschlossen
+1. Browser öffnet zufälligen Client-Port  
+2. Verbindung zur Server-IP auf Port 80 oder 443  
+3. TCP-Handshake (bei TCP/HTTPS)  
+4. Datenübertragung  
+5. Verbindung wird geschlossen  
 
 Struktur:
 
@@ -203,23 +204,23 @@ Struktur:
 Client-IP:Client-Port  →  Server-IP:Server-Port
 ```
 
-Das nennt man eine **Socket-zu-Socket-Verbindung**.
+Dies nennt man eine **Socket-zu-Socket-Verbindung**.
 
 ---
 
 ## 8) DDoS (Distributed Denial of Service)
 
 Ein **DDoS-Angriff** ist eine Überlastungsattacke.  
-Viele Systeme senden gleichzeitig Anfragen an einen Server.
+Viele kompromittierte Systeme (Botnetz) senden gleichzeitig Anfragen an einen Server.
 
-Ziel:  
-Der Dienst ist nicht mehr erreichbar.
+Ziel:
 
-Typische Merkmale:
+- Überlastung von Bandbreite
+- Überlastung von Serverressourcen
+- Dienst ist nicht mehr erreichbar
 
-- enorme Anzahl gleichzeitiger Verbindungen
-- Ausnutzung von TCP- oder UDP-Mechanismen
-- Überlastung von Bandbreite oder Serverressourcen
+DDoS nutzt häufig Eigenschaften von TCP oder UDP aus,  
+ist jedoch ein Sicherheitsproblem und kein Transportmechanismus.
 
 ---
 
@@ -247,12 +248,17 @@ Typische Merkmale:
 
 - Warum ist TCP zuverlässiger?
   <details style="margin-left: 20px;color: #186e3b;"><summary>Antwort anzeigen</summary>
-  - A: TCP nutzt Bestätigungen, Wiederholungen verlorener Pakete sowie Reihenfolge- und Staukontrolle.
+  - A: TCP nutzt Bestätigungen, Wiederholungen verlorener Segmente sowie Fluss- und Staukontrolle.
   </details>
 
 - Warum ist UDP schneller?
   <details style="margin-left: 20px;color: #186e3b;"><summary>Antwort anzeigen</summary>
   - A: UDP verzichtet auf Verbindungsaufbau und Kontrollmechanismen, wodurch weniger Overhead entsteht.
+  </details>
+
+- Was ist das Sliding Window?
+  <details style="margin-left: 20px;color: #186e3b;"><summary>Antwort anzeigen</summary>
+  - A: Ein TCP-Mechanismus zur Flusskontrolle, bei dem der Empfänger dem Sender mitteilt, wie viele Bytes ohne weitere Bestätigung gesendet werden dürfen.
   </details>
 
 - Was ist QUIC?
