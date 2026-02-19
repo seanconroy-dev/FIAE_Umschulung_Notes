@@ -111,11 +111,30 @@ classDiagram
 ```
 
 ### Bedeutung
-- `-` = private
-- `+` = public
+
+- `-` = private : 
+  Das Attribut oder die Methode ist nur innerhalb derselben Klasse sichtbar.
+  Von außen (auch von Unterklassen) kein direkter Zugriff.
+
+- `+` = public :
+  Öffentlich sichtbar.
+  Kann von allen anderen Klassen aufgerufen oder verwendet werden.
+
+- `~` = package :
+  Sichtbar nur innerhalb desselben Pakets (Namespace).
+  Außerhalb des Pakets kein Zugriff.
+
+- `#` = protected :
+  Sichtbar innerhalb der eigenen Klasse und in abgeleiteten Klassen (Vererbung).
+  Von nicht-verwandten Klassen nicht zugreifbar.
+
 - `"1"` zu `"0..*"` = 1:n-Beziehung  
+  Eine Instanz der ersten Klasse kann mit null bis beliebig vielen Instanzen 
+  der zweiten Klasse verbunden sein.  
+  Beispiel:  
   Ein Raum kann mehrere Kurse beherbergen.  
   Ein Kurs findet genau in einem Raum statt.
+
 
 ---
 
@@ -189,14 +208,41 @@ sequenceDiagram
 Du solltest können:
 
 - Encapsulation korrekt erklären
-- Access Modifier zuordnen (`private`, `public`)
-- UML-Diagramme lesen
+- Access Modifier zuordnen (`private`, `public`, `protected`, package)
+- UML-Diagramme lesen und interpretieren
 - Multiplizitäten verstehen (1, 0..*, 1..*)
+- Sichtbarkeiten im Klassendiagramm korrekt deuten (`+`, `-`, `#`, `~`)
+- Navigierbarkeit von Beziehungen erkennen (gerichtete Assoziationen)
 - Strukturdiagramme von Ablaufdiagrammen unterscheiden
+
+Wichtige UML-Konzepte:
+
+**Sichtbarkeiten**
+- `+` = public  
+- `-` = private  
+- `#` = protected  
+- `~` = package  
+
+Bestimmen, wer auf Attribute oder Methoden zugreifen darf.
+
+**Multiplizitäten**
+- `1` = genau ein Objekt  
+- `0..1` = optional  
+- `0..*` = beliebig viele  
+- `1..*` = mindestens eins  
+
+Beschreiben, wie viele Objekte in Beziehung stehen.
+
+**Navigierbarkeit**
+- Pfeilrichtung zeigt, welche Klasse die andere „kennt“.
+- Beispiel: `Raum --> Kurs` bedeutet, dass `Raum` eine Referenz auf `Kurs` besitzt.
+- Keine Pfeile = bidirektionale Assoziation.
 
 Merksatz:
 - Klassendiagramm = Struktur  
 - Aktivitätsdiagramm = Ablauf  
 - Zustandsdiagramm = Lebenszyklus  
-- Sequenzdiagramm = Kommunikation
+- Sequenzdiagramm = Kommunikation  
+
+
 
