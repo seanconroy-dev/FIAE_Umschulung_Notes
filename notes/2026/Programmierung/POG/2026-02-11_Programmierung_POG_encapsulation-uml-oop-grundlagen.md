@@ -107,7 +107,7 @@ classDiagram
         -int dauer
         -String dozent
     }
-    Raum "1" <-- "0..*" Kurs : beherbergt
+    Raum "1" <|-- "0..*" Kurs : beherbergt
 ```
 
 ### Bedeutung
@@ -136,6 +136,68 @@ classDiagram
   Ein Kurs findet genau in einem Raum statt.
 
 
+---
+---
+
+# Interfaces
+
+Ein Interface definiert einen Vertrag.
+Es beschreibt, welche Methoden eine Klasse bereitstellen muss,
+ohne deren Implementierung festzulegen.
+
+Ein Interface enthält:
+- Methodensignaturen
+- keine konkrete Implementierung (Ausnahme: default-Methoden in Java)
+- keine Instanziierungsmöglichkeit
+
+## Zweck
+
+- Abstraktion
+- Polymorphie
+- Entkopplung von Klassen
+- Austauschbarkeit von Implementierungen
+
+Beispiel:
+
+Ein Interface `Belegbar` definiert:
+
+- +belege()
+- +istBelegt(): boolean
+
+Unterschiedliche Klassen können dieses Interface implementieren,
+z. B. `Raum` oder `OnlineKurs`.
+
+---
+
+## Interface im UML-Klassendiagramm
+
+Darstellungsmöglichkeiten:
+
+1) Mit Stereotyp:
+<<interface>> Belegbar
+
+2) Mit „Lollipop“-Notation (Kreis-Symbol)
+
+Implementierung:
+- Gestrichelte Linie
+- Hohles Dreieck zeigt auf das Interface
+
+```mermaid
+classDiagram
+    class Belegbar {
+        <<interface>>
+        +belege()
+        +istBelegt(): boolean
+    }
+
+    class Raum {
+        -boolean belegt
+        +belege()
+        +istBelegt(): boolean
+    }
+
+    Belegbar <|.. Raum
+```
 ---
 
 # 2. Aktivitätsdiagramm
@@ -243,6 +305,7 @@ Merksatz:
 - Aktivitätsdiagramm = Ablauf  
 - Zustandsdiagramm = Lebenszyklus  
 - Sequenzdiagramm = Kommunikation  
+
 
 
 
