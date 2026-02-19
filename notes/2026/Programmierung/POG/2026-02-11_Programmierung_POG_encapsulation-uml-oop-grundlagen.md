@@ -107,7 +107,7 @@ classDiagram
         -int dauer
         -String dozent
     }
-    Raum "1" -- "0..*" Kurs : beherbergt
+    Raum "1" <-- "0..*" Kurs : beherbergt
 ```
 
 ### Bedeutung
@@ -243,6 +243,7 @@ Merksatz:
 - Aktivitätsdiagramm = Ablauf  
 - Zustandsdiagramm = Lebenszyklus  
 - Sequenzdiagramm = Kommunikation  
+
 
 
 
