@@ -293,7 +293,7 @@ Dienstvertrag:
 Rebase brauchst du in Git.  
 Erfüllungsort brauchst du in WiSo.
 
-Beides prüfungsrelevant. 😉
+Beides prüfungsrelevant. 
 
 ---
 
