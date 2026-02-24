@@ -191,11 +191,23 @@ Beispiel:
 Ganz einfach:
 
 > Der Erfüllungsort ist der Ort, wo man seine Pflicht erfüllen muss.
+> ***Er ist der Ort, an dem der Schuldner durch rechtzeitige und mangelfreie Leistung von seiner Verpflichtung befreit wird.***
 
 Also:
 - Wo wird geliefert?
 - Wo wird bezahlt?
 
+
+## Zuständiges Gericht:
+- Amstgericht bis 5.000 € - vertäglich vereinbarer Ort
+- Landgericht über 5.000 € - gesetzlich festgelegter Ort
+
+> gerichtlicher Mahnverfahren: 1. Mahnung → 2. Mahnung → gerichtliches Mahnverfahren → Vollstreckung
+
+>Allgemeiner Gerichtsstand: ***Wohnsitz des Beklagten*** (z.B. bei Mietvertrag, Dienstvertrag) ist der Sitz des Gerichtes, in dessen Bezirk der Beklagte seinen Wohnsitz hat.
+
+>Besonderer Gerichtsstand: ***Erfüllungsort*** (z.B. bei Kaufvertrag) 
+ist der Sitz des Gerichtes, in dessen Bezirk der vertägliche oder gesetzliche Erfüllungsort liegt.
 ---
 
 # 5) Erfüllungsort beim Kaufvertrag
