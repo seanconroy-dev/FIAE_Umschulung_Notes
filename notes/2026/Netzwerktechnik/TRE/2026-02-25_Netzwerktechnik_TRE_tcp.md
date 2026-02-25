@@ -18,6 +18,7 @@ tags:
 author: "Sean Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
+
 # Mittwoch, 2026-02-25_Netzwerktechnik_TRE
 
 # 1️⃣ TCP – Grundidee
@@ -59,7 +60,7 @@ Erst danach beginnt die eigentliche Datenübertragung.
 
 ## Sequenznummer
 
-Jedes TCP-Segment bekommt eine Nummer:
+Jedes TCP-Segment bekommt eine Nummer (Byte-orientiert):
 
 ```
 Segment 1 → Seq 1000
@@ -67,10 +68,10 @@ Segment 2 → Seq 2000
 Segment 3 → Seq 3000
 ```
 
-So erkennt der Empfänger:
+Damit erkennt der Empfänger:
 
 - Reihenfolge korrekt?
-- Fehlt ein Paket?
+- Fehlt ein Segment?
 
 ---
 
@@ -81,16 +82,20 @@ ACK 3000
 ```
 
 Bedeutung:
-Alle Daten bis 3000 wurden korrekt empfangen.
 
-Fehlt etwas?
+Der Empfänger erwartet als nächstes Byte **3000**.  
+Alle Bytes bis **2999** wurden korrekt empfangen.
+
+TCP verwendet **kumulative Bestätigungen**.
+
+Fehlt ein Segment?  
 → Neuübertragung.
 
 ---
 
 # 4️⃣ Flusskontrolle (Flow Control)
 
-TCP verwendet:
+TCP verwendet das Empfangsfenster:
 
 ```
 WIN = Window Size
@@ -103,11 +108,12 @@ WIN = 65535 Bytes
 ```
 
 Das bedeutet:
-Sender darf bis zu 65535 Bytes senden,
-bevor eine neue Bestätigung nötig ist.
 
-Schutz:
-→ Empfänger wird nicht überlastet.
+Der Sender darf bis zu 65535 Bytes senden,
+bevor eine neue Bestätigung erforderlich ist.
+
+Ziel:
+Empfänger wird nicht überlastet.
 
 ---
 
@@ -115,53 +121,63 @@ Schutz:
 
 Typischer Wert bei Ethernet:
 
+Ethernet MTU: 1500 Bytes  
+IP Header: 20 Bytes  
+TCP Header: 20 Bytes  
+
 ```
-MSS ≈ 1460 Bytes
+1500 − 40 = 1460 Bytes MSS
 ```
 
-Das ist die maximale Nutzdatenmenge
-pro TCP-Segment.
+MSS ≈ 1460 Bytes
+
+Das ist die maximale Nutzdatenmenge pro TCP-Segment.
 
 Wichtig:
 
-- MSS kann dynamisch angepasst werden
-- Window Size ebenfalls
+- MSS wird beim Verbindungsaufbau ausgehandelt
+- Window Size ist dynamisch
 - Werte hängen vom Netzwerk ab
-
-Diese Zahlen dienen nur zum Verständnis.
 
 ---
 
 # 6️⃣ Staukontrolle (Congestion Control)
 
-Wenn Netzwerk überlastet ist:
+Wenn Paketverluste auftreten:
 
-- TCP reduziert Geschwindigkeit
-- Sendefenster wird verkleinert
-- Übertragung wird angepasst
+→ TCP interpretiert dies als Netzüberlastung  
+→ Congestion Window (cwnd) wird reduziert  
+→ Übertragungsrate sinkt  
 
-Deshalb kann TCP langsamer wirken.
+Mechanismus:
+
+Weniger erlaubte Daten im Netz  
+→ Netz wird entlastet  
+→ Übertragung stabilisiert sich  
+
+Deshalb kann TCP langsamer wirken als UDP.
 
 ---
 
-# 7️⃣ TCP Header – Aufbau (grafisch)
+## 7️⃣ TCP Header – Aufbau
 
 ```
-----------------------------------------------------------------
-| Source Port (16 Bit) | Destination Port (16 Bit)            |
-----------------------------------------------------------------
-| Sequence Number (32 Bit)                                     |
-----------------------------------------------------------------
-| Acknowledgment Number (32 Bit)                                |
-----------------------------------------------------------------
-| Data Offset | Reserved | Flags | Window Size                 |
-----------------------------------------------------------------
-| Checksum | Urgent Pointer                                     |
-----------------------------------------------------------------
-| Options (optional)                                            |
-----------------------------------------------------------------
-| Data (variable Länge)                                         |
-----------------------------------------------------------------
+0                   15 16                  31
++--------------------+----------------------+
+|     Source Port    |   Destination Port   |
++-------------------------------------------+
+|              Sequence Number              |
++-------------------------------------------+
+|           Acknowledgment Number           |
++----+---+-----------+----------------------+
+|DOFF|Res| Flags (9) |     Window Size      |
++--------------------+----------------------+
+|      Checksum      |    Urgent Pointer    |
++-------------------------------------------+
+|      Options (optional, variable)         |
++-------------------------------------------+
+|      Data (variable length)               |
++-------------------------------------------+
 ```
 
 ---
@@ -176,6 +192,11 @@ Deshalb kann TCP langsamer wirken.
 | RST  | Verbindung zurücksetzen |
 | PSH  | Daten sofort weitergeben |
 | URG  | Urgent Pointer ist relevant |
+| ECE  | ECN Echo |
+| CWR  | Congestion Window Reduced |
+| NS   | ECN Nonce |
+
+Insgesamt: 9 Bits.
 
 ---
 
@@ -200,20 +221,20 @@ Mehrere Anwendungen können gleichzeitig kommunizieren.
 
 # 🔟 Wann ist TCP ungeeignet?
 
-Bei:
+Bei latenzkritischen Anwendungen:
 
 - Online-Games
-- Video-Streaming
 - VoIP
 - Echtzeitkommunikation
 
-Warum?
+Grund:
 
-TCP wartet auf Bestätigung.
-Das erzeugt Verzögerung.
+TCP wartet auf Bestätigungen  
+→ zusätzliche Verzögerung
 
-Dann besser:
-→ UDP
+Dann oft besser geeignet:
+
+→ UDP (keine Bestätigungen, geringere Latenz)
 
 ---
 
@@ -232,17 +253,17 @@ Admin-PC ---- Magic Packet ----> Ziel-PC
 
 Magic Packet enthält:
 
-- MAC-Adresse
-- spezielle Datenstruktur
+- 6x FF
+- 16x MAC-Adresse
 
-Netzwerkkarte erkennt das Muster
+Netzwerkkarte erkennt das Muster  
 → Computer startet
 
 ---
 
 ## Voraussetzungen
 
-- WoL im BIOS aktiviert
+- WoL im BIOS/UEFI aktiviert
 - Netzwerkkarte unterstützt WoL
 - Gerät hat Stromversorgung
 
@@ -252,14 +273,10 @@ Netzwerkkarte erkennt das Muster
 
 Meist:
 ```
-UDP
+UDP (Port 7 oder 9)
 ```
 
-Möglich:
-- TCP
-- ICMP
-
-Nicht jedes Netzwerk erlaubt das.
+Andere Varianten möglich, aber nicht standardisiert.
 
 ---
 
@@ -267,13 +284,13 @@ Nicht jedes Netzwerk erlaubt das.
 
 Falsch konfiguriert:
 
-→ Unbefugte können Geräte starten
+→ Unbefugte könnten Geräte starten
 
-Lösungen:
+Absicherung:
 
 - VPN
-- Firewall
-- sichere Netzstruktur
+- Firewall-Regeln
+- Kein direktes Port-Forwarding
 
 ---
 
@@ -296,7 +313,7 @@ DDNS aktualisiert automatisch:
 meinserver.ddns.net → aktuelle IP
 ```
 
-So bleibt das Gerät erreichbar.
+So bleibt der Server erreichbar.
 
 ---
 
@@ -305,7 +322,7 @@ So bleibt das Gerät erreichbar.
 Sicherheitsmethode.
 
 Server öffnet Port nur,
-wenn bestimmte Port-Sequenz geklopft wird.
+wenn bestimmte Port-Sequenz gesendet wird.
 
 Beispiel:
 
@@ -313,11 +330,11 @@ Beispiel:
 7000 → 8000 → 9000
 ```
 
-Danach wird SSH geöffnet.
+Danach wird z.B. SSH freigegeben.
 
 Vorteil:
 
-→ Server ist von außen unsichtbar.
+Server ist von außen nicht direkt sichtbar.
 
 ---
 
@@ -326,11 +343,11 @@ Vorteil:
 - TCP ist verbindungsorientiert
 - 3 Way Handshake
 - Sequenznummern sichern Reihenfolge
-- ACK bestätigt Empfang
+- ACK ist kumulativ
 - Window Size steuert Flusskontrolle
-- MSS bestimmt Segmentgröße
-- TCP passt Geschwindigkeit an
-- TCP ≠ ideal für Echtzeit
+- MSS ergibt sich aus MTU − Header
+- TCP reagiert auf Überlastung
+- TCP ist nicht ideal für Echtzeit
 - WoL nutzt Magic Packet
 - DDNS löst dynamische IP-Probleme
 - Port Knocking erhöht Sicherheit
@@ -341,7 +358,7 @@ Vorteil:
 
 ```
 Zuverlässig? → TCP
-Schnell? → UDP
+Geringe Latenz? → UDP
 Fernstart? → WoL
 IP wechselt? → DDNS
 Server verstecken? → Port Knocking
