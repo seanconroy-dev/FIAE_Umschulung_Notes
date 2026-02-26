@@ -17,6 +17,7 @@ tags:
 author: "Sean Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
+
 # Donnerstag, 2026-02-26_Programmiertechnik_UDEMY
 
 # 1 Inheritance (Vererbung)
@@ -221,6 +222,120 @@ Beliebig viele Objekte kombinieren
 ```
 
 ---
+
+##  Subclass – Definition & Verwendung
+
+## Was ist eine Subclass (Unterklasse)?
+
+Eine Subclass ist eine Klasse, die von einer anderen Klasse erbt.  
+Sie wird mit `extends` definiert.
+
+```java
+class Product {
+    public void start() {
+        System.out.println("Starting product");
+    }
+}
+
+class Monitor extends Product {
+}
+```
+
+Hier gilt:
+
+Monitor IS A Product  
+Monitor ist eine Subclass von Product.
+
+---
+
+## Was erbt eine Subclass?
+
+Eine Subclass erbt:
+
+- Alle `public` Methoden
+- Alle `protected` Methoden
+- Alle nicht-privaten Felder
+
+Sie kann zusätzlich:
+
+- Neue Methoden hinzufügen
+- Bestehende Methoden überschreiben (override)
+
+---
+
+## Methode überschreiben (Override)
+
+```java
+class Monitor extends Product {
+
+    @Override
+    public void start() {
+        System.out.println("Starting monitor");
+    }
+
+    public void drawPixel() {
+        System.out.println("Drawing pixel");
+    }
+}
+```
+
+Hier:
+
+- `start()` wird überschrieben
+- `drawPixel()` ist neue Funktionalität
+
+---
+
+## Wie benutzt man eine Subclass?
+
+### 1 Direkt
+
+```java
+Monitor m = new Monitor();
+m.drawPixel();
+m.start();
+```
+
+---
+
+### 2 Polymorphisch
+
+```java
+Product p = new Monitor();
+p.start();
+```
+
+Wichtig:
+
+Die ausgeführte Methode hängt vom tatsächlichen Objekt ab  
+(nicht vom Referenztyp).
+
+Das nennt man:
+
+Dynamic Dispatch.
+
+---
+
+## Wann sollte man eine Subclass erstellen?
+
+Nur wenn:
+
+- Eine echte IS-A Beziehung existiert
+- Das Modell fachlich korrekt ist
+- Die Subclass vollständig ersetzbar bleibt (Liskov Prinzip)
+
+Beispiel:
+
+Monitor IS A Product → sinnvoll  
+Car IS A Engine → falsch → hier braucht man Composition
+
+---
+
+## Merksatz
+
+Inheritance = Spezialisierung  
+Subclass erweitert oder verfeinert das Verhalten der Basisklasse  
+Polymorphism ermöglicht Austauschbarkeit  durch gemeinsame Oberklasse.
 
 # 7 DigitalProduct Problem
 
