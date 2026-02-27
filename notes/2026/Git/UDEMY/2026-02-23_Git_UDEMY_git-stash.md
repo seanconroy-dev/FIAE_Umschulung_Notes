@@ -5,213 +5,312 @@ weekday: "Montag"
 subject: "Git"
 instructor: "UDEMY"
 program: "FIAE Umschulung 2025-2027"
-module: "Working Directory Management"
-topic: "git stash, apply, pop, drop, clear"
+module: "Versionsverwaltung mit Git"
+topic: "Temporäres Auslagern von Änderungen mit git stash"
 level: "Grundlagen"
 tags:
   - git
+  - versionskontrolle
   - stash
-  - workflow
-  - branches
 author: "Sean Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
-# Montag, 2026-02-23_Git_UDEMY
 
-## 1) Was ist `git stash`?
+# Git Stash
 
-`git stash` speichert **nicht-committete Änderungen** temporär.
+## Kurzdefinition
 
-Das bedeutet:
+`git stash` speichert **nicht-committete Änderungen** (Working Directory und optional Staging Area) temporär in einem internen Stack und stellt den Arbeitszustand auf den letzten Commit zurück.
 
-- Änderungen bleiben erhalten
-- Es wird **kein Commit** erstellt
-- Arbeitsverzeichnis wird auf den letzten Commit zurückgesetzt
-
-Man kann es sich wie einen **Zwischenspeicher** vorstellen.
+Es dient dazu, **unfertige Arbeit zwischenzuspeichern**, ohne einen Commit erstellen zu müssen.
 
 ---
 
-## 2) Typisches Szenario
+## 1. Ausgangssituation
 
-Du arbeitest an einer neuen Funktion:
+Typischer Ablauf:
 
-```
-working on a nice feature
-```
-
-Plötzlich musst du:
-
-- Zur letzten sauberen Version zurück
-- Einen Hotfix machen
-- Branch wechseln
-
-Du willst:
-- Änderungen NICHT committen
-- Änderungen NICHT verlieren
-
-Lösung:
-
-```
-git stash
+```bash
+mkdir git
+cd git
+touch file1.txt
+git init
+git add file1.txt
+git commit -m "file1 added"
 ```
 
 Ergebnis:
-- Änderungen verschwinden aus dem Working Directory
-- Du bist wieder beim letzten Commit
+
+- Ein Repository wurde initialisiert.
+- Ein erster Commit existiert.
+- Wir befinden uns auf dem Branch `master` (bzw. `main`, je nach Git-Version).
+- Working Directory ist sauber.
 
 ---
 
-## 3) Änderungen wiederherstellen
+## 2. Problemstellung
 
-```
-git stash apply
-```
+Angenommen:
 
-→ Holt den **letzten** Stash zurück  
-→ Bleibt im Stash gespeichert
+- Du arbeitest direkt auf `master`
+- Du änderst Dateien
+- Die Änderungen sind **noch nicht commit-reif**
+- Plötzlich musst du:
+  - den Branch wechseln
+  - auf den letzten Commit zurück
+  - einen Hotfix machen
+  - oder den Code in einem sauberen Zustand testen
+
+### ❗ Was du NICHT willst
+
+- Keinen „dirty commit“ erstellen
+- Keine halbfertige Arbeit verlieren
+- Kein kompliziertes Reset-Branch-Konstrukt bauen
 
 ---
 
-## 4) Mehrere Stashes
+## 3. Lösung: `git stash`
 
-Jeder `git stash` erzeugt einen neuen Eintrag.
+`git stash` speichert deine lokalen Änderungen in einem internen Stack und setzt dein Arbeitsverzeichnis auf den letzten Commit zurück.
 
-Liste anzeigen:
+---
 
+## 4. Was genau wird gespeichert?
+
+Standardmäßig:
+
+- Änderungen im Working Directory
+- Änderungen in der Staging Area
+
+Nicht gespeichert werden:
+
+- Untracked Files (außer mit `-u`)
+- Ignorierte Dateien (außer mit `-a`)
+
+---
+
+## 5. Grundlegende Befehle
+
+### Änderungen stashen
+
+```bash
+git stash
 ```
+
+Alternative mit Nachricht:
+
+```bash
+git stash push -m "WIP: Feature X"
+```
+
+---
+
+### Stashes anzeigen
+
+```bash
 git stash list
 ```
 
-Beispiel:
+Beispielausgabe:
 
 ```
-stash@{0}
-stash@{1}
-stash@{2}
+stash@{0}: On master: WIP: Feature X
+stash@{1}: On master: experiment
 ```
 
-Wichtig:
-
-- `stash@{0}` = neuester Stash
-- Indizes verschieben sich nach Löschung
+→ `stash@{0}` ist immer der neueste Eintrag (Stack-Prinzip).
 
 ---
 
-## 5) Bestimmten Stash anwenden
+### Stash wiederherstellen (behalten)
 
-```
-git stash apply stash@{1}
-```
-
-Oder:
-
-```
-git stash apply 1
-```
-
----
-
-## 6) Stash mit Nachricht speichern
-
-Empfohlen für Übersichtlichkeit:
-
-```
-git stash push -m "third feature added"
-```
-
-Jetzt zeigt `git stash list`:
-
-```
-stash@{0}: On master: third feature added
-```
-
----
-
-## 7) Unterschied: apply vs pop
-
-### apply
-
-```
+```bash
 git stash apply
 ```
 
-- Holt Änderungen zurück
-- Bleibt im Stash gespeichert
+oder gezielt:
 
-### pop
-
+```bash
+git stash apply stash@{1}
 ```
+
+---
+
+### Stash anwenden und löschen
+
+```bash
 git stash pop
 ```
 
-- Holt Änderungen zurück
-- Entfernt sie aus dem Stash
-
-Merksatz:
-
-> apply = kopieren  
-> pop = verschieben  
+→ `apply` + automatisches Entfernen aus dem Stack.
 
 ---
 
-## 8) Einzelnen Stash löschen
+### Stash löschen
 
-```
+Einzelner Eintrag:
+
+```bash
 git stash drop stash@{0}
 ```
 
----
+Alle löschen:
 
-## 9) Alle Stashes löschen
-
-```
+```bash
 git stash clear
 ```
 
 ---
 
-## 10) Wichtige Punkte
+## 6. Interne Funktionsweise (Konzept)
 
-- Stash speichert **unstaged & staged Änderungen**
-- Kein Commit wird erzeugt
-- Ideal für schnellen Kontextwechsel
-- Wird intern als spezieller Commit gespeichert
+Mermaid-Darstellung:
+
+```mermaid
+flowchart LR
+    A[Letzter Commit] --> B[Uncommitted Changes]
+    B --> C[git stash]
+    C --> D[Stash Stack]
+    C --> E[Working Directory clean]
+```
+
+Wichtige Punkte:
+
+- Der Stash ist **kein Branch**
+- Der Stash ist **kein Ersatz für Commits**
+- Intern erstellt Git versteckte Commit-Objekte
+- Stashes liegen in einem Stack (LIFO-Prinzip)
 
 ---
 
-## 11) Typischer Workflow
+## 7. Praktisches Beispiel
+
+### Schritt 1: Datei verändern
 
 ```bash
-# Änderungen zwischenspeichern
+echo "Neue Zeile" >> file1.txt
+```
+
+Status prüfen:
+
+```bash
+git status
+```
+
+→ Datei ist modified.
+
+---
+
+### Schritt 2: Änderungen stashen
+
+```bash
 git stash
+```
 
-# Hotfix machen
-git checkout other-branch
-# fix committen
+Jetzt:
 
-# Zurück
-git checkout master
+```bash
+git status
+```
+
+→ Working Directory ist sauber.
+
+---
+
+### Schritt 3: Später wiederherstellen
+
+```bash
 git stash pop
+```
+
+→ Änderungen sind wieder da.
+
+---
+
+## 8. Erweiterte Optionen
+
+### Untracked Files mit speichern
+
+```bash
+git stash -u
+```
+
+### Auch ignorierte Dateien speichern
+
+```bash
+git stash -a
 ```
 
 ---
 
-## 12) Prüfungsrelevante Fragen
+## 9. Examensrelevanz (IHK / FIAE)
 
-- Unterschied apply vs pop?
-- Was speichert git stash?
-- Wie liste ich Stashes auf?
-- Wie lösche ich einzelne Stashes?
-- Wie speichere ich mit Nachricht?
+Prüfungsrelevante Aspekte:
+
+- Unterschied zwischen Commit und Stash
+- Verhalten bei Branch-Wechsel
+- Stack-Prinzip verstehen
+- Unterschied zwischen `apply` und `pop`
+- Umgang mit untracked Dateien
+
+Typische Prüfungsfrage:
+
+> Warum sollte man `git stash` verwenden, anstatt einen Commit zu erstellen?
+
+Antwort:
+
+- Vermeidung unsauberer Zwischen-Commits
+- Temporäres Parken unfertiger Arbeit
+- Schneller Kontextwechsel
 
 ---
 
-## Merksatz
+## 10. Typische Fehler und Missverständnisse
 
-git stash =
-> „Parkplatz für unfertige Arbeit“
-
-Schnell, sauber, ohne Commit.
+### ❌ „Stash ist wie ein Backup“
+Nein.  
+Stashes sind temporär gedacht und können gelöscht werden.
 
 ---
+
+### ❌ „Stash ersetzt Branches“
+Nein.  
+Feature-Branches bleiben Best Practice.
+
+---
+
+### ❌ „Stash speichert automatisch alles“
+Nein.  
+Untracked und ignorierte Dateien nur mit `-u` oder `-a`.
+
+---
+
+### ❌ Konflikte beim Anwenden
+
+Wenn sich der Code seit dem Stash verändert hat, können Merge-Konflikte entstehen.
+
+---
+
+## 11. Einordnung im Git-Gesamtbild
+
+| Mechanismus | Zweck | Dauerhaft? |
+|-------------|--------|------------|
+| Commit      | Versionierung | Ja |
+| Branch      | Parallele Entwicklung | Ja |
+| Stash       | Temporäres Parken | Nein |
+
+---
+
+## Kerngedanke
+
+`git stash` ist ein **Werkzeug für Kontextwechsel**.
+
+Es ermöglicht:
+
+- sauberes Arbeiten
+- keine unfertigen Commits
+- schnelles Umschalten zwischen Aufgaben
+
+Aber:
+
+> Für echte Feature-Entwicklung bleibt der Branch das richtige Mittel.
