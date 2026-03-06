@@ -1,27 +1,72 @@
-
+# =========================
+# Editors / IDEs
+# =========================
 .vscode/
 .idea/
+*.swp
+*~
+
+# =========================
+# OS junk
+# =========================
 .DS_Store
+.AppleDouble
+.LSOverride
 Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+
+# virtual environments
+.venv/
+venv/
+
+# =========================
+# MkDocs
+# =========================
+site/
+
+# =========================
+# Logs / temp
+# =========================
 *.log
 *.tmp
 *.bak
-*.swp
-*~
-.venv/
-site/
 
-.AppleDouble
-.LSOverride
-.markdownlint*
-ehthumbs.db
-desktop.ini
-*.pdf
+# =========================
+# LaTeX build artifacts
+# =========================
 *.aux
 *.out
 *.toc
+
+# =========================
+# Archives
+# =========================
 *.gz
+
+# =========================
+# Images (ignored except allowed)
+# =========================
 *.png
 *.jpg
+
+# Allow specific WiSo image
 !WiSo/WIL/bilder/
 !WiSo/WIL/bilder/Produktionsfaktoren.png
+
+# =========================
+# Markdown tooling
+# =========================
+.markdownlint*
+
+# =========================
+# PDFs
+# =========================
+*.pdf
