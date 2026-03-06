@@ -1,2 +1,5 @@
 mkdocs<2
 mkdocs-material==9.7.4
+mkdocs-gen-files
+mkdocs-awesome-pages-plugin
+pyyaml
