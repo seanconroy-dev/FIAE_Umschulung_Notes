@@ -1,3 +1,8 @@
+[![GitHub Pages](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://seanconroy-dev.github.io/FIAE_Umschulung_Notes/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/seanconroy-dev/FIAE_Umschulung_Notes)](https://github.com/seanconroy-dev/FIAE_Umschulung_Notes/commits/main)
+[![Repo Size](https://img.shields.io/github/repo-size/seanconroy-dev/FIAE_Umschulung_Notes)](https://github.com/seanconroy-dev/FIAE_Umschulung_Notes)
+
 # FIAE Umschulung Notes
 
 Markdown-basierte Mitschriften aus meiner Umschulung zum  
