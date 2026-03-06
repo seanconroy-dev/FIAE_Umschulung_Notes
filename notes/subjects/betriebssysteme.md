@@ -34,7 +34,7 @@ Grundlagen moderner Betriebssysteme.
 
 ## Alle Notizen
 
-- [Automatisch generierter Überblick](../_generated/subjects/betriebssysteme.md)
+- [Automatisch generierter Überblick](../_generated/subjects/bs.md)
 
 ### Nach Dozent
 
