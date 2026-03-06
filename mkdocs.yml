@@ -1,0 +1,14 @@
+site_name: FIAE Umschulung Notes
+docs_dir: notes
+site_dir: site
+
+theme:
+  name: material
+
+plugins:
+  - search
+
+markdown_extensions:
+  - meta
+  - toc:
+      permalink: true
