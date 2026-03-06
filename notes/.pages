@@ -1,0 +1,7 @@
+cat > notes/.pages <<'EOF'
+nav:
+  - Home: index.md
+  - Subjects: subjects
+  - Generated: _generated
+  - Tags: tags.md
+EOF
