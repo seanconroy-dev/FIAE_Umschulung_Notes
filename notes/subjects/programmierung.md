@@ -37,10 +37,10 @@ Dieses Fach behandelt die praktische Umsetzung objektorientierter Programmierung
 
 ## Alle Notizen
 
-- [Automatisch generierter Überblick](_generated/subjects/programmierung.md)
+- [Automatisch generierter Überblick](../_generated/subjects/programmierung.md)
 
 ### Nach Dozent / Quelle
 
-- [ASS](_generated/instructors/ass.md)
-- [POG](_generated/instructors/pog.md)
-- [UDEMY](_generated/instructors/udemy.md)
+- [ASS](../_generated/instructors/ass.md)
+- [POG](../_generated/instructors/pog.md)
+- [UDEMY](../_generated/instructors/udemy.md)

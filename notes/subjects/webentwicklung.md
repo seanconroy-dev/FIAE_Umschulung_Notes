@@ -32,9 +32,9 @@ Dieses Fach behandelt Grundlagen moderner Webentwicklung.
 
 ## Alle Notizen
 
-- [Automatisch generierter Überblick](_generated/subjects/webentwicklung.md)
+- [Automatisch generierter Überblick](../_generated/subjects/webentwicklung.md)
 
 ### Nach Dozent
 
-- [KLU](_generated/instructors/klu.md)
-- [KLK](_generated/instructors/klk.md)
+- [KLU](../_generated/instructors/klu.md)
+- [KLK](../_generated/instructors/klk.md)

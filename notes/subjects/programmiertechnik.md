@@ -50,14 +50,14 @@ Dieses Fach behandelt grundlegende Programmierkonzepte in **Java** sowie zentral
 
 ## Alle Notizen
 
-- [Automatisch generierter Überblick](_generated/subjects/programmiertechnik.md)
+- [Automatisch generierter Überblick](../_generated/subjects/programmiertechnik.md)
 
 ### Nach Dozent / Quelle
 
-- [ASS](_generated/instructors/ass.md)
-- [PAS](_generated/instructors/pas.md)
-- [SCH](_generated/instructors/sch.md)
-- [WED](_generated/instructors/wed.md)
-- [KON](_generated/instructors/kon.md)
-- [POG](_generated/instructors/pog.md)
-- [UDEMY](_generated/instructors/udemy.md)
+- [ASS](../_generated/instructors/ass.md)
+- [PAS](../_generated/instructors/pas.md)
+- [SCH](../_generated/instructors/sch.md)
+- [WED](../_generated/instructors/wed.md)
+- [KON](../_generated/instructors/kon.md)
+- [POG](../_generated/instructors/pog.md)
+- [UDEMY](../_generated/instructors/udemy.md)

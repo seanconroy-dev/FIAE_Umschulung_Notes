@@ -39,8 +39,8 @@ Dieses Fach behandelt die Grundlagen moderner Computernetzwerke.
 
 ## Alle Notizen
 
-- [Automatisch generierter Überblick](_generated/subjects/netzwerktechnik.md)
+- [Automatisch generierter Überblick](../_generated/subjects/netzwerktechnik.md)
 
 ### Nach Dozent
 
-- [TRE](_generated/instructors/tre.md)
+- [TRE](../_generated/instructors/tre.md)

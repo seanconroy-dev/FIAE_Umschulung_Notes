@@ -34,10 +34,10 @@ Grundlagen moderner Betriebssysteme.
 
 ## Alle Notizen
 
-- [Automatisch generierter Überblick](_generated/subjects/betriebssysteme.md)
+- [Automatisch generierter Überblick](../_generated/subjects/betriebssysteme.md)
 
 ### Nach Dozent
 
-- [WED](_generated/instructors/wed.md)
-- [SLE](_generated/instructors/sle.md)
-- [SCHLEGEL](_generated/instructors/schlegel.md)
+- [WED](../_generated/instructors/wed.md)
+- [SLE](../_generated/instructors/sle.md)
+- [SCHLEGEL](../_generated/instructors/schlegel.md)

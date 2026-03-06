@@ -36,11 +36,11 @@ Dieses Fach behandelt relationale Datenbanken und SQL.
 
 ## Alle Notizen
 
-- [Automatisch generierter Überblick](_generated/subjects/datenbanken.md)
+- [Automatisch generierter Überblick](../_generated/subjects/datenbanken.md)
 
 ### Nach Dozent
 
-- [POG](_generated/instructors/pog.md)
-- [KNO](_generated/instructors/kno.md)
-- [WIT](_generated/instructors/wit.md)
-- [SCH](_generated/instructors/sch.md)
+- [POG](../_generated/instructors/pog.md)
+- [KNO](../_generated/instructors/kno.md)
+- [WIT](../_generated/instructors/wit.md)
+- [SCH](../_generated/instructors/sch.md)

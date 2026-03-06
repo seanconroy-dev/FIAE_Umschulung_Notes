@@ -28,8 +28,8 @@ Datentechnik behandelt die Grundlagen der digitalen Informationsverarbeitung.
 
 ## Alle Notizen
 
-- [Automatisch generierter Überblick](_generated/subjects/datentechnik.md)
+- [Automatisch generierter Überblick](../_generated/subjects/datentechnik.md)
 
 ### Nach Dozent
 
-- [PAS](_generated/instructors/pas.md)
+- [PAS](../_generated/instructors/pas.md)

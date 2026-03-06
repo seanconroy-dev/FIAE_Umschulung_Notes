@@ -35,8 +35,8 @@ Dieses Fach behandelt die technische Grundlage moderner Computersysteme und IT-I
 
 ## Alle Notizen
 
-- [Automatisch generierter Überblick](_generated/subjects/systemtechnik.md)
+- [Automatisch generierter Überblick](../_generated/subjects/systemtechnik.md)
 
 ### Nach Dozent
 
-- [WED](_generated/instructors/wed.md)
+- [WED](../_generated/instructors/wed.md)

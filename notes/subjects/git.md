@@ -31,8 +31,8 @@ Dieses Fach behandelt Versionskontrolle mit Git.
 
 ## Alle Notizen
 
-- [Automatisch generierter Überblick](_generated/subjects/git.md)
+- [Automatisch generierter Überblick](../_generated/subjects/git.md)
 
 ### Nach Quelle / Dozent
 
-- [UDEMY](_generated/instructors/udemy.md)
+- [UDEMY](../_generated/instructors/udemy.md)

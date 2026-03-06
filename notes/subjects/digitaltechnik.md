@@ -30,9 +30,9 @@ Digitaltechnik behandelt die Funktionsweise digitaler Schaltungen und logischer 
 
 ## Alle Notizen
 
-- [Automatisch generierter Überblick](_generated/subjects/digitaltechnik.md)
+- [Automatisch generierter Überblick](../_generated/subjects/digitaltechnik.md)
 
 ### Nach Dozent
 
-- [KRU](_generated/instructors/kru.md)
-- [PAS](_generated/instructors/pas.md)
+- [KRU](../_generated/instructors/kru.md)
+- [PAS](../_generated/instructors/pas.md)

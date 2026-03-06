@@ -27,8 +27,8 @@ Telekommunikation behandelt technische Grundlagen moderner Kommunikationssysteme
 
 ## Alle Notizen
 
-- [Automatisch generierter Überblick](_generated/subjects/telekommunikation.md)
+- [Automatisch generierter Überblick](../_generated/subjects/telekommunikation.md)
 
 ### Nach Dozent
 
-- [KLA](_generated/instructors/kla.md)
+- [KLA](../_generated/instructors/kla.md)
