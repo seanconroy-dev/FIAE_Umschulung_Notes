@@ -8,6 +8,9 @@ Thumbs.db
 *.bak
 *.swp
 *~
+.venv/
+site/
+
 .AppleDouble
 .LSOverride
 .markdownlint*
