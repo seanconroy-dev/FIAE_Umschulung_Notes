@@ -1,3 +1,5 @@
+# notes/subjects/telekommunikation.md
+
 # Telekommunikation
 
 Telekommunikation behandelt technische Grundlagen moderner Kommunikationssysteme.
@@ -25,5 +27,8 @@ Telekommunikation behandelt technische Grundlagen moderner Kommunikationssysteme
 
 ## Alle Notizen
 
-- [2025/Telekommunikation](../2025/Telekommunikation/)
-- [2025/Telekommunikationstechnik](../2025/Telekommunikationstechnik/)
+- [Automatisch generierter Überblick](_generated/subjects/telekommunikation.md)
+
+### Nach Dozent
+
+- [KLA](_generated/instructors/kla.md)

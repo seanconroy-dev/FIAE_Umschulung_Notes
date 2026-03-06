@@ -1,3 +1,5 @@
+# notes/subjects/systemtechnik.md
+
 # Systemtechnik
 
 Dieses Fach behandelt die technische Grundlage moderner Computersysteme und IT-Infrastruktur.
@@ -33,6 +35,8 @@ Dieses Fach behandelt die technische Grundlage moderner Computersysteme und IT-I
 
 ## Alle Notizen
 
-- [2025/Systemtechnik](../2025/Systemtechnik/WED/)
-- [2026/Systemtechnik](../2026/Systemtechnik/WED/)
+- [Automatisch generierter Überblick](_generated/subjects/systemtechnik.md)
 
+### Nach Dozent
+
+- [WED](_generated/instructors/wed.md)

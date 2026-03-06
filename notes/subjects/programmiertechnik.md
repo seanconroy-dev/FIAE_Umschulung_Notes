@@ -35,31 +35,29 @@ Dieses Fach behandelt grundlegende Programmierkonzepte in **Java** sowie zentral
 ### Grundlagen
 
 - [Datentypen und Arrays in Java](../2025/Programmiertechnik/WED/2025-08-18_Programmiertechnik_WED_datentypen-und-arrays-in-java-grundlagen-ap1-relevanz.md)
+
 - [Methoden und Sichtbarkeit](../2025/Programmiertechnik/ASS/2025-11-21_Programmiertechnik_ASS_methoden-sichtbarkeit-und-zugriff-in-java.md)
 
 ### Objektorientierung
 
 - [Composition, Encapsulation und Polymorphism](../2026/Programmiertechnik/UDEMY/2026-02-26_Programmiertechnik_UDEMY_composition-encapsulation-and-polymorphism-essentials.md)
+
 - [Encapsulation in Java](../2026/Programmiertechnik/UDEMY/2026-03-04_Programmiertechnik_UDEMY_encapsulation-in-java.md)
+
 - [Vererbung](../2026/Programmiertechnik/POG/2026-03-04_Programmiertechnik_POG_vererbung.md)
 
 ---
 
-## Inhalte nach Jahr
+## Alle Notizen
 
-### 2025
+- [Automatisch generierter Überblick](_generated/subjects/programmiertechnik.md)
 
-Grundlagen und Einstieg in Java.
+### Nach Dozent / Quelle
 
-Ordner:
-
-    ../2025/Programmiertechnik/
-
-### 2026
-
-Vertiefung der OOP-Konzepte.
-
-Ordner:
-
-- [2026/Programmiertechnik](../2026/Programmiertechnik/)
-   
+- [ASS](_generated/instructors/ass.md)
+- [PAS](_generated/instructors/pas.md)
+- [SCH](_generated/instructors/sch.md)
+- [WED](_generated/instructors/wed.md)
+- [KON](_generated/instructors/kon.md)
+- [POG](_generated/instructors/pog.md)
+- [UDEMY](_generated/instructors/udemy.md)

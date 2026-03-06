@@ -1,3 +1,5 @@
+# notes/subjects/webentwicklung.md
+
 # Webentwicklung
 
 Dieses Fach behandelt Grundlagen moderner Webentwicklung.
@@ -29,5 +31,10 @@ Dieses Fach behandelt Grundlagen moderner Webentwicklung.
 ---
 
 ## Alle Notizen
-- [2025/Webentwicklung](../2025/Webentwicklung/)
 
+- [Automatisch generierter Überblick](_generated/subjects/webentwicklung.md)
+
+### Nach Dozent
+
+- [KLU](_generated/instructors/klu.md)
+- [KLK](_generated/instructors/klk.md)

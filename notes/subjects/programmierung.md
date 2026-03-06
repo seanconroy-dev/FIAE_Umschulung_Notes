@@ -1,3 +1,5 @@
+# notes/subjects/programmierung.md
+
 # Programmierung
 
 Dieses Fach behandelt die praktische Umsetzung objektorientierter Programmierung und Softwareentwicklung in Java.
@@ -35,4 +37,10 @@ Dieses Fach behandelt die praktische Umsetzung objektorientierter Programmierung
 
 ## Alle Notizen
 
-- [2026/Programmierung](../2026/Programmierung/)
+- [Automatisch generierter Überblick](_generated/subjects/programmierung.md)
+
+### Nach Dozent / Quelle
+
+- [ASS](_generated/instructors/ass.md)
+- [POG](_generated/instructors/pog.md)
+- [UDEMY](_generated/instructors/udemy.md)

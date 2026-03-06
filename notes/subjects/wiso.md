@@ -1,3 +1,5 @@
+# notes/subjects/wiso.md
+
 # Wirtschafts- und Sozialkunde (WiSo)
 
 Dieses Fach behandelt wirtschaftliche und rechtliche Grundlagen.
@@ -9,7 +11,7 @@ Dieses Fach behandelt wirtschaftliche und rechtliche Grundlagen.
 - Produktionsfaktoren
 - Arbeitsmarkt
 - Kaufvertrag
-- Geschäfts­fähigkeit
+- Geschäftsfähigkeit
 
 ---
 
@@ -32,5 +34,9 @@ Dieses Fach behandelt wirtschaftliche und rechtliche Grundlagen.
 
 ## Alle Notizen
 
-- [2026/WiSo](../2026/WiSo/)
+- [Automatisch generierter Überblick](_generated/subjects/wiso.md)
 
+### Nach Dozent
+
+- [WIL](_generated/instructors/wil.md)
+- [HPT](_generated/instructors/hpt.md)

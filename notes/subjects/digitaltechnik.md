@@ -1,3 +1,5 @@
+# notes/subjects/digitaltechnik.md
+
 # Digitaltechnik
 
 Digitaltechnik behandelt die Funktionsweise digitaler Schaltungen und logischer Systeme.
@@ -28,5 +30,9 @@ Digitaltechnik behandelt die Funktionsweise digitaler Schaltungen und logischer 
 
 ## Alle Notizen
 
-- [2025/Digitaltechnik](../2025/Digitaltechnik/)
+- [Automatisch generierter Überblick](_generated/subjects/digitaltechnik.md)
 
+### Nach Dozent
+
+- [KRU](_generated/instructors/kru.md)
+- [PAS](_generated/instructors/pas.md)
