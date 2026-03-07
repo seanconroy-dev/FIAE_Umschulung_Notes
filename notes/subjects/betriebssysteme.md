@@ -1,11 +1,11 @@
 # Betriebssysteme
 
-!!! tip "Schnellzugriff"
+!!! tip "Schnellzugriff" 
 
-                - [Alle Notizen](../_generated/subjects/bs.md)
-                - [Dozent WED](../_generated/instructors/wed.md)
-                - [Dozent SLE](../_generated/instructors/sle.md)
-                - [Dozent SCHLEGEL](../_generated/instructors/schlegel.md)
+    - [Alle Notizen](../_generated/subjects/bs.md)
+    - [Dozent WED](../_generated/instructors/wed.md)
+    - [Dozent SLE](../_generated/instructors/sle.md)
+    - [Dozent SCHLEGEL](../_generated/instructors/schlegel.md)
     
 Grundlagen moderner Betriebssysteme, Linux-Praxis und Systemverwaltung.
 
