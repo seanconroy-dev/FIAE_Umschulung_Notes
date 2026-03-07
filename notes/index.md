@@ -20,52 +20,52 @@ Die Notizen sind chronologisch organisiert, können aber über Fächer, Tags ode
 
 <div class="grid cards" markdown>
 
-- __Betriebssysteme__  
-  Linux-Grundlagen, Shell, Benutzerverwaltung, Dateirechte, Bootprozess und Virtualisierung.  
+- :material-linux: **Betriebssysteme**  
+  Linux, Kernel, Shell, Benutzerverwaltung  
   [Öffnen](subjects/betriebssysteme.md)
 
-- __Datenbanken__  
-  Relationale Datenbanken, ER-Modell, SQL, Normalisierung und Beziehungen.  
+- :material-database: **Datenbanken**  
+  SQL, ER-Modell, Normalisierung  
   [Öffnen](subjects/datenbanken.md)
 
-- __Datentechnik__  
-  Zahlensysteme, Dualsystem, Hexadezimaldarstellung und logische Grundlagen.  
+- :material-counter: **Datentechnik**  
+  Zahlensysteme, Logik, digitale Grundlagen  
   [Öffnen](subjects/datentechnik.md)
 
-- __Digitaltechnik__  
-  Logikgatter, Schaltkreise, Zahlensysteme und digitale Systeme.  
+- :material-chip: **Digitaltechnik**  
+  Logikgatter, digitale Schaltungen  
   [Öffnen](subjects/digitaltechnik.md)
 
-- __Git__  
-  Versionskontrolle mit Branching, Merge, Rebase, Stash und Reflog.  
+- :material-source-branch: **Git**  
+  Versionskontrolle, Branching, Merge  
   [Öffnen](subjects/git.md)
 
-- __Netzwerktechnik__  
-  OSI-Modell, TCP/IP, VLAN, Routing, IPv4/IPv6, DHCP, DNS und NAT.  
+- :material-lan: **Netzwerktechnik**  
+  OSI, TCP/IP, Routing, Subnetting  
   [Öffnen](subjects/netzwerktechnik.md)
 
-- __Programmiertechnik__  
-  Java-Grundlagen, Methoden, OOP, Vererbung, Kapselung und Polymorphie.  
+- :material-code-tags: **Programmiertechnik**  
+  Java Grundlagen, OOP, Methoden  
   [Öffnen](subjects/programmiertechnik.md)
 
-- __Programmierung__  
-  Praktische objektorientierte Programmierung mit Klassen, Konstruktoren, Records und Referenzen.  
+- :material-code-braces: **Programmierung**  
+  Klassen, Objekte, Konstruktoren  
   [Öffnen](subjects/programmierung.md)
 
-- __Systemtechnik__  
-  Rechnerarchitektur, Speicher, Bussysteme, SSD/SATA/PCIe und IT-Arbeitsplätze.  
+- :material-desktop-classic: **Systemtechnik**  
+  Rechnerarchitektur, EVA, Hardware  
   [Öffnen](subjects/systemtechnik.md)
 
-- __Telekommunikation__  
-  Grundlagen moderner Kommunikationssysteme, Anschlüsse und Signalübertragung.  
+- :material-phone-classic: **Telekommunikation**  
+  TAE, Signalübertragung, Anschlüsse  
   [Öffnen](subjects/telekommunikation.md)
 
-- __Webentwicklung__  
-  HTML, CSS, Layoutsysteme, Responsive Design, CSS Grid und Emmet.  
+- :material-web: **Webentwicklung**  
+  HTML, CSS, Layoutsysteme  
   [Öffnen](subjects/webentwicklung.md)
 
-- __WiSo__  
-  Wirtschafts- und Sozialkunde mit Marktformen, Produktionsfaktoren, Arbeitsmarkt und Kaufvertrag.  
+- :material-scale-balance: **WiSo**  
+  Wirtschaft, Recht, Arbeitsmarkt  
   [Öffnen](subjects/wiso.md)
 
 </div>
