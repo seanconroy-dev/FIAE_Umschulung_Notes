@@ -52,16 +52,6 @@ site/
 *.gz
 
 # =========================
-# Images (ignored except allowed)
-# =========================
-*.png
-*.jpg
-
-# Allow specific WiSo image
-!WiSo/WIL/bilder/
-!WiSo/WIL/bilder/Produktionsfaktoren.png
-
-# =========================
 # Markdown tooling
 # =========================
 .markdownlint*
