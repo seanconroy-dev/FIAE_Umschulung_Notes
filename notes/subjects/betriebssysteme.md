@@ -56,7 +56,4 @@ Besonders hilfreich für Wiederholung und AP1-nahe Themen sind Notizen zu:
 
 ---
 
-## Hinweis
 
-Die vollständige Übersicht wird automatisch aus dem Frontmatter generiert.  
-Neue Notizen erscheinen daher zusätzlich im generierten Index, ohne dass diese Einstiegsseite manuell gepflegt werden muss.
