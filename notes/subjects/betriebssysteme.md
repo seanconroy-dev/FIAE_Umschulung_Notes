@@ -1,43 +1,62 @@
-# notes/subjects/betriebssysteme.md
-
 # Betriebssysteme
 
-Grundlagen moderner Betriebssysteme.
+Grundlagen moderner Betriebssysteme, Linux-Praxis und Systemverwaltung.
 
-## Themen
+## Überblick
 
-- Kernel
-- Shell
-- Linux Grundlagen
-- Benutzerverwaltung
-- Dateisysteme
-- Bootprozess
-- Virtualisierung
+Betriebssysteme bilden die technische Basis für Benutzerverwaltung, Dateisysteme, Prozesse, Rechteverwaltung, Bootvorgänge und Virtualisierung.  
+Der Schwerpunkt in diesen Notizen liegt auf **Linux-Grundlagen**, **Systemaufbau**, **Benutzer- und Rechteverwaltung** sowie **betriebssystemnahen AP1-relevanten Themen**.
 
 ---
 
-## Dozenten
+## Schwerpunkte
 
-- WED
-- SLE
-- SCHLEGEL
+`Kernel` `Shell` `Linux` `Benutzerverwaltung` `Dateirechte` `Dateisysteme` `Bootprozess` `SSH` `Virtualisierung`
 
 ---
 
 ## Einstieg
 
+### Grundlagen
+
 - [Linux Grundlagen](../2025/Betriebssysteme/WED/2025-07-16_Betriebssysteme_WED_linux-grundlagen-terminal-shell-und-kommandos.md)
 - [Kernelarchitekturen](../2025/Betriebssysteme/SLE/2025-09-18_Betriebssysteme_SLE_schalenmodell-kernelarchitekturen.md)
-- [SSH und Schlüsselbasierte Authentifizierung](../2025/Betriebssysteme/WED/2025-12-17_Betriebssysteme_WED_ssh-kryptographie-und-schluesselbasierte-authentifizierung.md)
+
+### Praxis
+
+- [SSH und schlüsselbasierte Authentifizierung](../2025/Betriebssysteme/WED/2025-12-17_Betriebssysteme_WED_ssh-kryptographie-und-schluesselbasierte-authentifizierung.md)
+- [Linux Benutzer- und Gruppenmanagement](../2025/Betriebssysteme/WED/2025-09-10_Betriebssysteme_WED_linux-benutzer-und-gruppenmanagement.md)
+
+### Vertiefung
+
+- [Windows Bootprozess, BIOS, UEFI und MBR/GPT](../2025/Betriebssysteme/SLE/2025-10-08_Betriebssysteme_SLE_windows-bootprozess-bios-uefi-und-mbr-gpt.md)
+- [VirtualBox Grundlagen und Verwaltung](../2026/Betriebssysteme/SLE/2026-01-15_Betriebssysteme_SLE_virtualbox-grundlagen-verwaltung.md)
 
 ---
 
-## Alle Notizen
+## Schnellzugriff
 
-- [Automatisch generierter Überblick](../_generated/subjects/bs.md)
+- [Alle Notizen zu Betriebssystemen](../_generated/subjects/bs.md)
+- [Dozent WED](../_generated/instructors/wed.md)
+- [Dozent SLE](../_generated/instructors/sle.md)
+- [Dozent SCHLEGEL](../_generated/instructors/schlegel.md)
 
-### Nach Dozent
+---
 
-- [WED](../_generated/instructors/wed.md)
-- [SLE](../_generated/instructors/sle.md)
-- [SCHLEGEL](../_generated/instructors/schlegel.md)
+## Für Prüfung und Wiederholung relevant
+
+Besonders hilfreich für Wiederholung und AP1-nahe Themen sind Notizen zu:
+
+- Linux-Grundlagen
+- Rechteverwaltung
+- Dateisystemen
+- Bootprozess
+- EVA-/Systembezug
+- Virtualisierung
+
+---
+
+## Hinweis
+
+Die vollständige Übersicht wird automatisch aus dem Frontmatter generiert.  
+Neue Notizen erscheinen daher zusätzlich im generierten Index, ohne dass diese Einstiegsseite manuell gepflegt werden muss.
