@@ -1,35 +1,49 @@
-# notes/subjects/datentechnik.md
-
 # Datentechnik
 
-Datentechnik behandelt die Grundlagen der digitalen Informationsverarbeitung.
+!!! info "Schnellzugriff"
 
-## Themen
+    - [Alle Notizen](../_generated/subjects/datentechnik.md)
+    - [Dozent PAS](../_generated/instructors/pas.md)
 
-- Zahlensysteme
-- Dualsystem
-- Hexadezimalsystem
-- Logische Operationen
-- Grundlagen digitaler Systeme
+Grundlagen der digitalen Informationsverarbeitung und Zahlendarstellung in Computersystemen.
+
+## Überblick
+
+Datentechnik behandelt die Darstellung, Verarbeitung und logische Verknüpfung digitaler Informationen.  
+Zentrale Themen sind verschiedene **Zahlensysteme**, **logische Operationen** sowie die Grundlagen digitaler Systeme, die als Basis für Rechnerarchitektur und Programmierung dienen.
 
 ---
 
-## Dozent
+## Schwerpunkte
 
-- PAS
+`Zahlensysteme` `Dualsystem` `Hexadezimalsystem` `Logik` `Boolesche Operationen` `Digitale Systeme`
 
 ---
 
 ## Einstieg
 
+### Grundlagen
+
 - [Zahlensysteme und Logik Grundlagen](../2025/Datentechnik/PAS/2025-07-10_Datentechnik_PAS_zahlensysteme-und-logik-grundlagen.md)
 
 ---
 
-## Alle Notizen
+## Schnellzugriff
 
-- [Automatisch generierter Überblick](../_generated/subjects/datentechnik.md)
+- [Alle Notizen zu Datentechnik](../_generated/subjects/datentechnik.md)
 
 ### Nach Dozent
 
 - [PAS](../_generated/instructors/pas.md)
+
+---
+
+## Für Prüfung und Wiederholung relevant
+
+Besonders prüfungsrelevant sind Themen zu:
+
+- Zahlensystemen (Dezimal, Dual, Hexadezimal)
+- Umrechnung zwischen Zahlensystemen
+- Logischen Operationen
+- Boolescher Algebra
+- Grundlagen digitaler Systeme
