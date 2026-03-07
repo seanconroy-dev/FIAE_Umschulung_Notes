@@ -3,10 +3,10 @@
 Willkommen.
 
 Diese Seite enthält strukturierte Mitschriften aus meiner Umschulung zum  
-Fachinformatiker für Anwendungsentwicklung (FIAE) am  
-BFW Mühlenbeck (2025–2027).
+**Fachinformatiker für Anwendungsentwicklung (FIAE)** am  
+**BFW Mühlenbeck (2025–2027)**.
 
-Die Notizen sind chronologisch organisiert, können aber über Fächer, Tags oder die Suche schnell gefunden werden.
+Die Notizen sind chronologisch organisiert, können aber über **Fächer**, **Tags** oder die **Suche** schnell gefunden werden.
 
 !!! info "Navigation"
 
@@ -20,79 +20,56 @@ Die Notizen sind chronologisch organisiert, können aber über Fächer, Tags ode
 
 <div class="grid cards" markdown>
 
-- :material-linux: **Betriebssysteme**
+- [**Betriebssysteme**](subjects/betriebssysteme.md)
 
     Linux, Kernel, Shell, Benutzerverwaltung
 
-    [Öffnen](subjects/betriebssysteme.md)
-
-- :material-database: **Datenbanken**
+- [**Datenbanken**](subjects/datenbanken.md)
 
     SQL, ER-Modell, Normalisierung
 
-    [Öffnen](subjects/datenbanken.md)
-
-- :material-counter: **Datentechnik**
+- [**Datentechnik**](subjects/datentechnik.md)
 
     Zahlensysteme, Logik, digitale Grundlagen
 
-    [Öffnen](subjects/datentechnik.md)
-
-- :material-chip: **Digitaltechnik**
+- [**Digitaltechnik**](subjects/digitaltechnik.md)
 
     Logikgatter, digitale Schaltungen
 
-    [Öffnen](subjects/digitaltechnik.md)
-
-- :material-source-branch: **Git**
+- [**Git**](subjects/git.md)
 
     Versionskontrolle, Branching, Merge
 
-    [Öffnen](subjects/git.md)
-
-- :material-lan: **Netzwerktechnik**
+- [**Netzwerktechnik**](subjects/netzwerktechnik.md)
 
     OSI, TCP/IP, Routing, Subnetting
 
-    [Öffnen](subjects/netzwerktechnik.md)
-
-- :material-code-tags: **Programmiertechnik**
+- [**Programmiertechnik**](subjects/programmiertechnik.md)
 
     Java Grundlagen, OOP, Methoden
 
-    [Öffnen](subjects/programmiertechnik.md)
-
-- :material-code-braces: **Programmierung**
+- [**Programmierung**](subjects/programmierung.md)
 
     Klassen, Objekte, Konstruktoren
 
-    [Öffnen](subjects/programmierung.md)
-
-- :material-desktop-classic: **Systemtechnik**
+- [**Systemtechnik**](subjects/systemtechnik.md)
 
     Rechnerarchitektur, EVA, Hardware
 
-    [Öffnen](subjects/systemtechnik.md)
-
-- :material-phone-classic: **Telekommunikation**
+- [**Telekommunikation**](subjects/telekommunikation.md)
 
     TAE, Signalübertragung, Anschlüsse
 
-    [Öffnen](subjects/telekommunikation.md)
-
-- :material-web: **Webentwicklung**
+- [**Webentwicklung**](subjects/webentwicklung.md)
 
     HTML, CSS, Layoutsysteme
 
-    [Öffnen](subjects/webentwicklung.md)
-
-- :material-scale-balance: **WiSo**
+- [**WiSo**](subjects/wiso.md)
 
     Wirtschaft, Recht, Arbeitsmarkt
 
-    [Öffnen](subjects/wiso.md)
-
 </div>
+
 ---
 
 ## Prüfungsrelevante Themen
@@ -112,29 +89,29 @@ Neben der Fächerstruktur können Inhalte auch über Tags gefunden werden.
 
 <div class="grid cards" markdown>
 
-- __Linux__  
-  Inhalte zu Linux, Shell, Rechten und Administration.  
-  [Tag öffnen](tags/linux/)
+- [**Linux**](tags/linux/)
 
-- __Java__  
-  Sprachgrundlagen, OOP, Records, Methoden und Klassen.  
-  [Tag öffnen](tags/java/)
+    Inhalte zu Linux, Shell, Rechten und Administration
 
-- __OOP__  
-  Kapselung, Vererbung, Polymorphie und UML.  
-  [Tag öffnen](tags/oop/)
+- [**Java**](tags/java/)
 
-- __SQL__  
-  DDL, DML, DQL, Abfragen und relationale Modelle.  
-  [Tag öffnen](tags/sql/)
+    Sprachgrundlagen, OOP, Records, Methoden und Klassen
 
-- __Subnetting__  
-  IPv4, Netzmasken, Adressierung und AP1-relevante Netzwerkthemen.  
-  [Tag öffnen](tags/subnetting/)
+- [**OOP**](tags/oop/)
 
-- __Alle Tags__  
-  Gesamte Themenübersicht über alle Notizen hinweg.  
-  [Tag-Übersicht öffnen](tags.md)
+    Kapselung, Vererbung, Polymorphie und UML
+
+- [**SQL**](tags/sql/)
+
+    DDL, DML, DQL, Abfragen und relationale Modelle
+
+- [**Subnetting**](tags/subnetting/)
+
+    IPv4, Netzmasken, Adressierung und AP1-relevante Netzwerkthemen
+
+- [**Alle Tags**](tags.md)
+
+    Gesamte Themenübersicht über alle Notizen hinweg
 
 </div>
 
