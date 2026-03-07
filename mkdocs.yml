@@ -13,6 +13,7 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+    - content.code.annotate
 
   palette:
     - scheme: default
@@ -53,3 +54,4 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
