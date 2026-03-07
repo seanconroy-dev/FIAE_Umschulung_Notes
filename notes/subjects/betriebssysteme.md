@@ -1,6 +1,6 @@
 # Betriebssysteme
 
-!!! tip "Schnellzugriff" 
+!!! info "Schnellzugriff" 
 
     - [Alle Notizen](../_generated/subjects/bs.md)
     - [Dozent WED](../_generated/instructors/wed.md)
