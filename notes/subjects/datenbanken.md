@@ -1,42 +1,47 @@
-# notes/subjects/datenbanken.md
-
 # Datenbanken
 
-Dieses Fach behandelt relationale Datenbanken und SQL.
+!!! info "Schnellzugriff"
 
-## Themen
+    - [Alle Notizen](../_generated/subjects/datenbanken.md)
+    - [Dozent POG](../_generated/instructors/pog.md)
+    - [Dozent KNO](../_generated/instructors/kno.md)
+    - [Dozent WIT](../_generated/instructors/wit.md)
+    - [Dozent SCH](../_generated/instructors/sch.md)
 
-- Relationale Datenbanken
-- ER-Modell
-- Normalisierung
-- SQL (DDL, DML, DQL)
-- Fremdschlüssel
-- Beziehungen
+Grundlagen relationaler Datenbanken, Datenmodellierung und SQL.
+
+## Überblick
+
+Datenbanken ermöglichen die strukturierte Speicherung, Verwaltung und Abfrage von Daten.  
+Schwerpunkte dieses Fachs sind das **relationale Datenbankmodell**, **Datenmodellierung mit ER-Diagrammen**, **Normalisierung** sowie die Arbeit mit **SQL** zur Definition und Abfrage von Daten.
 
 ---
 
-## Dozenten
+## Schwerpunkte
 
-- POG
-- KNO
-- WIT
-- SCH
+`Relationale Datenbanken` `ER-Modell` `Normalisierung` `SQL` `DDL` `DML` `DQL` `Fremdschlüssel` `Beziehungen`
 
 ---
 
 ## Einstieg
 
+### Grundlagen
+
 - [Datenbanken Grundlagen und ER-Modell](../2025/Datenbanken/POG/2025-07-09_Datenbanken_POG_datenbanken-grundlagen-er-modell-und-normalisierung.md)
 
+### SQL
+
 - [SQL Grundlagen](../2025/Datenbanken/KNO/2025-10-08_Datenbanken_KNO_sql-grundlagen-und-sprachbereiche.md)
+
+### Vertiefung
 
 - [Normalisierung](../2026/Datenbanken/KNO/2026-02-02_Datenbanken_KNO_normalisierung-normalformen-in-relationalen-datenbanken.md)
 
 ---
 
-## Alle Notizen
+## Schnellzugriff
 
-- [Automatisch generierter Überblick](../_generated/subjects/datenbanken.md)
+- [Alle Notizen zu Datenbanken](../_generated/subjects/datenbanken.md)
 
 ### Nach Dozent
 
@@ -44,3 +49,16 @@ Dieses Fach behandelt relationale Datenbanken und SQL.
 - [KNO](../_generated/instructors/kno.md)
 - [WIT](../_generated/instructors/wit.md)
 - [SCH](../_generated/instructors/sch.md)
+
+---
+
+## Für Prüfung und Wiederholung relevant
+
+Besonders prüfungsrelevant sind Themen zu:
+
+- Relationalen Datenbanken
+- ER-Modellen
+- Normalisierung
+- SQL-Grundlagen
+- Primär- und Fremdschlüsseln
+- Beziehungen zwischen Tabellen
