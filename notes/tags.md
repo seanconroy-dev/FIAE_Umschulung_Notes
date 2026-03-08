@@ -7,20 +7,16 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 <div class="grid cards" markdown>
 
 - [**Java**](../_generated/tags/java/)
-
-  Klassen, Methoden, Datentypen, OOP
+    Klassen, Methoden, Datentypen, OOP
 
 - [**OOP**](../_generated/tags/oop/)
-
-  Vererbung, Polymorphie, Kapselung, UML
+    Vererbung, Polymorphie, Kapselung, UML
 
 - [**SQL**](../_generated/tags/sql/)
-
-  Datenbankabfragen, DDL, DML, DQL
+    Datenbankabfragen, DDL, DML, DQL
 
 - [**Git**](../_generated/tags/git/)
-
-  Branching, Merge, Rebase, Stash
+    Branching, Merge, Rebase, Stash
 
 </div>
 
@@ -29,20 +25,16 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 <div class="grid cards" markdown>
 
 - [**Subnetting**](../_generated/tags/subnetting/)
-
-  IPv4, Netzmasken, Adressierung
+    IPv4, Netzmasken, Adressierung
 
 - [**TCP**](../_generated/tags/tcp/)
-
-  Transport Layer, Ports, Verbindungen
+    Transport Layer, Ports, Verbindungen
 
 - [**UDP**](../_generated/tags/udp/)
-
-  Verbindungslos, Ports, Protokolle
+    Verbindungslos, Ports, Protokolle
 
 - [**VLAN**](../_generated/tags/vlan/)
-
-  Switching, Segmentierung, Trunking
+    Switching, Segmentierung, Trunking
 
 </div>
 
@@ -51,20 +43,16 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 <div class="grid cards" markdown>
 
 - [**Linux**](../_generated/tags/linux/)
-
-  Shell, Benutzerverwaltung, Dateirechte
+    Shell, Benutzerverwaltung, Dateirechte
 
 - [**Kernel**](../_generated/tags/kernel/)
-
-  Systemarchitektur und Betriebssystemkern
+    Systemarchitektur und Betriebssystemkern
 
 - [**SSH**](../_generated/tags/ssh/)
-
-  Authentifizierung und Fernzugriff
+    Authentifizierung und Fernzugriff
 
 - [**Dateirechte**](../_generated/tags/dateirechte/)
-
-  chmod, chown, Benutzer und Gruppen
+    chmod, chown, Benutzer und Gruppen
 
 </div>
 
@@ -73,20 +61,16 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 <div class="grid cards" markdown>
 
 - [**PCIe**](../_generated/tags/pcie/)
-
-  Lanes, Versionen, Schnittstellen
+    Lanes, Versionen, Schnittstellen
 
 - [**EVA**](../_generated/tags/eva/)
-
-  Eingabe, Verarbeitung, Ausgabe
+    Eingabe, Verarbeitung, Ausgabe
 
 - [**Rechnerarchitektur**](../_generated/tags/rechnerarchitektur/)
-
-  Aufbau moderner Computersysteme
+    Aufbau moderner Computersysteme
 
 - [**Virtualisierung**](../_generated/tags/virtualisierung/)
-
-  VirtualBox, VMs, Infrastruktur
+    VirtualBox, VMs, Infrastruktur
 
 </div>
 
@@ -95,20 +79,16 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 <div class="grid cards" markdown>
 
 - [**Wirtschaftskreislauf**](../_generated/tags/wirtschaftskreislauf/)
-
-  Geld- und Güterströme
+    Geld- und Güterströme
 
 - [**Marktformen**](../_generated/tags/marktformen/)
-
-  Monopol, Oligopol, Polypol
+    Monopol, Oligopol, Polypol
 
 - [**Kaufvertrag**](../_generated/tags/kaufvertrag/)
-
-  Vertragsarten und Rechtsgrundlagen
+    Vertragsarten und Rechtsgrundlagen
 
 - [**Geschäftsfähigkeit**](../_generated/tags/geschäftsfähigkeit/)
-
-  BGB, Altersstufen, Rechtsfolgen
+    BGB, Altersstufen, Rechtsfolgen
 
 </div>
 
@@ -117,11 +97,9 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 <div class="grid cards" markdown>
 
 - [**AP1**](../_generated/tags/ap1/)
-
-  Prüfungsrelevante Themen für Teil 1
+    Prüfungsrelevante Themen für Teil 1
 
 - [**AP2**](../_generated/tags/ap2/)
-
-  Prüfungsrelevante Themen für Teil 2
+    Prüfungsrelevante Themen für Teil 2
 
 </div>
