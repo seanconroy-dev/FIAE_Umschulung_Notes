@@ -1,4 +1,3 @@
-cat > notes/_generated/index.md <<'EOF'
 # Generated Indexes
 
 This section contains navigation pages generated from note metadata.
@@ -12,4 +11,3 @@ This section contains navigation pages generated from note metadata.
 ## Related navigation
 
 - [Tags](../tags.md)
-EOF
