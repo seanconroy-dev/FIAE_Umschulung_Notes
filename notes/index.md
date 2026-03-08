@@ -1,12 +1,10 @@
 # FIAE Umschulung Notes (2025–2027)
 
-!!! abstract "FIAE Umschulung Notes"
+Strukturierte Mitschriften aus meiner Umschulung zum  
+**Fachinformatiker für Anwendungsentwicklung (FIAE)**  
+am **BFW Mühlenbeck (2025–2027)**.
 
-    Strukturierte Mitschriften aus meiner Umschulung zum  
-    **Fachinformatiker für Anwendungsentwicklung (FIAE)**  
-    am **BFW Mühlenbeck (2025–2027)**.
-
-    Nutze die **Suche**, die **Fächerübersicht** oder die **Tag-Navigation**, um Inhalte schnell zu finden.
+Die Inhalte können über **Fächer**, **Tags** und die **Suche** erschlossen werden.
 
 !!! info "Navigation"
 
@@ -46,7 +44,7 @@
 
 - [ :material-code-tags: **Programmiertechnik** ](subjects/programmiertechnik.md)
 
-    Java Grundlagen, OOP, Methoden, Klassen, Objekte, Konstruktoren
+    Java, OOP, Methoden, Klassen, Objekte, Konstruktoren
 
 - [ :material-desktop-classic: **Systemtechnik** ](subjects/systemtechnik.md)
 
@@ -84,7 +82,7 @@ Diese lassen sich über die Suche oder die Tag-Seiten schnell finden.
 !!! tip "Navigation über Themen"
 
     Inhalte können auch über **Tags** gefunden werden.  
-    Diese gruppieren Notizen thematisch über mehrere Fächer hinweg.
+    Diese verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
@@ -113,6 +111,7 @@ Diese lassen sich über die Suche oder die Tag-Seiten schnell finden.
     Gesamte Themenübersicht über alle Notizen hinweg
 
 </div>
+
 ---
 
 ## Struktur des Repositories
