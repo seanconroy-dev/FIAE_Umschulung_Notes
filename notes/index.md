@@ -46,11 +46,7 @@ Die Notizen sind chronologisch organisiert, können aber über **Fächer**, **Ta
 
 - [ :material-code-tags: **Programmiertechnik** ](subjects/programmiertechnik.md)
 
-    Java Grundlagen, OOP, Methoden
-
-- [ :material-code-braces: **Programmierung** ](subjects/programmierung.md)
-
-    Klassen, Objekte, Konstruktoren
+    Java Grundlagen, OOP, Methoden, Klassen, Objekte, Konstruktoren
 
 - [ :material-desktop-classic: **Systemtechnik** ](subjects/systemtechnik.md)
 
