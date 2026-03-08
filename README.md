@@ -85,5 +85,5 @@ Dieses Repository dient als:
 
 ## Lizenz
 
-© Sean Conroy  
+© Sean Matthew Conroy  
 MIT License

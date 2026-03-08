@@ -139,5 +139,5 @@ Die Dateien enthalten Metadaten im Frontmatter, z. B.:
 
 ## Lizenz
 
-© 2025–2027 Sean Conroy  
+© 2025–2027 Sean Matthew Conroy  
 Lizenz: CC BY-NC-SA 4.0
