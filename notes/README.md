@@ -68,7 +68,7 @@ Sie stellen **keine offizielle Lehrunterlage** dar und ersetzen kein Fachbuch.
 
 ## Lizenz
 
-© 2025–2027 Sean Conroy  
+© 2025–2027 Sean Matthew Conroy  
 Lizenz: **CC BY-NC-SA 4.0**
 
 - Nutzung zu Lernzwecken erlaubt  
@@ -80,6 +80,6 @@ Lizenz: **CC BY-NC-SA 4.0**
 
 ## Autor
 
-Sean Conroy  
+Sean Matthew Conroy  
 FIAE Umschulung · BFW Mühlenbeck  
 GitHub: https://github.com/seanconroy-dev
