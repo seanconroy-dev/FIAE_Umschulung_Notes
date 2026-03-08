@@ -221,6 +221,4 @@
 
   margin-right: .35rem;
 }
-.md-typeset .grid.cards > ul > li > a:active {
-  transform: translateY(-1px);
-}
+
