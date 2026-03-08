@@ -77,7 +77,7 @@
   font-size: 0.82rem;
 }
 
-/* slightly softer cards / blocks */
+/* softer blocks */
 .md-typeset .admonition,
 .md-typeset details {
   border-radius: 12px;
@@ -90,16 +90,17 @@
   font-size: 0.95rem;
 }
 
-/* make Mermaid diagrams breathe */
+/* Mermaid spacing */
 .mermaid {
   margin: 1.5rem 0 2rem 0;
 }
 
-/* landing pages feel nicer */
+/* horizontal rule spacing */
 .md-typeset hr {
   margin: 2rem 0;
   opacity: 0.18;
 }
+
 /* =========================
    Homepage / grid cards
    ========================= */
@@ -119,6 +120,7 @@
   border: 1px solid rgba(127, 127, 127, 0.18);
   border-radius: 16px;
   background: rgba(127, 127, 127, 0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   transition:
     transform 180ms ease,
     border-color 180ms ease,
@@ -126,6 +128,7 @@
     background-color 180ms ease;
 }
 
+/* hover effect */
 .md-typeset .grid.cards > ul > li:hover {
   transform: translateY(-3px);
   border-color: rgba(79, 70, 229, 0.35);
@@ -140,7 +143,7 @@
 
 /* card title */
 .md-typeset .grid.cards > ul > li > p:first-child {
-  margin: 0 0 0.65rem 0;
+  margin: 0 0 0.75rem 0;
   font-size: 1.08rem;
   font-weight: 750;
   line-height: 1.35;
@@ -152,7 +155,15 @@
   text-decoration: none;
 }
 
-/* icon inside card titles */
+.md-typeset .grid.cards > ul > li > p:first-child a {
+  color: var(--md-default-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li > p:first-child a {
+  color: var(--md-default-fg-color);
+}
+
+/* icon alignment */
 .md-typeset .grid.cards .twemoji,
 .md-typeset .grid.cards svg {
   vertical-align: -0.18em;
@@ -166,15 +177,12 @@
   line-height: 1.6;
 }
 
-/* make the last line link feel like a CTA when present */
+/* CTA link style */
 .md-typeset .grid.cards > ul > li > p:last-child a {
   font-weight: 650;
 }
 
-/* =========================
-   Homepage section spacing
-   ========================= */
-
+/* section spacing */
 .md-typeset h2 {
   margin-top: 2.25rem;
 }
