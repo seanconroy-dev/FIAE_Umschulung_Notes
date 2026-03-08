@@ -6,19 +6,19 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
-- [**Java**](java/)
+- [**Java**](../_generated/tags/java/)
 
   Klassen, Methoden, Datentypen, OOP
 
-- [**OOP**](oop/)
+- [**OOP**](../_generated/tags/oop/)
 
   Vererbung, Polymorphie, Kapselung, UML
 
-- [**SQL**](sql/)
+- [**SQL**](../_generated/tags/sql/)
 
   Datenbankabfragen, DDL, DML, DQL
 
-- [**Git**](git/)
+- [**Git**](../_generated/tags/git/)
 
   Branching, Merge, Rebase, Stash
 
@@ -28,19 +28,19 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
-- [**Subnetting**](subnetting/)
+- [**Subnetting**](../_generated/tags/subnetting/)
 
   IPv4, Netzmasken, Adressierung
 
-- [**TCP**](tcp/)
+- [**TCP**](../_generated/tags/tcp/)
 
   Transport Layer, Ports, Verbindungen
 
-- [**UDP**](udp/)
+- [**UDP**](../_generated/tags/udp/)
 
   Verbindungslos, Ports, Protokolle
 
-- [**VLAN**](vlan/)
+- [**VLAN**](../_generated/tags/vlan/)
 
   Switching, Segmentierung, Trunking
 
@@ -50,19 +50,19 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
-- [**Linux**](linux/)
+- [**Linux**](../_generated/tags/linux/)
 
   Shell, Benutzerverwaltung, Dateirechte
 
-- [**Kernel**](kernel/)
+- [**Kernel**](../_generated/tags/kernel/)
 
   Systemarchitektur und Betriebssystemkern
 
-- [**SSH**](ssh/)
+- [**SSH**](../_generated/tags/ssh/)
 
   Authentifizierung und Fernzugriff
 
-- [**Dateirechte**](dateirechte/)
+- [**Dateirechte**](../_generated/tags/dateirechte/)
 
   chmod, chown, Benutzer und Gruppen
 
@@ -72,19 +72,19 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
-- [**PCIe**](pcie/)
+- [**PCIe**](../_generated/tags/pcie/)
 
   Lanes, Versionen, Schnittstellen
 
-- [**EVA**](eva/)
+- [**EVA**](../_generated/tags/eva/)
 
   Eingabe, Verarbeitung, Ausgabe
 
-- [**Rechnerarchitektur**](rechnerarchitektur/)
+- [**Rechnerarchitektur**](../_generated/tags/rechnerarchitektur/)
 
   Aufbau moderner Computersysteme
 
-- [**Virtualisierung**](virtualisierung/)
+- [**Virtualisierung**](../_generated/tags/virtualisierung/)
 
   VirtualBox, VMs, Infrastruktur
 
@@ -94,19 +94,19 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
-- [**Wirtschaftskreislauf**](wirtschaftskreislauf/)
+- [**Wirtschaftskreislauf**](../_generated/tags/wirtschaftskreislauf/)
 
   Geld- und Güterströme
 
-- [**Marktformen**](marktformen/)
+- [**Marktformen**](../_generated/tags/marktformen/)
 
   Monopol, Oligopol, Polypol
 
-- [**Kaufvertrag**](kaufvertrag/)
+- [**Kaufvertrag**](../_generated/tags/kaufvertrag/)
 
   Vertragsarten und Rechtsgrundlagen
 
-- [**Geschäftsfähigkeit**](geschäftsfähigkeit/)
+- [**Geschäftsfähigkeit**](../_generated/tags/geschäftsfähigkeit/)
 
   BGB, Altersstufen, Rechtsfolgen
 
@@ -116,11 +116,11 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
-- [**AP1**](ap1/)
+- [**AP1**](../_generated/tags/ap1/)
 
   Prüfungsrelevante Themen für Teil 1
 
-- [**AP2**](ap2/)
+- [**AP2**](../_generated/tags/ap2/)
 
   Prüfungsrelevante Themen für Teil 2
 
