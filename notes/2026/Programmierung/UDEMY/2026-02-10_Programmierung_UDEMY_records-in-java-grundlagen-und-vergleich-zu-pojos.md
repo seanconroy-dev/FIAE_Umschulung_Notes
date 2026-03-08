@@ -2,7 +2,7 @@
 title: "Records in Java – Grundlagen und Vergleich zu POJOs"
 date: 2026-02-10
 weekday: "Dienstag"
-subject: "Programmierung"
+subject: "Programmiertechnik"
 instructor: "UDEMY"
 program: "FIAE Umschulung 2025-2027"
 module: "Java Grundlagen"
@@ -15,7 +15,7 @@ tags:
   - POJO
   - DTO
   - OOP
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 

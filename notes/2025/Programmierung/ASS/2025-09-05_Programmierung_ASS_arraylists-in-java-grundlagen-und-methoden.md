@@ -2,7 +2,7 @@
 title: "ArrayLists in Java – Grundlagen und Methoden"
 date: 2025-09-05
 weekday: "Freitag"
-subject: "Programmierung"
+subject: "Programmiertechnik"
 instructor: "ASS"
 program: "FIAE Umschulung 2025-2027"
 module: "Java Grundlagen"
@@ -15,7 +15,7 @@ tags:
   - Datenstrukturen
   - Listen
   - OOP
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 

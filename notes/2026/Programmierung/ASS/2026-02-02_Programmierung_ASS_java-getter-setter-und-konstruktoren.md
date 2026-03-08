@@ -2,7 +2,7 @@
 title: "Java – Getter, Setter und Konstruktoren"
 date: 2026-02-02
 weekday: "Montag"
-subject: "Programmierung"
+subject: "Programmiertechnik"
 instructor: "ASS"
 program: "FIAE Umschulung 2025-2027"
 module: "Java Grundlagen"
@@ -16,7 +16,7 @@ tags:
   - Setter
   - Konstruktor
   - Objektorientierung
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 

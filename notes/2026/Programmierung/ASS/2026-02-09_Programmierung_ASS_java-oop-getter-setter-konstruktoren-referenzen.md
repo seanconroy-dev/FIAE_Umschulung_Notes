@@ -2,7 +2,7 @@
 title: "Java OOP – Getter, Setter, Konstruktoren & Referenzen"
 date: 2026-02-09
 weekday: "Montag"
-subject: "Programmierung"
+subject: "Programmiertechnik"
 instructor: "ASS"
 program: "FIAE Umschulung 2025-2027"
 module: "Java Grundlagen"
@@ -18,7 +18,7 @@ tags:
   - Referenz
   - Klasse
   - Objekt
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 

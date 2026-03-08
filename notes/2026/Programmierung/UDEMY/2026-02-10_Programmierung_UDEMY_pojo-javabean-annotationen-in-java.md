@@ -2,7 +2,7 @@
 title: "POJO, JavaBean & Annotationen in Java"
 date: 2026-02-10
 weekday: "Dienstag"
-subject: "Programmierung"
+subject: "Programmiertechnik"
 instructor: "UDEMY"
 program: "FIAE Umschulung 2025-2027"
 module: "Java Grundlagen"
@@ -16,7 +16,7 @@ tags:
   - Serializable
   - Overriding
   - OOP
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 

@@ -2,7 +2,7 @@
 title: "Java – Static vs. Instance Variablen und Methoden"
 date: 2026-02-09
 weekday: "Montag"
-subject: "Programmierung"
+subject: "Programmiertechnik"
 instructor: "ASS"
 program: "FIAE Umschulung 2025-2027"
 module: "Java Grundlagen"
@@ -16,7 +16,7 @@ tags:
   - Klassenvariable
   - Methoden
   - Udemy
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 

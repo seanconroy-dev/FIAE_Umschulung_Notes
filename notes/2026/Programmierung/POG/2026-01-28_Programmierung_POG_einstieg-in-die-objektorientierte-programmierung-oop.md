@@ -2,7 +2,7 @@
 title: "Einstieg in die objektorientierte Programmierung (OOP)"
 date: 2026-01-28
 weekday: "Mittwoch"
-subject: "Programmierung"
+subject: "Programmiertechnik"
 instructor: "POG"
 program: "FIAE Umschulung 2025-2027"
 module: "Objektorientierte Programmierung"
@@ -16,7 +16,7 @@ tags:
   - Polymorphismus
   - Abstraktion
   - Kapselung
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 

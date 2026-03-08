@@ -2,7 +2,7 @@
 title: "Encapsulation & UML – OOP Grundlagen"
 date: 2026-02-11
 weekday: "Mittwoch"
-subject: "Programmierung"
+subject: "Programmiertechnik"
 instructor: "POG"
 program: "FIAE Umschulung 2025-2027"
 module: "Objektorientierte Programmierung"
@@ -16,7 +16,7 @@ tags:
   - Sequenzdiagramm
   - Aktivitätsdiagramm
   - Zustandsdiagramm
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 

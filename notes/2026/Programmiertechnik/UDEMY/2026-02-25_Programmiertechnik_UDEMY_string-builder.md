@@ -15,7 +15,7 @@ tags:
   - immutable
   - append
   - capacity
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 # Mittwoch, 2026-02-25_Programmiertechnik_UDEMY

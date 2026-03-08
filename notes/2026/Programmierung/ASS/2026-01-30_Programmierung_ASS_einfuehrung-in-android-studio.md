@@ -2,7 +2,7 @@
 title: "Einführung in Android Studio"
 date: 2026-01-30
 weekday: "Freitag"
-subject: "Programmierung"
+subject: "Programmiertechnik"
 instructor: "ASS"
 program: "FIAE Umschulung 2025-2027"
 module: "Android Grundlagen"
@@ -16,7 +16,7 @@ tags:
   - strings.xml
   - colors.xml
   - Gradle
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 

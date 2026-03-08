@@ -2,7 +2,7 @@
 title: "Objektorientierte Programmierung & Hibernate – Semester 2"
 date: 2026-01-26
 weekday: "Montag"
-subject: "Programmierung"
+subject: "Programmiertechnik"
 instructor: "ASS"
 program: "FIAE Umschulung 2025-2027"
 module: "OOP Grundlagen"
@@ -17,7 +17,7 @@ tags:
   - Hibernate
   - ORM
   - Semester2
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
