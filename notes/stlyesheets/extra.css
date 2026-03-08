@@ -100,3 +100,85 @@
   margin: 2rem 0;
   opacity: 0.18;
 }
+/* =========================
+   Homepage / grid cards
+   ========================= */
+
+.md-typeset .grid.cards > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 2rem 0;
+  padding: 0;
+}
+
+.md-typeset .grid.cards > ul > li {
+  list-style: none;
+  margin: 0;
+  padding: 1.1rem 1.15rem;
+  border: 1px solid rgba(127, 127, 127, 0.18);
+  border-radius: 16px;
+  background: rgba(127, 127, 127, 0.04);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-3px);
+  border-color: rgba(79, 70, 229, 0.35);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  background: rgba(79, 70, 229, 0.045);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  background: rgba(122, 162, 255, 0.05);
+}
+
+/* card title */
+.md-typeset .grid.cards > ul > li > p:first-child {
+  margin: 0 0 0.65rem 0;
+  font-size: 1.08rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+/* card links */
+.md-typeset .grid.cards > ul > li > p:first-child a,
+.md-typeset .grid.cards > ul > li > p:last-child a {
+  text-decoration: none;
+}
+
+/* icon inside card titles */
+.md-typeset .grid.cards .twemoji,
+.md-typeset .grid.cards svg {
+  vertical-align: -0.18em;
+  margin-right: 0.35rem;
+}
+
+/* card body text */
+.md-typeset .grid.cards > ul > li > p:not(:first-child) {
+  margin: 0.35rem 0 0 0;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.6;
+}
+
+/* make the last line link feel like a CTA when present */
+.md-typeset .grid.cards > ul > li > p:last-child a {
+  font-weight: 650;
+}
+
+/* =========================
+   Homepage section spacing
+   ========================= */
+
+.md-typeset h2 {
+  margin-top: 2.25rem;
+}
+
+.md-typeset .grid.cards {
+  margin-top: 0.75rem;
+}
