@@ -94,19 +94,19 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
-- [**Wirtschaftskreislauf**](tags/wirtschaftskreislauf/)
+- [**Wirtschaftskreislauf**](/tags/wirtschaftskreislauf/)
   
   Geld- und Güterströme
 
-- [**Marktformen**](tags/marktformen/)
+- [**Marktformen**](/tags/marktformen/)
   
   Monopol, Oligopol, Polypol
 
-- [**Kaufvertrag**](tags/kaufvertrag/)
+- [**Kaufvertrag**](/tags/kaufvertrag/)
   
   Vertragsarten und Rechtsgrundlagen
 
-- [**Geschäftsfähigkeit**](tags/geschäftsfähigkeit/)
+- [**Geschäftsfähigkeit**](/tags/geschäftsfähigkeit/)
   
   BGB, Altersstufen, Rechtsfolgen
 
@@ -116,11 +116,11 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
-- [**AP1**](tags/ap1/)
+- [**AP1**](/tags/ap1/)
   
   Prüfungsrelevante Themen für Teil 1
 
-- [**AP2**](tags/ap2/)
+- [**AP2**](/tags/ap2/)
   
   Prüfungsrelevante Themen für Teil 2
 
