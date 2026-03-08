@@ -6,19 +6,19 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
-- [**Java**](tags/java/)
+- [**Java**](java/)
   
   Klassen, Methoden, Datentypen, OOP
 
-- [**OOP**](tags/oop/)
+- [**OOP**](oop/)
   
   Vererbung, Polymorphie, Kapselung, UML
 
-- [**SQL**](tags/sql/)
+- [**SQL**](sql/)
   
   Datenbankabfragen, DDL, DML, DQL
 
-- [**Git**](tags/git/)
+- [**Git**](git/)
   
   Branching, Merge, Rebase, Stash
 
@@ -28,19 +28,19 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
-- [**Subnetting**](tags/subnetting/)
+- [**Subnetting**](subnetting/)
   
   IPv4, Netzmasken, Adressierung
 
-- [**TCP**](tags/tcp/)
+- [**TCP**](tcp/)
   
   Transport Layer, Ports, Verbindungen
 
-- [**UDP**](tags/udp/)
+- [**UDP**](udp/)
   
   Verbindungslos, Ports, Protokolle
 
-- [**VLAN**](tags/vlan/)
+- [**VLAN**](vlan/)
   
   Switching, Segmentierung, Trunking
 
@@ -50,19 +50,19 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
-- [**Linux**](tags/linux/)
+- [**Linux**](linux/)
   
   Shell, Benutzerverwaltung, Dateirechte
 
-- [**Kernel**](tags/kernel/)
+- [**Kernel**](kernel/)
   
   Systemarchitektur und Betriebssystemkern
 
-- [**SSH**](tags/ssh/)
+- [**SSH**](ssh/)
   
   Authentifizierung und Fernzugriff
 
-- [**Dateirechte**](tags/dateirechte/)
+- [**Dateirechte**](dateirechte/)
   
   chmod, chown, Benutzer und Gruppen
 
@@ -72,19 +72,19 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
-- [**PCIe**](tags/pcie/)
+- [**PCIe**](pcie/)
   
   Lanes, Versionen, Schnittstellen
 
-- [**EVA**](tags/eva/)
+- [**EVA**](eva/)
   
   Eingabe, Verarbeitung, Ausgabe
 
-- [**Rechnerarchitektur**](tags/rechnerarchitektur/)
+- [**Rechnerarchitektur**](rechnerarchitektur/)
   
   Aufbau moderner Computersysteme
 
-- [**Virtualisierung**](tags/virtualisierung/)
+- [**Virtualisierung**](virtualisierung/)
   
   VirtualBox, VMs, Infrastruktur
 
@@ -94,19 +94,19 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
-- [**Wirtschaftskreislauf**](/tags/wirtschaftskreislauf/)
+- [**Wirtschaftskreislauf**](wirtschaftskreislauf/)
   
   Geld- und Güterströme
 
-- [**Marktformen**](/tags/marktformen/)
+- [**Marktformen**](marktformen/)
   
   Monopol, Oligopol, Polypol
 
-- [**Kaufvertrag**](/tags/kaufvertrag/)
+- [**Kaufvertrag**](kaufvertrag/)
   
   Vertragsarten und Rechtsgrundlagen
 
-- [**Geschäftsfähigkeit**](/tags/geschäftsfähigkeit/)
+- [**Geschäftsfähigkeit**](geschäftsfähigkeit/)
   
   BGB, Altersstufen, Rechtsfolgen
 
@@ -116,11 +116,11 @@ Tags verbinden Themen über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
-- [**AP1**](/tags/ap1/)
+- [**AP1**](ap1/)
   
   Prüfungsrelevante Themen für Teil 1
 
-- [**AP2**](/tags/ap2/)
+- [**AP2**](ap2/)
   
   Prüfungsrelevante Themen für Teil 2
 
