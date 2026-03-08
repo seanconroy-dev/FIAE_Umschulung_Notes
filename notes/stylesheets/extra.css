@@ -1,192 +1,34 @@
-:root {
-  --md-default-fg-color: #1f2328;
-  --md-default-fg-color--light: #59636e;
-  --md-default-fg-color--lighter: #7a8590;
-  --md-default-bg-color: #ffffff;
 
-  --md-primary-fg-color: #ffffff;
-  --md-primary-bg-color: #1f2328;
-
-  --md-accent-fg-color: #4f46e5;
-
-  --md-typeset-a-color: #2563eb;
-  --md-code-bg-color: #f6f8fa;
-  --md-code-fg-color: #1f2328;
+/* whole card clickable */
+.md-typeset .grid.cards > ul > li > a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 
-[data-md-color-scheme="slate"] {
-  --md-default-fg-color: #e6edf3;
-  --md-default-fg-color--light: #b8c0c8;
-  --md-default-bg-color: #0d1117;
-
-  --md-code-bg-color: #161b22;
-  --md-code-fg-color: #e6edf3;
-
-  --md-typeset-a-color: #7aa2ff;
+.md-typeset .grid.cards > ul > li > a:hover,
+.md-typeset .grid.cards > ul > li > a:focus {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* overall content width */
-.md-grid {
-  max-width: 1440px;
-}
-
-/* make article area feel less cramped */
-.md-content__inner {
-  margin-top: 1rem;
-}
-
-/* calmer headings */
-.md-typeset h1 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
-}
-
-.md-typeset h2,
-.md-typeset h3 {
-  font-weight: 650;
-  letter-spacing: -0.01em;
-}
-
-/* cleaner paragraph rhythm */
-.md-typeset p,
-.md-typeset li {
-  line-height: 1.75;
-}
-
-/* nicer code blocks */
-.md-typeset pre > code {
-  border-radius: 12px;
-  font-size: 0.92rem;
-}
-
-.md-typeset code {
-  border-radius: 6px;
-  padding: 0.15em 0.4em;
-}
-
-/* table of contents less shouty */
-.md-nav--secondary .md-nav__title {
-  font-weight: 700;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.md-nav--secondary .md-nav__link {
-  font-size: 0.82rem;
-}
-
-/* softer blocks */
-.md-typeset .admonition,
-.md-typeset details {
-  border-radius: 12px;
-}
-
-/* tables cleaner */
-.md-typeset table:not([class]) {
-  border-radius: 10px;
-  overflow: hidden;
-  font-size: 0.95rem;
-}
-
-/* Mermaid spacing */
-.mermaid {
-  margin: 1.5rem 0 2rem 0;
-}
-
-/* horizontal rule spacing */
-.md-typeset hr {
-  margin: 2rem 0;
-  opacity: 0.18;
-}
-
-/* =========================
-   Homepage / grid cards
-   ========================= */
-
-.md-typeset .grid.cards > ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-  margin: 1.25rem 0 2rem 0;
-  padding: 0;
-}
-
-.md-typeset .grid.cards > ul > li {
-  list-style: none;
-  margin: 0;
-  padding: 1.1rem 1.15rem;
-  border: 1px solid rgba(127, 127, 127, 0.18);
-  border-radius: 16px;
-  background: rgba(127, 127, 127, 0.04);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease,
-    background-color 180ms ease;
-}
-
-/* hover effect */
-.md-typeset .grid.cards > ul > li:hover {
-  transform: translateY(-3px);
-  border-color: rgba(79, 70, 229, 0.35);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
-  background: rgba(79, 70, 229, 0.045);
-}
-
-[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
-  background: rgba(122, 162, 255, 0.05);
-}
-
-/* card title */
-.md-typeset .grid.cards > ul > li > p:first-child {
+/* spacing inside fully clickable cards */
+.md-typeset .grid.cards > ul > li > a > p:first-child {
   margin: 0 0 0.75rem 0;
   font-size: 1.08rem;
   font-weight: 750;
   line-height: 1.35;
 }
 
-/* card links */
-.md-typeset .grid.cards > ul > li > p:first-child a,
-.md-typeset .grid.cards > ul > li > p:last-child a {
-  text-decoration: none;
-}
-
-.md-typeset .grid.cards > ul > li > p:first-child a {
-  color: var(--md-default-fg-color);
-}
-
-[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li > p:first-child a {
-  color: var(--md-default-fg-color);
-}
-
-/* icon alignment */
-.md-typeset .grid.cards .twemoji,
-.md-typeset .grid.cards svg {
-  vertical-align: -0.18em;
-  margin-right: 0.35rem;
-}
-
-/* card body text */
-.md-typeset .grid.cards > ul > li > p:not(:first-child) {
+.md-typeset .grid.cards > ul > li > a > p:not(:first-child) {
   margin: 0.35rem 0 0 0;
   color: var(--md-default-fg-color--light);
   line-height: 1.6;
 }
 
-/* CTA link style */
-.md-typeset .grid.cards > ul > li > p:last-child a {
-  font-weight: 650;
-}
-
-/* section spacing */
-.md-typeset h2 {
-  margin-top: 2.25rem;
-}
-
-.md-typeset .grid.cards {
-  margin-top: 0.75rem;
+/* icon alignment inside full-card links */
+.md-typeset .grid.cards > ul > li > a .twemoji,
+.md-typeset .grid.cards > ul > li > a svg {
+  vertical-align: -0.18em;
+  margin-right: 0.35rem;
 }
