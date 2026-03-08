@@ -1,22 +1,22 @@
 # FIAE Umschulung Notes (2025–2027)
 
-Willkommen.
+!!! abstract "FIAE Umschulung Notes"
 
-Diese Seite enthält strukturierte Mitschriften aus meiner Umschulung zum  
-**Fachinformatiker für Anwendungsentwicklung (FIAE)** am  
-**BFW Mühlenbeck (2025–2027)**.
+    Strukturierte Mitschriften aus meiner Umschulung zum  
+    **Fachinformatiker für Anwendungsentwicklung (FIAE)**  
+    am **BFW Mühlenbeck (2025–2027)**.
 
-Die Notizen sind chronologisch organisiert, können aber über **Fächer**, **Tags** oder die **Suche** schnell gefunden werden.
+    Nutze die **Suche**, die **Fächerübersicht** oder die **Tag-Navigation**, um Inhalte schnell zu finden.
 
 !!! info "Navigation"
 
-    - Nutze die Suche (z. B. `OOP`, `Subnetting`, `AP1`, `SQL`)
+    - Suche nach Themen wie `OOP`, `Subnetting`, `AP1`, `SQL`
     - Navigiere über die Fächerübersicht
     - Entdecke Inhalte zusätzlich über Tags
 
 ---
 
-## Fächerübersicht
+## Fächer
 
 <div class="grid cards" markdown>
 
@@ -81,7 +81,10 @@ Diese lassen sich über die Suche oder die Tag-Seiten schnell finden.
 
 ## Themen-Navigation
 
-Neben der Fächerstruktur können Inhalte auch über Tags gefunden werden.
+!!! tip "Navigation über Themen"
+
+    Inhalte können auch über **Tags** gefunden werden.  
+    Diese gruppieren Notizen thematisch über mehrere Fächer hinweg.
 
 <div class="grid cards" markdown>
 
@@ -110,7 +113,6 @@ Neben der Fächerstruktur können Inhalte auch über Tags gefunden werden.
     Gesamte Themenübersicht über alle Notizen hinweg
 
 </div>
-
 ---
 
 ## Struktur des Repositories
