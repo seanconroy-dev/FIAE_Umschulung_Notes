@@ -116,7 +116,10 @@
 
 .md-typeset .grid.cards > ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  /* Wider cards -> fewer 2-line titles on smaller laptops */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
   gap: 1rem;
   margin: 1.25rem 0 2rem 0;
   padding: 0;
@@ -164,21 +167,19 @@
   font-weight: 750;
   line-height: 1.35;
 
-  /* NEW: keep icon + title aligned and prevent awkward wrapping */
+  /* Improved: baseline alignment + predictable wrapping */
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 0.45rem;
-  flex-wrap: wrap;
 }
 
 .md-typeset .grid.cards > ul > li > p:first-child a {
   color: var(--md-default-fg-color);
   text-decoration: none;
 
-  /* NEW: make link behave well inside flex title row */
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
+  /* Take remaining width so long titles wrap cleanly */
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .md-typeset .grid.cards > ul > li > p:first-child a:hover,
@@ -214,18 +215,26 @@
   color: var(--md-default-fg-color);
 }
 
-/* icon alignment */
+/* icon alignment (general) */
 .md-typeset .grid.cards .twemoji,
 .md-typeset .grid.cards svg {
   vertical-align: -0.18em;
   margin-right: 0.35rem;
 }
 
-/* NEW: prevent icons inside the title row from shrinking/wrapping oddly */
+/* icon sizing/alignment specifically in title row */
 .md-typeset .grid.cards > ul > li > p:first-child .twemoji,
 .md-typeset .grid.cards > ul > li > p:first-child svg {
   flex: 0 0 auto;
   margin-right: 0; /* gap handles spacing */
+  height: 1.1em;
+  width: 1.1em;
+}
+
+/* Optional: nicer word breaking for long titles */
+.md-typeset .grid.cards > ul > li > p:first-child a strong {
+  hyphens: auto;
+  overflow-wrap: anywhere;
 }
 
 /* mobile comfort */
