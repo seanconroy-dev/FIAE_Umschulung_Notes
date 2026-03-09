@@ -87,21 +87,27 @@ Diese lassen sich über die Suche oder die Tag-Seiten schnell finden.
 <div class="grid cards" markdown>
 
 - [ :material-linux: **Linux** ](_generated/tags/linux/)
+
     Inhalte zu Linux, Shell, Rechten und Administration
 
 - [ :material-language-java: **Java** ](_generated/tags/java/)
+
     Sprachgrundlagen, OOP, Records, Methoden und Klassen
 
 - [ :material-code-braces: **OOP** ](_generated/tags/oop/)
+
     Kapselung, Vererbung, Polymorphie und UML
 
 - [ :material-database-search: **SQL** ](_generated/tags/sql/)
+
     DDL, DML, DQL, Abfragen und relationale Modelle
 
 - [ :material-ip-network: **Subnetting** ](_generated/tags/subnetting/)
+
     IPv4, Netzmasken, Adressierung und AP1-relevante Netzwerkthemen
 
 - [ :material-tag-multiple: **Alle Tags** ](tags.md)
+
     Gesamte Themenübersicht über alle Notizen hinweg
 
 </div>
