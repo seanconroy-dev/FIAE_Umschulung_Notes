@@ -80,7 +80,7 @@ for md in NOTES_DIR.rglob("*.md"):
     tags_list = meta.get("tags", [])
 
     if not title:
-    continue
+        continue
     
     subject = subject or "Unknown"
 
