@@ -2,7 +2,7 @@
 
 !!! info "Schnellzugriff"
 
-    - [Alle Notizen](../_generated/subjects/wiso.md)
+    - [Alle Notizen](../_generated/subjects/wirtschafts-und-sozialkunde.md)
     - [Dozent WIL](../_generated/instructors/wil.md)
     - [Dozent HPT](../_generated/instructors/hpt.md)
 
@@ -37,7 +37,7 @@ Schwerpunkte sind **Wirtschaftssysteme**, **Marktmechanismen**, **Arbeitsrecht**
 
 ## Schnellzugriff
 
-- [Alle Notizen zu WiSo](../_generated/subjects/wiso.md)
+- [Alle Notizen zu WiSo](../_generated/subjects/wirtschafts-und-sozialkunde.md)
 
 ### Nach Dozent
 
