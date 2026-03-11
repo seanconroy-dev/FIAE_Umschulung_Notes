@@ -79,8 +79,9 @@ for md in NOTES_DIR.rglob("*.md"):
     module = meta.get("module")
     tags_list = meta.get("tags", [])
 
-    if not title or not subject:
-        continue
+    if not title:
+    continue
+    subject = subject or "Unknown"
 
     rel = md.relative_to(NOTES_DIR).as_posix()
 
