@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Versandkosten & Gefahrübergang"
 date: 2026-02-18
@@ -191,5 +190,4 @@ sondern Kosten- und Risikoübergang.
 - Einrede des nicht erfüllten Vertrags = Zahlung nur gegen Lieferung.
 - Incoterms regeln Kosten- und Risikoaufteilung im internationalen Handel.
 
----
-```
+
