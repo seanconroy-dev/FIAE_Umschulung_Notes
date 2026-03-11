@@ -81,6 +81,7 @@ for md in NOTES_DIR.rglob("*.md"):
 
     if not title:
     continue
+    
     subject = subject or "Unknown"
 
     rel = md.relative_to(NOTES_DIR).as_posix()
