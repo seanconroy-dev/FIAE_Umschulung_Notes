@@ -2,7 +2,7 @@
 title: "Arten des Kaufvertrags & Erfüllungsort"
 date: 2026-02-24
 weekday: "Dienstag"
-subject: "WiSo"
+subject: "Wirtschafts- und Sozialkunde"
 instructor: "WIL"
 program: "FIAE Umschulung 2025-2027"
 module: "Wirtschaft & Recht"
@@ -14,7 +14,7 @@ tags:
   - Erfüllungsort
   - Rechte und Pflichten
   - IHK
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 # Dienstag, 2026-02-24_WiSo_WIL
