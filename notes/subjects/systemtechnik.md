@@ -3,7 +3,7 @@
 !!! info "Schnellzugriff"
 
     - [Alle Notizen](../_generated/subjects/systemtechnik.md)
-    - [Dozent WED](../_generated/instructors/wed.md)
+    - [Dozent WED](../_generated/subjects/systemtechnik/instructors/wed.md)
 
 Technische Grundlagen moderner Computersysteme und IT-Infrastruktur.
 
@@ -42,7 +42,7 @@ Der Schwerpunkt liegt auf **Rechnerarchitektur**, **Speichersystemen**, **Bussys
 
 ### Nach Dozent
 
-- [WED](../_generated/instructors/wed.md)
+- [WED](../_generated/subjects/systemtechnik/instructors/wed.md)
 
 ---
 

@@ -3,7 +3,7 @@
 !!! info "Schnellzugriff"
 
     - [Alle Notizen](../_generated/subjects/git.md)
-    - [Quelle UDEMY](../_generated/instructors/udemy.md)
+    - [Quelle UDEMY](../_generated/subjects/git/instructors/udemy.md)
 
 Grundlagen der Versionskontrolle mit Git.
 
@@ -45,7 +45,7 @@ Schwerpunkte in diesen Notizen sind die Grundlagen von **Commits**, **Branching*
 
 ### Nach Quelle
 
-- [UDEMY](../_generated/instructors/udemy.md)
+- [UDEMY](../_generated/subjects/git/instructors/udemy.md)
 
 ---
 

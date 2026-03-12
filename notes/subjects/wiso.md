@@ -3,8 +3,8 @@
 !!! info "Schnellzugriff"
 
     - [Alle Notizen](../_generated/subjects/wirtschafts-und-sozialkunde.md)
-    - [Dozent WIL](../_generated/instructors/wil.md)
-    - [Dozent HPT](../_generated/instructors/hpt.md)
+    - [Dozent WIL](../_generated/subjects/wirtschafts-und-sozialkunde/instructors/wil.md)
+    - [Dozent HPT](../_generated/subjects/wirtschafts-und-sozialkunde/instructors/hpt.md)
 
 Wirtschaftliche, gesellschaftliche und rechtliche Grundlagen im Kontext der Arbeitswelt.
 
@@ -41,8 +41,8 @@ Schwerpunkte sind **Wirtschaftssysteme**, **Marktmechanismen**, **Arbeitsrecht**
 
 ### Nach Dozent
 
-- [WIL](../_generated/instructors/wil.md)
-- [HPT](../_generated/instructors/hpt.md)
+- [WIL](../_generated/subjects/wirtschafts-und-sozialkunde/instructors/wil.md)
+- [HPT](../_generated/subjects/wirtschafts-und-sozialkunde/instructors/hpt.md)
 
 ---
 

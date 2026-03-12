@@ -3,7 +3,7 @@
 !!! info "Schnellzugriff"
 
     - [Alle Notizen](../_generated/subjects/telekommunikation.md)
-    - [Dozent KLA](../_generated/instructors/kla.md)
+    - [Dozent KLA](../_generated/subjects/telekommunikation/instructors/kla.md)
 
 Technische Grundlagen moderner Kommunikationssysteme und Anschlussarten.
 
@@ -34,7 +34,7 @@ Der Fokus liegt auf **Anschlussarten**, **Signalübertragung**, sowie der prakti
 
 ### Nach Dozent
 
-- [KLA](../_generated/instructors/kla.md)
+- [KLA](../_generated/subjects/telekommunikation/instructors/kla.md)
 
 ---
 

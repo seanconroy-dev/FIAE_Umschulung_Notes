@@ -3,8 +3,8 @@
 !!! info "Schnellzugriff"
 
     - [Alle Notizen](../_generated/subjects/digitaltechnik.md)
-    - [Dozent KRU](../_generated/instructors/kru.md)
-    - [Dozent PAS](../_generated/instructors/pas.md)
+    - [Dozent KRU](../_generated/subjects/digitaltechnik/instructors/kru.md)
+    - [Dozent PAS](../_generated/subjects/digitaltechnik/instructors/pas.md)
 
 Grundlagen digitaler Schaltungen, Logikgatter und der Verarbeitung digitaler Signale.
 
@@ -39,8 +39,8 @@ Diese Grundlagen sind zentral für das Verständnis von Prozessoren, Rechnerarch
 
 ### Nach Dozent
 
-- [KRU](../_generated/instructors/kru.md)
-- [PAS](../_generated/instructors/pas.md)
+- [KRU](../_generated/subjects/digitaltechnik/instructors/kru.md)
+- [PAS](../_generated/subjects/digitaltechnik/instructors/pas.md)
 
 ---
 
