@@ -2,7 +2,7 @@
 title: "Linux – Benutzer- und Gruppenmanagement"
 date: 2025-09-10
 weekday: "Mittwoch"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "WED"
 program: "FIAE Umschulung 2025-2027"
 module: "Linux Grundlagen"
@@ -15,11 +15,11 @@ tags:
   - sudo
   - useradd
   - usermod
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Mittwoch, 2025-09-10_BS_WED
+# Mittwoch, 2025-09-10_Betriebssysteme_WED
 
 ## Thema: Benutzer- und Gruppenmanagement in Linux
 

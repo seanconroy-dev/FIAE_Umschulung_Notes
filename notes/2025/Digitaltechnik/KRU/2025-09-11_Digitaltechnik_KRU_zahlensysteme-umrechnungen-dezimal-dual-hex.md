@@ -2,7 +2,7 @@
 title: "Zahlensysteme – Umrechnungen (Dezimal, Dual, Hex)"
 date: 2025-09-11
 weekday: "Donnerstag"
-subject: "DT"
+subject: "Digitaltechnik"
 instructor: "KRU"
 program: "FIAE Umschulung 2025-2027"
 module: "Grundlagen Informatik"
@@ -16,11 +16,11 @@ tags:
   - Umrechnung
   - Bits
   - Bytes
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Donnerstag, 2025-09-11_DT_KRU
+# Donnerstag, 2025-09-11_Digitaltechnik_KRU
 
 ## Zahlensysteme – Umrechnungen (Dezimal, Dual, Hex)
 

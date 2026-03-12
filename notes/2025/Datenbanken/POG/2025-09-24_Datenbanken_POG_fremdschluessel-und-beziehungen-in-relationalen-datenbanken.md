@@ -14,7 +14,7 @@ tags:
   - ER-Modell
   - Kardinalitäten
   - Normalisierung
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 

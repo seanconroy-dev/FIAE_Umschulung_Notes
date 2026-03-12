@@ -2,7 +2,7 @@
 title: "RECAP & Geschichte der Betriebssysteme ab 2000 – UNIX"
 date: 2025-08-21
 weekday: "Donnerstag"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "SLE"
 program: "FIAE Umschulung 2025-2027"
 module: "Betriebssysteme"
@@ -16,11 +16,11 @@ tags:
   - Android
   - Server
   - Geschichte
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Donnerstag, 2025-08-21_BS_SLE
+# Donnerstag, 2025-08-21_Betriebssysteme_SLE
 
 ## RECAP – Aufgaben eines Betriebssystems
 

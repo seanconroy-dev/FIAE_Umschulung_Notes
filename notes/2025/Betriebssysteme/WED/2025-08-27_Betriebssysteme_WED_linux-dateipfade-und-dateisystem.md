@@ -2,7 +2,7 @@
 title: "Linux – Dateipfade und Dateisystem"
 date: 2025-08-27
 weekday: "Mittwoch"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "WED"
 program: "FIAE Umschulung 2025-2027"
 module: "Linux Grundlagen"
@@ -14,11 +14,11 @@ tags:
   - Pfade
   - FHS
   - CLI
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Mittwoch, 2025-08-27_BS_WED
+# Mittwoch, 2025-08-27_Betriebssysteme_WED
 
 ### Linux – Dateipfade und Dateisystem
 

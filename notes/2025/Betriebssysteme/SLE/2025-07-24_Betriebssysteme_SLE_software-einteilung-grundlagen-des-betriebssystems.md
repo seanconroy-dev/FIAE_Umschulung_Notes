@@ -2,7 +2,7 @@
 title: "Software-Einteilung & Grundlagen des Betriebssystems"
 date: 2025-07-24
 weekday: "Donnerstag"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "SLE"
 program: "FIAE Umschulung 2025-2027"
 module: "Betriebssysteme"
@@ -15,11 +15,11 @@ tags:
   - Anwendungssoftware
   - Speicherverwaltung
   - Prozessverwaltung
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Donnerstag, 2025-07-24_BS_SLE
+# Donnerstag, 2025-07-24_Betriebssysteme_SLE
 
 ## Software – Einordnung
 

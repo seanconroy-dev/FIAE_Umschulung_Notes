@@ -2,7 +2,7 @@
 title: "Linux Grundlagen – Terminal, Shell und Kommandos"
 date: 2025-07-16
 weekday: "Mittwoch"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "WED"
 program: "FIAE Umschulung 2025-2027"
 module: "Linux Grundlagen"
@@ -14,11 +14,11 @@ tags:
   - Shell
   - CLI
   - Grundbefehle
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Mittwoch, 2025-07-16_BS_WED
+# Mittwoch, 2025-07-16_Betriebssysteme_WED
 
 ## Linux Grundlagen – Terminal, Shell und Kommandos
 

@@ -2,8 +2,8 @@
 title: "PowerShell ISE & Automatisierung in Windows"
 date: 2025-07-21
 weekday: "Montag"
-subject: "BS"
-instructor: "Schlegel"
+subject: "Betriebssysteme"
+instructor: "SLE"
 program: "FIAE Umschulung 2025-2027"
 module: "Scripting & Automatisierung"
 topic: "PowerShell ISE"
@@ -15,11 +15,11 @@ tags:
   - Cmdlets
   - ExecutionPolicy
   - Scripting
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Montag, 2025-07-21_BS_Schlegel
+# Montag, 2025-07-21_Betriebssysteme_Schlegel
 
 ## PowerShell ISE & Automatisierung in Windows
 

@@ -17,7 +17,7 @@ tags:
   - Rechtssubjekt
   - Rechtsobjekt
   - AP1
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 

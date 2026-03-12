@@ -2,7 +2,7 @@
 title: "Windows – Bootprozess, BIOS/UEFI und MBR/GPT"
 date: 2025-10-08
 weekday: "Mittwoch"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "SLE"
 program: "FIAE Umschulung 2025-2027"
 module: "Betriebssysteme"
@@ -16,11 +16,11 @@ tags:
   - MBR
   - GPT
   - Firmware
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Mittwoch, 2025-10-08_BS_SLE
+# Mittwoch, 2025-10-08_Betriebssysteme_SLE
 
 #### Kontrollfragen & Antworten  
 **Thema:** Windows-Bootprozess, BIOS/UEFI und MBR/GPT  

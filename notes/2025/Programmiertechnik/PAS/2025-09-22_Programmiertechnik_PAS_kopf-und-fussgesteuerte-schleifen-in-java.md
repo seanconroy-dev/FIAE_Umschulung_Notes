@@ -16,7 +16,7 @@ tags:
   - do-while
   - Kontrollstrukturen
   - Programmierlogik
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 

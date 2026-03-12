@@ -2,7 +2,7 @@
 title: "Linux – Private-/Public-Key-Authentifizierung (SSH)"
 date: 2026-01-14
 weekday: "Mittwoch"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "WED"
 program: "FIAE Umschulung 2025-2027"
 module: "Linux Grundlagen"
@@ -15,11 +15,11 @@ tags:
   - Private Key
   - sshd_config
   - Sicherheit
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Mittwoch, 2026-01-14_BS_WED
+# Mittwoch, 2026-01-14_Betriebssysteme_WED
 
 # Private-/Public-Key-Authentifizierung (SSH)
 

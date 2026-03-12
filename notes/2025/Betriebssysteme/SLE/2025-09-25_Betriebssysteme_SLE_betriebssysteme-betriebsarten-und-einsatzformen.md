@@ -2,7 +2,7 @@
 title: "Betriebssysteme – Betriebsarten und Einsatzformen"
 date: 2025-09-25
 weekday: "Donnerstag"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "SLE"
 program: "FIAE Umschulung 2025-2027"
 module: "Betriebssysteme"
@@ -15,11 +15,11 @@ tags:
   - Netzwerkbetrieb
   - Echtzeitbetriebssystem
   - Universelles Betriebssystem
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Donnerstag, 2025-09-25_BS_SLE
+# Donnerstag, 2025-09-25_Betriebssysteme_SLE
 
 ## Betriebssysteme – Betriebsarten und Einsatzformen
 

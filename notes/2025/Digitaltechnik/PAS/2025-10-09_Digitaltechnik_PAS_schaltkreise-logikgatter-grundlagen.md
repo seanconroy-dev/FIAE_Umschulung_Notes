@@ -2,7 +2,7 @@
 title: "Schaltkreise & Logikgatter – Grundlagen"
 date: 2025-10-09
 weekday: "Donnerstag"
-subject: "DT"
+subject: "Digitaltechnik"
 instructor: "PAS"
 program: "FIAE Umschulung 2025-2027"
 module: "Digitale Technik"
@@ -15,11 +15,11 @@ tags:
   - Wahrheitstabelle
   - Rechnerarchitektur
   - Hardware
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Donnerstag, 2025-10-09_DT_PAS  
+# Donnerstag, 2025-10-09_Digitaltechnik_PAS  
 ### Schaltkreise & Logikgatter – Grundlagen
 
 **Kontext:** Digitale Logik, Sicherheit, Performance  

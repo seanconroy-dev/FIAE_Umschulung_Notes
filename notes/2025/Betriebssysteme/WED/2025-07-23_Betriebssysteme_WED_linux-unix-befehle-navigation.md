@@ -2,7 +2,7 @@
 title: "Linux/Unix – Befehle & Navigation"
 date: 2025-07-23
 weekday: "Mittwoch"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "WED"
 program: "FIAE Umschulung 2025-2027"
 module: "Linux Grundlagen"
@@ -15,11 +15,11 @@ tags:
   - Navigation
   - Dateiverwaltung
   - CLI
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Mittwoch, 2025-07-23_BS_WED
+# Mittwoch, 2025-07-23_Betriebssysteme_WED
 
 ## Grundlagen Linux/Unix – Befehle & Navigation
 

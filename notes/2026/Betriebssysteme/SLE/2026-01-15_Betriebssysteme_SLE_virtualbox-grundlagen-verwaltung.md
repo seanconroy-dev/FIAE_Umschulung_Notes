@@ -2,7 +2,7 @@
 title: "VirtualBox – Grundlagen & Verwaltung"
 date: 2026-01-15
 weekday: "Donnerstag"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "SLE"
 program: "FIAE Umschulung 2025-2027"
 module: "Virtualisierung"
@@ -15,11 +15,11 @@ tags:
   - Guest Additions
   - Netzwerke
   - Shared Folders
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Donnerstag, 2026-01-15_BS_SLE
+# Donnerstag, 2026-01-15_Betriebssysteme_SLE
 
 ## VirtualBox – Grundlagen & Verwaltung
 

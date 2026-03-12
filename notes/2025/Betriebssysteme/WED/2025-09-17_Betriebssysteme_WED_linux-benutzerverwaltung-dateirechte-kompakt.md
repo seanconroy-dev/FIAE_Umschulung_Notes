@@ -2,7 +2,7 @@
 title: "Linux – Benutzerverwaltung & Dateirechte (kompakt)"
 date: 2025-09-17
 weekday: "Mittwoch"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "WED"
 program: "FIAE Umschulung 2025-2027"
 module: "Linux Grundlagen"
@@ -17,11 +17,11 @@ tags:
   - ACL
   - sudo
   - Dateirechte
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Mittwoch, 2025-09-17_BS_WED
+# Mittwoch, 2025-09-17_Betriebssysteme_WED
 
 # Benutzerverwaltung in Linux – kompakte Lern- und Prüfungsnotizen
 

@@ -15,7 +15,7 @@ tags:
   - fast-forward
   - history
   - commit-hash
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 # Dienstag, 2026-02-24_Git_UDEMY

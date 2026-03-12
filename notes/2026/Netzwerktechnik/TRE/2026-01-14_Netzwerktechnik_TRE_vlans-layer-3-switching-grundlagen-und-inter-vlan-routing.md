@@ -15,7 +15,7 @@ tags:
   - Inter-VLAN-Routing
   - 802.1Q
   - Netzwerktechnik
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 

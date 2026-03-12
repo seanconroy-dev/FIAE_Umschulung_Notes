@@ -2,7 +2,7 @@
 title: "Sensoren & Mikrocontroller – SR04, DHT22, ESP32"
 date: 2025-07-14
 weekday: "Montag"
-subject: "Netzwerktechnik / Embedded"
+subject: "IoT & Netzwerktechnik"
 instructor: "WIT"
 program: "FIAE Umschulung 2025-2027"
 module: "Mikrocontroller & Sensorik"
@@ -15,11 +15,11 @@ tags:
   - Mikrocontroller
   - IoT
   - Sensorik
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Montag, 2025-07-14_NT_WIT
+# Montag, 2025-07-14_IoT-Netzwerktechnik-WIT
 
 ## Sensoren & Mikrocontroller: SR04, DHT22, ESP32-WROOM-32
 

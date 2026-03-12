@@ -2,7 +2,7 @@
 title: "Linux – SSH, IP-Bridges und Paketverwaltung"
 date: 2025-10-29
 weekday: "Mittwoch"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "WED"
 program: "FIAE Umschulung 2025-2027"
 module: "Netzwerk & Systemverwaltung"
@@ -15,11 +15,11 @@ tags:
   - Paketverwaltung
   - Netzwerk
   - Ubuntu
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Mittwoch, 2025-10-29_BS_WED  
+# Mittwoch, 2025-10-29_Betriebssysteme_WED  
 **Thema:** Linux – SSH, IP-Bridges und Paketverwaltung  
 
 In dieser Unterrichtseinheit wurde die Kommunikation zwischen virtuellen Maschinen und Hostsystemen per **SSH (Secure Shell)** eingerichtet und grundlegende Konzepte der **Linux-Paketverwaltung mit APT** behandelt. Ziel war es, Remote-Verbindungen sicher aufzubauen und die Installation sowie Verwaltung von Softwarepaketen praktisch nachzuvollziehen.  

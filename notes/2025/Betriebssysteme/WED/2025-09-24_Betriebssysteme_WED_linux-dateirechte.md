@@ -2,7 +2,7 @@
 title: "Linux – Dateirechte"
 date: 2025-09-24
 weekday: "Mittwoch"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "WED"
 program: "FIAE Umschulung 2025-2027"
 module: "Linux Grundlagen"
@@ -14,11 +14,11 @@ tags:
   - chmod
   - chown
   - Benutzerverwaltung
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Mittwoch, 2025-09-24_BS_WED
+# Mittwoch, 2025-09-24_Betriebssysteme_WED
 
 ## Dateirechte (Linux)
 

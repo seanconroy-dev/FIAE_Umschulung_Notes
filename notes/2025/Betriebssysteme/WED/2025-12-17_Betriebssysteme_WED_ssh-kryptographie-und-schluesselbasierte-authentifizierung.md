@@ -2,7 +2,7 @@
 title: "SSH – Kryptographie und schlüsselbasierte Authentifizierung"
 date: 2025-12-17
 weekday: "Mittwoch"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "WED"
 program: "FIAE Umschulung 2025-2027"
 module: "Linux Grundlagen"
@@ -17,11 +17,11 @@ tags:
   - Diffie-Hellman
   - RSA
   - Authentifizierung
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Mittwoch, 2025-12-17_BS_WED
+# Mittwoch, 2025-12-17_Betriebssysteme_WED
 
 ## SSH, Kryptographie und schlüsselbasierte Authentifizierung
 

@@ -2,7 +2,7 @@
 title: "Schalenmodell & Kernelarchitekturen"
 date: 2025-09-18
 weekday: "Donnerstag"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "SLE"
 program: "FIAE Umschulung 2025-2027"
 module: "Betriebssysteme"
@@ -16,11 +16,11 @@ tags:
   - Microkernel
   - Hybridkernel
   - HAL
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Donnerstag, 2025-09-18_BS_SLE
+# Donnerstag, 2025-09-18_Betriebssysteme_SLE
 
 ## Schalenmodell (Schichtenmodell des Betriebssystems)
 
