@@ -39,7 +39,7 @@ Ziel ist es, **Systeme und Daten vor unbefugtem Zugriff zu schützen**.
 
 ---
 
-# Benutzerkonten
+## Benutzerkonten
 
 In Windows existieren verschiedene Arten von Benutzerkonten mit unterschiedlichen Berechtigungsstufen.
 
@@ -54,7 +54,7 @@ In Windows existieren verschiedene Arten von Benutzerkonten mit unterschiedliche
 
 Administratoren können **Benutzerkonten erstellen, ändern, löschen und Gruppen zuweisen**.
 
-## Unterschied: Administrator, Standardbenutzer und Gast
+### Unterschied: Administrator, Standardbenutzer und Gast
 
 Die Kontotypen unterscheiden sich vor allem darin, **welche Systemänderungen erlaubt sind**.
 
@@ -105,7 +105,7 @@ Typische Eigenschaften:
 
 ---
 
-# Gruppen
+## Gruppen
 
 Gruppen vereinfachen die Verwaltung von Berechtigungen.
 
@@ -132,7 +132,7 @@ Wenn der Gruppe Zugriff auf einen Ordner gewährt wird, erhalten **alle Mitglied
 
 ---
 
-# Berechtigungen in Windows
+## Berechtigungen in Windows
 
 Berechtigungen bestimmen, **welche Aktionen ein Benutzer oder eine Gruppe auf eine Ressource ausführen darf**.
 
@@ -145,7 +145,7 @@ Sie können auf verschiedene Objekte angewendet werden:
 - Netzwerkfreigaben
 - Drucker
 
-## Standardberechtigungen
+### Standardberechtigungen
 
 | Berechtigung | Bedeutung |
 |---|---|
@@ -157,7 +157,7 @@ Sie können auf verschiedene Objekte angewendet werden:
 
 Zusätzlich gibt es **spezielle Berechtigungen**, mit denen einzelne Aktionen noch feiner gesteuert werden können.
 
-## Berechtigungen und Benutzerrollen im Zusammenhang
+### Berechtigungen und Benutzerrollen im Zusammenhang
 
 Die Rechte eines Benutzers ergeben sich nicht nur aus dem Kontotyp, sondern auch aus:
 
@@ -169,7 +169,7 @@ Ein Administrator hat also nicht nur wegen des Kontotyps viele Rechte, sondern a
 
 ---
 
-# Authentifizierung und Autorisierung
+## Authentifizierung und Autorisierung
 
 Die Rechteverwaltung basiert auf zwei Sicherheitsprozessen.
 
@@ -178,7 +178,7 @@ Die Rechteverwaltung basiert auf zwei Sicherheitsprozessen.
 | **Authentifizierung** | Überprüfung der Identität eines Benutzers |
 | **Autorisierung** | Überprüfung der Zugriffsrechte eines Benutzers |
 
-## Authentifizierung
+### Authentifizierung
 
 Bei der **Authentifizierung** wird geprüft, **ob ein Benutzer wirklich derjenige ist, für den er sich ausgibt**.
 
@@ -189,17 +189,16 @@ Typische Anmeldedaten sind:
 
 Sind die Daten korrekt, wird der Benutzer am System angemeldet.
 
-## Autorisierung
+### Autorisierung
 
 Nach erfolgreicher Anmeldung prüft Windows:
-
 > **Welche Ressourcen darf dieser Benutzer verwenden und welche Aktionen darf er ausführen?**
 
 Hier greifen die **zugewiesenen Berechtigungen und Gruppenmitgliedschaften**.
 
 ---
 
-## Ablauf: Authentifizierung → Autorisierung
+### Ablauf: Authentifizierung → Autorisierung
 
 ```mermaid
 flowchart LR
@@ -218,7 +217,7 @@ F -->|Nein| H[Zugriff verweigert]
 
 ---
 
-# Beispiel
+## Beispiel
 
 Ein Benutzer möchte eine Datei öffnen.
 
@@ -234,11 +233,11 @@ Ein Benutzer möchte eine Datei öffnen.
 
 ---
 
-# Typen der Authentifizierung
+## Typen der Authentifizierung
 
 Es existieren verschiedene Methoden zur Authentifizierung.
 
-## 1. Passwortbasierte Authentifizierung
+### 1. Passwortbasierte Authentifizierung
 
 Der Benutzer meldet sich mit **Benutzername und Passwort** an.
 
@@ -253,7 +252,7 @@ Nachteil:
 
 ---
 
-## 2. Zwei-Faktor-Authentifizierung (2FA)
+### 2. Zwei-Faktor-Authentifizierung (2FA)
 
 Hier werden **zwei unterschiedliche Faktoren** kombiniert.
 
@@ -272,7 +271,7 @@ Dadurch steigt die Sicherheit deutlich.
 
 ---
 
-## 3. Biometrische Authentifizierung
+### 3. Biometrische Authentifizierung
 
 Hier werden **körperliche Merkmale** genutzt.
 
@@ -293,7 +292,7 @@ Nachteil:
 
 ---
 
-## 4. Tokenbasierte Authentifizierung
+### 4. Tokenbasierte Authentifizierung
 
 Der Benutzer besitzt ein **Token**, das zur Anmeldung verwendet wird.
 
@@ -306,7 +305,7 @@ Diese Methode wird häufig in **Unternehmensumgebungen** verwendet.
 
 ---
 
-## 5. Zertifikatbasierte Authentifizierung
+### 5. Zertifikatbasierte Authentifizierung
 
 Hier werden **digitale Zertifikate** zur Identitätsprüfung eingesetzt.
 
@@ -318,7 +317,7 @@ Typische Einsatzbereiche:
 
 ---
 
-## 6. Single Sign-On (SSO)
+### 6. Single Sign-On (SSO)
 
 Der Benutzer meldet sich **einmal** an und kann danach auf mehrere Systeme zugreifen.
 
@@ -339,9 +338,9 @@ Vorteile:
 
 ---
 
-# SAM (Security Account Manager)
+## SAM (Security Account Manager)
 
-## Definition
+### Definition
 
 Der **Security Account Manager (SAM)** ist eine zentrale Komponente der Windows-Sicherheitsarchitektur.
 
@@ -358,7 +357,7 @@ In einer Domänenumgebung werden Kontoinformationen zentral z. B. über **Active
 
 ---
 
-## Aufgaben von SAM
+### Aufgaben von SAM
 
 | Aufgabe | Bedeutung |
 |---|---|
@@ -371,7 +370,7 @@ SAM ist sicherheitsrelevant und daher **geschützt**. Der direkte Zugriff ist nu
 
 ---
 
-## Warum werden Passwörter als Hash gespeichert?
+### Warum werden Passwörter als Hash gespeichert?
 
 Windows speichert Passwörter nicht direkt als lesbaren Text, sondern als **Hashwert**.
 
@@ -389,12 +388,11 @@ Wichtig:
 
 ---
 
-## Zusammenhang zwischen SAM, Authentifizierung und Autorisierung
+### Zusammenhang zwischen SAM, Authentifizierung und Autorisierung
 
 SAM spielt vor allem bei **lokalen Benutzerkonten** eine Rolle.
 
 Beim Anmelden wird geprüft:
-
 1. Gibt es das Benutzerkonto?
 2. Passt das eingegebene Passwort zum gespeicherten Hash?
 3. Zu welchen Gruppen gehört der Benutzer?
@@ -404,11 +402,11 @@ Damit unterstützt SAM sowohl die **Authentifizierung** als auch indirekt die **
 
 ---
 
-# Anmeldeprozess in Windows
+## Anmeldeprozess in Windows
 
 Beim Anmeldeprozess werden mehrere Schritte durchlaufen, damit nur berechtigte Benutzer Zugriff erhalten.
 
-## Die vier Grundschritte
+### Die vier Grundschritte
 
 1. Der Benutzer gibt seine **Anmeldeinformationen** ein  
 2. Das System vergleicht diese Informationen mit den gespeicherten Daten  
@@ -417,7 +415,7 @@ Beim Anmeldeprozess werden mehrere Schritte durchlaufen, damit nur berechtigte B
 
 ---
 
-## Darstellung des Anmeldeprozesses
+### Darstellung des Anmeldeprozesses
 
 ```mermaid
 flowchart TD
@@ -432,13 +430,11 @@ F --> G[Zugriff auf Ressourcen gemäß Autorisierung]
 
 ---
 
-## Fachliche Einordnung
+### Fachliche Einordnung
 
 Der Ablauf zeigt deutlich den Unterschied:
-
 - **Authentifizierung** beantwortet die Frage:  
   **Wer bist du?**
-
 - **Autorisierung** beantwortet die Frage:  
   **Was darfst du?**
 
@@ -446,7 +442,7 @@ Beides zusammen ist notwendig, damit Windows sicher arbeiten kann.
 
 ---
 
-# Warum Authentifizierung und Autorisierung wichtig sind
+## Warum Authentifizierung und Autorisierung wichtig sind
 
 Beide Mechanismen schützen die **Informationssicherheit** eines Systems.
 
@@ -462,11 +458,11 @@ Ohne diese Mechanismen könnten beliebige Benutzer auf sensible Informationen od
 
 ---
 
-# Prüfungsrelevanz (AP1)
+## Prüfungsrelevanz (AP1)
 
 Typische Prüfungsfragen:
 
-## Frage 1
+### Frage 1
 
 **Was ist der Unterschied zwischen Authentifizierung und Autorisierung?**
 
@@ -479,7 +475,7 @@ Typische Prüfungsfragen:
 
 ---
 
-## Frage 2
+### Frage 2
 
 **Nennen Sie drei Arten der Authentifizierung.**
 
@@ -491,7 +487,7 @@ Typische Prüfungsfragen:
 
 ---
 
-## Frage 3
+### Frage 3
 
 **Welche Standardberechtigungen gibt es in Windows?**
 
@@ -507,7 +503,7 @@ Typische Prüfungsfragen:
 
 ---
 
-## Frage 4
+### Frage 4
 
 **Was ist der Security Account Manager (SAM)?**
 
@@ -518,7 +514,7 @@ Außerdem werden dort sicherheitsrelevante Informationen wie **Passwort-Hashes**
 
 ---
 
-## Frage 5
+### Frage 5
 
 **Welche Rolle spielt SAM bei der Anmeldung?**
 
@@ -529,7 +525,7 @@ Sind die Daten korrekt, wird der Benutzer authentifiziert und anschließend anha
 
 ---
 
-## Frage 6
+### Frage 6
 
 **Was darf ein Administrator, was ein Standardbenutzer nicht darf?**
 
@@ -547,9 +543,9 @@ Ein Standardbenutzer darf dagegen hauptsächlich **normale Arbeitsaufgaben** aus
 
 ---
 
-# Häufige Fehler / Verständnisprobleme
+## Häufige Fehler / Verständnisprobleme
 
-## Authentifizierung ≠ Autorisierung
+### Authentifizierung ≠ Autorisierung
 
 Diese Begriffe werden oft verwechselt.
 
@@ -562,7 +558,7 @@ Autorisierung = Was darfst du?
 
 ---
 
-## SAM speichert keine Passwörter im Klartext
+### SAM speichert keine Passwörter im Klartext
 
 Ein häufiger Irrtum ist, dass Windows Passwörter direkt speichert.
 
@@ -573,7 +569,7 @@ Richtig ist:
 
 ---
 
-## Lokale Konten ≠ Domänenkonten
+### Lokale Konten ≠ Domänenkonten
 
 SAM ist für **lokale Konten** relevant.
 
@@ -581,7 +577,7 @@ In größeren Unternehmensnetzwerken mit zentraler Benutzerverwaltung werden Kon
 
 ---
 
-## Gruppen statt Einzelrechte
+### Gruppen statt Einzelrechte
 
 In der Praxis sollten Rechte möglichst **über Gruppen** vergeben werden.
 
@@ -602,14 +598,13 @@ Vorteile:
 - einfachere Verwaltung
 - weniger Fehler
 - bessere Übersicht
-- leichtere Skalierung
+- leichtere Skalierbarkeit
 
 ---
 
-## Administrator ist nicht automatisch unbegrenzt allmächtig
+### Administrator ist nicht automatisch unbegrenzt allmächtig
 
 Ein Administrator hat sehr viele Rechte, aber auch Administratorkonten unterliegen:
-
 - Sicherheitsrichtlinien
 - UAC-Abfragen
 - technischen Systemgrenzen
@@ -619,7 +614,7 @@ Das ist wichtig, weil in Prüfungen oft vereinfacht von "Vollzugriff" gesprochen
 
 ---
 
-# Merksätze
+## Merksätze
 
 > **Authentifizierung prüft die Identität – Autorisierung prüft die Berechtigung.**
 
