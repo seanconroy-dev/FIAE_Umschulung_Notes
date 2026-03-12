@@ -3,8 +3,8 @@
 !!! info "Schnellzugriff"
 
     - [Alle Notizen](../_generated/subjects/webentwicklung.md)
-    - [Dozent KLU](../_generated/instructors/klu.md)
-    - [Dozent KLK](../_generated/instructors/klk.md)
+    - [Dozent KLU](../_generated/subjects/webentwicklung/instructors/klu.md)
+    - [Dozent KLK](../_generated/subjects/webentwicklung/instructors/klk.md)
 
 Grundlagen moderner Webentwicklung mit Fokus auf **HTML**, **CSS** und moderne Layouttechniken.
 
@@ -39,8 +39,8 @@ Der Schwerpunkt liegt auf **HTML-Strukturen**, **CSS-Layouts**, **Responsive Des
 
 ### Nach Dozent
 
-- [KLU](../_generated/instructors/klu.md)
-- [KLK](../_generated/instructors/klk.md)
+- [KLU](../_generated/subjects/webentwicklung/instructors/klu.md)
+- [KLK](../_generated/subjects/webentwicklung/instructors/klk.md)
 
 ---
 

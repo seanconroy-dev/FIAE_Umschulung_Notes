@@ -3,7 +3,7 @@
 !!! info "Schnellzugriff"
 
     - [Alle Notizen](../_generated/subjects/datentechnik.md)
-    - [Dozent PAS](../_generated/instructors/pas.md)
+    - [Dozent PAS](../_generated/subjects/datentechnik/instructors/pas.md)
 
 Grundlagen der digitalen Informationsverarbeitung und Zahlendarstellung in Computersystemen.
 
@@ -34,7 +34,7 @@ Zentrale Themen sind verschiedene **Zahlensysteme**, **logische Operationen** so
 
 ### Nach Dozent
 
-- [PAS](../_generated/instructors/pas.md)
+- [PAS](../_generated/subjects/datentechnik/instructors/pas.md)
 
 ---
 

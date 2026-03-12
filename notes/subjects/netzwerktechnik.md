@@ -3,7 +3,7 @@
 !!! info "Schnellzugriff"
 
     - [Alle Notizen](../_generated/subjects/netzwerktechnik.md)
-    - [Dozent TRE](../_generated/instructors/tre.md)
+    - [Dozent TRE](../_generated/subjects/netzwerktechnik/instructors/tre.md)
 
 Grundlagen moderner Computernetzwerke, Protokolle und Netzwerkarchitekturen.
 
@@ -46,7 +46,7 @@ Schwerpunkte in diesen Notizen liegen auf **OSI-Modell**, **TCP/IP**, **Routing*
 
 ### Nach Dozent
 
-- [TRE](../_generated/instructors/tre.md)
+- [TRE](../_generated/subjects/netzwerktechnik/instructors/tre.md)
 
 ---
 

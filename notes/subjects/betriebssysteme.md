@@ -3,8 +3,8 @@
 !!! info "Schnellzugriff" 
 
     - [Alle Notizen](../_generated/subjects/betriebssysteme.md)
-    - [Dozent WED](../_generated/instructors/wed.md)
-    - [Dozent SLE](../_generated/instructors/sle.md)
+    - [Dozent WED](../_generated/subjects/betriebssysteme/instructors/wed.md)
+    - [Dozent SLE](../_generated/subjects/betriebssysteme/instructors/sle.md)
     
 Grundlagen moderner Betriebssysteme, Linux-Praxis und Systemverwaltung.
 
@@ -43,8 +43,8 @@ Der Schwerpunkt in diesen Notizen liegt auf **Linux-Grundlagen**, **Systemaufbau
 ## Schnellzugriff
 
 - [Alle Notizen zu Betriebssystemen](../_generated/subjects/betriebssysteme.md)
-- [Dozent WED](../_generated/instructors/wed.md)
-- [Dozent SLE](../_generated/instructors/sle.md)
+- [Dozent WED](../_generated/subjects/betriebssysteme/instructors/wed.md)
+- [Dozent SLE](../_generated/subjects/betriebssysteme/instructors/sle.md)
 
 ---
 

@@ -3,13 +3,13 @@
 !!! info "Schnellzugriff"
 
     - [Alle Notizen](../_generated/subjects/programmiertechnik.md)
-    - [Dozent ASS](../_generated/instructors/ass.md)
-    - [Dozent PAS](../_generated/instructors/pas.md)
-    - [Dozent SCH](../_generated/instructors/sch.md)
-    - [Dozent WED](../_generated/instructors/wed.md)
-    - [Dozent KON](../_generated/instructors/kon.md)
-    - [Dozent POG](../_generated/instructors/pog.md)
-    - [Quelle UDEMY](../_generated/instructors/udemy.md)
+    - [Dozent ASS](../_generated/subjects/programmiertechnik/instructors/ass.md)
+    - [Dozent PAS](../_generated/subjects/programmiertechnik/instructors/pas.md)
+    - [Dozent SCH](../_generated/subjects/programmiertechnik/instructors/sch.md)
+    - [Dozent WED](../_generated/subjects/programmiertechnik/instructors/wed.md)
+    - [Dozent KON](../_generated/subjects/programmiertechnik/instructors/kon.md)
+    - [Dozent POG](../_generated/subjects/programmiertechnik/instructors/pog.md)
+    - [Quelle UDEMY](../_generated/subjects/programmiertechnik/instructors/udemy.md)
 
 Grundlagen der Programmierung in **Java** sowie zentrale Konzepte der **objektorientierten Softwareentwicklung (OOP)**.
 
@@ -60,13 +60,13 @@ Dazu gehören auch zentrale Java-Konzepte wie **Getter/Setter**, **Konstruktoren
 
 ### Nach Dozent / Quelle
 
-- [ASS](../_generated/instructors/ass.md)
-- [PAS](../_generated/instructors/pas.md)
-- [SCH](../_generated/instructors/sch.md)
-- [WED](../_generated/instructors/wed.md)
-- [KON](../_generated/instructors/kon.md)
-- [POG](../_generated/instructors/pog.md)
-- [UDEMY](../_generated/instructors/udemy.md)
+- [ASS](../_generated/subjects/programmiertechnik/instructors/ass.md)
+- [PAS](../_generated/subjects/programmiertechnik/instructors/pas.md)
+- [SCH](../_generated/subjects/programmiertechnik/instructors/sch.md)
+- [WED](../_generated/subjects/programmiertechnik/instructors/wed.md)
+- [KON](../_generated/subjects/programmiertechnik/instructors/kon.md)
+- [POG](../_generated/subjects/programmiertechnik/instructors/pog.md)
+- [UDEMY](../_generated/subjects/programmiertechnik/instructors/udemy.md)
 
 ---
 

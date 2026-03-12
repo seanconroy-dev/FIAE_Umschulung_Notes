@@ -10,6 +10,7 @@ subjects = defaultdict(list)
 instructors = defaultdict(list)
 modules = defaultdict(list)
 tags = defaultdict(list)
+subject_instructors: dict[str, dict[str, list[tuple[str, str]]]] = defaultdict(lambda: defaultdict(list))
 
 
 def read_frontmatter(path: Path) -> dict:
@@ -90,6 +91,7 @@ for md in NOTES_DIR.rglob("*.md"):
 
     if instructor:
         instructors[instructor].append((title, rel))
+        subject_instructors[subject][instructor].append((title, rel))
 
     if module:
         modules[module].append((title, rel))
@@ -102,3 +104,14 @@ write_index("subjects", subjects)
 write_index("instructors", instructors)
 write_index("modules", modules)
 write_index("tags", tags)
+
+for subject_key, instructor_data in subject_instructors.items():
+    subject_slug = slug(subject_key)
+    for instructor_key, items in instructor_data.items():
+        instructor_slug = slug(instructor_key)
+        output_path = f"_generated/subjects/{subject_slug}/instructors/{instructor_slug}.md"
+        with mkdocs_gen_files.open(output_path, "w") as f:
+            f.write(f"# {subject_key} — {instructor_key}\n\n")
+            for title, target in sorted(items):
+                link = relative_link(output_path, target)
+                f.write(f"- [{title}]({link})\n")

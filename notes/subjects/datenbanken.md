@@ -3,10 +3,10 @@
 !!! info "Schnellzugriff"
 
     - [Alle Notizen](../_generated/subjects/datenbanken.md)
-    - [Dozent POG](../_generated/instructors/pog.md)
-    - [Dozent KNO](../_generated/instructors/kno.md)
-    - [Dozent WIT](../_generated/instructors/wit.md)
-    - [Dozent SCH](../_generated/instructors/sch.md)
+    - [Dozent POG](../_generated/subjects/datenbanken/instructors/pog.md)
+    - [Dozent KNO](../_generated/subjects/datenbanken/instructors/kno.md)
+    - [Dozent WIT](../_generated/subjects/datenbanken/instructors/wit.md)
+    - [Dozent SCH](../_generated/subjects/datenbanken/instructors/sch.md)
 
 Grundlagen relationaler Datenbanken, Datenmodellierung und SQL.
 
@@ -45,10 +45,10 @@ Schwerpunkte dieses Fachs sind das **relationale Datenbankmodell**, **Datenmodel
 
 ### Nach Dozent
 
-- [POG](../_generated/instructors/pog.md)
-- [KNO](../_generated/instructors/kno.md)
-- [WIT](../_generated/instructors/wit.md)
-- [SCH](../_generated/instructors/sch.md)
+- [POG](../_generated/subjects/datenbanken/instructors/pog.md)
+- [KNO](../_generated/subjects/datenbanken/instructors/kno.md)
+- [WIT](../_generated/subjects/datenbanken/instructors/wit.md)
+- [SCH](../_generated/subjects/datenbanken/instructors/sch.md)
 
 ---
 
