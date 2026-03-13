@@ -2,7 +2,7 @@
 title: "DQL – Data Query Language (SQL-Abfragen)"
 date: 2025-10-09
 weekday: "Donnerstag"
-subject: "DB"
+subject: "Datenbanken"
 instructor: "WIT"
 program: "FIAE Umschulung 2025-2027"
 module: "Relationale Datenbanken"
