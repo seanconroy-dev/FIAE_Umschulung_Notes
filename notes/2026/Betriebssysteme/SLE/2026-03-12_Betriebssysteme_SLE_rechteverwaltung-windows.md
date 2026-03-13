@@ -2,7 +2,7 @@
 title: "Rechteverwaltung in Windows"
 date: 2026-03-12
 weekday: "Donnerstag"
-subject: "BS"
+subject: "Betriebssysteme"
 instructor: "SLE"
 program: "FIAE Umschulung 2025-2027"
 module: "Benutzer- und Rechteverwaltung"
