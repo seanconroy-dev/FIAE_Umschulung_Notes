@@ -2,7 +2,7 @@
 
 !!! info "Schnellzugriff" 
 
-    - [Alle Notizen zu Betriebssystemen](_generated/subjects/betriebssysteme.md)
+    - [Alle Notizen](../_generated/subjects/betriebssysteme.md)
     - [Dozent WED](../_generated/instructors/wed.md)
     - [Dozent SLE](../_generated/instructors/sle.md)
     
@@ -42,7 +42,7 @@ Der Schwerpunkt in diesen Notizen liegt auf **Linux-Grundlagen**, **Systemaufbau
 
 ## Schnellzugriff
 
-- [Alle Notizen zu Betriebssystemen](_generated/subjects/betriebssysteme.md)
+- [Alle Notizen zu Betriebssystemen](../_generated/subjects/betriebssysteme.md)
 - [Dozent WED](../_generated/instructors/wed.md)
 - [Dozent SLE](../_generated/instructors/sle.md)
 
