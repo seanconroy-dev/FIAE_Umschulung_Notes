@@ -216,33 +216,45 @@ Ein häufiger Anfängerfehler ist die Verwechslung von `UNION` und `JOIN`.
 | benötigt gleiche Struktur | benötigt Beziehung (Join-Bedingung) |
 | arbeitet mit mehreren SELECT | arbeitet mit mehreren Tabellen |
 
-Visualisierung:
+---
 
-```
-UNION
------
+## Visualisierung
+
+### UNION (Zeilen werden untereinander gestapelt)
+
+```text
 Table A
+-------
 Row1
 Row2
 
 Table B
+-------
 Row3
 Row4
 
-Ergebnis:
+Ergebnis
+--------
 Row1
 Row2
 Row3
 Row4
 ```
 
-```
-JOIN
------
-Table A      Table B
+---
 
-Row1   +   Row1
-Row2   +   Row2
+### JOIN (Spalten werden kombiniert)
+
+```text
+Table A      Table B
+-------      -------
+Row1    +    Row1
+Row2    +    Row2
+
+Ergebnis
+-------------------
+Row1A   Row1B
+Row2A   Row2B
 ```
 
 ---
@@ -315,4 +327,15 @@ UNION ALL  = Kombination mit Duplikaten
 ```
 
 **Mentales Modell:**  
-`UNION` = **Resultsets stapeln**
+
+```
+UNION = Resultsets untereinander stapeln
+JOIN  = Tabellen nebeneinander verbinden
+```
+
+```mermaid
+flowchart TB
+    A[SELECT aus Tabelle A] --> C[UNION]
+    B[SELECT aus Tabelle B] --> C
+    C --> D[Gemeinsames Resultset]
+```
