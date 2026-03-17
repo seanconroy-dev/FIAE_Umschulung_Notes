@@ -26,16 +26,20 @@ Die **Speicherhierarchie** beschreibt die abgestufte Organisation verschiedener 
 - **Kapazität**
 - **Kosten pro Bit**
 
-Ziel ist ein effizienter Kompromiss:
+Das Ziel ist ein praktikabler Kompromiss:
 
-- schneller Speicher → **klein & teuer**
-- großer Speicher → **langsamer & günstig**
+- sehr schneller Speicher ist **klein und teuer**
+- großer Speicher ist **langsamer, aber günstiger**
 
-> **Je näher ein Speicher an der CPU liegt, desto schneller, kleiner und teurer ist er.**
+Grundregel:
+
+> **Je näher ein Speicher an der CPU liegt, desto schneller ist er in der Regel, desto kleiner ist seine Kapazität und desto höher sind die Kosten pro Bit.**
 
 ---
 
 ## Kernkonzept: Aufbau der Speicherhierarchie
+
+Die klassische Speicherhierarchie kann vereinfacht als Pyramide dargestellt werden:
 
 ```mermaid
 flowchart TB
@@ -43,7 +47,7 @@ flowchart TB
   B["Cache (L1, L2, L3)"]
   C["Hauptspeicher (RAM)"]
   D["Sekundärspeicher (SSD, HDD)"]
-  E["Tertiärspeicher (Band, Archiv)"]
+  E["Tertiärspeicher (z. B. Band, Archiv)"]
 
   A --> B
   B --> C
@@ -51,234 +55,423 @@ flowchart TB
   D --> E
 ```
 
-### Typische Eigenschaften
+### Typische Eigenschaften der Ebenen
 
-| Ebene | Geschwindigkeit | Kapazität | Kosten/Bit | Flüchtig |
-|---|---:|---:|---:|---|
-| Register | sehr hoch | sehr klein | sehr hoch | ja |
-| Cache | sehr hoch | klein | hoch | ja |
-| RAM | hoch | mittel–groß | mittel | ja |
-| SSD/HDD | niedrig | groß | niedrig | nein |
-| Band | sehr niedrig | sehr groß | sehr niedrig | nein |
+| Ebene | Nähe zur CPU | Geschwindigkeit | Kapazität | Kosten pro Bit | Flüchtigkeit |
+|---|---|---:|---:|---:|---|
+| Register | sehr hoch | sehr hoch | sehr klein | sehr hoch | flüchtig |
+| Cache | hoch | sehr hoch | klein | hoch | flüchtig |
+| RAM | mittel | hoch | mittel bis groß | mittel | flüchtig |
+| SSD/HDD | gering | deutlich niedriger | groß bis sehr groß | niedrig | nicht flüchtig |
+| Band/Archiv | sehr gering | sehr niedrig | sehr groß | sehr niedrig | nicht flüchtig |
 
 ---
 
 ## Warum gibt es eine Speicherhierarchie?
 
-Die CPU ist um Größenordnungen schneller als Massenspeicher.
+Die CPU arbeitet wesentlich schneller als große Massenspeicher. Würde die CPU ständig direkt auf SSD oder HDD zugreifen müssen, entstünden massive Wartezeiten.
 
-Ohne Hierarchie:
-- CPU müsste ständig warten → **massiver Performanceverlust**
+Die Speicherhierarchie reduziert dieses Problem:
 
-Mit Hierarchie:
-- häufig benötigte Daten werden **nach oben “gezogen”**
-- selten benötigte bleiben **unten gespeichert**
+- **Register** halten unmittelbar benötigte Werte
+- **Caches** puffern häufig benötigte Daten
+- **RAM** hält aktive Programme und Daten
+- **Massenspeicher** speichert Daten dauerhaft
 
-👉 Ergebnis: **hohe Performance bei vertretbaren Kosten**
+Dadurch entsteht der Eindruck eines großen und gleichzeitig schnellen Speichers, obwohl tatsächlich mehrere unterschiedlich schnelle Speicherstufen zusammenarbeiten.
 
 ---
 
-## Speicherstufen im Detail
+## Die einzelnen Speicherstufen
 
 ### 1. Register
-- direkt in der CPU
+
+Register befinden sich direkt in der CPU. Sie speichern Operanden, Adressen, Zwischenergebnisse und Steuerinformationen.
+
+**Merkmale:**
+
+- kleinste Speicherkapazität
 - schnellster Zugriff
-- minimale Kapazität
-- enthalten aktuelle Operanden
+- direkt für Rechenoperationen genutzt
+
+**Beispiel:**  
+Ein Additionsbefehl verarbeitet Werte typischerweise zuerst in Registern.
 
 ---
 
-### 2. Cache (SRAM)
+### 2. Cache (L1, L2, L3)
 
-- Pufferspeicher zwischen CPU und RAM
-- basiert auf **SRAM**
-- extrem geringe Latenz
+Der Cache ist ein sehr schneller Pufferspeicher zwischen CPU und RAM. Er speichert Daten und Befehle, die mit hoher Wahrscheinlichkeit bald erneut benötigt werden.
 
-**Lokalitätsprinzip:**
+**Merkmale:**
 
-- zeitlich → kürzlich genutzt = wahrscheinlich wieder
-- räumlich → benachbarte Daten werden genutzt
+- kleiner als RAM
+- deutlich schneller als RAM
+- meist in mehreren Ebenen organisiert:
+  - **L1**: sehr klein, sehr schnell
+  - **L2**: größer, etwas langsamer
+  - **L3**: noch größer, meist von mehreren Kernen gemeinsam genutzt
+
+#### Lokalitätsprinzip
+
+Der Cache funktioniert gut, weil Programme oft ein typisches Zugriffsverhalten zeigen:
+
+- **Zeitliche Lokalität**: kürzlich verwendete Daten werden oft bald wieder verwendet
+- **Räumliche Lokalität**: Daten in benachbarten Speicherbereichen werden oft nacheinander verwendet
+
+**Beispiel:**  
+Eine Schleife greift wiederholt auf aufeinanderfolgende Array-Elemente zu. Dadurch profitiert sie stark vom Cache.
 
 ---
 
-### 3. Hauptspeicher (RAM / DRAM)
+### 3. Hauptspeicher (RAM)
 
-- Arbeitsbereich für Programme
-- basiert auf **DRAM**
-- flüchtig
+Der **Random Access Memory (RAM)** ist der Arbeitsspeicher des Systems. Dort liegen Programme und Daten, die aktuell ausgeführt oder verarbeitet werden.
+
+**Merkmale:**
+
+- Arbeitsbereich für Betriebssystem und Anwendungen
+- größer als Cache
+- langsamer als Cache, aber viel schneller als SSD/HDD
+- **flüchtig**: Inhalte gehen ohne Stromversorgung verloren
+
+Typisch ist heute **DRAM** als Hauptspeicher, z. B. DDR-RAM.
 
 ---
 
 ### 4. Sekundärspeicher
 
-- dauerhafte Speicherung
-- SSD (Flash) / HDD (magnetisch)
-- nicht flüchtig
+Sekundärspeicher dient der dauerhaften Speicherung von Programmen und Daten.
+
+**Beispiele:**
+
+- SSD
+- HDD
+
+**Merkmale:**
+
+- **nicht flüchtig**
+- große Kapazität
+- deutlich höhere Zugriffszeiten als RAM
+- langfristige Speicherung von Dateien, Programmen und Betriebssystem
 
 ---
 
 ### 5. Tertiärspeicher
 
-- Backup & Archiv
-- sehr langsam, sehr groß
-- z. B. Band
+Tertiärspeicher wird vor allem für Archivierung, Sicherung und langfristige Aufbewahrung verwendet.
+
+**Beispiele:**
+
+- Bandlaufwerke
+- Bandbibliotheken
+- Archivsysteme
+
+**Merkmale:**
+
+- sehr hohe Kapazität
+- sehr langsamer Zugriff
+- oft nicht für den direkten Alltagsbetrieb gedacht
 
 ---
 
-## Ergänzung: Offlinespeicher
+## Ergänzung: Offlinespeicher und externe Speicher
 
-Kein fester Bestandteil der Hierarchie, sondern Nutzungsform:
+**Offlinespeicher** ist keine klassische eigene Hierarchiestufe der Speicherpyramide, sondern bezeichnet Speicher, die **nicht ständig mit dem System verbunden** sind.
+
+**Beispiele:**
 
 - externe Festplatten
 - USB-Sticks
-- Backup-Medien
+- optische Datenträger
+- ausgelagerte Backup-Medien
+
+Wichtig: **Cloud-Speicher** ist nicht automatisch Offlinespeicher. Er ist in der Regel ein netzwerkbasierter Dienst und logisch eher eine Form externer, entfernter Speicherung als „offline“.
 
 ---
 
 ## RAM vs. ROM
 
+RAM und ROM erfüllen unterschiedliche Aufgaben und dürfen nicht verwechselt werden.
+
 | Eigenschaft | RAM | ROM |
 |---|---|---|
-| Flüchtig | ja | nein |
-| Schreibbar | ja | teilweise |
-| Nutzung | Programme | Firmware |
+| Bedeutung | Random Access Memory | Read Only Memory |
+| Flüchtigkeit | flüchtig | nicht flüchtig |
+| Schreibbarkeit | lesen und schreiben | traditionell nur lesbar, moderne Varianten teils beschreibbar |
+| Typische Verwendung | laufende Programme und Daten | Firmware, z. B. BIOS/UEFI |
+| Geschwindigkeit | hoch | meist niedriger als RAM |
 
-👉 Moderne „ROM“-Varianten = **Flash / EEPROM**
+### Einordnung
+
+Der Begriff **ROM** ist historisch geprägt. Moderne Firmware liegt häufig in **Flash-Speicher**, der technisch beschreibbar ist. Deshalb ist „ROM“ heute oft eher eine funktionale Bezeichnung als eine streng technische.
 
 ---
 
 ## Volatile vs. Non-Volatile Memory
 
-### Volatile (flüchtig)
-- Register
-- Cache (SRAM)
-- RAM (DRAM)
+### Flüchtiger Speicher (volatile)
 
-### Non-Volatile (nicht flüchtig)
+Flüchtiger Speicher verliert seinen Inhalt ohne Stromversorgung.
+
+**Beispiele:**
+
+- Register
+- Cache
+- RAM
+
+### Nicht flüchtiger Speicher (non-volatile)
+
+Nicht flüchtiger Speicher behält seinen Inhalt auch ohne Stromversorgung.
+
+**Beispiele:**
+
 - ROM
-- Flash / SSD
+- Flash-Speicher
+- SSD
 - HDD
 - Band
 
 ```mermaid
 flowchart TD
-  A["Speicher"] --> B["Flüchtig"]
-  A --> C["Nicht flüchtig"]
+  A{"Volatil?"}
 
-  B --> SRAM["SRAM → Cache"]
-  B --> DRAM["DRAM → RAM"]
+  A -->|Nein| B{"Beschreibbar?"}
+  A -->|Ja| C{"Statisch / Dynamisch"}
 
-  C --> ROM["ROM / Firmware"]
-  C --> FLASH["Flash / SSD"]
-  C --> HDD["HDD"]
-  C --> BAND["Band"]
+  B -->|Nein| ROM["ROM"]
+  B -->|Ja| D{"Wie oft beschreibbar?"}
+
+  D -->|Einmal| PROM["PROM"]
+  D -->|Mehrmals| E{"Löschung durch"}
+
+  E -->|UV-Licht| EPROM["EPROM"]
+  E -->|Elektrisch| F{"Kapazität"}
+
+  F -->|Gering| EEPROM["EEPROM"]
+  F -->|Hoch| FLASH["Flash"]
+
+  C -->|Statisch| SRAM["SRAM"]
+  C -->|Dynamisch| DRAM["DRAM"]
+
+  SRAM --> CACHE["L1, L2, L3"]
+  DRAM --> DDR["DDR-RAM"]
 ```
 
 ---
 
-## Speichertechnologien
+## Speichertechnologien im Überblick
 
-| Technologie | Einsatz | Besonderheit |
-|---|---|---|
-| SRAM | Cache | sehr schnell, teuer |
-| DRAM | RAM | günstig, hohe Dichte |
-| Flash | SSD | nicht flüchtig |
-| HDD | Massenspeicher | mechanisch, langsam |
+| Technologie | Typische Verwendung | Flüchtig | Besonderheit |
+|---|---|---|---|
+| SRAM | Cache | ja | sehr schnell, teuer, geringe Dichte |
+| DRAM | Hauptspeicher | ja | hohe Dichte, günstiger als SRAM |
+| ROM | feste Firmware | nein | klassisch nur lesbar |
+| PROM | einmal programmierbar | nein | nachträglich genau einmal beschreibbar |
+| EPROM | ältere Firmwarelösungen | nein | löschbar per UV-Licht |
+| EEPROM | Konfigurationsdaten, Firmware | nein | elektrisch lösch- und schreibbar |
+| Flash | SSD, USB-Sticks, Firmware | nein | Sonderform von EEPROM mit hoher Speicherdichte |
+
+### Wichtige Unterscheidung: SRAM vs. DRAM
+
+- **SRAM** ist schneller und wird typischerweise für Cache verwendet.
+- **DRAM** ist dichter und günstiger, deshalb wird es als Hauptspeicher eingesetzt.
 
 ---
 
 ## Praktisches Beispiel
 
+Beim Start eines Programms läuft der Zugriff typischerweise so ab:
+
+1. Das Programm liegt dauerhaft auf der **SSD**.
+2. Beim Start wird es in den **RAM** geladen.
+3. Häufig benötigte Befehle und Daten werden in den **Cache** übernommen.
+4. Unmittelbar benötigte Werte landen in **Registern**.
+
 ```mermaid
 flowchart LR
-  A["SSD"] --> B["RAM"]
+  A["SSD / HDD"] --> B["RAM"]
   B --> C["Cache"]
   C --> D["Register"]
-  D --> E["CPU"]
+  D --> E["CPU verarbeitet Daten"]
 ```
 
-Ablauf:
-1. Programm liegt auf SSD  
-2. wird in RAM geladen  
-3. häufige Daten → Cache  
-4. aktuelle Werte → Register  
+Der Weg zeigt die Grundidee der Hierarchie: Je aktueller und relevanter Daten sind, desto weiter oben werden sie gehalten.
 
 ---
 
 ## Memory vs. Storage
 
+Im Deutschen werden beide Begriffe oft unscharf mit „Speicher“ übersetzt, technisch ist die Unterscheidung aber wichtig.
+
+### Memory
+
+**Memory** meint meist den **Arbeitsspeicher** beziehungsweise die direkt für die Verarbeitung genutzten schnellen Speicher:
+
+- Register
+- Cache
+- RAM
+
+### Storage
+
+**Storage** meint die **dauerhafte Datenspeicherung**:
+
+- SSD
+- HDD
+- USB-Stick
+- Band
+- optische Datenträger
+
 | Aspekt | Memory | Storage |
 |---|---|---|
-| Zweck | Verarbeitung | Speicherung |
-| Beispiele | RAM, Cache | SSD, HDD |
-| Geschwindigkeit | hoch | niedrig |
-| Flüchtig | meist ja | nein |
+| Zweck | aktive Verarbeitung | dauerhafte Ablage |
+| Beispiele | Register, Cache, RAM | SSD, HDD, Band |
+| Geschwindigkeit | hoch bis sehr hoch | deutlich niedriger |
+| Flüchtigkeit | oft flüchtig | meist nicht flüchtig |
+| Typische Nutzung | laufende Prozesse | Dateien, Programme, Archive |
+
+### Beispiel
+
+- Eine Textdatei liegt dauerhaft auf der **SSD** → das ist **Storage**
+- Beim Öffnen wird ihr Inhalt in den **RAM** geladen → das ist **Memory**
 
 ---
 
-## Kenngrößen (typische Größenordnungen)
+## Kenngrößen der Speicherarten
 
-| Speicherart | Zugriffszeit | Datenrate | Kapazität | Kosten/Bit |
+Die folgenden Werte sind **typische Größenordnungen**. Exakte Werte hängen von Technologie, Generation und Modell ab.
+
+| Speicherart | Zugriffszeit | Datenrate | Kapazität | Kosten pro Bit |
 |---|---:|---:|---:|---:|
-| Register | < 1 ns | > 100 GB/s | Bytes | sehr hoch |
-| L1 Cache | 1–2 ns | 50–100 GB/s | KB | hoch |
-| L2 Cache | 3–10 ns | 20–50 GB/s | KB–MB | hoch |
-| L3 Cache | 10–20 ns | 10–20 GB/s | MB | mittel |
-| RAM | 10–100 ns | 10–25 GB/s | GB | mittel |
-| SSD | 50–100 µs | bis ~3 GB/s | TB | niedrig |
-| HDD | 5–10 ms | 100–200 MB/s | TB | sehr niedrig |
+| Register | < 1 ns | > 100 GB/s | wenige Bytes | sehr hoch |
+| Cache (L1) | 1–2 ns | 50–100 GB/s | 16–64 KB | hoch |
+| Cache (L2) | 3–10 ns | 20–50 GB/s | 256 KB – 1 MB | hoch |
+| Cache (L3) | 10–20 ns | 10–20 GB/s | 2–16 MB | mittel |
+| RAM (z. B. DDR4/DDR5) | ca. 10–100 ns | 10–50 GB/s | 4–64 GB | mittel |
+| SSD | 50–100 µs | 500 MB/s – 3 GB/s | 256 GB – 4 TB | niedrig |
+| HDD | 5–10 ms | 100–200 MB/s | 1 TB – 16 TB | sehr niedrig |
 
-> Werte sind Richtwerte und variieren je nach Hardware.
+### Einordnung der Kenngrößen
+
+- **Zugriffszeit** beschreibt, wie schnell ein Speicher auf eine Anfrage reagiert.
+- **Datenrate** beschreibt, wie viele Daten pro Zeit übertragen werden können.
+- **Kapazität** beschreibt die maximale Datenmenge.
+- **Kosten pro Bit** zeigen, warum nicht der gesamte Speicher als sehr schneller CPU-naher Speicher gebaut wird.
 
 ---
 
-## Adressierung
+## Adressierung und maximal adressierbarer Speicher
 
-Maximal adressierbarer Speicher:
+Ein wichtiges Grundprinzip der Rechnerarchitektur lautet:
 
 ```text
-2^n
+maximal adressierbarer Speicher = 2^n
 ```
 
-- **n = Anzahl der Adressleitungen**
-- Beispiel:
-  - 32 Bit → 2³² = 4 GB
+Dabei ist:
+
+- **n** = Anzahl der **Adressleitungen** bzw. Adressbits
+
+### Beispiel
+
+- 32 Adressleitungen → **2³² = 4.294.967.296 Adressen**
+
+Ob das genau **4 GB** entspricht, hängt davon ab, **wie groß eine adressierbare Einheit** ist:
+
+- bei **Byte-Adressierung**: 2³² Byte = **4 GiB**
+- allgemein gilt daher:  
+  **adressierbarer Speicher = 2^n × Größe der adressierbaren Einheit**
+
+Diese Formel ist besonders wichtig, wenn Speichergrößen, Adressbusbreiten oder Architekturgrenzen abgefragt werden.
+
+---
+
+## Zukunfts- und Spezialthemen
+
+Einige Speichertechnologien werden in der Lehre gelegentlich ergänzend erwähnt, gehören aber **nicht** zur üblichen praktischen Standard-Speicherhierarchie heutiger Rechner:
+
+- **holographischer Speicher**: theoretisch sehr hohe Datendichte
+- **Quantenspeicher**: Forschungsfeld, nicht Teil klassischer Rechnerarchitektur im Alltag
+
+Für Prüfungen im Grundlagenbereich sind diese Themen meist **nachrangig**, sofern sie nicht ausdrücklich im Unterricht behandelt wurden.
 
 ---
 
 ## Prüfungsrelevanz
 
-Wichtig:
+Für die **AP1-Prüfung** ist es besonders wichtig, die **Reihenfolge der Speicherhierarchie** zu kennen und die **charakteristischen Eigenschaften** der einzelnen Speicherarten zu verstehen.
 
-- Reihenfolge der Hierarchie
-- Cache vs. RAM vs. SSD
+### Reihenfolge der Hierarchie
+
+**Register → Cache → RAM → SSD/HDD → Band/Archiv**
+
+### Zentrale Zusammenhänge
+
+- höhere Geschwindigkeit bedeutet meist:
+  - geringere Kapazität
+  - höhere Kosten pro Bit
+- Cache überbrückt die Geschwindigkeitslücke zwischen CPU und RAM
+- RAM ist flüchtig, Massenspeicher sind in der Regel nicht flüchtig
+- Cache besteht typischerweise aus **SRAM**, Hauptspeicher aus **DRAM**
+
+### Häufige Vergleichsfragen
+
+- Cache vs. RAM
+- RAM vs. ROM
 - volatile vs. non-volatile
-- Zusammenhang:
-  - Geschwindigkeit ↑ → Kosten ↑ → Kapazität ↓
+- memory vs. storage
+
+### Typische Prüfungsanforderungen
+
+- Speicherarten der Hierarchie in die richtige Reihenfolge bringen
+- Eigenschaften von Cache, RAM und Massenspeicher vergleichen
+- erklären, warum Cache notwendig ist
+- volatile und non-volatile Speicher unterscheiden
+- einfache Aufgaben zur Adressierung mit **2^n** lösen
 
 ---
 
-## Häufige Fehler
+## Häufige Fehler und Klarstellungen
 
-❌ RAM ist dauerhaft  
-→ falsch (flüchtig)
+### „RAM ist dauerhaft.“
 
-❌ SSD ≈ RAM  
-→ falsch (RAM viel schneller)
+**Falsch.**  
+RAM ist **flüchtig**. Ohne Stromversorgung gehen die Inhalte verloren.
 
-❌ Cache = kleiner RAM  
-→ falsch (andere Technologie: SRAM)
+### „ROM kann nie verändert werden.“
+
+**So pauschal falsch bzw. veraltet.**  
+Klassisches ROM ist nur lesbar, aber moderne Firmware-Speicher wie **EEPROM** oder **Flash** können beschrieben werden.
+
+### „SSD ist genauso schnell wie RAM.“
+
+**Falsch.**  
+SSD ist schnell im Vergleich zu HDD, aber RAM ist in Zugriffszeit und Datenrate weiterhin deutlich überlegen.
+
+### „Cache ist einfach nur kleiner RAM.“
+
+**Unpräzise.**  
+Cache ist anders optimiert, meist mit **SRAM** aufgebaut und speziell dafür gedacht, die CPU mit sehr geringer Latenz zu versorgen.
+
+### „Cloud ist eine Hierarchiestufe wie Cache oder RAM.“
+
+**Falsch.**  
+Cloud beschreibt in erster Linie ein Bereitstellungs- bzw. Speichermodell über ein Netzwerk, keine klassische lokale Speicherstufe in der Hardwarehierarchie.
 
 ---
 
 ## Zusammenfassung
 
-Die Speicherhierarchie ermöglicht:
+Die Speicherhierarchie ist ein Grundprinzip moderner Rechnerarchitektur. Sie verbindet mehrere Speicherarten so, dass ein System gleichzeitig:
 
-- hohe Geschwindigkeit
-- große Speichermengen
-- akzeptable Kosten
+- **schnell**
+- **bezahlbar**
+- **kapazitätsstark**
 
-Ohne sie wären Systeme entweder:
-- **zu langsam** oder
-- **zu teuer**
+sein kann.
+
+Die Leitidee lautet:
+
+> **Schnelle Speicher sind klein und teuer, große Speicher sind langsamer und günstiger.**
+
+Erst durch das Zusammenspiel von **Registern**, **Cache**, **RAM** und **Massenspeicher** können moderne Programme effizient ausgeführt werden.
