@@ -216,9 +216,6 @@ Flüchtiger Speicher verliert seinen Inhalt ohne Stromversorgung.
 
 **Beispiele:**
 
-- Register
-- Cache
-- RAM
 
 ### Nicht flüchtiger Speicher (non-volatile)
 
@@ -226,31 +223,31 @@ Nicht flüchtiger Speicher behält seinen Inhalt auch ohne Stromversorgung.
 
 **Beispiele:**
 
-- ROM
-- Flash-Speicher
-- SSD
-- HDD
-- Band
 
 ```mermaid
 flowchart TD
-  A["Speicher"] --> B["Flüchtig"]
-  A --> C["Nicht flüchtig"]
+  A{"Volatil?"}
 
-  B --> D["SRAM"]
-  B --> E["DRAM"]
+  A -->|Nein| B{"Beschreibbar?"}
+  A -->|Ja| C{"Statisch / Dynamisch"}
 
-  D --> F["Cache"]
-  E --> G["Hauptspeicher / DDR-RAM"]
+  B -->|Nein| ROM["ROM"]
+  B -->|Ja| D{"Wie oft beschreibbar?"}
 
-  C --> H["ROM / Firmware-Speicher"]
-  C --> I["Flash"]
-  C --> J["Magnetische / optische Speicher"]
+  D -->|Einmal| PROM["PROM"]
+  D -->|Mehrmals| E{"Löschung durch"}
 
-  I --> K["EEPROM"]
-  I --> L["NAND-Flash / SSD"]
-  J --> M["HDD"]
-  J --> N["Band / Archiv"]
+  E -->|UV-Licht| EPROM["EPROM"]
+  E -->|Elektrisch| F{"Kapazität"}
+
+  F -->|Gering| EEPROM["EEPROM"]
+  F -->|Hoch| FLASH["FLASH"]
+
+  C -->|Statisch| SRAM["SRAM"]
+  C -->|Dynamisch| DRAM["DRAM"]
+
+  SRAM --> CACHE["L1, L2, L3"]
+  DRAM --> DDR["DDR-RAM"]
 ```
 
 ---
