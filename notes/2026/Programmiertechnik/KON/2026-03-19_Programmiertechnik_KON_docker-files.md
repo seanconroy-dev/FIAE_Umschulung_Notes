@@ -416,6 +416,111 @@ docker logs <id>
 
 ---
 
+## Quickstart (60 Sekunden)
+
+Wenn du nur schnell pruefen willst, ob alles laeuft:
+
+```bash
+docker build -t demo-app .
+docker run -d --name demo -p 3000:3000 demo-app
+docker ps
+docker logs demo
+docker exec -it demo sh
+docker stop demo && docker rm demo
+```
+
+---
+
+## `.dockerignore` (wichtig in der Praxis)
+
+Ohne `.dockerignore` landen oft zu viele Dateien im Build-Kontext.
+
+Beispiel:
+
+```gitignore
+node_modules
+.git
+.env
+dist
+coverage
+npm-debug.log
+```
+
+Nutzen:
+- kleinerer Build-Kontext
+- schnellerer Build
+- weniger Risiko, sensible Dateien zu kopieren
+
+---
+
+## Compose mit `.env` (alltaeglich)
+
+Datei `.env`:
+
+```dotenv
+APP_PORT=3000
+POSTGRES_PASSWORD=example
+```
+
+Datei `compose.yaml`:
+
+```yaml
+services:
+    app:
+        build: .
+        ports:
+            - "${APP_PORT}:3000"
+        depends_on:
+            db:
+                condition: service_healthy
+        restart: unless-stopped
+
+    db:
+        image: postgres:16
+        environment:
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U postgres"]
+            interval: 10s
+            timeout: 5s
+            retries: 5
+        volumes:
+            - db_data:/var/lib/postgresql/data
+
+volumes:
+    db_data:
+```
+
+---
+
+## Aufraeumen (Cleanup, mit Vorsicht)
+
+```bash
+docker system prune
+docker volume prune
+```
+
+Hinweis:
+- entfernt ungenutzte Ressourcen
+- kann Daten loeschen, wenn Volumes nicht mehr referenziert sind
+
+---
+
+## Debug-Checkliste (Reihenfolge)
+
+1. `docker ps -a` pruefen (Status / Exit-Code)
+2. `docker logs <id>` lesen
+3. Port-Mapping pruefen (`-p host:container`)
+4. in den Container gehen (`docker exec -it <id> sh`)
+5. ENV-Variablen und Service-Namen (Compose) validieren
+6. Image neu bauen ohne Cache, falls noetig:
+
+```bash
+docker build --no-cache -t demo-app .
+```
+
+---
+
 ## Prüfungsrelevanz (AP1)
 
 ### Typische Fragen + Kernaussagen
