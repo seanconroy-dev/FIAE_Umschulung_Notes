@@ -27,7 +27,7 @@
 
 /* overall content width */
 .md-grid {
-  max-width: 1440px;
+  max-width: min(92vw,1800px);
 }
 
 /* make article area feel less cramped */
