@@ -253,6 +253,9 @@
     left: 0;
     top: var(--md-header-height, 2.4rem);
     bottom: 0;
+    /* Material sets height: 0 on large screens – override so top/bottom
+       constraint sets the real height instead */
+    height: auto !important;
     width: var(--md-sidebar-width, 12.1rem);
     z-index: 6; /* must be above .md-overlay (z-index: 5) so the sidebar isn't hidden behind the backdrop */
     transform: translateX(-100%);
@@ -268,11 +271,31 @@
     box-shadow: 0.2rem 0 0.8rem rgba(0, 0, 0, 0.12);
   }
 
+  /* Overlay base styles for large screens.
+     Material only sets position/size on the overlay inside its mobile
+     media query (max-width: 76.234375em), so we must replicate them here
+     to get a proper full-screen backdrop on desktop. */
+  .md-overlay {
+    background-color: rgba(0, 0, 0, 0.54);
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    /* delay width/height collapse until after opacity fade-out */
+    transition: width 0ms 0.25s, height 0ms 0.25s, opacity 0.25s;
+    width: 0;
+    z-index: 5;
+  }
+
   /* Show full-screen overlay so clicking outside closes the drawer */
   #__drawer:checked ~ .md-overlay {
+    height: 100%;
     width: 100%;
     opacity: 1;
     pointer-events: auto;
+    /* width/height expand immediately, opacity fades in */
+    transition: width 0ms, height 0ms, opacity 0.25s;
   }
 }
 
