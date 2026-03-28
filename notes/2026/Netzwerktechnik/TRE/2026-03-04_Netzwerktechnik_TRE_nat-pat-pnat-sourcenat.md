@@ -11,9 +11,9 @@ level: "Einführung"
 tags:
   - networking
   - nat
-  - routing
+  - routing   
   - ip
-author: "Sean Conroy"
+author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
