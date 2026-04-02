@@ -11,7 +11,19 @@ A structured, markdown-based knowledge system developed during my training as a
 👉 **Live Documentation (recommended):**  
 https://seanconroy-dev.github.io/FIAE_Umschulung_Notes/
 
-All notes are published as a searchable documentation site with indexing, topic overviews, and tag-based navigation.
+All notes are transformed into a searchable documentation system with structured navigation, indexing, and tag-based exploration.
+
+![Documentation Overview](notes/bilder/docs-overview.png)
+
+> Example: Generated documentation with categorized subjects, searchable content, and structured navigation
+
+## Documentation Output
+
+The notes are automatically transformed into a structured documentation site using MkDocs, providing:
+
+- Fast navigation across subjects  
+- Tag-based exploration  
+- Full-text search across all notes  
 
 ---
 
