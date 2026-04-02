@@ -5,58 +5,52 @@
 
 # FIAE Umschulung Notes
 
-Markdown-basierte Mitschriften aus meiner Umschulung zum  
-**Fachinformatiker für Anwendungsentwicklung (FIAE)**  
-BFW Mühlenbeck · 2025–2027
+A structured, markdown-based knowledge system developed during my training as a  
+**Fachinformatiker für Anwendungsentwicklung (FIAE)**.
 
-👉 **Dokumentationsseite (empfohlen):**  
+👉 **Live Documentation (recommended):**  
 https://seanconroy-dev.github.io/FIAE_Umschulung_Notes/
 
-Die vollständigen Notizen sind dort als durchsuchbare Dokumentation
-mit Indexen, Themenübersicht und Tags verfügbar.
+All notes are published as a searchable documentation site with indexing, topic overviews, and tag-based navigation.
 
 ---
 
-## Repository Struktur
+## Repository Structure
 
 ```
 .
-├─ notes/        # eigentliche Markdown-Notizen (MkDocs Content Root)
-├─ scripts/      # Automatisierungs- und Hilfsskripte
-├─ reports/      # generierte Berichte / Migration Reports
-├─ docs/         # Projektdokumentation
+├─ notes/        # Markdown-based knowledge base (MkDocs content root)
+├─ scripts/      # Automation and helper scripts
+├─ reports/      # Generated reports / migration outputs
+├─ docs/         # Project documentation
 └─ LICENSE
 ```
 
 ---
 
-## Notizsystem
+## Note System
 
-Die Notizen sind systematisch aufgebaut.
-
-Pfadstruktur:
+Notes follow a consistent hierarchical structure:
 
 ```
-notes/<jahr>/<fach>/<dozent>/<datei>.md
+notes/<year>/<subject>/<instructor>/<file>.md
 ```
 
-Beispiel:
+Example:
 
 ```
 notes/2026/Programmiertechnik/UDEMY/
-2026-02-17_Programmiertechnik_UDEMY_class-objekt.md
+2026-02-17_Programmiertechnik_UDEMY_class-object.md
 ```
 
 ---
 
-## Metadaten
+## Metadata
 
-Jede Notiz enthält ein standardisiertes YAML-Frontmatter.
-
-Beispiel:
+Each note includes standardized YAML frontmatter:
 
 ```yaml
-title: "java.lang.Object – Root-Klasse"
+title: "java.lang.Object – Root Class"
 date: 2026-02-17
 subject: "Programmiertechnik"
 instructor: "UDEMY"
@@ -67,23 +61,23 @@ tags:
   - AP1
 ```
 
-Diese Metadaten werden verwendet, um automatisch Indexseiten
-für Themen, Dozenten, Module und Tags zu generieren.
+These metadata fields enable:
+- Automatic index generation
+- Tag-based navigation
+- Filtering by subject, instructor, or module
 
 ---
 
-## Ziel des Projekts
+## Project Goals
 
-Dieses Repository dient als:
-
-- strukturierte Wissensbasis
-- Lernsystem für die FIAE-Umschulung
-- Vorbereitung auf **AP1 / AP2**
-- öffentliches Lernportfolio
+- Build a structured and maintainable knowledge base  
+- Support efficient exam preparation (**AP1 / AP2**)  
+- Apply software engineering principles to learning workflows  
+- Serve as a public learning portfolio  
 
 ---
 
-## Lizenz
+## License
 
 © Sean Matthew Conroy  
 MIT License
