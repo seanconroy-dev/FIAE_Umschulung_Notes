@@ -1,0 +1,15 @@
+classDiagram
+    class Server {
+        #name : string
+        #preis : double
+        #hauptspeicher : int
+        +getDaten() : string
+    }
+    class ProxyServer {
+        -protokoll : string
+    }
+    class DatenbankServer {
+        -dbms : string
+    }
+    Server <|-- ProxyServer
+    Server <|-- DatenbankServer
