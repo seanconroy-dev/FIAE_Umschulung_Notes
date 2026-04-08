@@ -143,9 +143,9 @@ Das ist ein klassisches Entwurfsmuster: **Template Method Pattern**
 
 ```mermaid
 flowchart TD
-    A[Start sortieren()] --> B[vorbereiten()]
-    B --> C[sortierenImpl() - abstrakt]
-    C --> D[abschließen()]
+    A["Start: sortieren(array)"] --> B["vorbereiten(array)"]
+    B --> C["sortierenImpl(array)\nabstrakter Schritt"]
+    C --> D["abschliessen(array)"]
 ```
 
 ### Beispiel
