@@ -219,6 +219,10 @@ Weil sie zu technisch oder zu kleinteilig sind. Ein Use-Case-Diagramm soll die *
 
 ---
 
+![Library System](../../../bilder/libray-system.drawio%281%29.png)
+
+---
+
 ## Beispieldiagramm: Onlineshop
 
 ```mermaid
