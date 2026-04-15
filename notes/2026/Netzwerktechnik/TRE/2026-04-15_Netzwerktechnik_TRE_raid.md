@@ -372,15 +372,21 @@ Gegeben:
 - 2 Festplatten
 - je 500 GB
 
-Frage: Nutzbare Kapazität?
+Frage (IHK-Stil):
+
+a) Wie groß ist die **Bruttokapazität**?  
+b) Wie groß ist die **Nettokapazität**?  
+c) Wie viele Festplattenausfälle sind tolerierbar?
 
 **Lösung:**
 
 ```text
-2 × 500 GB = 1000 GB
+Bruttokapazität = 2 × 500 GB = 1000 GB
+Nettokapazität  = 2 × 500 GB = 1000 GB
+Ausfalltoleranz = 0 Platten (RAID 0)
 ```
 
-**Ergebnis:** **1000 GB bzw. 1 TB**
+**Ergebnis:** **Brutto 1 TB; Netto 1 TB; Ausfalltoleranz 0 Platten**
 
 ---
 
@@ -391,17 +397,23 @@ Gegeben:
 - 2 Festplatten
 - je 2 TB
 
-Frage: Nutzbare Kapazität?
+Frage (IHK-Stil):
+
+a) Wie groß ist die **Bruttokapazität**?  
+b) Wie groß ist die **Nettokapazität**?  
+c) Wie viele Festplattenausfälle sind tolerierbar?
 
 **Lösung:**
 
 ```text
-2 TB
+Bruttokapazität = 2 × 2 TB = 4 TB
+Nettokapazität  = 2 TB
+Ausfalltoleranz = 1 Platte (bei 2er-Spiegel)
 ```
 
 weil die zweite Platte nur spiegelt.
 
-**Ergebnis:** **2 TB**
+**Ergebnis:** **Brutto 4 TB; Netto 2 TB; Ausfalltoleranz 1 Platte**
 
 ---
 
@@ -412,15 +424,21 @@ Gegeben:
 - 5 Festplatten
 - je 1 TB
 
-Frage: Nutzbare Kapazität?
+Frage (IHK-Stil):
+
+a) Wie groß ist die **Bruttokapazität**?  
+b) Wie groß ist die **Nettokapazität**?  
+c) Wie viele Festplattenausfälle sind tolerierbar?
 
 **Lösung:**
 
 ```text
-(5 - 1) × 1 TB = 4 TB
+Bruttokapazität = 5 × 1 TB = 5 TB
+Nettokapazität  = (5 - 1) × 1 TB = 4 TB
+Ausfalltoleranz = 1 Platte (RAID 5)
 ```
 
-**Ergebnis:** **4 TB**
+**Ergebnis:** **Brutto 5 TB; Netto 4 TB; Ausfalltoleranz 1 Platte**
 
 ---
 
@@ -431,15 +449,21 @@ Gegeben:
 - 6 Festplatten
 - je 4 TB
 
-Frage: Nutzbare Kapazität?
+Frage (IHK-Stil):
+
+a) Wie groß ist die **Bruttokapazität**?  
+b) Wie groß ist die **Nettokapazität**?  
+c) Wie viele Festplattenausfälle sind tolerierbar?
 
 **Lösung:**
 
 ```text
-(6 - 2) × 4 TB = 16 TB
+Bruttokapazität = 6 × 4 TB = 24 TB
+Nettokapazität  = (6 - 2) × 4 TB = 16 TB
+Ausfalltoleranz = 2 Platten (RAID 6)
 ```
 
-**Ergebnis:** **16 TB**
+**Ergebnis:** **Brutto 24 TB; Netto 16 TB; Ausfalltoleranz 2 Platten**
 
 ---
 
@@ -451,16 +475,49 @@ Gegeben:
 - 500 GB, 500 GB, 1 TB
 - RAID 5
 
+Frage (IHK-Stil):
+
+a) Wie groß ist die **Bruttokapazität**?  
+b) Wie groß ist die **Nettokapazität**?  
+c) Wie viele Festplattenausfälle sind tolerierbar?
+
 **Prüfungslogik:**
 Es zählt die kleinste Platte, also **500 GB**.
 
 **Lösung:**
 
 ```text
-(3 - 1) × 500 GB = 1000 GB
+Bruttokapazität = 3 × 500 GB = 1500 GB
+Nettokapazität  = (3 - 1) × 500 GB = 1000 GB
+Ausfalltoleranz = 1 Platte (RAID 5)
 ```
 
-**Ergebnis:** **1 TB**
+**Ergebnis:** **Brutto 1,5 TB; Netto 1 TB; Ausfalltoleranz 1 Platte**
+
+---
+
+### Bewertungsschema (Selbstkontrolle)
+
+Für die Aufgaben **1 bis 5** kannst du dieses einfache Punkteraster verwenden:
+
+- a) Bruttokapazität korrekt: **1 Punkt**
+- b) Nettokapazität korrekt (inkl. richtiger Formel): **1 Punkt**
+- c) Ausfalltoleranz korrekt: **1 Punkt**
+
+**Maximalpunkte:**
+
+```text
+5 Aufgaben × 3 Punkte = 15 Punkte
+```
+
+**Schnelle Einordnung:**
+
+| Punkte | Einordnung |
+|---|---|
+| 13-15 | Sehr sicher für AP1-Basisaufgaben |
+| 10-12 | Solide, aber einzelne Rechen-/Formelfehler prüfen |
+| 7-9 | Lücken vorhanden, Formeln und Begriffe wiederholen |
+| 0-6 | Grundlagen erneut lernen (RAID 0/1/5/6, Brutto/Netto) |
 
 ---
 
