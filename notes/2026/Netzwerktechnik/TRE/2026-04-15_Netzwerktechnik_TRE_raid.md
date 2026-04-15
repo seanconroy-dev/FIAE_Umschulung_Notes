@@ -698,6 +698,83 @@ Weil RAID nur gegen den **Ausfall von Festplatten** schützt, nicht gegen:
 
 ---
 
+### Geschlossene und abgestufte AP1-Übungsfragen
+
+#### Stufe 1: Basis (Single Choice)
+
+**S1.1** Welche Aussage zu RAID 0 ist korrekt?
+
+- A) RAID 0 bietet Redundanz durch Spiegelung.
+- B) RAID 0 bietet keine Redundanz.
+- C) RAID 0 toleriert den Ausfall von zwei Platten.
+- D) RAID 0 nutzt Parität.
+
+**S1.2** 4 × 2 TB in RAID 5 ergeben welche Nettokapazität?
+
+- A) 4 TB
+- B) 6 TB
+- C) 8 TB
+- D) 2 TB
+
+**S1.3** Wie viele gleichzeitige Plattenausfälle übersteht RAID 6?
+
+- A) 0
+- B) 1
+- C) 2
+- D) 3
+
+---
+
+#### Stufe 2: Anwendung (Multiple Choice)
+
+**S2.1** Welche Aussagen sind korrekt? (Mehrere Antworten möglich)
+
+- A) RAID 1 hat in der Regel 50 % Speichereffizienz.
+- B) RAID 5 benötigt mindestens 2 Festplatten.
+- C) RAID 10 kombiniert Spiegelung und Striping.
+- D) RAID ersetzt ein Backup vollständig.
+
+**S2.2** Bei welcher Konfiguration ist die Nettokapazität korrekt berechnet?
+
+- A) RAID 6, 6 × 2 TB -> 10 TB
+- B) RAID 5, 5 × 1 TB -> 4 TB
+- C) RAID 1, 2 × 4 TB -> 8 TB
+- D) RAID 10, 4 × 1 TB -> 2 TB
+
+---
+
+#### Stufe 3: Prüfungssimulation (Richtig/Falsch)
+
+**S3.1** Bruttokapazität bedeutet die nach RAID nutzbare Kapazität.  
+Richtig / Falsch
+
+**S3.2** In IHK-Aufgaben wird bei gemischten Plattengrößen mit der kleinsten Platte gerechnet.  
+Richtig / Falsch
+
+**S3.3** RAID 5 übersteht immer den Ausfall von zwei beliebigen Platten.  
+Richtig / Falsch
+
+**S3.4** RAID 10 kann mehr als einen Ausfall überstehen, wenn die Ausfälle in unterschiedlichen Spiegelpaaren liegen.  
+Richtig / Falsch
+
+---
+
+#### Lösungsschlüssel (ohne Rechenweg)
+
+| Aufgabe | Lösung |
+|---|---|
+| S1.1 | B |
+| S1.2 | B |
+| S1.3 | C |
+| S2.1 | A, C |
+| S2.2 | B, D |
+| S3.1 | Falsch |
+| S3.2 | Richtig |
+| S3.3 | Falsch |
+| S3.4 | Richtig |
+
+---
+
 ### Prüfungstipp
 
 Bei AP1-Aufgaben fast immer in dieser Reihenfolge denken:
