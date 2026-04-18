@@ -10,6 +10,7 @@
     - [Dozent KON](../_generated/subjects/programmiertechnik/instructors/kon.md)
     - [Dozent POG](../_generated/subjects/programmiertechnik/instructors/pog.md)
     - [Quelle UDEMY](../_generated/subjects/programmiertechnik/instructors/udemy.md)
+    - [Selbststudium](../_generated/subjects/programmiertechnik/instructors/selbststudium.md)
 
 Grundlagen der Programmierung in **Java** sowie zentrale Konzepte der **objektorientierten Softwareentwicklung (OOP)**.
 
@@ -67,6 +68,7 @@ Dazu gehören auch zentrale Java-Konzepte wie **Getter/Setter**, **Konstruktoren
 - [KON](../_generated/subjects/programmiertechnik/instructors/kon.md)
 - [POG](../_generated/subjects/programmiertechnik/instructors/pog.md)
 - [UDEMY](../_generated/subjects/programmiertechnik/instructors/udemy.md)
+- [Selbststudium](../_generated/subjects/programmiertechnik/instructors/selbststudium.md)
 
 ---
 
