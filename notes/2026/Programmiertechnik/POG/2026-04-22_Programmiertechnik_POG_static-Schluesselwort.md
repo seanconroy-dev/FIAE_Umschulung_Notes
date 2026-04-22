@@ -1,5 +1,5 @@
 ---
-title: 'static (Zugriffsmodifikator)'
+title: 'static (Schlüsselwort)'
 date: 2026-04-22
 weekday: 'Mittwoch'
 subject: 'Programmiertechnik'
