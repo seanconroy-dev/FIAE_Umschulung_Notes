@@ -3,7 +3,7 @@ title: "Logikfehler vs Syntaxfehler"
 date: 2026-04-24
 weekday: "Freitag"
 subject: "Programmiertechnik"
-instructor: "Selbststudium"
+instructor: "SELBSTSTUDIUM"
 program: "FIAE Umschulung 2025-2027"
 module: ""
 topic: "Fehlerarten in der Programmierung"
