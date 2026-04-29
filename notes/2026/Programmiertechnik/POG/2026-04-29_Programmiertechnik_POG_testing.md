@@ -13,6 +13,8 @@ tags:
   - Qualitätssicherung
   - TDD
   - Testarten
+  - ISTQB
+  - FIRST-Prinzip
 author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
@@ -34,14 +36,42 @@ Testing ist **kein einmaliger Schritt**, sondern ein **kontinuierlicher Bestandt
 
 ## Kernerklärung
 
-### 1. Grundprinzipien des Testings
-- Tests überprüfen **Soll vs. Ist-Verhalten**
-- Fehler können in jeder Phase entstehen → daher kontinuierliches Testen
-- Vollständige Fehlerfreiheit ist praktisch unmöglich → Ziel ist **Risikominimierung**
+### 1. Grundprinzipien des Testings (ISTQB)
+
+Die klassischen Testprinzipien bilden die Grundlage für professionelles Testing:
+
+| Prinzip | Erklärung |
+|--------|----------|
+| **1. Testing zeigt die Anwesenheit von Fehlern** | Tests können Fehler finden, aber nie beweisen, dass keine existieren |
+| **2. Vollständiges Testen ist unmöglich** | Alle möglichen Eingaben und Zustände zu testen ist nicht praktikabel |
+| **3. Frühes Testen** | Fehler sollten so früh wie möglich entdeckt werden |
+| **4. Fehlerhäufung** | Viele Fehler treten oft in wenigen Modulen auf |
+| **5. Pestizid-Paradoxon** | Immer gleiche Tests finden irgendwann keine neuen Fehler mehr |
+| **6. Testen ist kontextabhängig** | Teststrategie hängt vom System ab |
+| **7. Trugschluss der Fehlerfreiheit** | Fehlerfreie Software ist nutzlos, wenn sie falsche Anforderungen erfüllt |
 
 ---
 
-### 2. Testarten nach Testebene
+### 2. FIRST-Prinzip (für gute Unit-Tests)
+
+Dieses Prinzip beschreibt die **Qualitätskriterien für gute automatisierte Tests**:
+
+| Buchstabe | Bedeutung | Erklärung |
+|----------|----------|----------|
+| **F – Fast** | Schnell | Tests müssen schnell ausführbar sein |
+| **I – Independent** | Unabhängig | Tests beeinflussen sich nicht gegenseitig |
+| **R – Repeatable** | Wiederholbar | Gleiche Ergebnisse bei jeder Ausführung |
+| **S – Self-validating** | Selbstprüfend | Automatische Auswertung (kein manuelles Prüfen) |
+| **T – Timely** | Rechtzeitig | Tests werden früh geschrieben (z. B. TDD) |
+
+**Einordnung:**
+- Ergänzt die ISTQB-Prinzipien
+- Fokus auf **Entwicklerperspektive**
+- Besonders wichtig für **Unit-Tests und TDD**
+
+---
+
+### 3. Testarten nach Testebene
 
 | Testart            | Beschreibung |
 |--------------------|-------------|
@@ -52,7 +82,7 @@ Testing ist **kein einmaliger Schritt**, sondern ein **kontinuierlicher Bestandt
 
 ---
 
-### 3. Testarten nach Ziel
+### 4. Testarten nach Ziel
 
 | Testart             | Ziel |
 |---------------------|------|
@@ -63,7 +93,7 @@ Testing ist **kein einmaliger Schritt**, sondern ein **kontinuierlicher Bestandt
 
 ---
 
-### 4. Testarten nach Durchführung
+### 5. Testarten nach Durchführung
 
 | Kategorie            | Beschreibung |
 |----------------------|-------------|
@@ -85,7 +115,7 @@ Testing ist **kein einmaliger Schritt**, sondern ein **kontinuierlicher Bestandt
 
 ---
 
-### 5. Testabdeckung (Coverage)
+### 6. Testabdeckung (Coverage)
 - Gibt an, wie viel Prozent des Codes durch Tests geprüft werden
 - Hohe Coverage ≠ fehlerfreie Software
 - Ziel: **kritische Bereiche zuverlässig absichern**
@@ -111,6 +141,13 @@ C --> A
 - Hohe Testabdeckung
 - Bessere Codequalität
 - Fördert sauberes Design
+
+### Verbindung zu FIRST:
+- **Fast** → Tests laufen häufig und schnell
+- **Independent** → Tests sind voneinander unabhängig
+- **Repeatable** → stabile Ergebnisse
+- **Self-validating** → automatische Verifikation
+- **Timely** → Tests entstehen früh
 
 ---
 
@@ -167,70 +204,56 @@ int add(int a, int b) {
 - Automatisierte Tests sparen Zeit
 - Frühe Fehler = geringere Kosten
 
+### 7. Gemeinsame Verantwortung
+- Testing ist nicht nur Aufgabe von Testern
+- Entwickler müssen aktiv Tests schreiben (z. B. Unit-Tests)
+
 ---
 
 ## Exam Relevance (IHK)
 
 Wichtige Prüfungsaspekte:
+- Die **7 ISTQB Testprinzipien**
+- Das **FIRST-Prinzip (gute Unit-Tests)**
 - Unterschiede zwischen **Unit-, Integrations- und Systemtests**
 - Verständnis von **statischen vs. dynamischen Tests**
 - Unterschied **White-Box vs. Black-Box**
 - Bedeutung von **Testabdeckung**
 - Ablauf und Vorteile von **TDD**
-- Warum Testing wirtschaftlich sinnvoll ist
+- Wirtschaftliche Bedeutung von Testing
 
 Typische Fragen:
-- „Welche Testart wird wann eingesetzt?“  
-- „Erklären Sie den TDD-Zyklus“  
-- „Was ist der Unterschied zwischen White- und Black-Box-Tests?“  
-- „Warum sind Regressionstests wichtig?“  
+- „Warum können Tests keine Fehlerfreiheit beweisen?“  
+- „Was zeichnet gute Unit-Tests aus?“  
+- „Erklären Sie FIRST“  
+- „Was ist der Unterschied zwischen White- und Black-Box?“  
+- „Warum ist Testing wirtschaftlich sinnvoll?“  
 
 ---
 
 ## Häufige Fehler & Missverständnisse
 
-❌ „Hohe Testabdeckung = fehlerfreie Software“  
-→ Coverage misst nur, **was getestet wird**, nicht **wie gut**
-
-❌ „Testing ist nur Aufgabe von Testern“  
-→ Entwickler sind **mitverantwortlich (z. B. Unit-Tests)**
-
-❌ „Testing kommt am Ende“  
-→ Richtig: **Testing begleitet den gesamten Entwicklungsprozess**
-
-❌ „Manuelles Testen reicht aus“  
-→ Automatisierung ist entscheidend für Skalierbarkeit
+| Missverständnis | Richtigstellung |
+|---|---|
+| „Tests beweisen, dass Software fehlerfrei ist" | Tests können nur Fehler aufzeigen, nicht Fehlerfreiheit beweisen (ISTQB Prinzip 1) |
+| „Hohe Testabdeckung = fehlerfreie Software" | Coverage misst Quantität, nicht Qualität |
+| „Testing ist nur Aufgabe von Testern" | Entwickler sind mitverantwortlich, insbesondere für Unit-Tests |
+| „Tests dürfen langsam sein" | Widerspricht FIRST (Fast) |
+| „Tests hängen voneinander ab" | Widerspricht FIRST (Independent) |
+| „Testing kommt am Ende" | Testing ist ein kontinuierlicher Prozess |
 
 ---
 
 ## Fazit
 
-Testing ist ein zentraler Bestandteil der Softwareentwicklung und entscheidend für:
-- Qualität
-- Stabilität
-- Wartbarkeit
-- Kundenzufriedenheit
+Testing kombiniert:
+- **Theorie (ISTQB Prinzipien)** → Verständnis von Testing allgemein  
+- **Praxis (FIRST Prinzip)** → Qualität von Unit-Tests  
 
-Ein strukturierter Testansatz kombiniert:
-- verschiedene Testarten
-- Automatisierung
-- kontinuierliche Integration
-- ggf. TDD
+→ Nur zusammen ergibt sich **professionelles Testing**
 
-→ Ziel ist nicht perfekte Software, sondern **zuverlässige, kontrollierte und wartbare Systeme**.
-
----
-
-## Bewertung der Vollständigkeit (Lernperspektive)
-
-Die enthaltenen Informationen sind:
-✔ **Ausreichend für Prüfungsvorbereitung (IHK-Grundlagen)**  
-✔ **Strukturiert und logisch aufgebaut**  
-✔ **Gut geeignet zum Wiederholen und Verstehen**
-
-Was noch ergänzt werden könnte (für tieferes Verständnis):
-- Testpyramide (Unit vs. Integration vs. UI)
-- Mocking / Test-Doubles
-- Continuous Integration (CI) im Kontext von Tests
-- Beispiel für Black-Box vs. White-Box konkret
+Wichtigste Kernaussagen:
+- Tests zeigen Fehler, aber beweisen nie Fehlerfreiheit  
+- Gute Tests sind: **schnell, unabhängig, stabil, automatisch und frühzeitig**
+- Testing verbessert Qualität, senkt Kosten und erhöht Wartbarkeit
 
