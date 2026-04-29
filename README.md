@@ -32,11 +32,56 @@ The notes are automatically transformed into a structured documentation site usi
 ```
 .
 ├─ notes/        # Markdown-based knowledge base (MkDocs content root)
+│   └─ Tools/    # PowerShell helper scripts (note creation, migration, etc.)
 ├─ scripts/      # Automation and helper scripts
 ├─ reports/      # Generated reports / migration outputs
 ├─ docs/         # Project documentation
 └─ LICENSE
 ```
+
+---
+
+## Creating Notes
+
+New notes are created using the interactive PowerShell script:
+
+```powershell
+pwsh notes/Tools/new-fiae-note.ps1
+```
+
+The script works on Windows, Linux, and macOS (PowerShell 7+ required).  
+It will prompt you for:
+
+| Prompt | Example input | Notes |
+|---|---|---|
+| **Fach** (subject) | `PT`, `ST`, `DB`, `Programmiertechnik` | Short aliases and full names are accepted |
+| **Kürzel** (instructor code) | `POG`, `ASS` | Converted to uppercase automatically |
+| **Titel** (title) | `Windows – Bootprozess` | Used for the filename slug and the H1 heading |
+| **Modul** | `OOP` | Optional |
+| **Topic** | `Bootprozess` | Optional |
+| **Level** | `Grundlagen` | Optional |
+| **Tags** | `Java, OOP, AP1` | Comma-separated, optional |
+
+Once confirmed, the script:
+
+1. Creates the folder `notes/<year>/<subject>/<instructor>/` if it does not exist yet (with your confirmation)
+2. Writes a new `.md` file named `<date>_<subject>_<instructor>_<slug>.md` with pre-filled YAML frontmatter and a heading
+3. Opens the file in VS Code automatically (if the `code` CLI is available)
+
+**Supported subject aliases**
+
+| Alias | Subject |
+|---|---|
+| `pt` | Programmiertechnik |
+| `st` | Systemtechnik |
+| `bs` | Betriebssysteme |
+| `db`, `sql` | Datenbanken |
+| `dt` | Digitaltechnik |
+| `nt` | Netzwerktechnik |
+| `tk` | Telekommunikation |
+| `web` | Webentwicklung |
+| `wiso` | WiSo |
+| `git` | Git |
 
 ---
 
