@@ -72,6 +72,17 @@ Testing ist **kein einmaliger Schritt**, sondern ein **kontinuierlicher Bestandt
 | **Manuelle Tests**   | Durch Menschen durchgeführt |
 | **Automatisierte Tests** | Durch Tools ausgeführt |
 
+#### Dynamische Tests: White-Box vs. Black-Box
+
+| Ansatz            | Beschreibung | Beispiel |
+|-------------------|-------------|----------|
+| **White-Box-Test** | Kennt den internen Code (Struktur, Logik, Pfade) | Unit-Tests mit Fokus auf Codeabdeckung |
+| **Black-Box-Test** | Kennt nur Ein- und Ausgaben, nicht den Code | Systemtests, UI-Tests |
+
+**Merksatz:**
+- White-Box → *Wie funktioniert der Code intern?*  
+- Black-Box → *Was macht das System von außen?*
+
 ---
 
 ### 5. Testabdeckung (Coverage)
@@ -163,6 +174,7 @@ int add(int a, int b) {
 Wichtige Prüfungsaspekte:
 - Unterschiede zwischen **Unit-, Integrations- und Systemtests**
 - Verständnis von **statischen vs. dynamischen Tests**
+- Unterschied **White-Box vs. Black-Box**
 - Bedeutung von **Testabdeckung**
 - Ablauf und Vorteile von **TDD**
 - Warum Testing wirtschaftlich sinnvoll ist
@@ -170,6 +182,7 @@ Wichtige Prüfungsaspekte:
 Typische Fragen:
 - „Welche Testart wird wann eingesetzt?“  
 - „Erklären Sie den TDD-Zyklus“  
+- „Was ist der Unterschied zwischen White- und Black-Box-Tests?“  
 - „Warum sind Regressionstests wichtig?“  
 
 ---
@@ -205,3 +218,19 @@ Ein strukturierter Testansatz kombiniert:
 - ggf. TDD
 
 → Ziel ist nicht perfekte Software, sondern **zuverlässige, kontrollierte und wartbare Systeme**.
+
+---
+
+## Bewertung der Vollständigkeit (Lernperspektive)
+
+Die enthaltenen Informationen sind:
+✔ **Ausreichend für Prüfungsvorbereitung (IHK-Grundlagen)**  
+✔ **Strukturiert und logisch aufgebaut**  
+✔ **Gut geeignet zum Wiederholen und Verstehen**
+
+Was noch ergänzt werden könnte (für tieferes Verständnis):
+- Testpyramide (Unit vs. Integration vs. UI)
+- Mocking / Test-Doubles
+- Continuous Integration (CI) im Kontext von Tests
+- Beispiel für Black-Box vs. White-Box konkret
+
