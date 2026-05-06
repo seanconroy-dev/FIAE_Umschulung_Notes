@@ -18,7 +18,7 @@ author: "Sean Matthew Conroy"
 license: "CC BY-NC-SA 4.0"
 ---
 
-# Docker – Grundlagen
+# Docker – Grundlagen: Images, Container und Compose
 
 ## Kurzüberblick
 
@@ -41,7 +41,7 @@ Dockerfile → Image → Container
 
 ---
 
-# Grundprinzip von Docker
+## Grundprinzip von Docker
 
 ```mermaid
 flowchart LR
@@ -56,22 +56,22 @@ C --> D[Anwendung läuft isoliert]
 
 ---
 
-# Kernkonzepte von Docker
+## Kernkonzepte von Docker
 
-## Docker Image
+### Docker Image
 
 Ein **Image** ist eine **schreibgeschützte Vorlage**, aus der Container erstellt werden.
 
 Eigenschaften:
 
-- enthält Betriebssystembasis (z. B. Linux)
+- enthält Betriebssystembasis, z. B. Linux
 - enthält benötigte Software
 - enthält Anwendungscode
-- ist **immutable (unveränderlich)**
+- ist **immutable**, also unveränderlich
 
 Ein Image ist im Grunde:
 
-> eine **Momentaufnahme eines Dateisystems + Konfiguration**
+> eine **Momentaufnahme eines Dateisystems plus Konfiguration**
 
 Beispiel:
 
@@ -79,12 +79,12 @@ Beispiel:
 nginx:latest
 ```
 
-- `nginx` = Repository (Image-Name)
+- `nginx` = Repository beziehungsweise Image-Name
 - `latest` = Tag
 
 ---
 
-## Docker Container
+### Docker Container
 
 Ein **Container** ist eine **laufende Instanz eines Images**.
 
@@ -93,16 +93,16 @@ Eigenschaften:
 - isolierte Umgebung
 - eigener Prozessraum
 - eigenes Netzwerk
-- eigenes Dateisystem (über Layer)
+- eigenes Dateisystem über Layer
 
 Wichtig:
 
 Container **teilen sich den Kernel des Host-Systems**.  
-Dadurch müssen Container **kein eigenes vollständiges Betriebssystem** starten → sie sind **leichter** und **starten schneller** als virtuelle Maschinen.
+Dadurch müssen Container **kein eigenes vollständiges Betriebssystem** starten. Sie sind deshalb **leichter** und **starten schneller** als virtuelle Maschinen.
 
 ---
 
-# Unterschied: Container vs. Virtuelle Maschine
+## Unterschied: Container vs. Virtuelle Maschine
 
 ```mermaid
 flowchart TB
@@ -121,26 +121,23 @@ H[App + Dependencies]
 end
 ```
 
-**Virtuelle Maschine**
+| Virtuelle Maschine | Container |
+|---|---|
+| enthält ein vollständiges eigenes Betriebssystem | teilt sich den Kernel mit dem Host |
+| schwergewichtiger | leichtgewichtiger |
+| höherer Ressourcenverbrauch | geringerer Ressourcenverbrauch |
+| startet vergleichsweise langsamer | startet meist sehr schnell |
 
-- vollständiges Betriebssystem pro VM
-- schwergewichtig
-- hoher Ressourcenverbrauch
-
-**Container**
-
-- teilen sich Host-Kernel
-- leichtgewichtig
-- starten in Sekunden
+Der wichtigste Unterschied liegt darin, dass eine virtuelle Maschine ein vollständiges **Guest OS** startet, während ein Container lediglich isolierte Prozesse auf Basis des Host-Kernels ausführt.
 
 ---
 
-# Aufbau eines Docker Images
+## Aufbau eines Docker Images
 
-Docker Images bestehen aus **mehreren Schichten (Layers)**.  
+Docker Images bestehen aus **mehreren Schichten**, sogenannten **Layers**.  
 Jede Dockerfile-Anweisung erzeugt typischerweise einen neuen Layer.
 
-## Layer-System (Prinzip)
+### Layer-System
 
 ```mermaid
 flowchart TB
@@ -155,10 +152,10 @@ C --> D
 
 Eigenschaften der Layers:
 
-- **read-only** (einmal erstellt, nicht mehr veränderbar)
+- **read-only**, also nach Erstellung nicht mehr veränderbar
 - können **von mehreren Images geteilt** werden
 - sparen Speicherplatz
-- beschleunigen Builds (Caching)
+- beschleunigen Builds durch Caching
 
 Beispiel:
 
@@ -173,40 +170,35 @@ Jede Zeile erzeugt einen **neuen Layer**.
 
 ---
 
-## Layer Sharing in der Praxis
+### Layer Sharing in der Praxis
 
-### Warum Sharing?
-
-Viele Images bauen auf denselben Basisschichten auf (z. B. `ubuntu`, `debian`, `alpine`).  
+Viele Images bauen auf denselben Basisschichten auf, zum Beispiel `ubuntu`, `debian` oder `alpine`.  
 Docker kann diese Layers **einmal speichern** und **für mehrere Images wiederverwenden**.
 
-**Effekte:**
+Effekte:
 
-- **weniger Speicherbedarf**: gemeinsame Basisschichten werden nicht dupliziert
-- **schnellere Builds**: unveränderte Layers werden aus dem Cache wiederverwendet
-- **schnellere Pulls**: vorhandene Layers müssen nicht erneut geladen werden
+- **weniger Speicherbedarf**, weil gemeinsame Basisschichten nicht dupliziert werden
+- **schnellere Builds**, weil unveränderte Layers aus dem Cache wiederverwendet werden
+- **schnellere Pulls**, weil vorhandene Layers nicht erneut heruntergeladen werden müssen
 
-### Beispiel-Szenario
+Beispiel-Szenario:
 
 - Image A basiert auf `ubuntu`
 - Image B basiert ebenfalls auf `ubuntu`
 
-Dann kann Docker den `ubuntu`-Layer **einmal** halten und für beide Images nutzen.
+Dann kann Docker den `ubuntu`-Layer **einmal** speichern und für beide Images nutzen.
 
-### Ohne Sharing (als Gedankenmodell)
+Ohne Layer-Sharing müsste jedes Image alle Layers vollständig selbst enthalten. Das würde mehr Speicher verbrauchen und Builds sowie Downloads verlangsamen.
 
-Ohne Layer-Sharing müsste jedes Image alle Layers komplett selbst enthalten:
-
-- mehr Speicherverbrauch
-- langsameres Bauen und Laden
-
-> In der Realität ist genau dieses Sharing einer der großen Performance- und Speicher-Vorteile von Docker.
+> Layer-Sharing ist einer der großen Performance- und Speicher-Vorteile von Docker.
 
 ---
 
-# Dockerfile
+## Dockerfile
 
-Ein **Dockerfile** ist eine Textdatei, die beschreibt:
+Ein **Dockerfile** ist eine Textdatei, die beschreibt, wie ein Docker Image gebaut wird.
+
+Es legt unter anderem fest:
 
 - welches Basis-Image verwendet wird
 - welche Pakete installiert werden
@@ -231,13 +223,13 @@ CMD ["node", "server.js"]
 
 Ablauf:
 
-1. Docker liest Dockerfile
-2. erstellt Schritt für Schritt Image-Layer
-3. erzeugt final ein **Docker Image**
+1. Docker liest das Dockerfile.
+2. Docker erstellt Schritt für Schritt Image-Layer.
+3. Am Ende entsteht ein fertiges **Docker Image**.
 
 ---
 
-# Docker Hub
+## Docker Hub
 
 **Docker Hub** ist eine öffentliche **Image Registry**.
 
@@ -253,49 +245,62 @@ Beispiel:
 docker pull nginx
 ```
 
-lädt das **offizielle Nginx Image**.
+Dieser Befehl lädt das **offizielle Nginx Image** herunter.
 
-Viele offizielle Images existieren:
+Viele offizielle Images existieren, zum Beispiel:
 
-- nginx
-- mysql
-- node
-- python
-- postgres
-- redis
+- `nginx`
+- `mysql`
+- `node`
+- `python`
+- `postgres`
+- `redis`
 
 ---
 
-# Image Tags
+## Image Tags
 
 Tags sind ein zentraler Mechanismus für **Versionierung** und **kontrollierbare Deployments**.
 
-## Wozu Tags?
+### Wozu Tags dienen
 
-- **Versionierung**: z. B. `nginx:1.21` statt "irgendeine" Version
-- **Gezielte Deployments**: exakt reproduzierbar (wichtig für Tests & Produktion)
-- **Stabilität**: verhindert, dass ein Deployment plötzlich eine andere Version bekommt
+Tags ermöglichen:
 
-### Problem ohne (spezifische) Tags
+- **Versionierung**, zum Beispiel `nginx:1.21`
+- **gezielte Deployments**, weil eine bestimmte Image-Version genutzt wird
+- **Stabilität**, weil nicht unbeabsichtigt eine andere Version verwendet wird
+
+### Problem ohne spezifische Tags
 
 Wenn man kein Tag angibt, wird häufig automatisch `latest` verwendet:
 
-- `nginx` ≈ `nginx:latest`
+```text
+nginx
+```
+
+entspricht in vielen Fällen:
+
+```text
+nginx:latest
+```
 
 Das ist in der Praxis riskant:
 
 - `latest` kann sich ändern
-- Builds/Deployments werden schwer nachvollziehbar
-- Fehler können "plötzlich" auftreten, obwohl man nichts am Code geändert hat
+- Builds und Deployments werden schwer nachvollziehbar
+- Fehler können plötzlich auftreten, obwohl sich der eigene Code nicht geändert hat
 
-## Best Practice
+### Best Practice
 
-- **In Produktion**: möglichst **immer spezifische Tags** verwenden (z. B. `1.21.6`, `20-alpine`)
-- **`latest` vermeiden** in Production (nur für Experimente/Tests)
+Für produktive Systeme gilt:
+
+- möglichst **immer spezifische Tags** verwenden, zum Beispiel `1.21.6` oder `20-alpine`
+- `latest` in Production vermeiden
+- `latest` höchstens für Experimente oder einfache Tests nutzen
 
 ---
 
-## Aufbau von Tags
+### Aufbau von Tags
 
 Format:
 
@@ -303,8 +308,10 @@ Format:
 repository:tag
 ```
 
-- **repository**: Name des Images (z. B. `nginx`, `mysql`, `node`)
-- **tag**: Variante/Version (z. B. `1.21`, `latest`, `alpine`)
+| Bestandteil | Bedeutung | Beispiel |
+|---|---|---|
+| `repository` | Name des Images | `nginx`, `mysql`, `node` |
+| `tag` | Variante oder Version | `1.21`, `latest`, `alpine` |
 
 Beispiele:
 
@@ -315,53 +322,56 @@ node:20-alpine
 mysql:8
 ```
 
-Hinweis: Tags sind **Labels**, nicht automatisch "semantische Versionen" – ihre Bedeutung hängt vom Publisher ab.
+Wichtig:
+
+Tags sind **Labels**. Sie sind nicht automatisch semantische Versionen.  
+Ihre genaue Bedeutung hängt vom jeweiligen Publisher des Images ab.
 
 ---
 
-# Wichtige Docker Befehle
+## Wichtige Docker-Befehle
 
-## Images verwalten
+### Images verwalten
 
 | Befehl | Beschreibung |
-|------|-------------|
-| `docker build` | erstellt Image aus Dockerfile |
-| `docker images` | listet lokale Images |
-| `docker pull` | lädt Image aus Registry |
-| `docker push` | lädt Image in Registry hoch |
-| `docker rmi` | löscht Image |
+|---|---|
+| `docker build` | erstellt ein Image aus einem Dockerfile |
+| `docker images` | listet lokale Images auf |
+| `docker pull` | lädt ein Image aus einer Registry herunter |
+| `docker push` | lädt ein Image in eine Registry hoch |
+| `docker rmi` | löscht ein Image |
 
 ---
 
-## Container verwalten
+### Container verwalten
 
 | Befehl | Beschreibung |
-|------|-------------|
-| `docker run` | startet neuen Container |
+|---|---|
+| `docker run` | startet einen neuen Container |
 | `docker ps` | zeigt laufende Container |
 | `docker ps -a` | zeigt alle Container |
-| `docker stop` | stoppt Container |
-| `docker rm` | entfernt Container |
-| `docker logs` | zeigt Container Logs |
+| `docker stop` | stoppt einen Container |
+| `docker rm` | entfernt einen Container |
+| `docker logs` | zeigt Container-Logs |
 
 ---
 
-# Wichtige Optionen für `docker run`
+## Wichtige Optionen für `docker run`
 
 | Option | Bedeutung |
-|------|-----------|
-| `-d` | startet Container im Hintergrund |
-| `-p` | Port-Mapping Host → Container |
-| `-v` | Volume / Dateisystem Mount |
-| `--name` | Containername vergeben |
-| `--rm` | Container nach Stop automatisch löschen |
-| `-e` | Umgebungsvariable setzen |
-| `--network` | Container mit Netzwerk verbinden |
-| `--restart` | Restart Policy festlegen |
+|---|---|
+| `-d` | startet den Container im Hintergrund |
+| `-p` | Port-Mapping von Host zu Container |
+| `-v` | Volume oder Dateisystem-Mount |
+| `--name` | vergibt einen Container-Namen |
+| `--rm` | löscht den Container nach dem Stop automatisch |
+| `-e` | setzt eine Umgebungsvariable |
+| `--network` | verbindet den Container mit einem Netzwerk |
+| `--restart` | legt eine Restart Policy fest |
 
 ---
 
-## Beispiel
+### Beispiel für `docker run`
 
 ```bash
 docker run -d -p 8080:80 --name web nginx
@@ -370,13 +380,13 @@ docker run -d -p 8080:80 --name web nginx
 Bedeutung:
 
 | Teil | Erklärung |
-|----|-----------|
-| `-d` | Container im Hintergrund |
-| `-p 8080:80` | Host Port → Container Port |
-| `--name web` | Containername |
+|---|---|
+| `-d` | Container läuft im Hintergrund |
+| `-p 8080:80` | Host-Port `8080` wird auf Container-Port `80` weitergeleitet |
+| `--name web` | Container erhält den Namen `web` |
 | `nginx` | verwendetes Image |
 
-Danach erreichbar:
+Danach ist der Webserver erreichbar unter:
 
 ```text
 http://localhost:8080
@@ -384,16 +394,16 @@ http://localhost:8080
 
 ---
 
-# Restart Policies
+## Restart Policies
 
 Docker kann Container automatisch neu starten.
 
 | Policy | Verhalten |
-|------|-----------|
+|---|---|
 | `no` | kein automatischer Neustart |
-| `on-failure` | nur bei Fehler |
-| `always` | immer neu starten |
-| `unless-stopped` | neu starten außer manuell gestoppt |
+| `on-failure` | Neustart nur bei Fehler |
+| `always` | Container wird immer neu gestartet |
+| `unless-stopped` | Neustart, außer der Container wurde manuell gestoppt |
 
 Beispiel:
 
@@ -403,15 +413,15 @@ docker run --restart unless-stopped nginx
 
 ---
 
-# Container und Images analysieren
+## Container und Images analysieren
 
-## Images anzeigen
+### Images anzeigen
 
 ```bash
 docker images
 ```
 
-zeigt:
+Zeigt unter anderem:
 
 - Repository
 - Tag
@@ -420,13 +430,13 @@ zeigt:
 
 ---
 
-## Container anzeigen
+### Container anzeigen
 
 ```bash
 docker ps
 ```
 
-zeigt:
+Zeigt unter anderem:
 
 - Container ID
 - Image
@@ -436,27 +446,28 @@ zeigt:
 
 ---
 
-## Container/Images detailliert untersuchen
+### Container oder Images detailliert untersuchen
 
 ```bash
 docker inspect <container-id>
 ```
 
-liefert (u. a.):
+Liefert unter anderem Informationen zu:
 
-- Netzwerke
+- Netzwerken
 - Volumes
 - Konfiguration
 - Ressourcenlimits
 
 ---
 
-# Docker Compose
+## Docker Compose
 
-**Docker Compose** ermöglicht es, **mehrere Container gleichzeitig zu definieren und zu starten**.  
-Sobald eine Anwendung aus mehreren Komponenten besteht (z. B. Webserver + Datenbank), werden einzelne `docker run` Befehle schnell unübersichtlich. Compose löst das mit **einer zentralen YAML-Datei**.
+**Docker Compose** ermöglicht es, **mehrere Container gemeinsam zu definieren und zu starten**.
 
-Datei:
+Sobald eine Anwendung aus mehreren Komponenten besteht, zum Beispiel Webserver und Datenbank, werden einzelne `docker run`-Befehle schnell unübersichtlich. Compose löst dieses Problem mit **einer zentralen YAML-Datei**.
+
+Typische Datei:
 
 ```text
 docker-compose.yml
@@ -464,7 +475,7 @@ docker-compose.yml
 
 ---
 
-## Beispiel Compose Datei
+### Beispiel für eine Compose-Datei
 
 ```yaml
 version: "3"
@@ -483,7 +494,7 @@ services:
 
 ---
 
-## Compose Architektur
+### Compose-Architektur
 
 ```mermaid
 flowchart LR
@@ -496,46 +507,47 @@ Compose erstellt automatisch:
 
 - Netzwerk
 - Container
-- Volumes (optional)
+- optional Volumes
 
 ---
 
-## Wichtige Compose Befehle
+### Wichtige Compose-Befehle
 
 | Befehl | Funktion |
-|------|----------|
-| `docker compose up` | startet Anwendung |
-| `docker compose up -d` | startet im Hintergrund |
+|---|---|
+| `docker compose up` | startet die Anwendung |
+| `docker compose up -d` | startet die Anwendung im Hintergrund |
 | `docker compose down` | stoppt und entfernt Container |
-| `docker compose ps` | zeigt Container |
-| `docker compose logs` | Logs anzeigen |
+| `docker compose ps` | zeigt Compose-Container |
+| `docker compose logs` | zeigt Logs |
 
 ---
 
-# Docker Swarm
+## Docker Swarm
 
-**Docker Swarm** ist eine **Orchestrierungslösung für Docker Cluster**.
+**Docker Swarm** ist eine **Orchestrierungslösung für Docker-Cluster**.
 
-Funktion:
+Funktionen:
 
 - mehrere Docker Hosts verbinden
 - Container über mehrere Server verteilen
-- automatische Skalierung
-- Load Balancing
+- Skalierung ermöglichen
+- Load Balancing bereitstellen
 
-Cluster sieht für Docker aus wie **ein einziger virtueller Host**.
+Ein Swarm-Cluster sieht für Docker aus wie **ein einziger virtueller Host**.
 
 ---
 
-# Praxisbeispiel
+## Praxisbeispiel
 
 Ein Entwickler möchte eine Web-App deployen.
 
-Ohne Docker:
+Ohne Docker müssen auf dem Zielsystem manuell passende Abhängigkeiten eingerichtet werden:
 
-- Node installieren
+- Node.js installieren
 - Dependencies installieren
 - richtige Versionen sicherstellen
+- Umgebungsunterschiede beachten
 
 Mit Docker:
 
@@ -544,69 +556,84 @@ docker build -t my-app .
 docker run -p 3000:3000 my-app
 ```
 
-Die Anwendung läuft **identisch auf jedem System**.
+Die Anwendung läuft dadurch **identisch auf jedem System**, auf dem Docker verfügbar ist.
 
 ---
 
-# Prüfungsrelevanz (IHK)
+## Prüfungsrelevanz für die IHK
 
-Typische Prüfungsfragen:
+Typische prüfungsrelevante Themen:
 
-- Unterschied **Image vs Container**
-- Aufbau eines **Docker Images (Layer)**
+- Unterschied zwischen **Image** und **Container**
+- Aufbau eines **Docker Images** mit Layers
 - Zweck eines **Dockerfiles**
 - Rolle von **Docker Hub**
-- Nutzen und Risiken von **Tags** (z. B. `latest`)
-- Unterschiede **Docker vs VM**
-- Funktionsweise von **Docker Compose**
+- Nutzen und Risiken von **Tags**, besonders `latest`
+- Unterschied zwischen **Docker-Containern** und **virtuellen Maschinen**
+- Grundidee und Nutzen von **Docker Compose**
 
 Sehr wichtig:
 
-> Dockerfile → Image → Container
+```text
+Dockerfile → Image → Container
+```
+
+Diese Reihenfolge beschreibt den zentralen Docker-Workflow:
+
+1. Im Dockerfile wird der Bauprozess beschrieben.
+2. Daraus wird ein Image erstellt.
+3. Aus dem Image wird ein Container gestartet.
 
 ---
 
-# Häufige Missverständnisse
+## Häufige Missverständnisse
 
-## Container sind keine virtuellen Maschinen
+### Container sind keine virtuellen Maschinen
 
 Container:
 
-- teilen sich den Kernel
-- starten extrem schnell
-- benötigen weniger Ressourcen
+- teilen sich den Kernel mit dem Host-System
+- starten sehr schnell
+- benötigen weniger Ressourcen als virtuelle Maschinen
+
+Virtuelle Maschinen dagegen enthalten ein vollständiges eigenes Betriebssystem.
 
 ---
 
-## Images sind unveränderlich
+### Images sind unveränderlich
 
-Ein Image kann **nicht verändert werden**.
+Ein Image kann nach seiner Erstellung **nicht direkt verändert** werden.
 
-Stattdessen:
+Stattdessen wird bei Änderungen ein neues Image erzeugt:
 
-- neue Layer
+- neue Dockerfile-Anweisung
+- neuer Layer
 - neues Image
 
 ---
 
-## `latest` ist nicht automatisch "stabil"
+### `latest` ist nicht automatisch stabil
 
-`latest` bedeutet nicht "die beste Version", sondern nur "ein Tag, den der Publisher so benennt".  
-In Production daher besser:
+`latest` bedeutet nicht automatisch „neueste stabile Version“.  
+Es ist lediglich ein Tag, den der Publisher so benennt.
 
-- feste Versionen (z. B. `nginx:1.21.6`)
-- oder definierte Varianten (z. B. `node:20-alpine`)
+In produktiven Umgebungen sind daher besser:
+
+- feste Versionen, zum Beispiel `nginx:1.21.6`
+- definierte Varianten, zum Beispiel `node:20-alpine`
 
 ---
 
-## Container sind kurzlebig
+### Container sind kurzlebig
 
 Best Practice:
 
-Container sind **stateless**.
+Container sollten möglichst **stateless** sein.
 
 Daten werden ausgelagert in:
 
 - Volumes
 - Datenbanken
 - externe Speicher
+
+Dadurch können Container problemlos gelöscht, ersetzt oder neu gestartet werden, ohne dass wichtige Anwendungsdaten verloren gehen.
