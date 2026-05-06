@@ -165,7 +165,7 @@ Testing prüft nicht nur, ob eine Funktion vorhanden ist, sondern auch, ob sie z
 | **Unit-Test** | Testet einzelne Funktionen oder Methoden isoliert |
 | **Integrationstest** | Testet Zusammenspiel mehrerer Komponenten |
 | **Systemtest** | Testet das gesamte System als Einheit |
-| **Akzeptanztest** | Prüft, ob Anforderungen des Kunden erfüllt sind |
+| **Abnahmetest** | Prüft, ob Anforderungen des Kunden erfüllt sind |
 
 ---
 
