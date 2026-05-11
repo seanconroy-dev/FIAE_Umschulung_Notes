@@ -21,7 +21,7 @@ license: "CC BY-NC-SA 4.0"
 
 # Text-, Time- und Date-Funktionen in SQL
 
-## Kurzüberblick / Definition
+### Kurzüberblick / Definition
 
 **Text-, Datums- und Zeitfunktionen** sind SQL-Funktionen, mit denen Zeichenketten, Datumswerte und Zeitangaben verarbeitet, formatiert, berechnet oder verglichen werden können.
 
@@ -48,7 +48,7 @@ Für die Prüfung ist besonders wichtig, das Grundprinzip zu verstehen und typis
 
 ---
 
-## Grundidee: Funktionen in SQL
+### Grundidee: Funktionen in SQL
 
 Eine SQL-Funktion nimmt einen oder mehrere Werte entgegen, verarbeitet diese und gibt ein Ergebnis zurück.
 
@@ -93,7 +93,7 @@ FROM customers;
 
 ---
 
-## Wichtige Kategorien
+### Wichtige Kategorien
 
 ```mermaid
 flowchart TD
@@ -112,9 +112,9 @@ flowchart TD
 
 ---
 
-# Textfunktionen
+## Textfunktionen
 
-## Zweck von Textfunktionen
+### Zweck von Textfunktionen
 
 **Textfunktionen** dienen dazu, Zeichenketten zu verarbeiten.
 
@@ -129,7 +129,7 @@ Typische Aufgaben sind:
 
 ---
 
-## Häufige Textfunktionen
+### Häufige Textfunktionen
 
 | Funktion | Zweck | Beispiel |
 |---|---|---|
@@ -147,7 +147,7 @@ Die genaue Schreibweise kann je nach Datenbanksystem abweichen. In SQL Server he
 
 ---
 
-## Beispiel: Texte verbinden
+### Beispiel: Texte verbinden
 
 ```sql
 SELECT
@@ -164,7 +164,7 @@ Ergebnis:
 
 ---
 
-## Beispiel: Groß- und Kleinschreibung vereinheitlichen
+### Beispiel: Groß- und Kleinschreibung vereinheitlichen
 
 ```sql
 SELECT
@@ -176,9 +176,9 @@ Das ist nützlich, wenn E-Mail-Adressen einheitlich gespeichert oder verglichen 
 
 ---
 
-# Datums- und Zeitfunktionen
+## Datums- und Zeitfunktionen
 
-## Zweck von Datums- und Zeitfunktionen
+### Zweck von Datums- und Zeitfunktionen
 
 Datums- und Zeitfunktionen dienen dazu, mit zeitbezogenen Werten zu arbeiten.
 
@@ -194,7 +194,7 @@ Typische Aufgaben sind:
 
 ---
 
-## Aktuelles Datum und aktuelle Uhrzeit
+### Aktuelles Datum und aktuelle Uhrzeit
 
 Je nach Datenbanksystem gibt es unterschiedliche Funktionen für aktuelle Zeitwerte.
 
@@ -233,7 +233,7 @@ Mögliches Ergebnis:
 
 ---
 
-## DATE, TIME und NOW
+### DATE, TIME und NOW
 
 Die Begriffe `DATE`, `TIME` und `NOW` werden je nach Datenbanksystem unterschiedlich verwendet.
 
@@ -277,9 +277,9 @@ Für die aktuelle Uhrzeit ist `CURRENT_TIME` meist klarer.
 
 ---
 
-# Bestandteile eines Datums extrahieren
+## Bestandteile eines Datums extrahieren
 
-## DAY, MONTH und YEAR
+### DAY, MONTH und YEAR
 
 Mit Funktionen wie `DAY`, `MONTH` und `YEAR` können einzelne Bestandteile eines Datums ausgelesen werden.
 
@@ -300,7 +300,7 @@ Beispiel:
 
 ---
 
-## DATEPART
+### DATEPART
 
 `DATEPART` wird besonders in SQL Server verwendet. Die Funktion gibt einen bestimmten Bestandteil eines Datums zurück.
 
@@ -334,7 +334,7 @@ FROM log_entries;
 
 ---
 
-## EXTRACT als SQL-nahe Alternative
+### EXTRACT als SQL-nahe Alternative
 
 In mehreren SQL-Dialekten gibt es auch `EXTRACT`.
 
@@ -349,15 +349,15 @@ FROM orders;
 
 ---
 
-# Datumsdifferenzen berechnen
+## Datumsdifferenzen berechnen
 
-## DATEDIFF
+### DATEDIFF
 
 `DATEDIFF` berechnet die Differenz zwischen zwei Datums- oder Zeitwerten.
 
 Die genaue Syntax hängt vom Datenbanksystem ab.
 
-### SQL Server
+#### SQL Server
 
 ```sql
 SELECT DATEDIFF(day, start_date, end_date) AS days_between
@@ -366,7 +366,7 @@ FROM projects;
 
 Hier wird die Differenz in Tagen berechnet.
 
-### MySQL
+#### MySQL
 
 ```sql
 SELECT DATEDIFF(end_date, start_date) AS days_between
@@ -383,7 +383,7 @@ Beispiel:
 
 ---
 
-## Typische Anwendungsfälle für DATEDIFF
+### Typische Anwendungsfälle für DATEDIFF
 
 | Anwendungsfall | Beispiel |
 |---|---|
@@ -395,9 +395,9 @@ Beispiel:
 
 ---
 
-# Datumswerte verändern
+## Datumswerte verändern
 
-## DATEADD
+### DATEADD
 
 `DATEADD` fügt einem Datum eine bestimmte Anzahl von Zeiteinheiten hinzu oder zieht sie ab.
 
@@ -428,7 +428,7 @@ SELECT DATEADD(month, -1, CURRENT_DATE) AS one_month_ago;
 
 ---
 
-## DATE_ADD in MySQL
+### DATE_ADD in MySQL
 
 In MySQL wird häufig `DATE_ADD` verwendet.
 
@@ -449,7 +449,7 @@ SELECT DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 2 HOUR);
 
 ---
 
-## Datumsberechnung im Vergleich
+### Datumsberechnung im Vergleich
 
 | Aufgabe | SQL Server | MySQL |
 |---|---|---|
@@ -460,9 +460,9 @@ SELECT DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 2 HOUR);
 
 ---
 
-# Zeitstempel-Funktionen
+## Zeitstempel-Funktionen
 
-## TIMESTAMPDIFF
+### TIMESTAMPDIFF
 
 `TIMESTAMPDIFF` wird zum Beispiel in MySQL verwendet, um die Differenz zwischen zwei Zeitpunkten in einer bestimmten Einheit zu berechnen.
 
@@ -491,7 +491,7 @@ FROM user_sessions;
 
 ---
 
-## TIMESTAMPADD
+### TIMESTAMPADD
 
 `TIMESTAMPADD` fügt einem Zeitstempel eine bestimmte Anzahl von Zeiteinheiten hinzu.
 
@@ -508,9 +508,9 @@ Beispiel:
 
 ---
 
-# Formatierungsfunktionen
+## Formatierungsfunktionen
 
-## FORMAT
+### FORMAT
 
 `FORMAT` wird verwendet, um Werte in einem bestimmten Format darzustellen. Die genaue Syntax ist stark vom Datenbanksystem abhängig.
 
@@ -542,7 +542,7 @@ Mögliches Ergebnis:
 
 ---
 
-## FORMAT ist nicht überall gleich
+### FORMAT ist nicht überall gleich
 
 | Datenbanksystem | Typische Funktion |
 |---|---|
@@ -557,9 +557,9 @@ Formatierungsfunktionen sind oft eher für Ausgaben und Berichte gedacht. Für B
 
 ---
 
-# Validierung von Datumswerten
+## Validierung von Datumswerten
 
-## ISDATE
+### ISDATE
 
 `ISDATE` wird besonders in SQL Server verwendet. Die Funktion prüft, ob ein Ausdruck als gültiges Datum interpretiert werden kann.
 
@@ -601,7 +601,7 @@ Je nach Einstellung kann das als 1. Februar oder 2. Januar interpretiert werden.
 
 ---
 
-# TEXT-Funktion: Wichtige Klarstellung
+## TEXT-Funktion: Wichtige Klarstellung
 
 Die Funktion `TEXT()` ist keine allgemeine Standard-SQL-Funktion zur Datumsformatierung.
 
@@ -625,9 +625,9 @@ In SQL sollte man für Formatierung je nach Datenbanksystem eher Funktionen wie 
 
 ---
 
-# Typische praktische Beispiele
+## Typische praktische Beispiele
 
-## Beispiel 1: Bestellungen mit Jahr und Monat ausgeben
+### Beispiel 1: Bestellungen mit Jahr und Monat ausgeben
 
 ```sql
 SELECT
@@ -644,7 +644,7 @@ Man kann Bestellungen nach Jahr oder Monat gruppieren, filtern oder auswerten.
 
 ---
 
-## Beispiel 2: Bestellungen aus dem aktuellen Jahr finden
+### Beispiel 2: Bestellungen aus dem aktuellen Jahr finden
 
 ```sql
 SELECT
@@ -671,7 +671,7 @@ WHERE order_date >= '2026-01-01'
 
 ---
 
-## Beispiel 3: Fälligkeit einer Rechnung berechnen
+### Beispiel 3: Fälligkeit einer Rechnung berechnen
 
 ```sql
 SELECT
@@ -687,7 +687,7 @@ Das Fälligkeitsdatum liegt 14 Tage nach dem Rechnungsdatum.
 
 ---
 
-## Beispiel 4: Überfällige Rechnungen finden
+### Beispiel 4: Überfällige Rechnungen finden
 
 ```sql
 SELECT
@@ -704,7 +704,7 @@ Alle Rechnungen, deren Fälligkeitsdatum vor dem aktuellen Datum liegt, sind üb
 
 ---
 
-## Beispiel 5: Dauer einer Sitzung berechnen
+### Beispiel 5: Dauer einer Sitzung berechnen
 
 ```sql
 SELECT
@@ -721,9 +721,9 @@ Die Sitzungsdauer wird in Minuten berechnet.
 
 ---
 
-# Übersicht wichtiger Funktionen
+## Übersicht wichtiger Funktionen
 
-## Aktuelle Datums- und Zeitwerte
+### Aktuelle Datums- und Zeitwerte
 
 | Funktion | Bedeutung | Hinweis |
 |---|---|---|
@@ -736,7 +736,7 @@ Die Sitzungsdauer wird in Minuten berechnet.
 
 ---
 
-## Datumsteile extrahieren
+### Datumsteile extrahieren
 
 | Funktion | Bedeutung |
 |---|---|
@@ -748,7 +748,7 @@ Die Sitzungsdauer wird in Minuten berechnet.
 
 ---
 
-## Datumsberechnung
+### Datumsberechnung
 
 | Funktion | Bedeutung |
 |---|---|
@@ -760,7 +760,7 @@ Die Sitzungsdauer wird in Minuten berechnet.
 
 ---
 
-## Formatierung und Validierung
+### Formatierung und Validierung
 
 | Funktion | Bedeutung |
 |---|---|
@@ -771,7 +771,7 @@ Die Sitzungsdauer wird in Minuten berechnet.
 
 ---
 
-# Datenbanksysteme im Vergleich
+## Datenbanksysteme im Vergleich
 
 | Aufgabe | MySQL / MariaDB | SQL Server | PostgreSQL | Oracle |
 |---|---|---|---|---|
@@ -785,9 +785,9 @@ Die Sitzungsdauer wird in Minuten berechnet.
 
 ---
 
-# Wichtige Hinweise zur Arbeit mit Datum und Zeit
+## Wichtige Hinweise zur Arbeit mit Datum und Zeit
 
-## 1. Datumswerte nicht als Text speichern
+### 1. Datumswerte nicht als Text speichern
 
 Datumswerte sollten in passenden Datentypen gespeichert werden, zum Beispiel:
 
@@ -815,7 +815,7 @@ Warum?
 
 ---
 
-## 2. Formatierung erst bei der Ausgabe
+### 2. Formatierung erst bei der Ausgabe
 
 Intern sollte die Datenbank mit echten Datumswerten arbeiten.
 
@@ -848,7 +848,7 @@ FROM orders;
 
 ---
 
-## 3. Datenbanksystem beachten
+### 3. Datenbanksystem beachten
 
 Nicht jede Funktion existiert in jedem SQL-Dialekt.
 
@@ -875,7 +875,7 @@ Deshalb muss man bei SQL-Funktionen immer beachten:
 
 ---
 
-## 4. Zeitzonen beachten
+### 4. Zeitzonen beachten
 
 Bei Anwendungen mit mehreren Regionen oder Servern können Zeitzonen wichtig werden.
 
@@ -890,7 +890,7 @@ Für einfache Prüfungsaufgaben steht meist die Funktionsweise der SQL-Funktion 
 
 ---
 
-# Examensrelevanz
+## Examensrelevanz
 
 Text-, Datums- und Zeitfunktionen sind prüfungsrelevant, weil sie häufig in SQL-Abfragen, Berichten und Auswertungen vorkommen.
 
@@ -910,7 +910,7 @@ Typische Prüfungssituationen:
 
 ---
 
-## Typische Prüfungsfragen
+### Typische Prüfungsfragen
 
 | Frage | Erwartete Kernaussage |
 |---|---|
@@ -925,9 +925,9 @@ Typische Prüfungssituationen:
 
 ---
 
-# Häufige Fehler und Klarstellungen
+## Häufige Fehler und Klarstellungen
 
-## Fehler 1: „DATE gibt immer das aktuelle Datum zurück“
+### Fehler 1: „DATE gibt immer das aktuelle Datum zurück“
 
 Nicht allgemein richtig.
 
@@ -935,7 +935,7 @@ Nicht allgemein richtig.
 
 ---
 
-## Fehler 2: „NOW und GETDATE sind überall gleich verfügbar“
+### Fehler 2: „NOW und GETDATE sind überall gleich verfügbar“
 
 Falsch.
 
@@ -943,7 +943,7 @@ Falsch.
 
 ---
 
-## Fehler 3: „Formatierte Datumswerte eignen sich gut für Berechnungen“
+### Fehler 3: „Formatierte Datumswerte eignen sich gut für Berechnungen“
 
 Falsch.
 
@@ -951,7 +951,7 @@ Formatierte Datumswerte sind häufig Textwerte. Für Berechnungen sollte man ech
 
 ---
 
-## Fehler 4: „DATEDIFF hat überall dieselbe Syntax“
+### Fehler 4: „DATEDIFF hat überall dieselbe Syntax“
 
 Falsch.
 
@@ -971,7 +971,7 @@ DATEDIFF(end_date, start_date)
 
 ---
 
-## Fehler 5: „TEXT ist eine normale SQL-Funktion zur Datumsformatierung“
+### Fehler 5: „TEXT ist eine normale SQL-Funktion zur Datumsformatierung“
 
 Nicht allgemein richtig.
 
@@ -979,7 +979,7 @@ In SQL ist `TEXT` häufiger ein Datentyp. Für Datumsformatierung werden je nach
 
 ---
 
-## Fehler 6: „Man kann Datumswerte problemlos als VARCHAR speichern“
+### Fehler 6: „Man kann Datumswerte problemlos als VARCHAR speichern“
 
 Technisch möglich, aber fachlich meistens falsch.
 
@@ -987,7 +987,7 @@ Datumswerte sollten als passende Datums- oder Zeitdatentypen gespeichert werden,
 
 ---
 
-# Merksätze
+## Merksätze
 
 - Datumswerte sollten als Datumsdatentypen gespeichert werden, nicht als Text.
 - `CURRENT_DATE` liefert das aktuelle Datum.
