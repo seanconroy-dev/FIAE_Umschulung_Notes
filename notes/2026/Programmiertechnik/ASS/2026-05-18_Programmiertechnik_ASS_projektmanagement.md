@@ -1685,8 +1685,13 @@ Welche Aussage ist korrekt?
 - (C) Ja, weil dabei Ressourcen eingesetzt werden.
 - (D) Nein, weil kein Pflichtenheft erstellt wird.
 
-> **Lösung: (B)**  
-> Ein Projekt ist per Definition einmalig. Wiederkehrende Routineprozesse sind keine Projekte.
+<details>
+<summary>Antwort anzeigen</summary>
+
+**Lösung: (B)**  
+Ein Projekt ist per Definition einmalig. Wiederkehrende Routineprozesse sind keine Projekte.
+
+</details>
 
 ---
 
@@ -1700,9 +1705,14 @@ Welche der folgenden Aussagen treffen zu?
 - (D) Das Lastenheft enthält die Abnahmekriterien aus Sicht des Auftraggebers.
 - (E) Lastenheft und Pflichtenheft sind dasselbe Dokument.
 
-> **Lösung: (A), (C), (D)**  
-> Das Lastenheft = Auftraggeber, „Was wird gebraucht?".  
-> Das Pflichtenheft = Auftragnehmer, „Wie wird es umgesetzt?".
+<details>
+<summary>Antwort anzeigen</summary>
+
+**Lösung: (A), (C), (D)**  
+Das Lastenheft = Auftraggeber, „Was wird gebraucht?".  
+Das Pflichtenheft = Auftragnehmer, „Wie wird es umgesetzt?".
+
+</details>
 
 ---
 
@@ -1716,10 +1726,15 @@ Ordne jede Aussage der passenden Projektorganisationsform zu.
 | Mitarbeitende sind vollständig aus der Linie herausgelöst | ? |
 | Mitarbeitende haben sowohl einen Linienvorgesetzten als auch einen Projektleiter | ? |
 
-> **Lösung:**  
-> - Einfluss-/Stabs-Projektorganisation  
-> - Reine Projektorganisation  
-> - Matrix-Projektorganisation
+<details>
+<summary>Lösung anzeigen</summary>
+
+**Lösung:**
+- Einfluss-/Stabs-Projektorganisation  
+- Reine Projektorganisation  
+- Matrix-Projektorganisation
+
+</details>
 
 ---
 
@@ -1731,13 +1746,23 @@ Das Projektteam formuliert folgendes Ziel:
 
 **a)** Begründe, warum dieses Ziel **nicht** SMART ist. (2 Punkte)
 
-> **Lösung:**  
-> Das Ziel ist weder messbar (kein konkretes Kriterium), noch spezifisch (was genau soll besser sein?), noch terminiert (kein Datum).
+<details>
+<summary>Lösung a) anzeigen</summary>
+
+**Lösung:**  
+Das Ziel ist weder messbar (kein konkretes Kriterium), noch spezifisch (was genau soll besser sein?), noch terminiert (kein Datum).
+
+</details>
 
 **b)** Formuliere ein verbessertes, SMART-konformes Ziel. (2 Punkte)
 
-> **Beispiellösung:**  
-> „Die Ladezeit der Startseite wird bis zum 30.06.2026 auf unter 2 Sekunden reduziert."
+<details>
+<summary>Lösung b) anzeigen</summary>
+
+**Beispiellösung:**  
+„Die Ladezeit der Startseite wird bis zum 30.06.2026 auf unter 2 Sekunden reduziert."
+
+</details>
 
 ---
 
@@ -1759,40 +1784,45 @@ Gegeben ist folgende Vorgangsliste:
 
 **c)** Wie lang ist die Gesamtprojektdauer? (1 Punkt)
 
-> **Lösung:**
->
-> **Vorwärtsrechnung:**
->
-> | Vorgang | D | FAZ | FEZ |
-> |---|---|---|---|
-> | A | 4 | 0 | 4 |
-> | B | 3 | 4 | 7 |
-> | C | 6 | 4 | 10 |
-> | D | 2 | 7 | 9 |
-> | E | 5 | max(10, 9) = 10 | 15 |
->
-> **Rückwärtsrechnung** (SEZ von E = 15):
->
-> | Vorgang | D | SEZ | SAZ |
-> |---|---|---|---|
-> | E | 5 | 15 | 10 |
-> | C | 6 | 10 | 4 |
-> | D | 2 | 10 | 8 |
-> | B | 3 | 8 | 5 |
-> | A | 4 | min(5, 4) = 4 | 0 |
->
-> **Puffer:**
->
-> | Vorgang | FAZ | SAZ | GP | Kritisch? |
-> |---|---|---|---|---|
-> | A | 0 | 0 | 0 | ✓ |
-> | B | 4 | 5 | 1 | Nein |
-> | C | 4 | 4 | 0 | ✓ |
-> | D | 7 | 8 | 1 | Nein |
-> | E | 10 | 10 | 0 | ✓ |
->
-> **b)** Kritischer Pfad: **A → C → E**  
-> **c)** Gesamtprojektdauer: **15 Tage**
+<details>
+<summary>Lösung anzeigen</summary>
+
+**Lösung:**
+
+**Vorwärtsrechnung:**
+
+| Vorgang | D | FAZ | FEZ |
+|---|---|---|---|
+| A | 4 | 0 | 4 |
+| B | 3 | 4 | 7 |
+| C | 6 | 4 | 10 |
+| D | 2 | 7 | 9 |
+| E | 5 | max(10, 9) = 10 | 15 |
+
+**Rückwärtsrechnung** (SEZ von E = 15):
+
+| Vorgang | D | SEZ | SAZ |
+|---|---|---|---|
+| E | 5 | 15 | 10 |
+| C | 6 | 10 | 4 |
+| D | 2 | 10 | 8 |
+| B | 3 | 8 | 5 |
+| A | 4 | min(5, 4) = 4 | 0 |
+
+**Puffer:**
+
+| Vorgang | FAZ | SAZ | GP | Kritisch? |
+|---|---|---|---|---|
+| A | 0 | 0 | 0 | ✓ |
+| B | 4 | 5 | 1 | Nein |
+| C | 4 | 4 | 0 | ✓ |
+| D | 7 | 8 | 1 | Nein |
+| E | 10 | 10 | 0 | ✓ |
+
+**b)** Kritischer Pfad: **A → C → E**  
+**c)** Gesamtprojektdauer: **15 Tage**
+
+</details>
 
 ---
 
@@ -1808,11 +1838,16 @@ Für ein Arbeitspaket werden folgende Aufwände geschätzt:
 
 **b)** Ein Entwickler arbeitet zu einem Tagessatz von 480 €. Berechne die erwarteten Personalkosten für dieses Arbeitspaket. (2 Punkte)
 
-> **Lösung:**
->
-> **a)** $$E = \frac{3 + 4 \cdot 6 + 15}{6} = \frac{3 + 24 + 15}{6} = \frac{42}{6} = 7 \text{ Tage}$$
->
-> **b)** $$\text{Kosten} = 7 \text{ Tage} \times 480 \text{ €/Tag} = 3.360 \text{ €}$$
+<details>
+<summary>Lösung anzeigen</summary>
+
+**Lösung:**
+
+**a)** $$E = \frac{3 + 4 \cdot 6 + 15}{6} = \frac{3 + 24 + 15}{6} = \frac{42}{6} = 7 \text{ Tage}$$
+
+**b)** $$\text{Kosten} = 7 \text{ Tage} \times 480 \text{ €/Tag} = 3.360 \text{ €}$$
+
+</details>
 
 ---
 
@@ -1822,21 +1857,36 @@ Ein Unternehmen plant die Migration einer Datenbank auf eine neue Plattform.
 
 **a)** Nenne drei mögliche Risiken für dieses Projekt und ordne sie einer Risikoart zu. (3 Punkte)
 
-> **Beispiellösung:**
-> - Datenverlust während der Migration → technisches Risiko
-> - Datenbankadministrator erkrankt → organisatorisches Risiko
-> - Migration dauert länger als geplant → Terminrisiko
+<details>
+<summary>Lösung a) anzeigen</summary>
+
+**Beispiellösung:**
+- Datenverlust während der Migration → technisches Risiko
+- Datenbankadministrator erkrankt → organisatorisches Risiko
+- Migration dauert länger als geplant → Terminrisiko
+
+</details>
 
 **b)** Bewerte das Risiko „Datenverlust" mit Eintrittswahrscheinlichkeit 2 und Schadensausmaß 3. Berechne den Risikowert und gib den Handlungsbedarf an. (2 Punkte)
 
-> **Lösung:**  
-> $$\text{Risikowert} = 2 \times 3 = 6$$  
-> Handlungsbedarf: **Erhöht** — Maßnahmen planen und beobachten.
+<details>
+<summary>Lösung b) anzeigen</summary>
+
+**Lösung:**  
+$$\text{Risikowert} = 2 \times 3 = 6$$  
+Handlungsbedarf: **Erhöht** — Maßnahmen planen und beobachten.
+
+</details>
 
 **c)** Welche Maßnahme empfiehlst du für das Risiko „Datenverlust"? Nenne die Strategie und eine konkrete Maßnahme. (2 Punkte)
 
-> **Beispiellösung:**  
-> Strategie: Vermindern — vollständiges Backup vor der Migration erstellen und Rollback-Plan dokumentieren.
+<details>
+<summary>Antwort c) anzeigen</summary>
+
+**Beispiellösung:**  
+Strategie: Vermindern — vollständiges Backup vor der Migration erstellen und Rollback-Plan dokumentieren.
+
+</details>
 
 ---
 
@@ -1850,8 +1900,13 @@ Welche der folgenden Aussagen zum **V-Modell** sind korrekt?
 - (D) Das V-Modell ermöglicht flexible Anforderungsänderungen während der Entwicklung.
 - (E) Der Systemtest prüft den Systementwurf.
 
-> **Lösung: (A), (C), (E)**  
-> Das V-Modell ist klassisch/sequenziell, nicht agil. Änderungen sind schwierig einzubringen.
+<details>
+<summary>Antwort anzeigen</summary>
+
+**Lösung: (A), (C), (E)**  
+Das V-Modell ist klassisch/sequenziell, nicht agil. Änderungen sind schwierig einzubringen.
+
+</details>
 
 ---
 
@@ -1866,11 +1921,16 @@ Ordne jede Aufgabe der passenden Scrum-Rolle zu.
 | Entwickelt selbstorganisiert die Software | ? |
 | Plant den Sprint und legt das Sprint-Ziel fest | ? (gemeinsam) |
 
-> **Lösung:**
-> - Product Owner  
-> - Scrum Master  
-> - Entwicklungsteam  
-> - Alle drei Rollen gemeinsam (Sprint Planning)
+<details>
+<summary>Lösung anzeigen</summary>
+
+**Lösung:**
+- Product Owner  
+- Scrum Master  
+- Entwicklungsteam  
+- Alle drei Rollen gemeinsam (Sprint Planning)
+
+</details>
 
 ---
 
@@ -1886,14 +1946,19 @@ Stakeholder:
 
 **a)** Ordne jeden Stakeholder in die Stakeholder-Matrix ein und nenne die empfohlene Umgangsstrategie. (4 Punkte)
 
-> **Lösung:**
->
-> | Stakeholder | Einfluss | Interesse | Strategie |
-> |---|---|---|---|
-> | Geschäftsführung | Hoch | Hoch | Eng einbinden und aktiv managen |
-> | Lagerarbeiter | Gering | Hoch | Regelmäßig informieren |
-> | Datenschutzbeauftragter | Hoch | Gering | Zufrieden halten |
-> | Reinigungspersonal | Gering | Gering | Beobachten |
+<details>
+<summary>Lösung anzeigen</summary>
+
+**Lösung:**
+
+| Stakeholder | Einfluss | Interesse | Strategie |
+|---|---|---|---|
+| Geschäftsführung | Hoch | Hoch | Eng einbinden und aktiv managen |
+| Lagerarbeiter | Gering | Hoch | Regelmäßig informieren |
+| Datenschutzbeauftragter | Hoch | Gering | Zufrieden halten |
+| Reinigungspersonal | Gering | Gering | Beobachten |
+
+</details>
 
 ---
 
