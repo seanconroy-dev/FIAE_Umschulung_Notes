@@ -129,7 +129,7 @@ In der Praxis laufen Durchführung und Steuerung oft parallel, weil der Projektf
 
 ---
 
-# Projektinitialisierung
+## Projektinitialisierung
 
 ## Bedeutung
 
@@ -183,7 +183,7 @@ Der Projektauftrag schafft Klarheit darüber, ob ein Projekt offiziell gestartet
 
 ---
 
-# Projektplanung
+## Projektplanung
 
 ## Bedeutung
 
@@ -542,7 +542,7 @@ $$\text{Personalkosten} = 36 \text{ h} \times 65 \text{ €/h} = 2.340 \text{ �
 
 ---
 
-# Lastenheft und Pflichtenheft
+## Lastenheft und Pflichtenheft
 
 ## Lastenheft
 
@@ -609,7 +609,7 @@ Beispiel:
 
 ---
 
-# Projektdurchführung
+## Projektdurchführung
 
 ## Bedeutung
 
@@ -629,7 +629,7 @@ Die Projektdurchführung orientiert sich an der Projektplanung, muss aber flexib
 
 ---
 
-# Projektsteuerung
+## Projektsteuerung
 
 ## Bedeutung
 
@@ -684,7 +684,7 @@ Projektsteuerung bedeutet nicht nur, Abweichungen zu erkennen, sondern aktiv geg
 
 ---
 
-# Projektführung
+## Projektführung
 
 ## Bedeutung
 
@@ -723,7 +723,7 @@ Merksatz:
 
 ---
 
-# Projektmarketing
+## Projektmarketing
 
 ## Bedeutung
 
@@ -760,7 +760,7 @@ Projektmarketing ist besonders wichtig, wenn Projektergebnisse Veränderungen f�
 
 ---
 
-# Projektinformation und Dokumentation
+## Projektinformation und Dokumentation
 
 ## Projektinformation
 
@@ -813,7 +813,7 @@ Dokumentation sorgt für Nachvollziehbarkeit, Transparenz und Wiederverwendbarke
 
 ---
 
-# Projektabschluss
+## Projektabschluss
 
 ## Bedeutung
 
@@ -854,7 +854,7 @@ Lessons Learned helfen, Projektmanagement im Unternehmen langfristig zu verbesse
 
 ---
 
-# Risikomanagement
+## Risikomanagement
 
 ## Definition
 
@@ -948,7 +948,7 @@ EW = Eintrittswahrscheinlichkeit
 
 ---
 
-# Stakeholder
+## Stakeholder
 
 ## Definition
 
@@ -1067,7 +1067,7 @@ Typische Ableitung:
 
 ---
 
-# Organisationsformen im Projektmanagement
+## Organisationsformen im Projektmanagement
 
 ## Bedeutung
 
@@ -1279,7 +1279,7 @@ Agile Vorgehensweisen sind besonders in der Softwareentwicklung verbreitet, zum 
 
 ---
 
-# Vorgehensmodelle in der Softwareentwicklung
+## Vorgehensmodelle in der Softwareentwicklung
 
 Ein **Vorgehensmodell** beschreibt, wie ein Softwareprojekt strukturiert und durchgeführt wird.
 
@@ -1410,7 +1410,7 @@ Merkmale:
 
 ---
 
-# Projektmanagement-Aufgaben im Überblick
+## Projektmanagement-Aufgaben im Überblick
 
 ## Projektinitialisierung
 
@@ -1495,7 +1495,7 @@ Merkmale:
 
 ---
 
-# Praktisches Beispiel: IT-Projekt
+## Praktisches Beispiel: IT-Projekt
 
 Ein Unternehmen möchte ein neues Ticketsystem einführen.
 
@@ -1561,7 +1561,7 @@ Beispiele:
 
 ---
 
-# Examensrelevanz
+## Examensrelevanz
 
 Projektmanagement ist für die IHK-Prüfung besonders relevant, weil Fachinformatiker häufig Projekte planen, durchführen, dokumentieren und präsentieren müssen.
 
@@ -1672,7 +1672,7 @@ Falsch. Zum Projektabschluss gehören auch Übergabe, Abnahme, Dokumentation, Ab
 
 ---
 
-# IHK AP1 / AP2 Prüfungsaufgaben (Übungen)
+## IHK AP1 / AP2 Prüfungsaufgaben (Übungen)
 
 ## Aufgabe 1 — Projektmerkmale (Einfachauswahl)
 
