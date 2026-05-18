@@ -1191,9 +1191,9 @@ Nachteile:
 
 ## Einlinien- und Mehrlinienorganisation
 
-Die Begriffe **Einlinienorganisation** und **Mehrlinienorganisation** beschreiben allgemeine Organisationsprinzipien.
+Die Begriffe **Einlinienorganisation**, **Stablinienorganisation** und **Mehrlinienorganisation** beschreiben allgemeine Organisationsprinzipien.
 
-## Einlinienorganisation
+### Einlinienorganisation
 
 Bei der **Einlinienorganisation** hat jede Stelle genau einen direkten Vorgesetzten.
 
@@ -1211,7 +1211,38 @@ Nachteile:
 
 ---
 
-## Mehrlinienorganisation
+### Stablinienorganisation
+
+Die **Stablinienorganisation** basiert auf der Einlinienorganisation und ergänzt sie um **Stabsstellen**.
+
+Stabsstellen haben in der Regel **keine Weisungsbefugnis**, sondern beraten und entlasten die Linienführung durch Analysen, Vorbereitung von Entscheidungen und Spezialwissen.
+
+Typische Beispiele für Stabsstellen:
+
+- Qualitätsmanagement,
+- Rechtsabteilung,
+- Datenschutz,
+- Projektmanagement-Office (PMO).
+
+Vorteile:
+
+- Führungskräfte werden fachlich entlastet,
+- Spezialwissen steht zentral zur Verfügung,
+- Entscheidungen können besser vorbereitet werden.
+
+Nachteile:
+
+- Stäbe tragen Verantwortung ohne direkte Weisungsrechte,
+- mögliche Konflikte zwischen Stabsempfehlung und Linienentscheidung,
+- zusätzlicher Abstimmungsaufwand.
+
+Merksatz:
+
+> In der Stablinienorganisation berät der Stab, entschieden und angewiesen wird in der Linie.
+
+---
+
+### Mehrlinienorganisation
 
 Bei der **Mehrlinienorganisation** kann eine Stelle Weisungen von mehreren Vorgesetzten erhalten.
 
@@ -1233,7 +1264,7 @@ Die Matrixorganisation ist eine typische Form, bei der Mehrlinienprinzipien auft
 
 ## Funktionale Organisation und agile Organisation
 
-## Funktionale Organisation
+### Funktionale Organisation
 
 In einer **funktionalen Organisation** ist das Unternehmen nach Funktionen oder Fachbereichen gegliedert.
 
@@ -1262,7 +1293,7 @@ Nachteile:
 
 ---
 
-## Agile Organisation
+### Agile Organisation
 
 Eine **agile Organisation** arbeitet flexibel, iterativ und stark kunden- oder nutzerorientiert.
 
