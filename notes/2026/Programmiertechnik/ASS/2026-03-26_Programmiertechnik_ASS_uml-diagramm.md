@@ -247,7 +247,7 @@ Beispiel:
 classDiagram
     class Kunde
     class Bestellung
-    Kunde --> Bestellung
+    Kunde --- Bestellung
 ```
 
 ### Bedeutung
