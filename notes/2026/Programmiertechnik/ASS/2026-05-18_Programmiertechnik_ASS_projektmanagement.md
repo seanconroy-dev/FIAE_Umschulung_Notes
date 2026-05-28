@@ -597,7 +597,7 @@ Merksatz:
 | Dokument | Perspektive | Leitfrage | Erstellt durch |
 |---|---|---|---|
 | Lastenheft | Auftraggeber | Was wird benötigt? | Auftraggeber |
-| Pflichtenheft | Auftragnehmer | Wie wird es umgesetzt? | Auftragnehmer |
+| Pflichtenheft | Auftragnehmer | Wie wird es umgesetzt? | Auftragnehmer / Auftraggeber |
 
 Beispiel:
 
