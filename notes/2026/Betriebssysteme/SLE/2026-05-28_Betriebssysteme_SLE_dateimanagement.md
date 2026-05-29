@@ -1,279 +1,611 @@
 ---
-title: 'Dateimanagement'
+title: "Dateimanagement"
 date: 2026-05-28
-weekday: 'Donnerstag'
-subject: 'Betriebssysteme'
-instructor: 'SLE'
-program: 'FIAE Umschulung 2025-2027'
-module: ''
-topic: ''
-level: ''
+weekday: "Donnerstag"
+subject: "Betriebssysteme"
+instructor: "SLE"
+program: "FIAE Umschulung 2025-2027"
+module: "TODO"
+topic: "Dateimanagement unter Betriebssystemen"
+level: "Grundlagen"
 tags:
-  -
-author: 'Sean Matthew Conroy'
-license: 'CC BY-NC-SA 4.0'
----
-# Datei - Management unter Betriebssystemen
-
-## Lernziel (AP1/AP2 FIAE)
-
-Du solltest nach dieser Einheit sicher beantworten koennen:
-
-- Wie sind Datentraeger und Dateisysteme aufgebaut?
-- Warum ist unter Windows meist NTFS Standard?
-- Was ist der Unterschied zwischen Freigabeberechtigung und NTFS-Berechtigung?
-- Wie funktioniert Dateiverwaltung im Alltag (Explorer, CMD, PowerShell)?
-- Welche typischen Pruefungsfallen gibt es bei Partitionierung, Dateisystemwahl und Rechten?
-
+  - dateimanagement
+  - betriebssysteme
+  - dateisysteme
+  - windows
+author: "Sean Matthew Conroy"
+license: "CC BY-NC-SA 4.0"
 ---
 
-## 1. Grundlagen Dateimanagement
+# Dateimanagement unter Betriebssystemen
 
-Damit ein Betriebssystem Dateien verwalten kann, braucht es:
+## Kurzüberblick
 
-- Dateiname und Erweiterung (z. B. `angebot.docx`)
-- Inhalt (Datenbytes)
-- Metadaten:
-  - Erstellungsdatum
-  - Aenderungsdatum
-  - Dateigroesse
-  - Besitzer
-  - Attribute (z. B. schreibgeschuetzt, versteckt)
-- Speicherort (Pfad/Verzeichnisstruktur)
-- Zugriffsrechte
-- Zuordnung im Dateisystem (wo liegt die Datei physisch/logisch)
-- Backup-/Restore-Konzept
+**Dateimanagement** beschreibt, wie ein Betriebssystem Dateien, Verzeichnisse, Datenträger, Dateisysteme, Speicherorte und Zugriffsrechte verwaltet.
 
-Merksatz:
-> Eine Datei ist nicht nur Inhalt, sondern immer auch Name + Kontext + Rechte + Speicherzuordnung.
+Eine Datei besteht nicht nur aus ihrem Inhalt. Damit ein Betriebssystem mit einer Datei arbeiten kann, benötigt es zusätzlich Informationen über Speicherort, Name, Metadaten, Rechte und die Zuordnung im Dateisystem.
+
+> **Merksatz:**  
+> Eine Datei ist nicht nur Inhalt, sondern immer auch Name, Kontext, Rechte und Speicherzuordnung.
 
 ---
 
-## 2. Datentraeger, Partitionen und Volumes
+## Lernziele für AP1/AP2 FIAE
 
-### 2.1 Begriffe
+Nach dieser Einheit solltest du sicher erklären können:
 
-- **Datentraeger**: Physisches Medium (SSD/HDD)
-- **Partition**: Bereich auf dem Datentraeger
-- **Volume**: Im OS nutzbare Einheit mit Dateisystem
-- **Laufwerksbuchstabe (Windows)**: z. B. `C:`, `D:`
-
-### 2.2 Partitionsschema
-
-| Schema | Kerndaten | Relevanz fuer Windows |
-|---|---|---|
-| **MBR** (Master Boot Record) | max. 4 primaere Partitionen, Datentraeger bis ca. 2 TB | Alt-Systeme/Legacy BIOS |
-| **GPT** (GUID Partition Table) | sehr viele Partitionen (Windows i. d. R. bis 128), sehr grosse Datentraeger | Standard bei UEFI-Systemen |
-
-Hinweis:
-- **LVM** ist typisch Linux und kein Windows-Standard.
-- **RAID** ist kein Partitionsschema, sondern Redundanz-/Performance-Konzept fuer mehrere Datentraeger.
-
-### 2.3 Typische Partitionstypen
-
-- Primaere Partition
-- Erweiterte Partition (MBR-Kontext)
-- Logische Partition (innerhalb erweiterter Partition)
-- EFI-Systempartition (UEFI-Boot)
-- Wiederherstellungspartition (Recovery)
+- wie Datenträger, Partitionen, Volumes und Dateisysteme zusammenhängen
+- warum Windows-Systemlaufwerke in der Regel NTFS verwenden
+- was der Unterschied zwischen Freigabeberechtigungen und NTFS-Berechtigungen ist
+- wie Dateiverwaltung praktisch über Explorer, CMD und PowerShell funktioniert
+- welche typischen Prüfungsfallen bei Partitionierung, Dateisystemwahl und Berechtigungen auftreten
 
 ---
 
-## 3. Dateisysteme im Vergleich
+## 1. Grundidee des Dateimanagements
+
+Ein Betriebssystem muss Dateien eindeutig identifizieren, speichern, finden, schützen und verändern können.
+
+Dazu verwaltet es unter anderem:
+
+| Bestandteil | Bedeutung |
+|---|---|
+| Dateiname | Name der Datei, z. B. `angebot.docx` |
+| Dateierweiterung | Hinweis auf Dateityp, z. B. `.txt`, `.pdf`, `.exe` |
+| Inhalt | eigentliche Nutzdaten der Datei |
+| Metadaten | Zusatzinformationen wie Größe, Erstellungsdatum, Änderungsdatum |
+| Speicherort | Pfad innerhalb der Verzeichnisstruktur |
+| Zugriffsrechte | wer die Datei lesen, ändern oder löschen darf |
+| Dateisystem-Zuordnung | logische Zuordnung der Datei zu Speicherbereichen |
+| Backup-Konzept | Schutz gegen Datenverlust |
+
+### Beispiel
+
+Eine Datei `angebot.docx` besteht nicht nur aus dem geschriebenen Text. Das Betriebssystem speichert zusätzlich:
+
+- wo die Datei liegt, z. B. `C:\Users\Sean\Documents\angebot.docx`
+- wie groß sie ist
+- wann sie erstellt oder geändert wurde
+- welcher Benutzer Besitzer der Datei ist
+- welche Benutzer oder Gruppen Zugriff haben
+- auf welchen Speicherblöcken des Datenträgers die Datei liegt
+
+---
+
+## 2. Datenträger, Partitionen und Volumes
+
+### 2.1 Zentrale Begriffe
+
+| Begriff | Erklärung |
+|---|---|
+| Datenträger | physisches Speichermedium, z. B. SSD, HDD, USB-Stick |
+| Partition | abgegrenzter Bereich auf einem Datenträger |
+| Volume | vom Betriebssystem nutzbare Speichereinheit mit Dateisystem |
+| Dateisystem | Struktur, mit der Dateien und Ordner organisiert werden |
+| Laufwerksbuchstabe | Windows-Zuordnung wie `C:`, `D:` oder `E:` |
+| Mountpoint | Einbindung eines Volumes in eine Verzeichnisstruktur |
+
+### Zusammenhang
+
+Ein typischer Ablauf ist:
+
+```mermaid
+flowchart LR
+    A[Physischer Datenträger<br>SSD/HDD/USB] --> B[Partition]
+    B --> C[Volume]
+    C --> D[Dateisystem<br>z. B. NTFS]
+    D --> E[Dateien und Ordner]
+```
+
+Ein Datenträger kann mehrere Partitionen enthalten. Eine Partition kann als Volume verwendet und mit einem Dateisystem formatiert werden. Erst danach können Dateien und Ordner darauf gespeichert werden.
+
+---
+
+## 3. Partitionsschemata
+
+Ein **Partitionsschema** legt fest, wie Partitionen auf einem Datenträger beschrieben und organisiert werden.
+
+### 3.1 MBR und GPT im Vergleich
+
+| Schema | Bedeutung | Eigenschaften | Typische Nutzung |
+|---|---|---|---|
+| MBR | Master Boot Record | maximal 4 primäre Partitionen; Datenträger bis ca. 2 TB | ältere Systeme, Legacy BIOS |
+| GPT | GUID Partition Table | sehr viele Partitionen; unterstützt sehr große Datenträger | moderne Systeme mit UEFI |
+
+### 3.2 Wichtige Klarstellungen
+
+| Begriff | Einordnung |
+|---|---|
+| MBR | Partitionsschema |
+| GPT | Partitionsschema |
+| NTFS | Dateisystem, kein Partitionsschema |
+| FAT32 | Dateisystem, kein Partitionsschema |
+| RAID | Redundanz-/Performance-Konzept für mehrere Datenträger |
+| LVM | Linux-typische Volumenverwaltung, kein Windows-Standard |
+
+> **Prüfungsfalle:**  
+> RAID ist kein Partitionsschema. RAID beschreibt, wie mehrere physische Datenträger für Ausfallsicherheit oder Geschwindigkeit kombiniert werden.
+
+---
+
+## 4. Typische Partitionstypen
+
+| Partitionstyp | Bedeutung |
+|---|---|
+| Primäre Partition | direkt nutzbare Partition, besonders relevant im MBR-Kontext |
+| Erweiterte Partition | Container für logische Partitionen bei MBR |
+| Logische Partition | Partition innerhalb einer erweiterten Partition |
+| EFI-Systempartition | enthält Bootinformationen bei UEFI-Systemen |
+| Wiederherstellungspartition | enthält Werkzeuge zur Systemreparatur oder Wiederherstellung |
+
+Bei modernen Windows-Systemen mit UEFI ist GPT üblich. Dort gibt es typischerweise eine EFI-Systempartition, eine Windows-Partition und oft eine Wiederherstellungspartition.
+
+---
+
+## 5. Dateisysteme im Vergleich
+
+Ein **Dateisystem** bestimmt, wie Dateien und Ordner auf einem Volume gespeichert, benannt, organisiert und verwaltet werden.
 
 | Dateisystem | Typische Nutzung | Vorteile | Nachteile |
 |---|---|---|---|
-| **FAT32** | USB-Sticks, hohe Kompatibilitaet | sehr kompatibel | max. 4 GB pro Datei, keine NTFS-Rechte |
-| **exFAT** | USB/SD zwischen Windows/macOS | grosse Dateien, kompatibler als NTFS | keine NTFS-ACLs, weniger robust als journaling FS |
-| **NTFS** | Windows-Standard auf Systemlaufwerken | Rechte (ACL), Journaling, Komprimierung, Quotas, EFS | auf Fremdsystemen teils eingeschraenkt |
-| **ext4** | Linux | stabil, performant, journaling | unter Windows nicht nativ nutzbar |
-| **APFS** | aktuelles macOS | snapshots, modern | unter Windows nicht nativ |
-
-### Warum in Windows meist NTFS?
-
-- Detaillierte Berechtigungen (ACL)
-- Ausfallsicherheit durch Journaling
-- Unterstuetzung grosser Dateien/Volumes
-- Unternehmensfunktionen (Quotas, Verschluesselung, Auditing)
+| FAT32 | ältere USB-Sticks, maximale Kompatibilität | sehr kompatibel | maximale Dateigröße 4 GB; keine NTFS-Rechte |
+| exFAT | USB-Sticks, SD-Karten, Austausch zwischen Windows und macOS | unterstützt große Dateien; kompatibler als NTFS | keine NTFS-ACLs; weniger robust als Journaling-Dateisysteme |
+| NTFS | Windows-Systemlaufwerke und Unternehmensumgebungen | ACLs, Journaling, Quotas, Komprimierung, EFS | auf Fremdsystemen teilweise eingeschränkt |
+| ext4 | Linux-Systeme | stabil, performant, Journaling | unter Windows nicht nativ nutzbar |
+| APFS | moderne macOS-Systeme | Snapshots, moderne Speicherfunktionen | unter Windows nicht nativ nutzbar |
 
 ---
 
-## 4. Standardablauf: Von Rohdatentraeger zur nutzbaren Datei
+## 6. Warum Windows meist NTFS verwendet
 
-1. **Partitionieren** (Datentraeger strukturieren)
-2. **Formatieren** (Dateisystem anlegen, z. B. NTFS)
-  - Dateisystem wird festgelegt (z. B. NTFS, exFAT)
-  - Dateitabelle wird neu erstellt : Master File Table (MFT) bei NTFS 
-  - Clustergroesse wird festgelegt (z. B. 4 KB, beeinflusst Speicherplatznutzung)
-3. **Einbinden/Mounten**
-4. **Dateioperationen** (lesen, schreiben, aendern, loeschen)
-5. **Sichern/Archivieren**
+Windows verwendet für Systemlaufwerke in der Regel **NTFS**, weil es wichtige Funktionen für Sicherheit, Stabilität und Verwaltung bietet.
 
----
+### Wichtige NTFS-Funktionen
 
-## 5. Windows-Fokus: Dateiverwaltung in der Praxis
-
-### 5.1 Explorer-Funktionen (GUI)
-
-- Kopieren/Verschieben (`Strg+C`, `Strg+X`, `Strg+V`)
-- Umbenennen (`F2`)
-- Eigenschaften einsehen (Groesse, Attribute, Sicherheit)
-- Freigabe/Netzlaufwerk
-- Papierkorb und Wiederherstellung
-
-### 5.2 Wichtige CMD-Befehle
-
-| Befehl | Funktion |
+| Funktion | Bedeutung |
 |---|---|
-| `dir` | Verzeichnisinhalt anzeigen |
-| `cd` | Verzeichnis wechseln |
-| `md` / `mkdir` | Ordner erstellen |
-| `copy` | Datei kopieren |
-| `move` | Datei/Ordner verschieben |
-| `del` | Datei loeschen |
-| `rmdir /s` | Ordner rekursiv loeschen |
+| ACLs | detaillierte Zugriffsrechte für Benutzer und Gruppen |
+| Journaling | Schutz der Dateisystemstruktur bei Abstürzen oder Stromausfall |
+| Quotas | Speicherplatzbegrenzung für Benutzer |
+| EFS | dateibasierte Verschlüsselung |
+| Komprimierung | transparente Dateikomprimierung |
+| große Dateien und Volumes | geeignet für moderne Datenträgergrößen |
 
-### 5.3 Wichtige PowerShell-Cmdlets
+### Konzeptuell wichtig
 
-| Cmdlet | Funktion |
-|---|---|
-| `Get-ChildItem` | Inhalte auflisten |
-| `New-Item` | Datei/Ordner erstellen |
-| `Copy-Item` | kopieren |
-| `Move-Item` | verschieben |
-| `Remove-Item` | loeschen |
-| `Get-Acl` / `Set-Acl` | Berechtigungen lesen/setzen |
+NTFS ist nicht nur ein Speicherformat, sondern auch ein Sicherheitsmechanismus. Die NTFS-Berechtigungen bestimmen, welcher Benutzer oder welche Gruppe welche Operationen ausführen darf.
+
+Beispiele:
+
+- Datei lesen
+- Datei ändern
+- Datei ausführen
+- Datei löschen
+- Besitz übernehmen
+- Berechtigungen ändern
 
 ---
 
-## 6. Berechtigungen in Windows (pruefungsrelevant)
+## 7. Standardablauf: Vom Rohdatenträger zur nutzbaren Datei
 
-### 6.1 NTFS-Berechtigungen
+Ein neuer Datenträger ist nicht automatisch sofort sinnvoll nutzbar. Typischerweise erfolgt die Einrichtung in mehreren Schritten.
 
-Typische Stufen:
+```mermaid
+flowchart TD
+    A[Rohdatenträger] --> B[Partitionieren]
+    B --> C[Formatieren]
+    C --> D[Einbinden / Laufwerksbuchstabe zuweisen]
+    D --> E[Dateien und Ordner speichern]
+    E --> F[Sichern / Backup erstellen]
+```
 
-- Vollzugriff
-- Aendern
-- Lesen und Ausfuehren
-- Lesen
-- Schreiben
+### 7.1 Schrittfolge
 
-### 6.2 Vererbungsprinzip
+| Schritt | Bedeutung |
+|---|---|
+| 1. Partitionieren | Datenträger logisch aufteilen |
+| 2. Formatieren | Dateisystem anlegen, z. B. NTFS oder exFAT |
+| 3. Einbinden | Laufwerksbuchstabe oder Mountpoint zuweisen |
+| 4. Dateioperationen | lesen, schreiben, ändern, löschen |
+| 5. Sichern | Backup- oder Archivierungskonzept anwenden |
 
-- Unterordner/Dateien erben standardmaessig Rechte vom uebergeordneten Ordner.
-- Vererbung kann gebrochen werden (Achtung in Pruefungsaufgaben).
+### 7.2 Was passiert beim Formatieren?
 
-### 6.3 Freigabeberechtigung vs. NTFS-Berechtigung
+Beim Formatieren wird unter anderem:
 
-Merksatz fuer Netzwerkzugriff:
-> Effektiv gilt die restriktivere Berechtigung aus Freigabe und NTFS.
+- ein Dateisystem angelegt
+- eine Dateisystemstruktur erstellt
+- bei NTFS die Master File Table vorbereitet
+- die Clustergröße festgelegt
+- das Volume für Dateioperationen vorbereitet
+
+> **Wichtig:**  
+> Formatieren bedeutet nicht einfach „alles löschen“, sondern vor allem: ein Dateisystem auf einem Volume anlegen oder neu erzeugen.
+
+---
+
+## 8. Windows-Dateiverwaltung in der Praxis
+
+## 8.1 Explorer-Funktionen
+
+Der Windows Explorer bietet eine grafische Oberfläche zur Dateiverwaltung.
+
+Typische Aktionen:
+
+| Aktion | Tastenkombination oder Funktion |
+|---|---|
+| Kopieren | `Strg + C` |
+| Ausschneiden | `Strg + X` |
+| Einfügen | `Strg + V` |
+| Umbenennen | `F2` |
+| Eigenschaften anzeigen | Rechtsklick → Eigenschaften |
+| Datei löschen | `Entf` oder Papierkorb |
+| endgültig löschen | `Shift + Entf` |
+| Netzlaufwerk verbinden | Explorer → Dieser PC → Netzlaufwerk verbinden |
+
+Der Explorer zeigt außerdem Dateigröße, Änderungsdatum, Attribute und Sicherheitseinstellungen an.
+
+---
+
+## 8.2 Wichtige CMD-Befehle
+
+| Befehl | Funktion | Beispiel |
+|---|---|---|
+| `dir` | Verzeichnisinhalt anzeigen | `dir C:\Users` |
+| `cd` | Verzeichnis wechseln | `cd Documents` |
+| `md` / `mkdir` | Ordner erstellen | `mkdir Projekt` |
+| `copy` | Datei kopieren | `copy a.txt b.txt` |
+| `move` | Datei oder Ordner verschieben | `move a.txt D:\Backup` |
+| `del` | Datei löschen | `del test.txt` |
+| `rmdir /s` | Ordner rekursiv löschen | `rmdir /s Projekt` |
+
+### Beispiel
+
+```cmd
+mkdir Projekt
+cd Projekt
+echo Hallo > info.txt
+dir
+copy info.txt backup.txt
+```
+
+Dieses Beispiel erstellt einen Ordner, wechselt hinein, erzeugt eine Textdatei, listet den Inhalt auf und erstellt eine Kopie.
+
+---
+
+## 8.3 Wichtige PowerShell-Cmdlets
+
+| Cmdlet | Funktion | Beispiel |
+|---|---|---|
+| `Get-ChildItem` | Inhalte auflisten | `Get-ChildItem` |
+| `New-Item` | Datei oder Ordner erstellen | `New-Item -ItemType Directory Projekt` |
+| `Copy-Item` | kopieren | `Copy-Item info.txt backup.txt` |
+| `Move-Item` | verschieben | `Move-Item info.txt D:\Backup` |
+| `Remove-Item` | löschen | `Remove-Item test.txt` |
+| `Get-Acl` | Berechtigungen lesen | `Get-Acl .\info.txt` |
+| `Set-Acl` | Berechtigungen setzen | abhängig vom ACL-Objekt |
+
+### CMD vs. PowerShell
+
+| CMD | PowerShell |
+|---|---|
+| arbeitet stärker textorientiert | arbeitet objektorientiert |
+| ältere Windows-Kommandozeile | moderne Windows-Automatisierung |
+| gut für einfache Befehle | besser für Skripting und Administration |
+
+---
+
+## 9. Berechtigungen in Windows
+
+Berechtigungen legen fest, wer auf Dateien und Ordner zugreifen darf und welche Aktionen erlaubt sind.
+
+Windows unterscheidet besonders zwischen:
+
+- NTFS-Berechtigungen
+- Freigabeberechtigungen
+- effektiven Berechtigungen
+
+---
+
+## 9.1 NTFS-Berechtigungen
+
+NTFS-Berechtigungen gelten auf Dateisystemebene. Sie greifen lokal und über das Netzwerk.
+
+Typische Berechtigungsstufen:
+
+| Berechtigung | Bedeutung |
+|---|---|
+| Vollzugriff | alles erlaubt, inklusive Rechte ändern und Besitz übernehmen |
+| Ändern | lesen, schreiben, löschen, aber keine Rechteverwaltung |
+| Lesen und Ausführen | Dateien lesen und Programme ausführen |
+| Lesen | Dateien und Ordner anzeigen und lesen |
+| Schreiben | Dateien erstellen oder ändern |
+
+### Wichtiges Prinzip
+
+NTFS-Berechtigungen können Benutzern oder Gruppen zugewiesen werden. In der Praxis werden Rechte bevorzugt über Gruppen verwaltet, nicht einzeln pro Benutzer.
+
+---
+
+## 9.2 Vererbung
+
+Standardmäßig erben Dateien und Unterordner die Berechtigungen des übergeordneten Ordners.
 
 Beispiel:
 
-- Freigabe: `Aendern`
-- NTFS: `Lesen`
-- Ergebnis ueber Netzwerk: **Lesen**
+```text
+D:\Abteilung
+└── Projekte
+    └── projektplan.xlsx
+```
+
+Wenn `D:\Abteilung` einer Gruppe Leserechte gibt, können diese Rechte auf `Projekte` und `projektplan.xlsx` vererbt werden.
+
+### Vererbung kann gebrochen werden
+
+Die Vererbung kann deaktiviert oder angepasst werden. Das ist prüfungsrelevant, weil dadurch Rechte entstehen können, die nicht direkt aus dem übergeordneten Ordner erkennbar sind.
+
+> **Prüfungsfalle:**  
+> Wenn ein Benutzer unerwartet Zugriff hat oder keinen Zugriff hat, müssen Gruppenmitgliedschaften, Vererbung und explizite Rechte gemeinsam betrachtet werden.
 
 ---
 
-## 7. Typische AP1/AP2-Pruefungsthemen zum Dateimanagement
+## 9.3 Freigabeberechtigungen vs. NTFS-Berechtigungen
 
-- Geeignetes Dateisystem fuer Anwendungsfall auswaehlen (z. B. USB fuer Videos > 4 GB)
-- MBR vs. GPT begruenden
-- Rechtekonflikte aufloesen (Gruppen, Vererbung, Freigabe/NTFS)
-- Backup-Strategien einordnen (voll, inkrementell, differentiell)
-- Risiken bei Fehlbedienung benennen (falsche Berechtigungen, versehentliches Loeschen, kein Backup)
+Freigabeberechtigungen gelten beim Zugriff über das Netzwerk. NTFS-Berechtigungen gelten auf Dateisystemebene.
+
+Beim Netzwerkzugriff wirken beide Berechtigungssysteme zusammen.
+
+> **Merksatz:**  
+> Beim Netzwerkzugriff gilt effektiv die restriktivere Kombination aus Freigabeberechtigung und NTFS-Berechtigung.
+
+### Beispiel
+
+| Freigabeberechtigung | NTFS-Berechtigung | Effektiver Zugriff über Netzwerk |
+|---|---|---|
+| Vollzugriff | Lesen | Lesen |
+| Ändern | Lesen | Lesen |
+| Lesen | Ändern | Lesen |
+| Ändern | Ändern | Ändern |
+
+### Warum?
+
+Der Benutzer muss beide Prüfungen bestehen:
+
+```mermaid
+flowchart TD
+    A[Benutzer greift über Netzwerk zu] --> B{Freigabe erlaubt Zugriff?}
+    B -- Nein --> C[Zugriff verweigert]
+    B -- Ja --> D{NTFS erlaubt Zugriff?}
+    D -- Nein --> C
+    D -- Ja --> E[Zugriff entsprechend der restriktiveren Berechtigung]
+```
 
 ---
 
-## 8. Kompakte Lernzusammenfassung
+## 10. Backup-Bezug im Dateimanagement
 
-- Datei = Inhalt + Metadaten + Rechte + Speicherzuordnung
-- GPT ist heute in Windows mit UEFI Standard
-- NTFS ist Windows-Standard wegen ACL + Journaling + Features
-- FAT32 hat 4-GB-Dateigroessenlimit
-- Netzwerkzugriff: restriktivere Berechtigung gewinnt (Freigabe vs. NTFS)
-- Vor Datenarbeiten immer: Backup + Berechtigung + Zielpfad pruefen
+Dateimanagement ist eng mit Datensicherung verbunden. Dateien müssen nicht nur gespeichert, sondern auch gegen Verlust geschützt werden.
+
+### Backup-Arten
+
+| Backup-Art | Beschreibung | Vorteil | Nachteil |
+|---|---|---|---|
+| Vollbackup | sichert alle ausgewählten Daten | einfache Wiederherstellung | hoher Speicherbedarf |
+| Inkrementelles Backup | sichert nur Änderungen seit dem letzten Backup | spart Speicher und Zeit | Wiederherstellung benötigt mehrere Backup-Stände |
+| Differentielles Backup | sichert Änderungen seit dem letzten Vollbackup | Wiederherstellung einfacher als inkrementell | wächst bis zum nächsten Vollbackup an |
+
+### Beispiel
+
+Sonntag wird ein Vollbackup erstellt. Danach ändern sich täglich 200 GB.
+
+| Tag | Inkrementell | Differentiell |
+|---|---:|---:|
+| Montag | 200 GB | 200 GB |
+| Dienstag | 200 GB | 400 GB |
+| Mittwoch | 200 GB | 600 GB |
+| Donnerstag | 200 GB | 800 GB |
+| Freitag | 200 GB | 1000 GB |
+
+Inkrementelle Backups sparen unter der Woche meist Speicherplatz. Differentielle Backups vereinfachen häufig die Wiederherstellung, weil nur das Vollbackup und das letzte differentielle Backup benötigt werden.
 
 ---
 
-## 9. Uebungsfragen (AP1/AP2-Stil)
+## 11. Praktische Beispiele
+
+## 11.1 Geeignetes Dateisystem auswählen
+
+### Fall 1: USB-Stick für sehr große Videodateien
+
+Eine Datei ist größer als 4 GB.
+
+| Dateisystem | Geeignet? | Begründung |
+|---|---|---|
+| FAT32 | Nein | maximale Dateigröße 4 GB |
+| exFAT | Ja | unterstützt große Dateien und ist gut für Austauschmedien geeignet |
+| NTFS | Möglich | technisch geeignet, aber nicht immer ideal für Austausch mit anderen Systemen |
+
+### Fall 2: Windows-Systemlaufwerk
+
+| Dateisystem | Geeignet? | Begründung |
+|---|---|---|
+| NTFS | Ja | unterstützt Berechtigungen, Journaling und Windows-Verwaltungsfunktionen |
+| FAT32 | Nein | keine NTFS-ACLs, 4-GB-Grenze |
+| exFAT | Nein | nicht für Windows-Systemlaufwerke üblich |
+
+---
+
+## 11.2 Effektive Berechtigung bestimmen
+
+Ein Benutzer greift über das Netzwerk auf einen Ordner zu.
+
+```text
+Freigabeberechtigung: Ändern
+NTFS-Berechtigung: Lesen
+```
+
+Ergebnis:
+
+```text
+Effektiver Zugriff: Lesen
+```
+
+Begründung:
+
+Der Netzwerkzugriff wird sowohl durch die Freigabeberechtigung als auch durch die NTFS-Berechtigung begrenzt. Die restriktivere Berechtigung setzt sich effektiv durch.
+
+---
+
+## 12. Examensrelevanz AP1/AP2
+
+Dieses Thema ist prüfungsrelevant, weil es Grundlagen aus Betriebssystemen, Datensicherheit, Administration und praktischer Fehleranalyse verbindet.
+
+Typische Aufgabenformen:
+
+| Aufgabentyp | Beispiel |
+|---|---|
+| Dateisystem auswählen | „Welches Dateisystem eignet sich für große Dateien auf USB-Sticks?“ |
+| Partitionierung erklären | „Warum GPT statt MBR bei modernen Systemen?“ |
+| Rechte analysieren | „Welche effektive Berechtigung ergibt sich aus Freigabe und NTFS?“ |
+| Reihenfolge bestimmen | „Partitionieren, formatieren, einbinden, Datei speichern“ |
+| Backup-Strategie beurteilen | „Welche Sicherung spart Speicher? Welche vereinfacht Restore?“ |
+
+### Besonders wichtige Merksätze
+
+- FAT32 unterstützt keine Dateien größer als 4 GB.
+- NTFS unterstützt detaillierte Windows-Berechtigungen.
+- GPT ist bei modernen UEFI-Systemen Standard.
+- RAID ist kein Partitionsschema.
+- Beim Netzwerkzugriff zählt die restriktivere Kombination aus Freigabe und NTFS.
+- Vor riskanten Dateioperationen sollten Backup, Zielpfad und Berechtigungen geprüft werden.
+
+---
+
+## 13. Häufige Fehler und Klarstellungen
+
+| Fehler | Korrektur |
+|---|---|
+| „MBR ist ein Dateisystem.“ | Falsch. MBR ist ein Partitionsschema. |
+| „NTFS ist ein Partitionsschema.“ | Falsch. NTFS ist ein Dateisystem. |
+| „RAID ersetzt Backups.“ | Falsch. RAID erhöht Verfügbarkeit, ersetzt aber keine Datensicherung. |
+| „FAT32 ist für alle USB-Sticks ideal.“ | Nur bei Kompatibilität. Für Dateien über 4 GB ungeeignet. |
+| „Freigaberechte reichen aus.“ | Bei NTFS-Volumes müssen auch NTFS-Rechte passen. |
+| „Formatieren ist dasselbe wie Partitionieren.“ | Nein. Partitionieren teilt den Datenträger ein; Formatieren legt ein Dateisystem an. |
+
+---
+
+## 14. Kompakte Lernzusammenfassung
+
+- Dateimanagement umfasst Dateien, Ordner, Metadaten, Rechte und Speicherzuordnung.
+- Ein Datenträger wird partitioniert, formatiert und anschließend eingebunden.
+- MBR und GPT sind Partitionsschemata.
+- NTFS, FAT32, exFAT, ext4 und APFS sind Dateisysteme.
+- Windows verwendet meist NTFS wegen ACLs, Journaling und Verwaltungsfunktionen.
+- FAT32 hat eine maximale Dateigröße von 4 GB.
+- exFAT eignet sich oft für Austauschmedien mit großen Dateien.
+- Beim Netzwerkzugriff wirken Freigabe- und NTFS-Berechtigungen zusammen.
+- Effektiv zählt die restriktivere Berechtigung.
+- Backup-Strategien müssen nach Speicherbedarf, Wiederherstellungszeit und Risiko bewertet werden.
+
+---
+
+## 15. Übungsfragen im AP1/AP2-Stil
 
 ### Teil A: Single Choice
 
-1. Welches Dateisystem unterstuetzt standardmaessig detaillierte Windows-ACLs?
-  - A) FAT32
-  - B) NTFS
-  - C) exFAT
-  - D) ext4
+**1. Welches Dateisystem unterstützt standardmäßig detaillierte Windows-ACLs?**
 
-2. Welche Aussage zu MBR ist korrekt?
-  - A) MBR ist fuer UEFI zwingend erforderlich.
-  - B) MBR unterstuetzt unbegrenzt primaere Partitionen.
-  - C) MBR hat deutliche Grenzen bei Datentraegergroesse und Partitionen.
-  - D) MBR ist ein Dateisystem.
+- A) FAT32
+- B) NTFS
+- C) exFAT
+- D) ext4
 
-3. Ein Benutzer greift ueber Netzwerk auf eine Freigabe zu. Freigabe = Vollzugriff, NTFS = Lesen. Effektiv hat er:
-  - A) Vollzugriff
-  - B) Aendern
-  - C) Lesen
-  - D) Keinen Zugriff
+**2. Welche Aussage zu MBR ist korrekt?**
+
+- A) MBR ist für UEFI zwingend erforderlich.
+- B) MBR unterstützt unbegrenzt primäre Partitionen.
+- C) MBR hat deutliche Grenzen bei Datenträgergröße und Partitionen.
+- D) MBR ist ein Dateisystem.
+
+**3. Ein Benutzer greift über Netzwerk auf eine Freigabe zu. Freigabe = Vollzugriff, NTFS = Lesen. Welche effektive Berechtigung hat er?**
+
+- A) Vollzugriff
+- B) Ändern
+- C) Lesen
+- D) Keinen Zugriff
+
+---
 
 ### Teil B: Multiple Choice
 
-4. Welche Aussagen zu NTFS sind richtig?
-  - A) Unterstuetzt Journaling.
-  - B) Unterstuetzt keine Dateirechte.
-  - C) Kann Quotas verwalten.
-  - D) Maximal 4 GB pro Datei.
+**4. Welche Aussagen zu NTFS sind richtig?**
 
-5. Welche Schritte sind fuer einen neuen Datentraeger sinnvoll (technisch richtige Reihenfolge)?
-  - A) Formatieren
-  - B) Partitionieren
-  - C) Datei schreiben
-  - D) Einbinden/Mounten
+- A) NTFS unterstützt Journaling.
+- B) NTFS unterstützt keine Dateirechte.
+- C) NTFS kann Quotas verwalten.
+- D) NTFS erlaubt maximal 4 GB pro Datei.
 
-### Teil C: Kurzfall (Rechnen/Begruenden)
+**5. Welche Reihenfolge ist für einen neuen Datenträger technisch sinnvoll?**
 
-6. Ein Team sichert taeglich 200 GB geaenderte Daten. Sonntags wird ein Vollbackup erstellt.
-
-  Aufgaben:
-  - a) Nenne je einen Vorteil von inkrementell und differentiell.
-  - b) Welche Strategie minimiert i. d. R. den Speicherverbrauch unter der Woche?
-  - c) Welche Strategie vereinfacht typischerweise die Wiederherstellung im Stoerfall?
+- A) Formatieren
+- B) Partitionieren
+- C) Datei schreiben
+- D) Einbinden/Mounten
 
 ---
 
-## 10. Loesungsteil zur Selbstkontrolle
+### Teil C: Kurzfall
 
-### Teil A
+**6. Ein Team sichert täglich 200 GB geänderte Daten. Sonntags wird ein Vollbackup erstellt.**
 
-1. **B**
-2. **C**
-3. **C**
+Beantworte:
 
-### Teil B
-
-4. **A, C**
-5. **B, A, D, C**
-
-### Teil C (Muster)
-
-6a)
-- Inkrementell: wenig Daten pro Sicherungslauf, spart Zeit/Speicher.
-- Differentiell: schnellere Wiederherstellung als rein inkrementell.
-
-6b)
-- Meist **inkrementell**.
-
-6c)
-- Meist **differentiell** (Vollbackup + letztes differentielles Backup).
+1. Nenne je einen Vorteil von inkrementeller und differentieller Sicherung.
+2. Welche Strategie minimiert in der Regel den Speicherverbrauch unter der Woche?
+3. Welche Strategie vereinfacht typischerweise die Wiederherstellung im Störfall?
 
 ---
 
-## 11. Was du fuer den naechsten Unterricht mitnehmen kannst
+## 16. Lösungen zur Selbstkontrolle
 
-- Uebe 10 Minuten CMD/PowerShell-Dateibefehle praktisch.
-- Wiederhole Rechtefaelle mit Freigabe + NTFS.
-- Praege dir typische Auswahlregeln fuer FAT32/exFAT/NTFS ein.
+### Lösung Teil A
 
+| Frage | Lösung | Begründung |
+|---|---|---|
+| 1 | B | NTFS unterstützt Windows-ACLs. |
+| 2 | C | MBR hat Grenzen bei Partitionsanzahl und Datenträgergröße. |
+| 3 | C | Beim Netzwerkzugriff gilt die restriktivere Kombination. |
+
+### Lösung Teil B
+
+| Frage | Lösung | Begründung |
+|---|---|---|
+| 4 | A, C | NTFS unterstützt Journaling und Quotas. |
+| 5 | B, A, D, C | Erst partitionieren, dann formatieren, dann einbinden, dann Dateien schreiben. |
+
+### Lösung Teil C
+
+**6.1 Vorteile**
+
+- Inkrementell: spart meist Speicherplatz und Zeit, weil nur Änderungen seit dem letzten Backup gesichert werden.
+- Differentiell: Wiederherstellung ist oft einfacher, weil nur das Vollbackup und das letzte differentielle Backup benötigt werden.
+
+**6.2 Speicherverbrauch**
+
+In der Regel minimiert das inkrementelle Backup den Speicherverbrauch unter der Woche.
+
+**6.3 Wiederherstellung**
+
+In der Regel vereinfacht das differentielle Backup die Wiederherstellung, weil weniger Backup-Stände kombiniert werden müssen.
+
+---
+
+## 17. Wiederholung für den nächsten Unterricht
+
+Zur Festigung solltest du:
+
+- die Unterschiede zwischen MBR, GPT, NTFS, FAT32 und exFAT wiederholen
+- mindestens fünf CMD- oder PowerShell-Dateibefehle praktisch ausprobieren
+- Berechtigungsfälle mit Freigabe und NTFS üben
+- typische Dateisystem-Auswahlfragen trainieren
+- den Unterschied zwischen Vollbackup, inkrementellem Backup und differentiellem Backup sicher erklären können
