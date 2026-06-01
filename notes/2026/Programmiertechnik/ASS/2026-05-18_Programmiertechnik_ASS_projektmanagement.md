@@ -1431,6 +1431,35 @@ Merksatz:
 
 ---
 
+## Spiralmodell (klassisch, iterativ)
+
+Das **Spiralmodell** kombiniert strukturiertes Vorgehen mit wiederholten Zyklen und starkem Risikofokus.
+
+Jede Schleife der Spirale enthält typischerweise:
+
+1. Ziele und Alternativen festlegen,
+2. Risiken analysieren und bewerten,
+3. Prototypen/Umsetzungsschritt durchführen,
+4. Ergebnisse prüfen und nächste Runde planen.
+
+Typische Einsatzfälle:
+
+- große, komplexe oder risikoreiche Projekte,
+- Vorhaben mit unsicheren Anforderungen,
+- Projekte, bei denen frühe Prototypen hilfreich sind.
+
+| Vorteile | Nachteile |
+|---|---|
+| Früher Fokus auf Risiken | Höherer Planungs- und Managementaufwand |
+| Iteratives Lernen durch Prototypen | Für kleine Projekte oft zu aufwendig |
+| Änderungen besser integrierbar als bei rein sequenziellen Modellen | Gute Risikoanalyse-Kompetenz erforderlich |
+
+Merksatz:
+
+> Das Spiralmodell ist klassisch geprägt, aber iterativ und risikogesteuert.
+
+---
+
 ## Scrum (agil)
 
 **Scrum** ist ein agiles Rahmenwerk für iterative und inkrementelle Entwicklung.
@@ -1485,14 +1514,40 @@ Merkmale:
 
 ## Vergleich der Vorgehensmodelle
 
-| Merkmal | Wasserfall | V-Modell | Scrum | Kanban |
-|---|---|---|---|---|
-| Ablauf | Sequenziell | Sequenziell mit Testphasen | Iterativ in Sprints | Kontinuierlicher Fluss |
-| Anforderungen | Vollständig zu Beginn | Vollständig zu Beginn | Iterativ verfeinert | Laufend angepasst |
-| Kundenbeteiligung | Gering | Gering | Hoch (Sprint Review) | Mittel |
-| Flexibilität | Niedrig | Niedrig | Hoch | Hoch |
-| Dokumentation | Sehr umfangreich | Sehr umfangreich | Leichtgewichtig | Minimal |
-| Geeignet für | Stabile Anforderungen | Sicherheitskritische Systeme | Wechselnde Anforderungen | Wartung, Support |
+| Merkmal | Wasserfall | V-Modell | Spiralmodell | Scrum | Kanban |
+|---|---|---|---|---|---|
+| Ablauf | Sequenziell | Sequenziell mit Testphasen | Iterativ in Risikoschleifen | Iterativ in Sprints | Kontinuierlicher Fluss |
+| Anforderungen | Vollständig zu Beginn | Vollständig zu Beginn | Schritweise konkretisiert | Iterativ verfeinert | Laufend angepasst |
+| Kundenbeteiligung | Gering | Gering | Mittel | Hoch (Sprint Review) | Mittel |
+| Flexibilität | Niedrig | Niedrig | Mittel bis hoch | Hoch | Hoch |
+| Dokumentation | Sehr umfangreich | Sehr umfangreich | Umfangreich | Leichtgewichtig | Minimal |
+| Geeignet für | Stabile Anforderungen | Sicherheitskritische Systeme | Große/risikoreiche Projekte | Wechselnde Anforderungen | Wartung, Support |
+
+---
+
+## Klassisch vs. agil: Vor- und Nachteile
+
+### Klassische Modelle (z. B. Wasserfall, V-Modell, Spiralmodell)
+
+| Vorteile | Nachteile |
+|---|---|
+| Klare Struktur, Phasen und Verantwortlichkeiten | Änderungen später oft teuer |
+| Gute Planbarkeit bei stabilen Anforderungen | Kundenfeedback kommt häufig später |
+| Hohe Nachvollziehbarkeit durch Dokumentation | Höherer Dokumentationsaufwand |
+| Besonders geeignet für regulierte Umfelder | Bei dynamischen Anforderungen weniger flexibel |
+
+### Agile Modelle (z. B. Scrum, Kanban)
+
+| Vorteile | Nachteile |
+|---|---|
+| Schnelle Reaktion auf Änderungen | Planbarkeit über lange Zeiträume schwieriger |
+| Frühes und häufiges Feedback | Hohe Teamdisziplin und Kommunikation nötig |
+| Frühe sichtbare Zwischenergebnisse | Gefahr unklarer Zielbilder ohne gutes Backlog |
+| Starker Kundennutzen durch kurze Iterationen | In stark regulierten Umfeldern oft Zusatzaufwand |
+
+Prüfungsmerksatz:
+
+> Klassisch punktet bei Stabilität und Nachweisbarkeit, agil bei Anpassungsfähigkeit und schnellem Feedback.
 
 ---
 
