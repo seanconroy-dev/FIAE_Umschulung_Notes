@@ -46,6 +46,24 @@ Projektmanagement sorgt dafür, dass ein Projekt strukturiert geplant, durchgef�
 
 ---
 
+## Projektarten
+
+Je nach Ziel und Umfeld lassen sich Projekte in verschiedene Arten einteilen.
+
+| Projektart | Typische Beispiele |
+|---|---|
+| Bau- und Investitionsprojekte | Neubau, Umbau, Fabrikerweiterung |
+| Forschungs- und Entwicklungsprojekte | Prototyp, neue Produktidee, Pilotlösung |
+| Organisationsprojekte | Reorganisation, Einführung neuer Prozesse |
+| IT-Projekte | Softwareentwicklung, Migration, Infrastrukturaufbau |
+| Marketingprojekte | Kampagnen, Events, Markteinführung |
+
+Merksatz:
+
+> Projektarten helfen bei der Wahl von Vorgehensmodell, Teamaufbau und Steuerungsgrad.
+
+---
+
 ## Kernerklärung
 
 ## Ziel des Projektmanagements
@@ -180,6 +198,43 @@ Er enthält typischerweise:
 - Freigabeentscheidung.
 
 Der Projektauftrag schafft Klarheit darüber, ob ein Projekt offiziell gestartet wird.
+
+---
+
+## Projektrollen und Lenkungsausschuss
+
+In mittleren und großen Projekten ist eine klare Rollenverteilung wichtig.
+
+| Rolle | Typische Aufgaben |
+|---|---|
+| Lenkungsausschuss | Projektauftrag freigeben, Ziele bestätigen, Prioritäten setzen, Grundsatzentscheidungen treffen |
+| Projektleitung | Projekt planen und steuern, berichten, Entscheidungen vorbereiten, Koordination sicherstellen |
+| Teilprojektleitung | Teilbereiche fachlich und organisatorisch steuern |
+| Projektteam | Arbeitspakete umsetzen, Ergebnisse liefern, Probleme an die Projektleitung melden |
+
+Merksatz:
+
+> Der Lenkungsausschuss entscheidet strategisch, die Projektleitung steuert operativ.
+
+---
+
+## Kick-off-Meeting
+
+Das **Kick-off-Meeting** markiert den offiziellen Projektstart nach der Freigabe.
+
+Ziele des Kick-offs:
+
+- Projektziele und Rahmenbedingungen einheitlich vermitteln,
+- Rollen, Verantwortlichkeiten und Kommunikationswege klären,
+- Vorgehensweise, Meilensteine und nächste Schritte abstimmen,
+- Teamverständnis und Motivation fördern.
+
+Typische Agenda:
+
+1. Projektanlass und Zielbild,
+2. Projektorganisation und Rollen,
+3. Zeitplan, Meilensteine und Risiken,
+4. Kommunikation, Regeln und nächste Schritte.
 
 ---
 
@@ -1418,7 +1473,7 @@ Typische Spalten eines Kanban-Boards:
 | Backlog | In Bearbeitung | Review | Fertig |
 |---|---|---|---|
 | Aufgabe 1 | Aufgabe 3 | Aufgabe 5 | Aufgabe 6 |
-| Aufgabe 2 | Aufgabe 4 | | |
+| Aufgabe 2 | Aufgabe 4 | | 
 
 Merkmale:
 
@@ -1592,7 +1647,7 @@ Beispiele:
 
 ---
 
-## Examensrelevanz
+## Prüfungsrelevanz
 
 Projektmanagement ist für die IHK-Prüfung besonders relevant, weil Fachinformatiker häufig Projekte planen, durchführen, dokumentieren und präsentieren müssen.
 
@@ -1611,6 +1666,39 @@ Besonders wichtig sind:
 - Projektorganisationen,
 - Projektabschluss und Lessons Learned,
 - Projektdokumentation.
+
+---
+
+## Lernstruktur für AP1 und AP2
+
+Da du jetzt auf **AP1** lernst und später **AP2** folgt, hilft eine zweistufige Lernstruktur:
+
+### AP1-Fokus (jetzt)
+
+- Begriffe sicher beherrschen (Projekt, Projektphasen, Stakeholder, Lasten-/Pflichtenheft),
+- Standardaufgaben rechnen (Netzplan, PERT, Kosten, Risikowert),
+- kurze Definitionen in 1-3 Sätzen formulieren,
+- typische Multiple-Choice-Fallen erkennen.
+
+Empfehlung für jede Lerneinheit:
+
+1. 20 Minuten Grundlagen wiederholen,
+2. 20 Minuten 3-5 Prüfungsaufgaben,
+3. 10 Minuten Fehleranalyse mit eigener Merkliste.
+
+### AP2-Fokus (später)
+
+- Transfer auf größere Handlungssituationen (GA1/GA2),
+- begründete Entscheidungen schreiben (nicht nur Definitionen),
+- Aufgaben vernetzt lösen (z. B. Anforderungen -> Planung -> Risiko -> Qualität),
+- Fachsprache präzise und knapp anwenden.
+
+Schreibraster für AP2-Antworten:
+
+1. Ausgangslage kurz benennen,
+2. Entscheidung/Empfehlung nennen,
+3. fachlich begründen,
+4. Auswirkung auf Zeit/Kosten/Qualität darstellen.
 
 ---
 
@@ -1993,3 +2081,241 @@ Stakeholder:
 
 ---
 
+## AP1 1-Seiten-Crashkarte
+
+### 1) Definitionen (ultrakurz)
+
+- **Projekt:** Einmalig, zielgerichtet, zeitlich und ressourcenmäßig begrenzt, komplex.
+- **Projektmanagement:** Planen, Steuern, Führen, Dokumentieren und Abschließen eines Projekts.
+- **Stakeholder:** Personen/Gruppen mit Interesse am Projekt oder Einfluss auf das Projekt.
+- **Meilenstein:** Prüfbare Zwischenmarke ohne eigene Dauer.
+- **Arbeitspaket:** Kleinste sinnvoll planbare und zuordenbare Einheit.
+
+### 2) Projektphasen (Reihenfolge)
+
+1. Initialisierung
+2. Planung
+3. Durchführung
+4. Steuerung/Controlling (parallel zur Durchführung)
+5. Abschluss
+
+### 3) Lastenheft vs. Pflichtenheft
+
+- **Lastenheft:** Was wird benötigt? (Sicht Auftraggeber)
+- **Pflichtenheft:** Wie wird es umgesetzt? (Sicht Auftragnehmer)
+
+### 4) Wichtige Formeln
+
+- **PERT:** $$E = \frac{O + 4M + P}{6}$$
+- **Personalkosten:** $$\text{Kosten} = \text{Aufwand} \times \text{Satz}$$
+- **Risikowert:** $$R = \text{Eintrittswahrscheinlichkeit} \times \text{Schadensausmaß}$$
+- **Netzplan:** $$FEZ = FAZ + D$$ und $$GP = SAZ - FAZ$$
+
+### 5) Kritischer Pfad (Prüfungskern)
+
+- Kritischer Pfad = alle Vorgänge mit **GP = 0**.
+- Verzögerung auf kritischem Pfad verzögert das Gesamtprojekt.
+- Gesamtdauer = FEZ des letzten Vorgangs.
+
+### 6) Stakeholder-Matrix (Standardstrategie)
+
+- Hoch Einfluss / Hoch Interesse -> eng managen
+- Hoch Einfluss / Niedrig Interesse -> zufrieden halten
+- Niedrig Einfluss / Hoch Interesse -> informieren
+- Niedrig Einfluss / Niedrig Interesse -> beobachten
+
+### 7) Projektorganisationen (Unterscheidung)
+
+- **Reine Projektorganisation:** hohe Projektleiter-Befugnis, Team weitgehend aus Linie gelöst.
+- **Einfluss-/Stabsorganisation:** Projektleiter koordiniert, wenig Weisungsbefugnis.
+- **Matrixorganisation:** Doppelunterstellung (Linie + Projekt), hoher Abstimmungsbedarf.
+
+### 8) SMART in 10 Sekunden
+
+- **S** spezifisch
+- **M** messbar
+- **A** akzeptiert/attraktiv
+- **R** realistisch
+- **T** terminiert
+
+### 9) Typische AP1-Fehler
+
+- Projektplanung mit Projektsteuerung verwechseln.
+- Lastenheft/Pflichtenheft vertauschen.
+- Stakeholder nur als Kunden sehen.
+- Kritischen Pfad ohne Pufferprüfung bestimmen.
+
+### 10) 20-Minuten-Wiederholung direkt vor Übung
+
+1. 5 Min: Definitionen + Phasen laut aufsagen.
+2. 5 Min: Formeln ohne Hilfe notieren.
+3. 5 Min: 1 Netzplan-Miniaufgabe rechnen.
+4. 5 Min: 5 MC-Fragen mit Fehleranalyse.
+
+---
+
+## AP1 30-Sekunden-Drillblatt (MC-Speed)
+
+### Ziel
+
+In maximal **30 Sekunden pro Frage** die wahrscheinlich richtige Antwort eingrenzen und typische Fallen vermeiden.
+
+### 5-Schritte-Methode (30 Sekunden)
+
+1. **Fragetyp erkennen (5 s):** Definition, Unterschied, Reihenfolge, Rechnung, Anwendung?
+2. **Signalwort markieren (5 s):** z. B. *immer*, *nur*, *typischerweise*, *kritisch*, *zuerst*.
+3. **2 Optionen sofort streichen (8 s):** offensichtlich fachfremd oder absolut formuliert.
+4. **Fachregel prüfen (8 s):** kurze Kernregel abrufen (z. B. GP = 0 -> kritisch).
+5. **Finale Plausibilitätskontrolle (4 s):** passt zur Projektpraxis und zum Begriff?
+
+### Signalwörter und Bedeutung
+
+| Signalwort | Bedeutung für die Antwortwahl |
+|---|---|
+| immer / ausschließlich | Häufig falsch, wenn Ausnahmen existieren |
+| zuerst / primär | Fragt nach der Hauptfunktion, nicht nach Nebeneffekten |
+| typischerweise | Sucht Standardfall, nicht Spezialfall |
+| formal / offiziell | Meist Dokument oder Freigabeprozess gemeint |
+| kritisch | Im Netzplan meist GP = 0 |
+
+### Sofortregeln (Direktabruf)
+
+- Lastenheft = **Was** (Auftraggeber), Pflichtenheft = **Wie** (Auftragnehmer).
+- Projektsteuerung = Plan-Ist-Vergleich + Gegenmaßnahmen.
+- Projektplanung = Soll-Konzept vor Umsetzung.
+- Kritischer Pfad = Vorgänge mit **GP = 0**.
+- Meilenstein = Zeitpunkt ohne Dauer.
+- Stakeholder = betroffen **oder** einflussreich.
+
+### 10 Drillfragen (ohne Rechnen)
+
+1. Was beschreibt das Pflichtenheft primär?
+- A: Anforderungen des Auftraggebers
+- B: Technische Umsetzung der Anforderungen
+- C: Budgetfreigabe
+- D: Projektabschlussbericht
+
+2. Welche Aussage zur Projektsteuerung ist korrekt?
+- A: Sie findet nur am Projektende statt
+- B: Sie ersetzt die Planung vollständig
+- C: Sie überwacht Abweichungen und steuert nach
+- D: Sie betrifft nur Kosten
+
+3. Ein Vorgang hat GP = 0. Was folgt?
+- A: Er kann beliebig verschoben werden
+- B: Er liegt auf dem kritischen Pfad
+- C: Er ist ein Meilenstein
+- D: Er hat keine Vorgänger
+
+4. Welche Aussage zu Meilensteinen ist richtig?
+- A: Meilensteine dauern immer 1 Tag
+- B: Meilensteine sind Arbeitspakete mit Puffer
+- C: Meilensteine markieren prüfbare Zustände
+- D: Meilensteine ersetzen den Projektauftrag
+
+5. Wer erstellt typischerweise das Lastenheft?
+- A: Auftraggeber
+- B: Auftragnehmer
+- C: Scrum Master
+- D: Lenkungsausschuss
+
+6. Was ist typisch für Matrixorganisation?
+- A: Nur ein Vorgesetzter pro Mitarbeitendem
+- B: Keine Abstimmungsnotwendigkeit
+- C: Doppelunterstellung Linie/Projekt
+- D: Projektleiter ohne Einfluss
+
+7. Was ist **kein** Projektmerkmal im engeren Sinn?
+- A: Einmaligkeit
+- B: Begrenzte Ressourcen
+- C: Dauerhafter Routineprozess
+- D: Klare Zielvorgabe
+
+8. Welche SMART-Komponente fordert Messbarkeit?
+- A: S
+- B: M
+- C: A
+- D: T
+
+9. Wofür steht Projektinitialisierung typischerweise?
+- A: Produktivsetzung nach Abnahme
+- B: Projektidee konkretisieren und Freigabe vorbereiten
+- C: Nur Dokumentation archivieren
+- D: Tägliche Team-Standups
+
+10. Welche Stakeholder-Strategie passt zu hohem Einfluss und geringem Interesse?
+- A: Beobachten
+- B: Informieren
+- C: Zufrieden halten
+- D: Eng managen
+
+<details>
+<summary>Lösungen anzeigen</summary>
+
+**1:B, 2:C, 3:B, 4:C, 5:A, 6:C, 7:C, 8:B, 9:B, 10:C**
+
+</details>
+
+### Mini-Auswertung (nach 10 Fragen)
+
+- **9-10 richtig:** Sehr prüfungsnah, Tempo beibehalten.
+- **7-8 richtig:** Gut, aber gezielt Schwachthemen wiederholen.
+- **0-6 richtig:** Erst Crashkarte wiederholen, dann neuen Drilllauf.
+
+### Wiederholungsrhythmus
+
+1. Morgen: 10 Fragen in 5 Minuten.
+2. Übermorgen: dieselben 10 + 5 neue.
+3. In einer Woche: 20 gemischte Fragen unter Zeitdruck.
+
+---
+
+## AP1 30-Sekunden-Rechendrill (Netzplan, PERT, Risiko, Kosten)
+
+### Ziel
+
+Rechenaufgaben in kurzer Zeit sicher lösen: **ca. 30-45 Sekunden pro Mikrofrage**.
+
+### Formeln (Sofortabruf)
+
+- $$E = \frac{O + 4M + P}{6}$$
+- $$\text{Personalkosten} = \text{Stunden} \times \text{€/h}$$
+- $$R = EW \times SA$$
+- $$FEZ = FAZ + D$$
+- $$GP = SAZ - FAZ$$
+
+### 10 Mikrofragen (mit kurzer Angabe)
+
+1. **PERT:** O = 2, M = 5, P = 8. Wie groß ist $E$?
+2. **Personalkosten:** 14 h zu 72 €/h. Ergebnis?
+3. **Risikowert:** EW = 3, SA = 2. Wie groß ist $R$?
+4. **FEZ:** FAZ = 7, D = 4. FEZ?
+5. **GP:** SAZ = 13, FAZ = 9. GP?
+6. **PERT:** O = 1, M = 4, P = 13. Wie groß ist $E$?
+7. **Personalkosten:** 36 h zu 65 €/h. Ergebnis?
+8. **Risikowert + Bewertung:** EW = 2, SA = 3. Wert und Handlungsbedarf (1-3 gering, 4-6 erhöht, 7-9 kritisch)?
+9. **Kritischer Pfad:** Ein Vorgang hat GP = 0. Liegt er auf dem kritischen Pfad? (Ja/Nein)
+10. **Gesamtdauer:** Letzter Vorgang hat FEZ = 18. Projektdauer?
+
+<details>
+<summary>Lösungen anzeigen</summary>
+
+1. $$E = \frac{2 + 4\cdot5 + 8}{6} = \frac{30}{6} = 5$$
+2. $$14 \cdot 72 = 1.008\,€$$
+3. $$R = 3 \cdot 2 = 6$$
+4. $$FEZ = 7 + 4 = 11$$
+5. $$GP = 13 - 9 = 4$$
+6. $$E = \frac{1 + 4\cdot4 + 13}{6} = \frac{30}{6} = 5$$
+7. $$36 \cdot 65 = 2.340\,€$$
+8. $$R = 2 \cdot 3 = 6$$ -> **erhöht**
+9. **Ja**
+10. **18 Zeiteinheiten**
+
+</details>
+
+### 5-Minuten-Tempo-Test
+
+1. Stoppuhr auf 5:00 Minuten stellen.
+2. Alle 10 Fragen ohne Hilfsmittel rechnen.
+3. Fehler markieren nach Typ: Formel, Rechenfehler, Begriffsfehler.
+4. Nur den häufigsten Fehlertyp direkt 3-mal gezielt nachüben.
