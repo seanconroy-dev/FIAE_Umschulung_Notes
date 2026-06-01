@@ -410,7 +410,11 @@ $$SAZ = SEZ - D$$
 
 $$GP = SAZ - FAZ$$
 
+$$FP = FAZ \text{ des Nachfolgers} - FEZ$$
+
 Ein Vorgang liegt auf dem **kritischen Pfad**, wenn GP = 0.
+
+Der **freie Puffer** zeigt, wie lange ein Vorgang verschoben werden kann, ohne den frühesten Start eines Nachfolgers zu verzögern.
 
 ---
 
@@ -419,14 +423,28 @@ Ein Vorgang liegt auf dem **kritischen Pfad**, wenn GP = 0.
 In der IHK-Prüfung wird häufig die **Vorgangsknoten-Methode** verwendet. Jeder Vorgang wird als Kasten dargestellt:
 
 ```
-┌────────────────────────────────────┐
-│ FAZ     │   Dauer (D)   │   FEZ   │
-│─────────┼───────────────┼─────────│
-│         │  Vorgangsname │         │
-│─────────┼───────────────┼─────────│
-│ SAZ     │      GP       │   SEZ   │
-└────────────────────────────────────┘
+                 FAZ                             FEZ
+┌────────────────────────────────────────────────────────────────┐
+│ ┌────────┬────────────────────────────┬────────┐              │
+│ │ Index  │ Vorgangsname               │        │              │
+│ ├────────┼────────────────────────────┼────────┤              │
+│ │ D      │ GP                         │ FP     │              │
+│ └────────┴────────────────────────────┴────────┘              │
+└────────────────────────────────────────────────────────────────┘
+                 SAZ                             SEZ
 ```
+
+Legende:
+
+| Abkürzung | Bedeutung |
+|---|---|
+| D | Dauer des Vorgangs |
+| GP | Gesamtpuffer |
+| FP | Freier Puffer |
+| FAZ | Früheste Anfangszeit |
+| FEZ | Früheste Endzeit |
+| SAZ | Späteste Anfangszeit |
+| SEZ | Späteste Endzeit |
 
 ---
 
