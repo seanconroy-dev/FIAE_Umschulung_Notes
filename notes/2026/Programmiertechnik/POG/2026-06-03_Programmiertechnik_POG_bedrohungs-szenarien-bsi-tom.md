@@ -1,5 +1,5 @@
 ---
-title: 'Bedrohungs Szenarien BSI TOM'
+title: 'Bedrohungsszenarien BSI TOM'
 date: 2026-06-03
 weekday: 'Mittwoch'
 subject: 'Programmiertechnik'
@@ -18,7 +18,7 @@ tags:
 author: 'Sean Matthew Conroy'
 license: 'CC BY-NC-SA 4.0'
 ---
-# Bedrohungs Szenarien BSI TOM
+# Bedrohungsszenarien BSI TOM
 
 ## Kurzueberblick / Definition
 
@@ -101,7 +101,7 @@ TOM sind Schutzmassnahmen nach DSGVO Art. 32 und allgemein gute Sicherheitsprakt
 - Verfahrensdokumentation und Regelpruefungen
 - Auftragsverarbeitungsvertraege und Datenschutzprozesse
 
-## Zuordnung: Bedrohung -> passende TOM
+## Zuordnung: Bedrohung zu passenden TOM
 
 | Bedrohung | Technische Massnahmen | Organisatorische Massnahmen |
 |---|---|---|
@@ -134,7 +134,7 @@ Situation: Mitarbeiter klickt Link, gibt Zugangsdaten ein.
 Erwartete Pruefungsantwort (kurz):
 
 - betroffenes Schutzziel: Vertraulichkeit/Authentizitaet
-- Sofortmassnahmen: Passwort reset, MFA aktivieren, Log-Analyse
+- Sofortmassnahmen: Passwort-Reset, MFA aktivieren, Log-Analyse
 - TOM zur Vorsorge: Mail-Schutz, Schulung, Meldeprozess
 
 ## AP1/AP2 Lernfokus
@@ -150,6 +150,17 @@ Erwartete Pruefungsantwort (kurz):
 - Vertraulichkeit und Integritaet verwechseln
 - Ransomware nur als "Verschluesselung" sehen, statt Ausfallrisiko zu betonen
 - Keine Priorisierung von Sofortmassnahmen im Vorfall
+
+## 30-Sekunden-Antwortschema fuer die Pruefung
+
+Wenn eine Bedrohung in der Aufgabe steht, antworte immer in 4 Schritten:
+
+1. Bedrohung benennen (z. B. Phishing, Ransomware, Insider).
+2. Schutzziel nennen (primaer, optional sekundaer).
+3. Zwei technische TOM nennen.
+4. Zwei organisatorische TOM nennen.
+
+Merksatz: Bedrohung -> Schutzziel -> Technik -> Organisation.
 
 ## Selbstcheck (mit Loesungen)
 
