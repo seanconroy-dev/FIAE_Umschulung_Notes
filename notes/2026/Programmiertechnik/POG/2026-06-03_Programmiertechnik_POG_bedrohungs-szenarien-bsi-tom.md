@@ -30,6 +30,22 @@ Fuer AP1/AP2 wichtig:
 - Schutzziel zuordnen (CIA)
 - passende TOM ableiten
 
+## Was ist das BSI?
+
+BSI steht fuer Bundesamt fuer Sicherheit in der Informationstechnik.
+
+Kurz erklaert:
+
+- Das BSI ist die zentrale deutsche Behoerde fuer Cybersicherheit.
+- Es veroeffentlicht Empfehlungen, Standards und Mindestanforderungen fuer IT-Sicherheit.
+- Es unterstuetzt Behoerden, Unternehmen und Betreiber kritischer Infrastrukturen.
+
+Warum ist das in der Pruefung wichtig?
+
+- BSI-Vorgehen hilft, Bedrohungen systematisch zu analysieren.
+- Es verbindet Technik, Organisation und Prozesse (nicht nur Tools).
+- Viele Sicherheitskonzepte in Unternehmen orientieren sich am BSI-Grundschutz.
+
 ## Schutzziele als Basis (CIA + Erweiterung)
 
 - Vertraulichkeit: Nur Berechtigte duerfen lesen.
