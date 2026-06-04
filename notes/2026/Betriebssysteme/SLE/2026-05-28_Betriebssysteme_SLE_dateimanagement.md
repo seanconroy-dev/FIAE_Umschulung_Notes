@@ -609,3 +609,128 @@ Zur Festigung solltest du:
 - Berechtigungsfälle mit Freigabe und NTFS üben
 - typische Dateisystem-Auswahlfragen trainieren
 - den Unterschied zwischen Vollbackup, inkrementellem Backup und differentiellem Backup sicher erklären können
+
+---
+
+## 18. NTFS vertieft (Prüfungs- und Praxiswissen)
+
+### 18.1 Kernmerkmale von NTFS
+
+| Merkmal | Bedeutung für die Praxis |
+|---|---|
+| ACLs (Access Control Lists) | Detaillierte Rechtevergabe pro Benutzer und Gruppe |
+| Journaling | Dateisystem-Operationen werden vorab protokolliert; verringert Inkonsistenzen nach Absturz |
+| Quotas | Speicherplatzbegrenzung pro Benutzer |
+| EFS (Encrypting File System) | Dateibasierte Verschlüsselung |
+| Komprimierung | Dateien/Ordner können transparent komprimiert werden |
+| Große Dateien und Volumes | Geeignet für moderne Datenträgergrößen |
+| Hard Links / Symbolic Links | Flexible Verknüpfungen für Dateien und Ordner |
+| Dateiattribute | Attribute wie versteckt, schreibgeschützt, System, Archiv |
+| MFT (Master File Table) | Zentrale Verwaltungsstruktur für Datei-/Ordner-Einträge |
+| Schattenkopien/Versionen | Frühere Dateizustände können wiederhergestellt werden |
+
+### 18.2 Was bedeutet Journaling genau?
+
+Beim Journaling schreibt NTFS wichtige Metadaten-Änderungen zuerst in ein Journal (Protokoll) und setzt sie danach im Dateisystem um. Fällt das System währenddessen aus, kann NTFS den letzten konsistenten Zustand schneller wiederherstellen.
+
+Wichtig: Journaling schützt primär Dateisystemstrukturen (Metadaten), nicht automatisch jede zuletzt bearbeitete Nutzdatei bis aufs letzte Byte.
+
+### 18.3 MFT: Aufbau eines typischen Eintrags
+
+Ein MFT-Eintrag kann unter anderem enthalten:
+
+- Dateiname und Dateierweiterung
+- Dateigröße
+- Erstellungs- und Änderungszeit
+- Besitzer- und Rechteinformationen (ACL)
+- Dateiattribute (z. B. versteckt, schreibgeschützt)
+- Verweise auf Datencluster
+- Verknüpfung in der Ordnerstruktur (Parent-Child-Bezug)
+
+### 18.4 Streams und ADS (Alternate Data Streams)
+
+NTFS unterstützt mehrere Datenströme pro Datei. Der Hauptinhalt liegt im Standard-Stream, zusätzliche Informationen können in alternativen Datenströmen (ADS) gespeichert werden.
+
+Beispielnutzen:
+
+- Metadaten speichern, ohne den sichtbaren Hauptinhalt zu verändern
+- Anwendungsinterne Zusatzinformationen ablegen
+
+Sicherheitsaspekt: ADS können bei Analysen übersehen werden, wenn Tools nur den Standard-Stream betrachten.
+
+---
+
+## 19. Cluster, LCN und VCN verständlich erklärt
+
+### 19.1 Was ist ein Cluster?
+
+Ein Cluster ist die kleinste Speichereinheit, die das Dateisystem für die Belegung verwaltet. Ein Cluster besteht aus einer festen Anzahl von Sektoren.
+
+Konsequenz:
+
+- Ist eine Datei kleiner als ein Cluster, belegt sie trotzdem mindestens einen ganzen Cluster (interne Fragmentierung).
+
+Bei NTFS sind je nach Volumengröße unterschiedliche Clusterkonfigurationen möglich.
+
+### 19.2 LCN und VCN
+
+| Begriff | Bedeutung |
+|---|---|
+| VCN (Virtual Cluster Number) | Logische Cluster-Nummer innerhalb der Datei |
+| LCN (Logical Cluster Number) | Physische Cluster-Position auf dem Volume |
+
+NTFS nutzt die Zuordnung VCN -> LCN, um Dateiinhalte logisch zu organisieren und physisch auf dem Datenträger zu speichern.
+
+---
+
+## 20. Beispiel: MFT-Sicht auf eine größere Datei
+
+Beispieldatei: `langer_dateiname.txt` (5 MB)
+
+Mögliche gespeicherte Informationen:
+
+- Name/Endung: `langer_dateiname.txt`
+- Größe: 5 MB
+- Zeitstempel: erstellt am 01.01.2024, geändert am 15.01.2024
+- Rechte: Vollzugriff für Benutzer `Sean`, Lesen für Gruppe `Benutzer`
+- Attribute: normal, nicht versteckt, nicht schreibgeschützt
+- Datenzuordnung: mehrere Cluster, z. B. ein Bereich von 1000 bis 1500
+- Ordnerbezug: Parent `Dokumente`, Child-Kontext `Projekte`
+
+Hinweis: In realen Systemen liegen Dateiblöcke nicht zwingend als ein zusammenhängender Clusterbereich vor.
+
+---
+
+## 21. Dateisystem-Tabelle erweitert (mit FAT-Familie)
+
+| Dateisystem | Merkmale | Vorteile | Nachteile |
+|---|---|---|---|
+| FAT12 | sehr einfache FAT-Variante für sehr kleine Medien | extrem leichtgewichtig | nur sehr kleine Volumes sinnvoll |
+| FAT16 | frühere FAT-Variante für kleine bis mittlere Medien | hohe Alt-Kompatibilität | starke Größenlimits, keine ACLs, kein Journaling |
+| FAT32 | weit verbreitet auf USB/Altgeräten | sehr kompatibel | max. 4 GB pro Datei, keine NTFS-Rechte |
+| exFAT | moderne FAT-Variante für Flash/SD/USB | große Dateien, plattformübergreifend gut nutzbar | keine NTFS-ACLs, kein klassisches NTFS-Journaling |
+| NTFS | Windows-Standard für System/Business | Rechte, Journaling, Quotas, EFS, robuste Verwaltung | auf Fremdsystemen teils eingeschränkt |
+
+Merksatz: FAT steht für File Allocation Table. Die FAT-Familie ist sehr kompatibel, bietet aber weniger Sicherheits- und Verwaltungsfunktionen als NTFS.
+
+---
+
+## 22. Wichtige Dateiattribute (Windows)
+
+| Attribut | Bedeutung |
+|---|---|
+| Versteckt | Datei wird standardmäßig im Explorer ausgeblendet |
+| Schreibgeschützt | Datei soll nicht unbeabsichtigt geändert oder gelöscht werden |
+| System | Kennzeichnung für betriebssystemrelevante Datei |
+| Archiv | Markiert geänderte/neue Dateien für Backup-Prozesse |
+
+---
+
+## 23. Mini-Check für die Prüfung
+
+- NTFS statt "NFTS" schreiben (häufiger Tippfehler).
+- MBR/GPT = Partitionsschema, NTFS/FAT/exFAT = Dateisystem.
+- Journaling kurz erklären können (Protokollierung von Metadaten-Änderungen).
+- VCN/LCN unterscheiden können (logisch vs. physisch).
+- FAT32-Grenze von 4 GB pro Datei sicher beherrschen.
+
