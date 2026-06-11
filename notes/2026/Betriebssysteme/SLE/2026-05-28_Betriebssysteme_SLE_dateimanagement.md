@@ -734,3 +734,392 @@ Merksatz: FAT steht für File Allocation Table. Die FAT-Familie ist sehr kompati
 - VCN/LCN unterscheiden können (logisch vs. physisch).
 - FAT32-Grenze von 4 GB pro Datei sicher beherrschen.
 
+---
+
+## 24. NTFS intern: kleine vs. große Dateien (MFT und Streams)
+
+### 24.1 Kleine Dateien: resident im MFT-Eintrag
+
+Bei kleinen Dateien kann NTFS den Dateiinhalt direkt im MFT-Eintrag speichern. Das nennt man **residenten Datenstream**.
+
+Vorteil:
+
+- sehr schneller Zugriff, weil kein zusätzlicher Cluster-Lookup für den Hauptinhalt nötig ist
+
+Praxishinweis:
+
+- klein heißt nicht "immer gleich groß", sondern hängt von verfügbarer MFT-Record-Größe und den weiteren Attributen der Datei ab
+
+### 24.2 Große Dateien: non-resident mit Runlist
+
+Sobald der Inhalt nicht mehr in den MFT-Eintrag passt, speichert NTFS im MFT nur noch die Zuordnung, wo die Daten auf dem Volume liegen. Das nennt man **non-residenten Stream**.
+
+Typischer Aufbau im MFT-Eintrag:
+
+- Dateiattribute (Name, Zeiten, Rechte)
+- Data-Attribut als non-resident
+- Runlist (Mapping von VCN-Bereichen auf LCN-Bereiche)
+
+---
+
+## 25. Stream-Aufbau: klein und groß
+
+### 25.1 Residenter Stream (kleine Datei)
+
+Vereinfacht:
+
+```text
+MFT-Record
+    |- STANDARD_INFORMATION
+    |- FILE_NAME
+    |- DATA (resident): [Dateiinhalt direkt hier]
+```
+
+### 25.2 Non-resident Stream (große Datei)
+
+Vereinfacht:
+
+```text
+MFT-Record
+    |- STANDARD_INFORMATION
+    |- FILE_NAME
+    |- DATA (non-resident)
+             |- Run 1: VCN 0-127   -> LCN 8450-8577
+             |- Run 2: VCN 128-255 -> LCN 19000-19127
+             |- Run 3: VCN 256-300 -> LCN 32010-32054
+```
+
+Interpretation:
+
+- Datei ist logisch zusammenhaengend (VCN-Reihenfolge)
+- physisch kann sie verteilt liegen (mehrere LCN-Bereiche)
+- dadurch entsteht Fragmentierung
+
+---
+
+## 26. VCN, LCN und Cluster im Zusammenhang
+
+### 26.1 Merkkette
+
+- Cluster = kleinste vom Dateisystem verwaltete Belegungseinheit
+- VCN = logische Clusterposition innerhalb der Datei
+- LCN = physische Clusterposition auf dem Volume
+
+Formel fuer den Kopf:
+
+$$
+    ext{Datei-Offset} = \text{VCN} \cdot \text{Clustergroesse} + \text{Offset im Cluster}
+$$
+
+NTFS loest den logischen VCN auf den physischen LCN auf und kann damit die passenden Cluster lesen.
+
+### 26.2 Beispiel mit 4-KiB-Clustern
+
+- Clustergröße: 4096 Byte
+- Gesuchter Byte-Offset in Datei: 12.500
+
+Berechnung:
+
+$$
+    ext{VCN} = \left\lfloor \frac{12500}{4096} \right\rfloor = 3,
+\quad
+    ext{Offset im Cluster} = 12500 - 3 \cdot 4096 = 212
+$$
+
+Das Dateisystem sucht also den Cluster mit VCN 3 und darin Byte 212.
+
+---
+
+## 27. Shadow Copies (VSS) kurz und pruefungsnah
+
+**Shadow Copies** in Windows basieren auf dem **Volume Shadow Copy Service (VSS)**.
+
+Nutzen:
+
+- Wiederherstellung frueherer Dateiversionen
+- konsistente Snapshots auch bei geoeffneten Dateien
+- Grundlage fuer Backup-Loesungen und "Vorgaengerversionen"
+
+Prinzip vereinfacht:
+
+- VSS erzeugt einen Zeitpunkt-Snapshot des Volumes
+- geaenderte Datenbloecke werden ueber Copy-on-Write / Redirect-on-Write Verfahren verwaltet
+- Anwender koennen fruehere Versionen von Dateien/Ordnern wiederherstellen (wenn konfiguriert)
+
+Wichtig fuer die Pruefung:
+
+- Shadow Copy ist kein Ersatz fuer ein externes Backup
+- sie hilft bei versehentlichem Loeschen/Aendern, schuetzt aber nicht allein gegen Totalverlust des Datentraegers
+
+---
+
+## 28. Versteckte Datenstroeme (ADS) und Sicherheit
+
+NTFS erlaubt **Alternate Data Streams (ADS)**. Eine Datei kann mehrere Streams haben:
+
+- Hauptstream: `datei.txt`
+- Zusatzstream: `datei.txt:meta`
+
+Moegliche Nutzung:
+
+- legitime Metadaten
+- aber auch Verstecken von Inhalten vor einfachen Datei-Listings
+
+Praxisbeispiel (CMD):
+
+```cmd
+echo normaler Inhalt > notiz.txt
+echo geheimer Inhalt > notiz.txt:secret
+```
+
+In vielen Standardansichten sieht man nur `notiz.txt`.
+
+Sicherheitsbezug:
+
+- Forensik- und Security-Tools sollten ADS explizit pruefen
+- einfache "Datei vorhanden?"-Checks reichen nicht aus
+
+---
+
+## 29. Links (Vertiefung)
+
+- Microsoft Learn: NTFS technical reference  
+    https://learn.microsoft.com/windows/win32/fileio/master-file-table
+- Microsoft Learn: File streams (including alternate streams)  
+    https://learn.microsoft.com/windows/win32/fileio/file-streams
+- Microsoft Learn: Volume Shadow Copy Service overview  
+    https://learn.microsoft.com/windows/win32/vss/volume-shadow-copy-service-overview
+- Microsoft Learn: Previous Versions and restore points (User perspective)  
+    https://support.microsoft.com/windows/previous-versions-of-files-in-windows
+- Sysinternals Streams tool (ADS sichtbar machen)  
+    https://learn.microsoft.com/sysinternals/downloads/streams
+
+---
+
+## 30. Zusatz: IHK-Style Uebungsblock zu NTFS-Interna
+
+### Punkte und Bewertung
+
+- Gesamt: 20 Punkte
+- Empfehlung Selbstcheck:
+    - 18-20 Punkte: sehr sicher
+    - 14-17 Punkte: gut, aber Luecken bei Details
+    - 10-13 Punkte: Grundlagen da, Wiederholung noetig
+    - 0-9 Punkte: Thema gezielt neu lernen
+
+### Teil A: Single Choice (je 2 Punkte)
+
+**1. Welche Aussage beschreibt den Unterschied zwischen resident und non-resident in NTFS korrekt?**
+
+- A) Resident bedeutet, dass die Datei verschluesselt ist.
+- B) Resident bedeutet, dass Dateiinhalte direkt im MFT-Record stehen koennen.
+- C) Non-resident bedeutet, dass die Datei nur im RAM existiert.
+- D) Non-resident gilt nur fuer ADS, nicht fuer den Hauptstream.
+
+**2. Was beschreibt eine Runlist in NTFS am treffendsten?**
+
+- A) Reihenfolge der Dateinamen im Verzeichnis
+- B) Mapping von VCN-Bereichen auf LCN-Bereiche
+- C) Liste aller Benutzer mit Vollzugriff
+- D) Liste der Shadow Copies eines Volumes
+
+**3. Welche Aussage zu VCN und LCN ist korrekt?**
+
+- A) VCN ist physisch, LCN ist logisch.
+- B) Beide bezeichnen nur Metadaten im Registry-Hive.
+- C) VCN ist logisch innerhalb der Datei, LCN ist physisch auf dem Volume.
+- D) VCN und LCN sind nur bei FAT32 relevant.
+
+**4. Welche Aussage zu Shadow Copies ist korrekt?**
+
+- A) Shadow Copies ersetzen ein externes Backup vollstaendig.
+- B) Shadow Copies funktionieren nur bei ausgeschalteten Systemen.
+- C) Shadow Copies erlauben fruehere Dateiversionen, sind aber kein vollwertiger Ersatz fuer externe Backups.
+- D) Shadow Copies speichern nur Dateinamen, nicht Inhalte.
+
+### Teil B: Multiple Choice (je 3 Punkte)
+
+**5. Welche Aussagen zu ADS (Alternate Data Streams) sind richtig?**
+
+- A) ADS koennen Zusatzdaten zu einer Datei speichern.
+- B) ADS sind in jeder Standard-Exploreransicht sofort sichtbar.
+- C) ADS koennen bei oberflaechlicher Analyse uebersehen werden.
+- D) ADS existieren nur auf FAT32.
+
+**6. Welche Aussagen zu Clustern sind richtig?**
+
+- A) Cluster sind die kleinste vom Dateisystem verwaltete Belegungseinheit.
+- B) Eine 1-Byte-Datei belegt bei 4-KiB-Clustern nur 1 Byte auf dem Datentraeger.
+- C) Interne Fragmentierung entsteht, wenn Dateigroesse und Clustergrenze nicht zusammenpassen.
+- D) Clusterkonzepte sind bei NTFS irrelevant.
+
+### Teil C: Rechen-/Analyseaufgabe (7 Punkte)
+
+**7. Gegeben:**
+
+- Clustergröße: 4096 Byte
+- Datei-Offset: 50.000 Byte
+- Runlist (verkuerzt):
+    - Run 1: VCN 0-3 -> LCN 100-103
+    - Run 2: VCN 4-9 -> LCN 500-505
+
+**Aufgaben:**
+
+1. Bestimme den VCN und den Offset im Cluster (3 Punkte).
+2. Entscheide, ob der Zugriff in Run 1 oder Run 2 liegt (2 Punkte).
+3. Bestimme den zugehoerigen LCN (2 Punkte).
+
+---
+
+## 31. Loesungen und Bepunktung
+
+### Loesungen Teil A
+
+| Frage | Loesung | Punkte | Kurzbegruendung |
+|---|---|---:|---|
+| 1 | B | 2 | Kleine Inhalte koennen resident im MFT-Record liegen. |
+| 2 | B | 2 | Runlist mappt logische VCN-Bereiche auf physische LCN-Bereiche. |
+| 3 | C | 2 | VCN = logisch in Datei, LCN = physisch auf Volume. |
+| 4 | C | 2 | VSS hilft bei Versionen, ersetzt aber kein externes Backup. |
+
+### Loesungen Teil B
+
+| Frage | Loesung | Punkte |
+|---|---|---:|
+| 5 | A, C | 3 |
+| 6 | A, C | 3 |
+
+### Loesung Teil C (Musterweg)
+
+1. VCN und Offset (3 Punkte)
+
+$$
+	ext{VCN} = \left\lfloor \frac{50000}{4096} \right\rfloor = 12
+$$
+
+$$
+	ext{Offset im Cluster} = 50000 - 12 \cdot 4096 = 848
+$$
+
+2. Run bestimmen (2 Punkte)
+
+- Run 1 deckt VCN 0-3 ab
+- Run 2 deckt VCN 4-9 ab
+- VCN 12 liegt in keinem der angegebenen Runs
+
+Bewertung:
+
+- Richtige Feststellung "nicht in Run 1/2 enthalten" = volle 2 Punkte
+
+3. LCN bestimmen (2 Punkte)
+
+- Aus den gegebenen Daten nicht bestimmbar, da VCN 12 in der gekuerzten Runlist fehlt
+
+Bewertung:
+
+- Richtige Begruendung "Runlist unvollstaendig" = volle 2 Punkte
+
+Merksatz fuer die Pruefung:
+
+- Wenn VCN bekannt ist, braucht man den passenden Run, erst dann kann der LCN berechnet werden.
+
+---
+
+## 32. Hardlinks und Softlinks (Symbolic Links) in NTFS
+
+### 32.1 Hardlink: Was ist "drin"?
+
+Ein **Hardlink** ist ein weiterer Dateiname fuer **dieselbe Datei**.
+
+Technisch bedeutet das in NTFS:
+
+- mehrere Verzeichniseintraege zeigen auf denselben MFT-Dateirecord
+- der Datenstream der Datei ist derselbe
+- der Link selbst enthaelt nicht separat den Dateiinhalt
+
+Vereinfacht:
+
+```text
+Name A  ----\
+            +--> gleicher MFT-Record --> gleicher Datenstream
+Name B  ----/
+```
+
+Folgen in der Praxis:
+
+- Aenderst du Dateiinhalt ueber Name A, siehst du denselben Inhalt bei Name B
+- loeschst du Name A, bleibt Datei ueber Name B erhalten
+- Daten werden erst entfernt, wenn der letzte Hardlink weg ist
+
+Einschraenkungen:
+
+- nur innerhalb desselben Volumes
+- in der Regel fuer Dateien, nicht fuer normale Ordner
+
+### 32.2 Softlink (Symbolic Link): Was ist "drin"?
+
+Ein **Softlink/Symbolic Link** ist ein eigener Link-Eintrag, der auf einen Zielpfad verweist.
+
+Technisch betrachtet enthaelt er also:
+
+- Link-Metadaten
+- Zielinformation (Pfad/Referenz auf das Zielobjekt)
+- nicht den eigentlichen Dateiinhalt des Ziels
+
+Vereinfacht:
+
+```text
+Link-Datei --> "C:\\Daten\\bericht.txt"
+```
+
+Folgen in der Praxis:
+
+- der Link kann auf Dateien oder Ordner zeigen
+- der Link kann auch auf andere Volumes zeigen
+- wenn Ziel fehlt, wird der Link "haengend" (dangling)
+
+---
+
+## 33. Vergleich Hardlink vs. Softlink (pruefungsnah)
+
+| Kriterium | Hardlink | Softlink (Symbolic Link) |
+|---|---|---|
+| Intern gespeichert | zusaetzlicher Name auf denselben MFT-Record | eigener Link mit Zielpfad |
+| Eigener Dateiinhalt | nein | nein |
+| Ziel ueber Volumes hinweg | nein | ja |
+| Verhalten bei geloeschtem Ziel | bleibt gueltig, solange ein Link existiert | kann ungueltig/haengend werden |
+| Typische Nutzung | zweiter Name fuer gleiche Datei | flexible Umleitung auf Datei/Ordner |
+
+Merksatz:
+
+- Hardlink = zweiter Name fuer dieselbe Datei
+- Softlink = Verweis auf ein Ziel
+
+---
+
+## 34. Mini-Beispiele (Windows)
+
+### 34.1 Hardlink erstellen
+
+```cmd
+mklink /H bericht_hard.txt bericht.txt
+```
+
+Interpretation:
+
+- `bericht_hard.txt` und `bericht.txt` zeigen auf denselben Dateidatensatz.
+
+### 34.2 Symbolic Link erstellen
+
+```cmd
+mklink bericht_link.txt C:\Daten\bericht.txt
+```
+
+Interpretation:
+
+- `bericht_link.txt` ist ein Link auf den Zielpfad `C:\Daten\bericht.txt`.
+
+Hinweis fuer die Praxis:
+
+- Fuer bestimmte Link-Operationen sind passende Rechte/Policies noetig (je nach Windows-Konfiguration und Umgebung).
+
